@@ -1,7 +1,10 @@
 # PS Translator
 
 # Cập nhật thông tin sớm nhất tại: https://t.me/pstranslator
-
+<p align="center">
+  <strong>Cập nhật phiên bản mới, TestFlight và thông báo:</strong><br>
+  <a href="https://t.me/pstranslator">Telegram — PS Translator</a>
+</p>
 Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đọc thành giọng nói.
 
 <p align="center">
