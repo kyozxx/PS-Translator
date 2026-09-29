@@ -6,7 +6,6 @@ Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đ�
   <img src="screenshots/01-home.png" width="200">
   <img src="screenshots/02-settings.png" width="200">
   <img src="screenshots/04-pairing.png" width="200">
-  <img src="screenshots/03-donate.png" width="200">
 </p>
 
 ## Tính năng
