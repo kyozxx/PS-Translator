@@ -1,5 +1,7 @@
 # PS Translator
+
 # Cập nhật thông tin sớm nhất tại: https://t.me/pstranslator
+
 Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đọc thành giọng nói.
 
 <p align="center">
@@ -10,7 +12,7 @@ Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đ�
 
 ## Tính năng
 
-- **Chơi từ xa PX5**: xem và dịch phụ đề game trực tiếp qua mạng Wi-Fi.
+- **Chơi từ xa PS5**: xem và dịch phụ đề game trực tiếp qua mạng Wi-Fi.
 - **Xem YouTube & web**: dịch phụ đề cứng trong video bằng nhận dạng chữ (OCR), hoặc dùng phụ đề CC.
 - **Nhiều bộ dịch**: Dịch thuật Apple (ngoại tuyến, miễn phí), Apple Intelligence, CloudAPI, Google Gemini.
 - **Đọc phụ đề**: giọng Piper tiếng Việt có sẵn trong app, hoặc giọng Apple.
@@ -19,6 +21,8 @@ Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đ�
 
 ## Tải về
 
+### Có máy tính
+
 Vào mục [**Releases**](../../releases/latest) và tải file theo phiên bản iOS của máy:
 
 | File | Dành cho | Ghi chú |
@@ -26,29 +30,53 @@ Vào mục [**Releases**](../../releases/latest) và tải file theo phiên bả
 | `PS-Translator.ipa` | iOS 26 trở lên | Đầy đủ tính năng |
 | `PS-Translator-iOS18.ipa` | iOS 18 đến iOS 25 | **Không hỗ trợ Apple Intelligence**, còn lại giống bản chính |
 
-Không tải file "Source code", đó là file GitHub tự tạo.
+Không tải file **Source code**, đó là file GitHub tự tạo.
 
-## Cách cài
+### Không có máy tính
 
-App được cài ngoài App Store, bằng một trong hai công cụ miễn phí:
+Nếu không có PC hoặc Mac để cài file IPA, hãy tham gia Telegram:
+
+**https://t.me/pstranslator**
+
+Link **TestFlight** sẽ được cập nhật tại đây khi có bản thử nghiệm và còn suất tham gia.
+
+## Cách cài file IPA bằng máy tính
+
+App được cài ngoài App Store bằng một trong hai công cụ miễn phí:
 
 1. Cài [Sideloadly](https://sideloadly.io) (Windows hoặc macOS) hoặc [AltStore](https://altstore.io).
-2. Cắm iPhone vào máy tính, kéo file `PS-Translator.ipa` vào công cụ, đăng nhập Apple ID của bạn.
+2. Cắm iPhone vào máy tính, kéo file `PS-Translator.ipa` vào công cụ và đăng nhập Apple ID của bạn.
 3. Trên iPhone: **Cài đặt → Cài đặt chung → VPN & Quản lý thiết bị**, chọn Apple ID của bạn rồi bấm **Tin cậy**.
-4. Bật **Chế độ nhà phát triển** nếu iPhone yêu cầu (Cài đặt → Quyền riêng tư & Bảo mật).
+4. Bật **Chế độ nhà phát triển** nếu iPhone yêu cầu: **Cài đặt → Quyền riêng tư & Bảo mật → Chế độ nhà phát triển**.
 
-Với Apple ID miễn phí, app hết hạn sau **7 ngày** và cần cài lại (AltStore có thể tự làm mới).
+Với Apple ID miễn phí, app hết hạn sau **7 ngày** và cần cài lại. AltStore có thể tự làm mới ứng dụng.
+
+Nếu không có máy tính hoặc không muốn sideload thủ công, hãy vào Telegram để nhận link TestFlight:
+
+**https://t.me/pstranslator**
 
 ## Lưu ý
 
 - **Dịch thuật Apple**: cần app [Dịch thuật](https://apps.apple.com/app/id1514844618) của Apple và tải gói Tiếng Anh + Tiếng Việt trong app đó.
-- **Apple Intelligence**: chỉ có ở bản iOS 26, trên iPhone 15 Pro trở lên.
-- **Ghép nối PX5**: làm theo nút **?** trong màn Ghép nối. Account ID được lấy bằng cách đăng nhập trong Safari, app không nhận mật khẩu của bạn.
-- Đây là bản **thử nghiệm**. Gặp lỗi, hãy tạo một mục [Issues](../../issues) kèm mô tả và ảnh chụp màn hình.
+- **Apple Intelligence**: chỉ có ở bản iOS 26 và trên các thiết bị được Apple hỗ trợ.
+- **Ghép nối PS5**: làm theo nút **?** trong màn Ghép nối. Account ID được lấy bằng cách đăng nhập trong Safari, app không nhận mật khẩu của bạn.
+- Đây là bản **thử nghiệm**. Nếu gặp lỗi, hãy tạo một mục [Issues](../../issues) kèm mô tả và ảnh chụp màn hình.
+- Thông báo bản mới và link TestFlight sẽ được cập nhật tại **https://t.me/pstranslator**.
 
 ## Ủng hộ
 
-App miễn phí. Nếu thấy hữu ích, bạn có thể ủng hộ qua mục **Ủng hộ tác giả** ngay trong app.
+PS Translator được phát hành miễn phí.
+
+Nếu thấy ứng dụng hữu ích và muốn ủng hộ tác giả:
+
+**MB Bank**  
+**Số tài khoản: 008808**
+
+<p align="center">
+  <img src="https://img.vietqr.io/image/MB-008808-qr_only.png" width="280">
+</p>
+
+Bạn cũng có thể mở mục **Ủng hộ tác giả** ngay trong ứng dụng.
 
 ---
 
