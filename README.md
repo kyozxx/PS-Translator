@@ -91,8 +91,6 @@ Nếu thấy ứng dụng hữu ích và muốn ủng hộ tác giả:
   <img src="https://img.vietqr.io/image/MB-008808-qr_only.png" width="280">
 </p>
 
-Bạn cũng có thể mở mục **Ủng hộ tác giả** ngay trong ứng dụng.
-
 ---
 
 Tên sản phẩm và nhãn hiệu thuộc về chủ sở hữu tương ứng. Dự án không liên kết với Sony Interactive Entertainment.
