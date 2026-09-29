@@ -22,12 +22,7 @@ Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đ�
 
 ### Có máy tính
 
-Vào mục [**Releases**](../../releases/latest) và tải file theo phiên bản iOS của máy:
-
-| File | Dành cho | Ghi chú |
-|---|---|---|
-| `PS-Translator.ipa` | iOS 26 trở lên | Đầy đủ tính năng |
-| `PS-Translator-iOS18.ipa` | iOS 18 đến iOS 25 | **Không hỗ trợ Apple Intelligence**, còn lại giống bản chính |
+Vào mục [**Releases**](../../releases/latest) và tải file `PS-Translator.ipa`. Một file dùng chung cho **iOS 18 trở lên**: app tự nhận biết máy, Apple Intelligence chỉ bật trên iOS 26 và iPhone hỗ trợ.
 
 Không tải file **Source code**, đó là file GitHub tự tạo.
 
