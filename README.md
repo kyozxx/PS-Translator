@@ -11,7 +11,7 @@ Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đ�
 
 ## Tính năng
 
-- **Chơi từ xa PS5**: xem và dịch phụ đề game trực tiếp qua mạng Wi-Fi.
+- **Chơi từ xa PS5 và PS4** (PS4 đang thử nghiệm): xem và dịch phụ đề game trực tiếp qua mạng Wi-Fi, không cần capture card. Có nút **Tự tìm máy** trong cùng Wi-Fi.
 - **Xem YouTube & web**: dịch phụ đề cứng trong video bằng nhận dạng chữ (OCR), hoặc dùng phụ đề CC.
 - **Nhiều bộ dịch**: Dịch thuật Apple (ngoại tuyến, miễn phí), Apple Intelligence, CloudAPI, Google Gemini.
 - **Đọc phụ đề**: giọng Piper tiếng Việt có sẵn trong app, hoặc giọng Apple.
