@@ -1,5 +1,5 @@
 # PS Translator
-
+# Cập nhật thông tin sớm nhất tại: https://t.me/pstranslator
 Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đọc thành giọng nói.
 
 <p align="center">
