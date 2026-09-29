@@ -19,9 +19,14 @@ Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đ�
 
 ## Tải về
 
-Vào mục [**Releases**](../../releases/latest) và tải file `PS-Translator.ipa`.
+Vào mục [**Releases**](../../releases/latest) và tải file theo phiên bản iOS của máy:
 
-Yêu cầu: iPhone chạy **iOS 26** trở lên.
+| File | Dành cho | Ghi chú |
+|---|---|---|
+| `PS-Translator.ipa` | iOS 26 trở lên | Đầy đủ tính năng |
+| `PS-Translator-iOS18.ipa` | iOS 18 đến iOS 25 | **Không hỗ trợ Apple Intelligence**, còn lại giống bản chính |
+
+Không tải file "Source code", đó là file GitHub tự tạo.
 
 ## Cách cài
 
@@ -37,7 +42,7 @@ Với Apple ID miễn phí, app hết hạn sau **7 ngày** và cần cài lại
 ## Lưu ý
 
 - **Dịch thuật Apple**: cần app [Dịch thuật](https://apps.apple.com/app/id1514844618) của Apple và tải gói Tiếng Anh + Tiếng Việt trong app đó.
-- **Apple Intelligence**: chỉ có trên iPhone 15 Pro trở lên.
+- **Apple Intelligence**: chỉ có ở bản iOS 26, trên iPhone 15 Pro trở lên.
 - **Ghép nối PX5**: làm theo nút **?** trong màn Ghép nối. Account ID được lấy bằng cách đăng nhập trong Safari, app không nhận mật khẩu của bạn.
 - Đây là bản **thử nghiệm**. Gặp lỗi, hãy tạo một mục [Issues](../../issues) kèm mô tả và ảnh chụp màn hình.
 
