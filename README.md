@@ -1,7 +1,8 @@
 # PS Translator
 
+<p align="center">
 # Cập nhật phiên bản mới, TestFlight và thông báo tại: https://t.me/pstranslator
-
+</p>
 Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đọc thành giọng nói.
 
 <p align="center">
