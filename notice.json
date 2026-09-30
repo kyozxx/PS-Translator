@@ -1,0 +1,8 @@
+{
+  "github": {
+    "minBuild": 0,
+    "blockMessage": "Phiên bản này đã ngừng hoạt động. Vui lòng tải bản mới.",
+    "blockURL": "https://github.com/kyozxx/PS-Translator/releases/latest"
+  },
+  "testflight": {}
+}
