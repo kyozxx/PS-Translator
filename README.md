@@ -60,11 +60,25 @@ Nếu không có máy tính hoặc không muốn sideload thủ công, hãy vào
 ## Các lỗi thường gặp và cách khắc phục
 
 ### 1. Báo lỗi "PS5 từ chối đăng ký" khi ghép nối
+
+- **Bật Remote Play**: Trên PS5 vào **Cài đặt (Settings) → Hệ thống (System) → Chơi từ xa (Remote Play) → Cho phép chơi từ xa (Enable Remote Play)** (bắt buộc phải bật On).
+
+<p align="center">
+  <img src="screenshots/05-ps5-remote-play.png" width="600" alt="Bật Enable Remote Play trên PS5">
+</p>
+
+- **Trùng khớp tài khoản (Cực kỳ quan trọng)**: Bấm vào **Avatar** ở góc trên bên phải màn hình PS5 để kiểm tra tài khoản User đang hoạt động. Tài khoản này **phải trùng khớp hoàn toàn** với tài khoản bạn đăng nhập trên Safari để lấy **Account ID** trong app PS Translator. Nếu trên PS5 đang ở User khác hoặc Guest, máy sẽ từ chối ghép nối.
+
+<p align="center">
+  <img src="screenshots/06-ps5-user-match.png" width="400" alt="Kiểm tra User trùng khớp trên PS5">
+</p>
+
 - **Nhập đúng IP**: Trên PS5 vào **Cài đặt (Settings) → Mạng (Network) → Trạng thái kết nối (Connection Status) → Xem trạng thái kết nối (View Connection Status)** để lấy **Địa chỉ IPv4**. Sau đó nhập chính xác địa chỉ này vào mục IP trong app.
-- **Trùng khớp tài khoản**: Tài khoản bạn đăng nhập trên Safari để lấy **Account ID** phải là tài khoản User đang được mở và điều khiển trên PS5 lúc ghép nối.
-- **Bật Remote Play**: Trên PS5 vào **Cài đặt (Settings) → Hệ thống (System) → Chơi từ xa (Remote Play) → Cho phép chơi từ xa (Enable Remote Play)**.
 - **Nhập mã PIN mới**: Trên PS5 chọn **Liên kết thiết bị (Link Device)**, giữ nguyên màn hình hiển thị mã và nhập ngay **8 số** đó vào app rồi bấm **Ghép nối**.
 - **Chung mạng**: Ở lần ghép nối đầu tiên, iPhone và PS5 nên kết nối cùng một mạng Wi-Fi/LAN nội bộ.
+
+> [!TIP]
+> Bạn có thể xem bản hướng dẫn chi tiết định dạng web tại file [**guide.html**](guide.html).
 
 ### 2. Kết nối Remote Play xong nhưng tay cầm bị ngắt hoặc không điều khiển được
 - **Nhấn giữ nút PS trên tay cầm**.
