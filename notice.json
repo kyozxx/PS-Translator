@@ -4,12 +4,12 @@
     "blockMessage": "Phiên bản này đã ngừng hoạt động. Vui lòng tải bản mới.",
     "blockURL": "https://github.com/kyozxx/PS-Translator/releases/latest",
     "notice": {
-      "id": "v1.0.5",
-      "title": "Đã có bản 1.0.5",
-      "message": "Sửa lỗi ghép nối PS4, thêm chế độ màn hình đen tiết kiệm pin, sửa lỗi báo mất kết nối khi đang chơi.",
+      "id": "v1.0.6",
+      "title": "Đã có bản 1.0.6",
+      "message": "Thêm chế độ Chữ hiện dần: dịch ngay từng câu cho game hiện phụ đề từng chữ. Sửa lỗi dịch lặp câu.",
       "buttonTitle": "Tải bản mới",
       "url": "https://github.com/kyozxx/PS-Translator/releases/latest",
-      "maxBuild": 7
+      "maxBuild": 8
     }
   },
   "testflight": {}
