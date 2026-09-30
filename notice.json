@@ -2,7 +2,15 @@
   "github": {
     "minBuild": 0,
     "blockMessage": "Phiên bản này đã ngừng hoạt động. Vui lòng tải bản mới.",
-    "blockURL": "https://github.com/kyozxx/PS-Translator/releases/latest"
+    "blockURL": "https://github.com/kyozxx/PS-Translator/releases/latest",
+    "notice": {
+      "id": "v1.0.4",
+      "title": "Đã có bản 1.0.4",
+      "message": "Thêm chế độ màn hình đen tiết kiệm pin, vẫn dịch và đọc phụ đề. Sửa lỗi báo mất kết nối khi đang chơi PS5.",
+      "buttonTitle": "Tải bản mới",
+      "url": "https://github.com/kyozxx/PS-Translator/releases/latest",
+      "maxBuild": 6
+    }
   },
   "testflight": {}
 }
