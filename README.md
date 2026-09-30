@@ -73,6 +73,14 @@ Nếu không có máy tính hoặc không muốn sideload thủ công, hãy vào
 
 **Khuyến nghị:** nên dùng **một tài khoản phụ để kết nối Remote Play**, sau đó trên tay cầm chuyển sang **tài khoản chính để chơi game**.
 
+### 3. Kết nối được nhưng app không dịch lời thoại
+Nếu hình ảnh Remote Play vẫn hiển thị bình thường nhưng không thấy bản dịch:
+
+- Trên **thanh công cụ**, chọn **Chỉnh sửa khung**.
+- Điều chỉnh khung nhận diện đến đúng **khu vực hiển thị lời thoại/subtitle trong game**.
+- Nên khoanh vùng vừa đủ phần lời thoại, tránh lấy quá nhiều khu vực khác trên màn hình.
+- Sau khi chọn đúng vùng, app sẽ nhận diện lời thoại trong khu vực này và tiến hành dịch.
+
 ## Ủng hộ
 
 PS Translator được phát hành miễn phí.
