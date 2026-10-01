@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hướng Dẫn Cài Đặt PS5 & Bật Remote Play - PS Translator</title>
+    <title>PS Translator: Hướng dẫn cho người mới &amp; lỗi thường gặp</title>
     <style>
         :root {
             --bg-color: #0b0f19;
@@ -210,6 +210,25 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        html { scroll-behavior: smooth; }
+        a { color: var(--accent-blue); text-underline-offset: 3px; }
+        a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 4px; }
+        .quick-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0; }
+        .quick-nav a { padding: 8px 12px; background: var(--badge-bg); border: 1px solid var(--card-border); border-radius: 8px; text-decoration: none; }
+        h3 { font-size: 17px; margin: 20px 0 10px; }
+        .success-box { border-left: 3px solid var(--accent-green); background: rgba(34,197,94,.08); padding: 12px 14px; border-radius: 8px; margin: 14px 0; }
+        .success-box p { margin: 0; color: var(--text-primary); }
+        details { border: 1px solid var(--card-border); border-radius: 10px; margin: 12px 0; background: var(--bg-color); }
+        summary { padding: 14px; cursor: pointer; font-weight: 600; }
+        details .answer { padding: 0 16px 8px; }
+        .small { font-size: 13px; }
+        code { overflow-wrap: anywhere; }
+        .path-box { overflow-wrap: anywhere; }
+        .image-note { padding: 16px; margin: 0; font-size: 13px; }
+        @media (max-width: 540px) { body { padding: 20px 12px; } .card { padding: 18px; } h1 { font-size: 25px; } .card-title { font-size: 18px; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+        @media print { body { background: white; color: #111; padding: 0; } .card, details { background: white; box-shadow: none; break-inside: avoid; } p, li, .subtitle, .card-title, h1, p strong, li strong { color: #111; } .path-box { background: #eee; color: #111; } .quick-nav { display: none; } }
     </style>
 </head>
 <body>
@@ -217,18 +236,37 @@
 <div class="container">
     <header>
         <span class="app-badge">PS Translator Guide</span>
-        <h1>Hướng Dẫn Bật Remote Play & Cài Đặt PS5</h1>
-        <p class="subtitle">Các bước chuẩn bị trên máy PlayStation 5 để ghép nối và dịch phụ đề mượt mà</p>
+        <h1>Hướng dẫn Remote Play cho người mới</h1>
+        <p class="subtitle">Từ chuẩn bị máy, ghép nối lần đầu đến dịch phụ đề và xử lý lỗi thường gặp</p>
     </header>
 
+
+    <nav class="quick-nav" aria-label="Mục lục hướng dẫn">
+        <a href="#start">Chuẩn bị</a><a href="#console">Cài đặt máy</a><a href="#account">Account ID</a>
+        <a href="#first-play">Kết nối &amp; dịch</a><a href="#errors">Lỗi thường gặp</a><a href="#help">Cần hỗ trợ</a>
+    </nav>
+    <section class="card" id="start">
+        <div class="card-header"><h2 class="card-title">Trước khi bắt đầu</h2></div>
+        <p>Hướng dẫn này dành cho PS Translator trên iPhone/iPad và máy PlayStation 5. App gọi máy là <strong>PX5</strong>; tên mục trong cài đặt máy được ghi bằng tiếng Anh để bạn dễ tìm.</p>
+        <ul>
+            <li>Bật máy và TV trong lần ghép nối đầu tiên. Chuẩn bị tài khoản PSN đã đăng nhập trên máy.</li>
+            <li>Cho iPhone/iPad và máy vào cùng mạng gia đình. Máy cắm LAN, điện thoại dùng Wi-Fi trên cùng router vẫn được; tránh Wi-Fi khách vì có thể chặn thiết bị nhìn thấy nhau.</li>
+            <li>Khi iPhone hỏi quyền <strong>Mạng cục bộ (Local Network)</strong>, chọn <strong>Cho phép</strong>.</li>
+            <li>Chuẩn bị ba thông tin: địa chỉ IP của máy, Account ID và mã PIN ghép nối 8 số.</li>
+        </ul>
+        <div class="path-box">Bật Remote Play → Chọn tài khoản → Nhập IP → Lấy Account ID → Lấy PIN → Ghép nối → Kết nối → Quét phụ đề</div>
+        <p class="small">IP là địa chỉ của máy trong mạng nhà. Account ID là mã tài khoản PSN, không phải email hay tên Online ID. PIN là mã ghép nối tạm thời trên TV, không phải mật khẩu PSN.</p>
+        <div class="warning-box"><h4>Phạm vi hướng dẫn</h4><p>Hãy kết nối thành công trong mạng nhà trước. Dùng qua 4G/5G hoặc từ mạng khác cần khả năng kết nối từ xa phù hợp; nhập IP nội bộ của máy không đủ để truy cập từ ngoài nhà.</p></div>
+    </section>
+
     <!-- BƯỚC 1 -->
-    <div class="card">
+    <div class="card" id="console">
         <div class="card-header">
             <span class="step-num">1</span>
-            <h2 class="card-title">Bật Remote Play (Cho phép chơi từ xa) trên PS5</h2>
+            <h2 class="card-title">Bật Remote Play (Cho phép chơi từ xa) trên PX5</h2>
         </div>
         
-        <p>Để ứng dụng PS Translator có thể nhận diện và truyền hình ảnh từ máy PS5, bạn bắt buộc phải bật tính năng chơi từ xa.</p>
+        <p>Để ứng dụng PS Translator có thể nhận diện và truyền hình ảnh từ máy PX5, bạn bắt buộc phải bật tính năng chơi từ xa.</p>
 
         <div class="path-box">
             Cài đặt (Settings) ➔ Hệ thống (System) ➔ Chơi từ xa (Remote Play) ➔ Bật "Cho phép chơi từ xa (Enable Remote Play)"
@@ -237,7 +275,8 @@
         <p>Bật công tắc mục <strong>Cho phép chơi từ xa (Enable Remote Play)</strong> sang trạng thái mở (On như trong ảnh dưới).</p>
 
         <div class="img-container">
-            <img src="screenshots/05-ps5-remote-play.png" alt="Bật Enable Remote Play trên PS5">
+            <img src="screenshots/05-ps5-remote-play.png" alt="Bật Enable Remote Play trên PX5" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+            <p class="image-note" hidden>Ảnh chưa được đính kèm. Làm theo đường dẫn Settings → System → Remote Play ở trên.</p>
             <div class="img-caption">Màn hình Cài đặt Hệ thống: Bật mục Enable Remote Play</div>
         </div>
     </div>
@@ -246,27 +285,43 @@
     <div class="card">
         <div class="card-header">
             <span class="step-num">2</span>
-            <h2 class="card-title">Kiểm tra User đang hoạt động trên PS5 (CỰC KỲ QUAN TRỌNG)</h2>
+            <h2 class="card-title">Kiểm tra User đang hoạt động trên PX5 (CỰC KỲ QUAN TRỌNG)</h2>
         </div>
 
         <div class="warning-box">
             <h4>Lưu ý về tài khoản ghép nối</h4>
-            <p>Tài khoản User đang hiển thị và hoạt động trên màn hình PS5 <strong>bắt buộc phải trùng khớp</strong> với tài khoản PlayStation Network (PSN) mà bạn dùng để đăng nhập lấy Account ID trên app PS Translator.</p>
+            <p>Tài khoản User đang hiển thị và hoạt động trên màn hình PX5 <strong>bắt buộc phải trùng khớp</strong> với tài khoản PlayStation Network (PSN) mà bạn dùng để đăng nhập lấy Account ID trên app PS Translator.</p>
         </div>
 
-        <p>Trên màn hình chính của PS5, nhìn lên góc trên bên phải và chọn vào <strong>Ảnh đại diện (Avatar)</strong>:</p>
+        <p>Trên màn hình chính của PX5, nhìn lên góc trên bên phải và chọn vào <strong>Ảnh đại diện (Avatar)</strong>:</p>
 
         <ul>
-            <li>Xem chính xác tên User và tài khoản đang đăng nhập (ví dụ trong ảnh là <strong>Kyozx Mimi</strong>).</li>
+            <li>Xem chính xác tên User và tài khoản đang đăng nhập (kiểm tra tài khoản PSN của người dùng này, không chỉ tên hiển thị).</li>
             <li>Khi vào màn hình Ghép nối của app PS Translator và bấm <strong>Đăng nhập tài khoản trong Safari</strong>, hãy đăng nhập <strong>đúng tài khoản PSN này</strong>.</li>
-            <li><strong>Tại sao cần trùng khớp?</strong> Giao thức của Sony yêu cầu Account ID đã xác thực phải thuộc quyền sở hữu của User đang mở trên máy. Nếu tài khoản khác nhau hoặc đang ở chế độ Khách (Guest), PS5 sẽ báo lỗi <em>"PS5 từ chối đăng ký"</em>.</li>
+            <li><strong>Tại sao cần trùng khớp?</strong> Account ID dùng để ghép nối cần thuộc tài khoản PSN bạn chọn trên máy. Nếu nhầm tài khoản, ghép nối có thể bị từ chối; khi gặp lỗi, hãy kiểm tra cả tài khoản, mã PIN và mạng.</li>
         </ul>
 
         <div class="img-container">
-            <img src="screenshots/06-ps5-user-match.png" alt="Kiểm tra User trên PS5">
+            <img src="screenshots/06-ps5-user-match.png" alt="Kiểm tra User trên PX5" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+            <p class="image-note" hidden>Ảnh chưa được đính kèm. Mở ảnh đại diện góc trên bên phải màn hình chính để kiểm tra người dùng.</p>
             <div class="img-caption">Menu tài khoản ở góc trên bên phải: Đảm bảo trùng khớp với tài khoản đăng nhập trên app</div>
         </div>
     </div>
+
+
+    <section class="card" id="account">
+        <div class="card-header"><h2 class="card-title">Lấy Account ID trong app, làm trước khi lấy PIN</h2></div>
+        <ol>
+            <li>Mở màn <strong>Ghép nối PX5</strong>. Chọn loại máy PX5, nhập IP hoặc bấm <strong>Tự tìm máy</strong>.</li>
+            <li>Ở mục <strong>Account ID</strong>, bấm <strong>Đăng nhập tài khoản trong Safari</strong>.</li>
+            <li>Đăng nhập đúng tài khoản PSN đã chọn trên máy. Nếu dùng nick phụ cho Remote Play, đăng nhập nick phụ ở bước này.</li>
+            <li>Sau khi đăng nhập, Safari có thể hiện trang trắng hoặc trang lỗi. Chạm thanh địa chỉ và sao chép <strong>toàn bộ đường dẫn có chứa <code>code=</code></strong>.</li>
+            <li>Quay lại app ngay. Dán vào ô <strong>Dán link trang trắng (hoặc Account ID)</strong>; app sẽ tự xử lý. Nếu cần, bấm <strong>Lấy Account ID</strong>.</li>
+            <li>Đợi thông báo <strong>Đã có Account ID</strong>, sau đó mới mở màn lấy PIN trên máy để tránh PIN hết hạn trong lúc đăng nhập.</li>
+        </ol>
+        <div class="success-box"><p>Hoàn thành khi app báo đã có Account ID. Bạn không cần tự chuyển đổi mã hay nhập email vào ô này.</p></div>
+        <div class="warning-box"><h4>Giữ riêng thông tin đăng nhập</h4><p>Chỉ đăng nhập qua Safari từ nút trong app. Không gửi mật khẩu, mã xác minh, Account ID, PIN hoặc link chứa <code>code=</code> cho người hỗ trợ. Nếu link hết hạn, mở lại nút đăng nhập để lấy link mới.</p></div>
+    </section>
 
     <!-- BƯỚC 3 -->
     <div class="card">
@@ -277,7 +332,7 @@
 
         <ol>
             <li>
-                <strong>Lấy địa chỉ IP của PS5:</strong>
+                <strong>Lấy địa chỉ IP của PX5:</strong>
                 <div class="path-box" style="margin-top: 6px;">
                     Cài đặt (Settings) ➔ Mạng (Network) ➔ Trạng thái kết nối (Connection Status) ➔ Xem trạng thái kết nối (View Connection Status)
                 </div>
@@ -288,7 +343,7 @@
                 <div class="path-box" style="margin-top: 6px;">
                     Cài đặt (Settings) ➔ Hệ thống (System) ➔ Chơi từ xa (Remote Play) ➔ Liên kết thiết bị (Pair Device / Link Device)
                 </div>
-                Trên TV sẽ hiện một mã gồm <strong>8 chữ số</strong> và đồng hồ đếm ngược (300 giây). Nhập ngay 8 số này vào ô <em>Mã PIN</em> trên app rồi bấm <strong>Ghép nối</strong>.
+                Trên TV sẽ hiện một mã gồm <strong>8 chữ số</strong> và đồng hồ đếm ngược. Nhập ngay 8 số này vào ô <em>Mã PIN</em> trên app rồi bấm <strong>Ghép nối</strong>.
             </li>
         </ol>
     </div>
@@ -300,17 +355,101 @@
             <h2 class="card-title">Mẹo: Không bị ngắt tay cầm DualSense khi kết nối</h2>
         </div>
 
-        <p>Khi ứng dụng bắt đầu phát hình ảnh Remote Play, máy PS5 có thể sẽ tự động ngắt kết nối của tay cầm điều khiển vật lý. Bạn có thể áp dụng 1 trong 2 cách sau:</p>
+        <p>Khi ứng dụng bắt đầu phát hình ảnh Remote Play, máy PX5 có thể sẽ tự động ngắt kết nối của tay cầm điều khiển vật lý. Bạn có thể áp dụng 1 trong 2 cách sau:</p>
 
         <ul>
-            <li><strong>Cách nhanh:</strong> Nhấn giữ nút <strong>PS</strong> trên tay cầm trong 2 giây, sau đó chọn lại User bạn muốn chơi trên màn hình TV để tiếp tục.</li>
-            <li><strong>Cách tối ưu (Khuyến nghị):</strong> Tạo hoặc dùng một tài khoản phụ (nick phụ) để ghép nối với app PS Translator. Khi kết nối, app sẽ chiếm luồng của nick phụ, còn bạn đăng nhập nick chính trên tay cầm DualSense để chơi mà không lo bị ngắt kết nối.</li>
+            <li><strong>Cách nhanh:</strong> Nhấn nút <strong>PS</strong> trên tay cầm và chọn một người dùng khác với tài khoản đang dùng cho Remote Play. Nếu dùng cùng tài khoản, phiên Remote Play có thể bị ngắt.</li>
+            <li><strong>Cách tối ưu (Khuyến nghị):</strong> Dùng tài khoản PSN phụ để ghép nối: chọn người dùng phụ trên PX5, lấy Account ID của chính tài khoản phụ trong Safari, rồi nhập PIN và ghép nối. Sau khi app kết nối, dùng tay cầm chọn người dùng chính để chơi. Đây là hai tài khoản khác nhau; không dùng Account ID của nick chính để ghép với nick phụ.</li>
         </ul>
     </div>
 
+
+    <section class="card" id="first-play">
+        <div class="card-header"><h2 class="card-title">Sau khi ghép nối: kết nối và dịch câu đầu tiên</h2></div>
+        <ol>
+            <li>Đợi app báo ghép nối thành công. Mở <strong>Chơi từ xa</strong> rồi bấm <strong>Kết nối</strong>.</li>
+            <li>Kiểm tra hình từ máy đã hiện và chuyển động trong app. Ghép nối chỉ lưu thông tin máy; bạn vẫn cần bấm Kết nối để xem hình.</li>
+            <li>Trong game, bật phụ đề và chọn ngôn ngữ <strong>English</strong>. Đến một đoạn có hội thoại và phụ đề rõ.</li>
+            <li>Chọn <strong>Quét vùng</strong>, dùng nút khung cắt để đặt vùng quét bao trọn phụ đề tiếng Anh. Có thể thử <strong>Quét toàn màn hình</strong> nếu chưa biết đặt khung ở đâu.</li>
+            <li>Trong mục <strong>Bộ dịch</strong>, chọn bộ dịch và kiểm tra cấu hình. Với Dịch thuật Apple, cài app Dịch thuật của Apple và tải gói Tiếng Anh, Tiếng Việt. Với CloudAPI hoặc Gemini, nhập khóa API của bạn.</li>
+            <li>Đợi câu phụ đề tiếp theo và kiểm tra bản dịch tiếng Việt. Khi đã hoạt động, tạo một hồ sơ riêng cho game để lưu vùng quét và phong cách dịch.</li>
+        </ol>
+        <div class="success-box"><p>Kiểm tra theo thứ tự: có hình → có phụ đề tiếng Anh trong vùng quét → nhận được chữ → có bản dịch tiếng Việt. Dừng ở bước chưa đạt để sửa đúng phần.</p></div>
+        <p class="small">Bạn thường chỉ cần ghép nối một lần. Những lần sau chỉ cần bật máy, kiểm tra IP rồi Kết nối; ghép lại khi đổi máy hoặc đổi tài khoản PSN.</p>
+        <h3>Bật máy từ chế độ nghỉ</h3>
+        <div class="path-box">Settings → System → Power Saving → Features Available in Rest Mode</div>
+        <p>Bật <strong>Stay Connected to the Internet</strong> và <strong>Enable Turning On PS5 from Network</strong>. Sau đó để máy ở Rest Mode và dùng nút <strong>Bật PX5</strong> trong app. Máy tắt hẳn cần được bật trực tiếp.</p>
+        <p class="small">Các tùy chọn Remote Play và chế độ nghỉ: <a href="https://www.playstation.com/en-us/support/games/remote-play-settings/" target="_blank" rel="noopener noreferrer">hướng dẫn chính thức của PlayStation</a>.</p>
+    </section>
+
+    <section class="card" id="errors">
+        <div class="card-header"><h2 class="card-title">Tổng hợp lỗi thường gặp</h2></div>
+        <p>Chạm vào lỗi giống tình trạng của bạn và làm theo thứ tự. Đây là các bước kiểm tra, không phải mọi lỗi đều có cùng nguyên nhân.</p>
+        <details open><summary>1. Tự tìm máy không thấy PX5 hoặc kết nối bị hết thời gian</summary><div class="answer"><ol>
+            <li>Bật máy trực tiếp, kiểm tra máy và điện thoại cùng mạng nhà. Tạm ngắt VPN nếu đang bật; tránh Wi-Fi khách.</li>
+            <li>Trên iPhone vào <strong>Cài đặt → Quyền riêng tư &amp; Bảo mật → Mạng cục bộ</strong>, bật quyền cho PS Translator. Có thể tìm quyền này trong Cài đặt → Ứng dụng → PS Translator, tùy phiên bản iOS.</li>
+            <li>Xem lại IPv4 Address trên máy và nhập thủ công. Không tìm thấy tự động chưa chắc có nghĩa là không kết nối được.</li>
+            <li>Nếu vừa đổi router hoặc khởi động lại mạng, IP có thể đã đổi. Cập nhật IP trước khi thử lại.</li>
+        </ol><p class="small">Kết quả cần đạt: app kết nối được với địa chỉ IP hiện tại của máy.</p></div></details>
+        <details><summary>2. Máy từ chối đăng ký hoặc ghép nối thất bại</summary><div class="answer"><ol>
+            <li>Kiểm tra đã bật Enable Remote Play và chọn đúng loại máy PX5 trong app.</li>
+            <li>Chọn đúng người dùng trên máy; Account ID trong app phải lấy từ tài khoản PSN của người dùng đó.</li>
+            <li>Mở Pair Device để lấy PIN mới. Nhập đủ 8 chữ số trước khi đồng hồ hết hạn, giữ cả số 0 ở đầu nếu có.</li>
+            <li>Nếu vẫn thất bại, kiểm tra lại IP và quyền Mạng cục bộ theo lỗi số 1 rồi thử ghép nối lại.</li>
+        </ol></div></details>
+        <details><summary>3. Không biết lấy Account ID ở đâu, nhập email không được</summary><div class="answer"><p>Account ID khác email, mật khẩu và tên Online ID. Làm theo <a href="#account">phần lấy Account ID trong Safari</a>, chờ app báo Đã có Account ID rồi mới ghép nối.</p></div></details>
+        <details><summary>4. Đăng nhập Safari xong hiện trang trắng hoặc trang lỗi</summary><div class="answer"><p>Nếu đường dẫn trên thanh địa chỉ có <code>code=</code>, hãy sao chép toàn bộ link và dán ngay vào app. Đây là luồng lấy Account ID hiện tại của app; không cần đợi trang hiện nội dung.</p><p>Nếu link không có <code>code=</code>, đăng nhập chưa hoàn tất. Mở lại từ nút trong app và hoàn thành các bước Sony yêu cầu.</p></div></details>
+        <details><summary>5. Báo phiên đăng nhập không hợp lệ hoặc invalid_grant</summary><div class="answer"><p>Mã trong đường dẫn có thể đã hết hạn hoặc đã được dùng. Bấm Đăng nhập tài khoản trong Safari để bắt đầu lượt mới, sao chép link mới và dán ngay; không dùng lại link cũ.</p></div></details>
+        <details><summary>6. Ghép nối thành công nhưng không có hình</summary><div class="answer"><ol>
+            <li>Mở Chơi từ xa và bấm Kết nối. Thông báo đã ghép nối không đồng nghĩa phiên phát hình đã bắt đầu.</li>
+            <li>Bật máy trực tiếp để thử lần đầu; kiểm tra IP hiện tại.</li>
+            <li>Đóng phiên Remote Play đang mở trên thiết bị hoặc ứng dụng khác, rồi kết nối lại.</li>
+            <li>Thử về màn hình chính của máy. Nếu chỉ một game hoặc nội dung không truyền được, kiểm tra giới hạn Remote Play của nội dung đó.</li>
+        </ol></div></details>
+        <details><summary>7. Không đánh thức được máy đang nghỉ</summary><div class="answer"><p>Bật máy bằng nút nguồn hoặc tay cầm để kiểm tra kết nối trước. Sau đó bật hai tùy chọn mạng trong <a href="#first-play">Features Available in Rest Mode</a> và để máy ở Rest Mode. Nếu máy đã tắt hẳn, hãy bật trực tiếp.</p></div></details>
+        <details><summary>8. Tay cầm DualSense bị ngắt khi app kết nối</summary><div class="answer"><p>Tay cầm và Remote Play có thể tranh cùng người dùng. Dùng tài khoản phụ để ghép nối app, còn tài khoản chính để chơi bằng tay cầm. Khi ghép nối, chọn nick phụ trên máy và lấy Account ID của nick phụ; sau khi kết nối mới chọn nick chính bằng tay cầm.</p></div></details>
+        <details><summary>9. Hình bị giật, trễ hoặc kết nối hay rớt</summary><div class="answer"><ol>
+            <li>Ưu tiên máy cắm LAN, điện thoại dùng Wi-Fi 5 GHz gần router.</li>
+            <li>Tạm dừng tải game, tải file lớn hoặc thiết bị đang chiếm nhiều mạng; thử lại trong cùng mạng nhà.</li>
+            <li>Nếu đã thay đổi chất lượng phát hình, thử mức thấp hơn rồi tăng dần khi ổn định.</li>
+            <li>Nếu vẫn xảy ra, ghi lại lỗi xảy ra ngay khi kết nối hay sau một thời gian để gửi hỗ trợ.</li>
+        </ol><p class="small">Tham khảo thêm: <a href="https://www.playstation.com/en-in/support/games/ps4-remote-play-connection-troubleshooting/" target="_blank" rel="noopener noreferrer">xử lý lỗi kết nối Remote Play của PlayStation</a>.</p></div></details>
+        <details><summary>10. Có hình nhưng không nhận chữ hoặc bỏ sót phụ đề</summary><div class="answer"><ol>
+            <li>Bật phụ đề English trong game và thử ở đoạn hội thoại có chữ rõ.</li>
+            <li>Chỉnh vùng quét bao trọn cả hai dòng phụ đề, tránh cắt mất chữ ở mép. Nếu đổi game hoặc hồ sơ, kiểm tra lại khung.</li>
+            <li>Thử Quét toàn màn hình để kiểm tra có phải khung quét đang đặt sai vị trí.</li>
+            <li>Nếu hình mờ hoặc vỡ, xử lý chất lượng kết nối trước để chữ dễ đọc hơn.</li>
+        </ol></div></details>
+        <details><summary>11. Nhận được chữ tiếng Anh nhưng không có bản dịch</summary><div class="answer"><ol>
+            <li>Mở Bộ dịch để kiểm tra bộ dịch đang chọn.</li>
+            <li>Với Apple: kiểm tra app Dịch thuật và gói ngôn ngữ Tiếng Anh, Tiếng Việt đã tải xong.</li>
+            <li>Với CloudAPI/Gemini: kiểm tra kết nối internet, khóa API và hạn mức tài khoản; đọc thông báo lỗi của nhà cung cấp.</li>
+            <li>Thử lại với một câu phụ đề mới, ngắn và rõ. Không chia sẻ khóa API khi nhờ hỗ trợ.</li>
+        </ol></div></details>
+        <details><summary>12. Có bản dịch nhưng không nghe giọng đọc</summary><div class="answer"><ol>
+            <li>Kiểm tra đã bật đọc phụ đề và chọn giọng trong mục Giọng đọc.</li>
+            <li>Tăng âm lượng phương tiện; kiểm tra âm thanh có đang chuyển sang tai nghe hoặc thiết bị Bluetooth khác.</li>
+            <li>Chạm khung phụ đề để thử đọc lại. Nếu giọng cần tải dữ liệu, đợi tải xong hoặc thử giọng Apple có sẵn.</li>
+        </ol></div></details>
+        <details><summary>13. Về nhà dùng được, ra ngoài dùng 4G/5G lại không được</summary><div class="answer"><p>Địa chỉ IP nội bộ trong nhà không truy cập trực tiếp được từ mạng di động. Hướng dẫn này chỉ bao gồm kết nối cùng mạng; hãy kiểm tra khả năng hỗ trợ kết nối ngoài mạng của phiên bản app trước khi cấu hình router. Không cần mở cổng router để ghép nối trong mạng nhà.</p></div></details>
+    </section>
+
+    <section class="card" id="help">
+        <div class="card-header"><h2 class="card-title">Nếu vẫn chưa xử lý được</h2></div>
+        <p>Gửi mô tả theo mẫu sau để người hỗ trợ biết bạn đang vướng ở bước nào:</p>
+        <ul>
+            <li>Thiết bị, phiên bản iOS/iPadOS và phiên bản PS Translator.</li>
+            <li>Đang ghép nối, kết nối, nhận chữ, dịch hay đọc phụ đề.</li>
+            <li>Nội dung thông báo lỗi; lỗi xuất hiện sau thao tác nào.</li>
+            <li>Đang cùng mạng nhà hay mạng khác; máy dùng LAN hay Wi-Fi.</li>
+            <li>Các bước đã thử và kết quả từng bước.</li>
+        </ul>
+        <p class="small">Nếu gửi ảnh, che email, Account ID, IP, mã PIN, khóa API và link đăng nhập. Không gửi mật khẩu hoặc mã xác minh. Liên hệ: <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">cộng đồng PS Translator</a>.</p>
+    </section>
+
     <footer>
         <p>PS Translator &copy; 2026. Phát hành miễn phí cho cộng đồng game thủ.</p>
-        <p style="margin-top: 6px;">Hỗ trợ & Thông báo: <a href="https://t.me/pstranslator" target="_blank">t.me/pstranslator</a></p>
+        <p style="margin-top: 6px;">Hỗ trợ & Thông báo: <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">t.me/pstranslator</a></p>
     </footer>
 </div>
 
