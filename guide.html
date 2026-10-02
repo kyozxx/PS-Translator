@@ -68,7 +68,7 @@
 
         /* Overview */
         .overview {
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 18px;
+            display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 18px;
         }
         .overview a {
             text-decoration: none; text-align: center; border-radius: 12px; padding: 10px 4px;
@@ -93,6 +93,16 @@
         .s3 { --accent: var(--green); }
         .s4 { --accent: var(--orange); }
         .s5 { --accent: var(--pink); }
+        .s6 { --accent: var(--amber); }
+        .styles { display: grid; gap: 8px; margin-top: 10px; }
+        .style {
+            background: #1a2438; border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px;
+        }
+        .style b { color: var(--text); font-size: 15px; }
+        .style .for { float: right; font-size: 12px; color: var(--amber); font-weight: 600; }
+        .style p { margin: 2px 0 0; font-size: 14px; }
+        .style q { display: block; margin-top: 4px; color: var(--text); font-size: 14px; font-style: italic; quotes: "\201C" "\201D"; }
+        .group-label { font-size: 13px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 14px 0 0; }
 
         h3 { font-size: 16px; margin: 14px 0 6px; color: var(--text); }
         ol, ul { padding-left: 22px; color: var(--muted); font-size: 15px; }
@@ -193,6 +203,7 @@
         <a href="#ps5"><b>2</b>Chỉnh PS5</a>
         <a href="#account"><b>3</b>Ghép nối</a>
         <a href="#choi"><b>4</b>Chơi</a>
+        <a href="#phong-cach"><b>5</b>Văn phong</a>
     </nav>
 
     <section class="card s1" id="cai-app">
@@ -316,6 +327,49 @@
                 <figcaption>Giọng đọc: tải thêm giọng nam, bật Đọc theo cảm xúc</figcaption>
             </figure>
         </div>
+    </section>
+
+    <section class="card s6" id="phong-cach">
+        <h2><span class="num">5</span>Chọn văn phong dịch</h2>
+        <p class="why">Cùng một câu, mỗi game hợp một cách nói khác nhau. Chọn văn phong để bản dịch nghe đúng chất nhân vật.</p>
+        <div class="ps-path"><span>Cài đặt</span><i>→</i><span>Hồ sơ game</span><i>→</i><span>Phong cách dịch</span></div>
+        <p>Mỗi hồ sơ game lưu văn phong riêng. Ví dụ tạo hồ sơ "GTA" để giọng giang hồ, hồ sơ "RDR2" để giọng cao bồi, đổi game là đổi hồ sơ, không phải chỉnh lại.</p>
+        <figure class="phone">
+            <img src="screenshots/guide/07-style-picker.jpg" alt="Danh sách phong cách dịch" loading="lazy">
+            <figcaption>Bấm vào ô Phong cách dịch để chọn</figcaption>
+        </figure>
+
+        <p class="group-label">Cho game</p>
+        <p style="margin-bottom:0">Câu gốc ví dụ: <em>"Get in the car, we don't have time!"</em></p>
+        <div class="styles">
+            <div class="style"><span class="for">Mặc định</span><b>Tự nhiên</b>
+                <p>Dễ nghe, xưng tôi, bạn. Hợp với hầu hết game.</p>
+                <q>Lên xe đi, chúng ta không còn thời gian đâu!</q></div>
+            <div class="style"><span class="for">Game nhiều cốt truyện</span><b>Sát nghĩa</b>
+                <p>Bám sát câu gốc, không thêm bớt ý.</p>
+                <q>Vào xe đi, chúng ta không có thời gian!</q></div>
+            <div class="style"><span class="for">Game tình cảm</span><b>Anh – em</b>
+                <p>Người nói xưng anh, gọi người nghe là em.</p>
+                <q>Lên xe đi em, bọn anh không còn thời gian đâu!</q></div>
+            <div class="style"><span class="for">GTA, game giang hồ</span><b>Bụi bặm, đường phố</b>
+                <p>Xưng tao, mày, giữ tiếng lóng đúng chất đường phố.</p>
+                <q>Lên xe mau, tao với mày hết thời gian rồi!</q></div>
+            <div class="style"><span class="for">Red Dead Redemption</span><b>Cao bồi miền Tây</b>
+                <p>Mộc mạc, phong trần như phim cao bồi.</p>
+                <q>Lên xe mau đi anh bạn, ta chẳng còn thì giờ đâu!</q></div>
+        </div>
+
+        <p class="group-label">Cho video YouTube</p>
+        <div class="styles">
+            <div class="style"><b>Podcast</b><p>Như đang trò chuyện, gần gũi, dễ nghe.</p></div>
+            <div class="style"><b>Thuyết minh</b><p>Giọng điềm tĩnh như phim tài liệu.</p></div>
+            <div class="style"><b>Tin tức</b><p>Trung lập, ngắn gọn, giữ đúng tên và số liệu.</p></div>
+            <div class="style"><b>Học tập</b><p>Giữ đúng thuật ngữ, câu gọn, dễ hiểu.</p></div>
+            <div class="style"><b>Prompt riêng</b><p>Tự viết yêu cầu cho AI, ví dụ cách xưng hô hay tên nhân vật cần giữ nguyên.</p></div>
+        </div>
+
+        <div class="box warn"><strong>Văn phong đầy đủ cần bộ dịch AI</strong>Văn phong chỉ được áp dụng trọn vẹn khi dùng <strong>Apple Intelligence, CloudAPI hoặc Gemini</strong> (các bộ dịch có nhãn AI HỖ TRỢ). Với Dịch thuật Apple, app chỉ đổi được cách xưng hô cho hai kiểu Anh – em và Bụi bặm, đường phố.</div>
+        <p style="font-size:13px;margin-top:8px">Các câu dịch mẫu ở trên chỉ để minh hoạ, bản dịch thật có thể khác tuỳ bộ dịch.</p>
     </section>
 
     <section class="card s5">
