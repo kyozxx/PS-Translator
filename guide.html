@@ -20,22 +20,26 @@
     <style>
         :root {
             --bg: #0b0f19;
-            --card: #151d2f;
+            --card: #141c2d;
             --border: #24324d;
             --text: #f1f5f9;
-            --muted: #94a3b8;
+            --muted: #a3b1c6;
             --blue: #38bdf8;
-            --amber: #f59e0b;
+            --purple: #a78bfa;
+            --green: #34d399;
+            --orange: #fb923c;
+            --amber: #fbbf24;
+            --pink: #f472b6;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.65;
             padding: 28px 16px 40px;
         }
-        .wrap { max-width: 640px; margin: 0 auto; }
+        .wrap { max-width: 660px; margin: 0 auto; }
         a { color: var(--blue); }
 
         header { text-align: center; margin-bottom: 22px; }
@@ -46,10 +50,11 @@
         h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.4px; }
         .tagline { color: var(--muted); font-size: 15px; margin-top: 4px; }
 
+        /* Telegram */
         .tg {
             display: block; text-decoration: none; text-align: center;
             background: linear-gradient(135deg, #229ed9, #1b7fc4);
-            border-radius: 20px; padding: 22px 18px; margin-bottom: 22px;
+            border-radius: 20px; padding: 22px 18px; margin-bottom: 18px;
             box-shadow: 0 12px 30px -8px rgba(34, 158, 217, 0.55);
         }
         .tg h2 { color: #fff; font-size: 21px; font-weight: 800; }
@@ -61,45 +66,101 @@
         }
         .tg small { display: block; color: #e0f2fe; font-size: 13px; margin-top: 10px; }
 
-        .card {
-            background: var(--card); border: 1px solid var(--border);
-            border-radius: 16px; padding: 18px; margin-bottom: 14px;
+        /* Overview */
+        .overview {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 18px;
         }
-        .card h2 { display: flex; align-items: center; gap: 10px; font-size: 18px; margin-bottom: 10px; }
+        .overview a {
+            text-decoration: none; text-align: center; border-radius: 12px; padding: 10px 4px;
+            background: var(--card); border: 1px solid var(--border); font-size: 13px; color: var(--muted);
+        }
+        .overview b { display: block; font-size: 18px; }
+
+        /* Step cards: each step has its own soft colour */
+        .card {
+            background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent, var(--blue));
+            border-radius: 16px; padding: 18px; margin-bottom: 16px;
+        }
+        .card h2 { display: flex; align-items: center; gap: 10px; font-size: 19px; margin-bottom: 4px; }
+        .card .why { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
         .num {
             display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
-            width: 28px; height: 28px; border-radius: 50%;
-            background: var(--blue); color: var(--bg); font-size: 14px; font-weight: 800;
+            width: 30px; height: 30px; border-radius: 50%;
+            background: var(--accent, var(--blue)); color: var(--bg); font-size: 15px; font-weight: 800;
         }
-        ol, ul { padding-left: 20px; color: var(--muted); font-size: 15px; }
-        li { margin-bottom: 6px; }
+        .s1 { --accent: var(--blue); }
+        .s2 { --accent: var(--purple); }
+        .s3 { --accent: var(--green); }
+        .s4 { --accent: var(--orange); }
+        .s5 { --accent: var(--pink); }
+
+        h3 { font-size: 16px; margin: 14px 0 6px; color: var(--text); }
+        ol, ul { padding-left: 22px; color: var(--muted); font-size: 15px; }
+        li { margin-bottom: 8px; }
         li strong, p strong { color: var(--text); }
         p { color: var(--muted); font-size: 15px; margin-bottom: 8px; }
-        code { color: var(--text); }
-        .path {
-            background: #1e293b; border-left: 3px solid var(--blue); border-radius: 6px;
-            padding: 8px 12px; margin: 6px 0 10px; font-size: 14px; color: var(--text);
+        code { color: var(--text); background: #1e293b; padding: 1px 6px; border-radius: 4px; }
+
+        /* A button in the app */
+        .btn-app {
+            display: inline-block; background: rgba(56, 189, 248, 0.15); color: var(--blue);
+            border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 9999px;
+            padding: 0 9px; font-weight: 600; font-size: 14px; white-space: nowrap;
         }
-        .tip {
-            border-left: 3px solid var(--amber); background: rgba(245, 158, 11, 0.08);
-            border-radius: 6px; padding: 10px 12px; margin-top: 10px; font-size: 14px; color: var(--muted);
+        /* A menu path on the PS5 */
+        .ps-path { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 6px 0 10px; }
+        .ps-path span {
+            background: #1e293b; border: 1px solid var(--border); border-radius: 8px;
+            padding: 3px 9px; font-size: 13px; color: var(--text);
         }
-        .tip strong { color: var(--amber); }
+        .ps-path span:last-child { border-color: var(--accent, var(--blue)); color: var(--accent, var(--blue)); font-weight: 700; }
+        .ps-path i { color: var(--muted); font-style: normal; font-size: 13px; }
+
+        .box { border-radius: 10px; padding: 11px 13px; margin-top: 12px; font-size: 14px; color: var(--muted); }
+        .box > strong:first-child { display: block; margin-bottom: 2px; }
+        .box.tip { background: rgba(52, 211, 153, 0.08); border: 1px solid rgba(52, 211, 153, 0.3); }
+        .box.tip > strong:first-child { color: var(--green); }
+        .box.warn { background: rgba(251, 191, 36, 0.08); border: 1px solid rgba(251, 191, 36, 0.3); }
+        .box.warn > strong:first-child { color: var(--amber); }
+        .box strong { color: var(--text); }
+
+        .toggle-list { list-style: none; padding-left: 0; }
+        .toggle-list li {
+            display: flex; gap: 10px; align-items: flex-start; background: #1a2438;
+            border: 1px solid var(--border); border-radius: 10px; padding: 9px 12px; margin-bottom: 6px;
+        }
+        .toggle-list .on {
+            flex-shrink: 0; margin-top: 3px; width: 34px; height: 20px; border-radius: 9999px;
+            background: var(--green); position: relative;
+        }
+        .toggle-list .on::after {
+            content: ""; position: absolute; right: 2px; top: 2px; width: 16px; height: 16px;
+            border-radius: 50%; background: #fff;
+        }
+        .toggle-list small { display: block; color: var(--muted); font-size: 13px; }
+        .toggle-list b { color: var(--text); font-size: 14px; }
+
         figure { margin: 10px 0 4px; }
         figure img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
+        figcaption { color: var(--muted); font-size: 13px; text-align: center; margin-top: 6px; }
 
         details {
             background: #1a2438; border: 1px solid var(--border); border-radius: 12px;
             padding: 0 14px; margin-bottom: 8px;
         }
+        details.method { border-color: rgba(52, 211, 153, 0.35); }
         summary {
             cursor: pointer; font-weight: 600; font-size: 15px; padding: 12px 0; min-height: 44px;
-            list-style: none; display: flex; justify-content: space-between; gap: 10px;
+            list-style: none; display: flex; justify-content: space-between; gap: 10px; color: var(--text);
         }
         summary::-webkit-details-marker { display: none; }
-        summary::after { content: "+"; color: var(--blue); font-weight: 800; }
+        summary::after { content: "+"; color: var(--accent, var(--blue)); font-weight: 800; font-size: 18px; line-height: 1; }
         details[open] summary::after { content: "−"; }
         details > :not(summary) { margin-bottom: 12px; }
+        .tag {
+            font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 9999px; margin-left: 6px;
+            background: rgba(52, 211, 153, 0.15); color: var(--green); vertical-align: middle;
+        }
 
         footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 22px; }
     </style>
@@ -110,127 +171,164 @@
     <header>
         <img class="app-icon" src="assets/icon-180.png" alt="Biểu tượng Console Translator" width="88" height="88">
         <h1>Console Translator</h1>
-        <p class="tagline">Dịch phụ đề game PS5 sang tiếng Việt và đọc to, ngay trên iPhone</p>
+        <p class="tagline">Dịch phụ đề game PS5 sang tiếng Việt và đọc to, ngay trên iPhone. Không cần capture card.</p>
     </header>
 
     <a class="tg" href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">
         <h2>Tham gia kênh Telegram</h2>
-        <p>Có <strong>link tải app (TestFlight)</strong>, thông báo bản mới và nơi báo lỗi.</p>
+        <p>Có <strong>link tải app (TestFlight)</strong>, thông báo bản mới và nơi hỏi đáp, báo lỗi.</p>
         <span class="btn">Vào kênh Telegram</span>
         <small>t.me/pstranslator</small>
     </a>
 
-    <section class="card">
+    <nav class="overview" aria-label="Các bước">
+        <a href="#cai-app"><b>1</b>Cài app</a>
+        <a href="#ps5"><b>2</b>Chỉnh PS5</a>
+        <a href="#account"><b>3</b>Ghép nối</a>
+        <a href="#choi"><b>4</b>Chơi</a>
+    </nav>
+
+    <section class="card s1" id="cai-app">
         <h2><span class="num">1</span>Cài app</h2>
+        <p class="why">App phát hành qua TestFlight, cách cài thử nghiệm chính thức của Apple. Không cần máy tính, không phải cài lại sau 7 ngày.</p>
         <ol>
-            <li>Cài app <strong>TestFlight</strong> của Apple từ App Store.</li>
-            <li>Vào kênh Telegram, bấm <strong>link TestFlight</strong> rồi bấm Cài đặt.</li>
+            <li>Mở App Store, tìm và cài app <strong>TestFlight</strong> (biểu tượng chiếc máy bay màu xanh).</li>
+            <li>Vào <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">kênh Telegram</a>, bấm vào <strong>link TestFlight</strong> được ghim.</li>
+            <li>TestFlight mở ra, bấm <span class="btn-app">Chấp nhận</span> rồi <span class="btn-app">Cài đặt</span>.</li>
         </ol>
-        <p>Cần iPhone hoặc iPad chạy <strong>iOS 18</strong> trở lên.</p>
+        <div class="box warn"><strong>Yêu cầu</strong>iPhone hoặc iPad chạy iOS 18 trở lên.</div>
     </section>
 
-    <section class="card">
-        <h2><span class="num">2</span>Cài đặt trên PS5</h2>
-        <p>Bật Remote Play:</p>
-        <div class="path">Settings → System → Remote Play → <strong>Enable Remote Play</strong></div>
-        <figure><img src="screenshots/05-ps5-remote-play.png" alt="Bật Enable Remote Play trên PS5" loading="lazy" onerror="this.parentElement.hidden=true"></figure>
-        <p style="margin-top:10px">Để app tự bật máy khi đang nghỉ, bật 2 mục trong:</p>
-        <div class="path">Settings → System → Power Saving → Features Available in Rest Mode</div>
-        <ul>
-            <li><strong>Stay Connected to the Internet</strong></li>
-            <li><strong>Enable Turning On PS5 from Network</strong></li>
+    <section class="card s2" id="ps5">
+        <h2><span class="num">2</span>Chỉnh trên PS5 (làm một lần)</h2>
+        <p class="why">Cầm tay cầm PS5, vào Settings (biểu tượng bánh răng ở góc trên bên phải màn hình chính).</p>
+
+        <h3>Bật chơi từ xa</h3>
+        <div class="ps-path"><span>Settings</span><i>→</i><span>System</span><i>→</i><span>Remote Play</span></div>
+        <ul class="toggle-list">
+            <li><span class="on" aria-hidden="true"></span><div><b>Enable Remote Play</b><small>Bắt buộc. Tắt mục này thì app không kết nối được.</small></div></li>
+            <li><span class="on" aria-hidden="true"></span><div><b>Hide Remote Play Connection Status</b><small>Nên bật. Ẩn dòng thông báo "đang chơi từ xa" trên TV cho màn hình gọn khi chơi.</small></div></li>
         </ul>
+        <figure>
+            <img src="screenshots/05-ps5-remote-play.png" alt="Màn hình Remote Play trên PS5" loading="lazy" onerror="this.parentElement.hidden=true">
+            <figcaption>Màn hình Remote Play trong Settings của PS5</figcaption>
+        </figure>
+
+        <h3>Cho app tự bật PS5 khi máy đang nghỉ</h3>
+        <div class="ps-path"><span>Settings</span><i>→</i><span>System</span><i>→</i><span>Power Saving</span><i>→</i><span>Features Available in Rest Mode</span></div>
+        <ul class="toggle-list">
+            <li><span class="on" aria-hidden="true"></span><div><b>Stay Connected to the Internet</b></div></li>
+            <li><span class="on" aria-hidden="true"></span><div><b>Enable Turning On PS5 from Network</b></div></li>
+        </ul>
+        <div class="box tip"><strong>Lợi ích</strong>Để PS5 ở chế độ nghỉ (đèn cam), mở app bấm Kết nối là máy tự bật. Máy tắt hẳn thì phải bật bằng tay.</div>
     </section>
 
-    <section class="card" id="account">
-        <h2><span class="num">3</span>Ghép nối (chỉ làm một lần)</h2>
-        <p>iPhone và PS5 cùng một mạng Wi-Fi. Mở app, vào <strong>Ghép nối</strong>. Khi iPhone hỏi quyền Mạng cục bộ, bấm <strong>Cho phép</strong>.</p>
-        <ol>
-            <li><strong>Địa chỉ IP:</strong> bấm <strong>Tự tìm máy</strong>.</li>
-            <li><strong>Account ID:</strong> chọn một trong 2 cách bên dưới.</li>
-            <li><strong>Mã PIN:</strong> trên PS5 vào Settings → System → Remote Play → <strong>Pair Device</strong>, nhập 8 số trên TV vào app rồi bấm <strong>Ghép nối</strong>.</li>
-        </ol>
+    <section class="card s3" id="account">
+        <h2><span class="num">3</span>Ghép nối iPhone với PS5 (làm một lần)</h2>
+        <p class="why">Để PS5 tin cậy iPhone của bạn. Cần 3 thứ: địa chỉ IP của máy, Account ID (mã số tài khoản PSN) và mã PIN hiện trên TV.</p>
 
-        <details>
+        <div class="box warn"><strong>Trước khi bắt đầu</strong>iPhone và PS5 phải dùng chung một mạng Wi-Fi ở nhà. Lần đầu mở app, iPhone hỏi quyền "Mạng cục bộ", hãy bấm <strong>Cho phép</strong>.</div>
+
+        <h3>Bước 1: Địa chỉ IP</h3>
+        <p>Trong app, vào màn <span class="btn-app">Ghép nối</span>, chọn loại máy rồi bấm <span class="btn-app">Tự tìm máy</span>. App tự điền địa chỉ IP của PS5.</p>
+
+        <h3>Bước 2: Account ID, chọn 1 trong 2 cách</h3>
+        <details class="method">
             <summary>Cách 1: Đăng nhập Sony</summary>
             <ol>
-                <li>Bấm <strong>Đăng nhập tài khoản trong Safari</strong>, đăng nhập tài khoản đang dùng trên PS5.</li>
-                <li>Hiện trang trắng là bình thường. Copy toàn bộ link trên thanh địa chỉ (có <code>code=</code>).</li>
-                <li>Quay lại app dán ngay. Link hết hạn rất nhanh, lỗi thì đăng nhập lại.</li>
+                <li>Bấm <span class="btn-app">Đăng nhập tài khoản trong Safari</span>.</li>
+                <li>Đăng nhập tài khoản PSN đang dùng trên PS5. Mật khẩu chỉ nhập trên trang của Sony, app không thấy được.</li>
+                <li>Đăng nhập xong, Safari hiện <strong>trang trắng hoặc trang lỗi, đó là bình thường</strong>.</li>
+                <li>Chạm vào thanh địa chỉ ở trên cùng Safari, copy <strong>toàn bộ link</strong> (link có chữ <code>code=</code>).</li>
+                <li>Quay lại app và dán ngay vào ô bên dưới nút. Link chỉ dùng được trong ít phút, nếu báo lỗi thì đăng nhập lại.</li>
             </ol>
         </details>
-        <details>
-            <summary>Cách 2: Tìm theo tên PSN (không cần đăng nhập)</summary>
+        <details class="method">
+            <summary>Cách 2: Tìm theo tên PSN <span class="tag">Dễ hơn</span></summary>
             <ol>
-                <li>Chọn <strong>Tìm theo tên PSN</strong>, bấm <strong>Mở trang tìm Account ID</strong>.</li>
-                <li>Nhập tên PSN (Online ID), <strong>đợi trang tìm xong</strong>.</li>
-                <li>Kéo xuống mục <strong>BASE64 (FOR REMOTE PLAY)</strong>, copy dãy ký tự kết thúc bằng dấu <code>=</code>, dán vào app.</li>
+                <li>Trong app, chọn <span class="btn-app">Tìm theo tên PSN</span> rồi bấm <span class="btn-app">Mở trang tìm Account ID</span>.</li>
+                <li>Gõ <strong>tên PSN</strong> (tên hiển thị khi chơi online) và bấm tìm. <strong>Đợi trang tìm xong.</strong></li>
+                <li>Kéo xuống tìm mục <strong>BASE64 (FOR REMOTE PLAY)</strong>. Copy dãy ký tự ngay bên dưới, thường kết thúc bằng dấu <code>=</code>.</li>
+                <li>Quay lại app, dán vào ô bên dưới nút. App tự nhận.</li>
             </ol>
-            <p>Không lấy dòng HEX hay NPID, app sẽ không nhận.</p>
+            <div class="box warn"><strong>Copy đúng dòng</strong>Chỉ lấy dòng BASE64 (FOR REMOTE PLAY). Không lấy dòng HEX hay NPID.</div>
         </details>
+        <p>Thấy chữ <strong style="color:var(--green)">Đã có Account ID</strong> màu xanh là xong.</p>
 
-        <div class="tip"><strong>Quan trọng:</strong> Account ID phải là của đúng tài khoản đang chọn trên PS5. Nên dùng một nick phụ để ghép nối, nick chính để chơi bằng tay cầm, như vậy tay cầm không bị ngắt.</div>
+        <h3>Bước 3: Mã PIN</h3>
+        <div class="ps-path"><span>Settings</span><i>→</i><span>System</span><i>→</i><span>Remote Play</span><i>→</i><span>Pair Device</span></div>
+        <p>TV hiện mã 8 số kèm đồng hồ đếm ngược. Nhập ngay 8 số vào app rồi bấm <span class="btn-app">Ghép nối</span>.</p>
+
+        <div class="box tip"><strong>Mẹo để tay cầm không bị ngắt</strong>Account ID phải của đúng tài khoản đang chọn trên PS5. Nên dùng <strong>một nick phụ</strong> để ghép nối với app, còn <strong>nick chính</strong> để cầm tay cầm chơi. Hai nick khác nhau thì tay cầm không bị app tranh mất.</div>
+        <figure>
+            <img src="screenshots/06-ps5-user-match.png" alt="Kiểm tra tài khoản đang chọn trên PS5" loading="lazy" onerror="this.parentElement.hidden=true">
+            <figcaption>Xem tài khoản đang chọn ở ảnh đại diện góc trên bên phải PS5</figcaption>
+        </figure>
     </section>
 
-    <section class="card">
+    <section class="card s4" id="choi">
         <h2><span class="num">4</span>Chơi và dịch</h2>
+        <p class="why">Ghép nối xong, từ lần sau chỉ cần làm bước này.</p>
         <ol>
-            <li>Bấm <strong>Kết nối</strong>. Máy đang nghỉ thì app tự bật, đợi khoảng 30 giây.</li>
-            <li>Trong game, bật phụ đề <strong>English</strong>.</li>
-            <li>Bấm nút <strong>khung cắt</strong>, kéo khung trùm lên phụ đề.</li>
+            <li>Ở màn chính của app, bấm <span class="btn-app">Kết nối</span>. Nếu PS5 đang nghỉ, app tự bật máy, đợi khoảng 30 giây.</li>
+            <li>Vào game, bật <strong>phụ đề tiếng Anh (English)</strong> trong phần cài đặt của game.</li>
+            <li>Trong app, bấm nút <span class="btn-app">khung cắt</span> và kéo khung trùm lên chỗ phụ đề hiện trên màn hình.</li>
+            <li>Chơi bình thường bằng tay cầm. Nhân vật nói gì, app dịch và đọc to bằng tiếng Việt.</li>
         </ol>
-        <p>Dịch thuật Apple cần app <strong>Dịch thuật</strong> của Apple đã tải gói Tiếng Anh và Tiếng Việt.</p>
+        <div class="box tip"><strong>Nên thử</strong>
+            Bật <strong>Đọc theo cảm xúc</strong> trong Cài đặt → Giọng đọc để giọng đổi theo nhân vật giận, buồn hay sợ. Game hiện chữ từng chữ một thì bật <strong>Chữ hiện dần</strong> trong nút khung cắt. Muốn đỡ tốn pin, bấm nút <strong>mặt trăng</strong> để tắt màn hình, app vẫn đọc.</div>
+        <div class="box warn"><strong>Dùng Dịch thuật Apple</strong>Cần cài app <strong>Dịch thuật</strong> (Translate) của Apple và tải sẵn gói Tiếng Anh, Tiếng Việt trong app đó.</div>
     </section>
 
-    <section class="card">
-        <h2>Lỗi thường gặp</h2>
+    <section class="card s5">
+        <h2>Gặp lỗi? Bấm vào lỗi giống bạn</h2>
 
         <details>
             <summary>Không tìm thấy máy</summary>
             <ul>
-                <li>iPhone và PS5 phải cùng mạng, tắt VPN, tránh Wi-Fi khách.</li>
-                <li>Cài đặt iPhone → Quyền riêng tư &amp; Bảo mật → <strong>Mạng cục bộ</strong> → bật cho app.</li>
-                <li>Nhập IP thủ công: PS5 → Settings → Network → Connection Status → View Connection Status, xem <strong>IPv4 Address</strong>.</li>
+                <li>Kiểm tra iPhone và PS5 cùng một mạng Wi-Fi. Tắt VPN nếu có, không dùng Wi-Fi dành cho khách.</li>
+                <li>Mở Cài đặt iPhone → Quyền riêng tư &amp; Bảo mật → <strong>Mạng cục bộ</strong>, bật cho app.</li>
+                <li>Vẫn không thấy thì nhập IP bằng tay. Trên PS5 vào Settings → Network → Connection Status → View Connection Status, xem dòng <strong>IPv4 Address</strong> (dạng 192.168.x.x).</li>
             </ul>
         </details>
         <details>
             <summary>Ghép nối thất bại</summary>
             <ul>
-                <li>Kiểm tra đã bật Enable Remote Play.</li>
+                <li>Kiểm tra đã bật <strong>Enable Remote Play</strong> ở bước 2.</li>
                 <li>Account ID phải đúng tài khoản đang chọn trên PS5.</li>
-                <li>Lấy mã PIN mới và nhập trước khi hết giờ.</li>
+                <li>Mã PIN hết hạn rất nhanh, lấy mã mới rồi nhập ngay.</li>
             </ul>
         </details>
         <details>
-            <summary>Ghép nối xong nhưng không vào được</summary>
+            <summary>Ghép nối xong nhưng không vào được game</summary>
             <ul>
-                <li>Tắt Remote Play đang mở trên máy khác (PC, điện thoại).</li>
-                <li>Đợi 30 giây rồi bấm Thử lại.</li>
-                <li>Vẫn lỗi thì ghép nối lại từ đầu.</li>
+                <li>Tắt Remote Play đang mở ở thiết bị khác (PC, điện thoại khác).</li>
+                <li>Đợi khoảng 30 giây rồi bấm <strong>Thử lại</strong>.</li>
+                <li>Vẫn lỗi thì xoá ghép nối cũ trên PS5 và ghép nối lại từ đầu.</li>
             </ul>
         </details>
         <details>
             <summary>Tay cầm bị ngắt khi app kết nối</summary>
-            <p>Bấm nút PS trên tay cầm, chọn lại user để chơi. Lâu dài nên ghép nối bằng nick phụ, chơi bằng nick chính.</p>
+            <p>Bấm nút PS giữa tay cầm, chọn lại tài khoản để chơi. Để không bị nữa, làm theo mẹo nick phụ ở bước 3.</p>
         </details>
         <details>
-            <summary>Có hình nhưng không dịch</summary>
+            <summary>Có hình nhưng không ra bản dịch</summary>
             <ul>
-                <li>Bật phụ đề English trong game, kéo khung quét trùm hết phụ đề.</li>
-                <li>Dịch thuật Apple: tải gói Tiếng Anh, Tiếng Việt trong app Dịch thuật.</li>
-                <li>Gemini hoặc CloudAPI: kiểm tra mạng và khóa API.</li>
+                <li>Kiểm tra game đã bật phụ đề tiếng Anh, khung quét trùm hết chữ phụ đề.</li>
+                <li>Dùng Dịch thuật Apple: tải gói Tiếng Anh, Tiếng Việt trong app Dịch thuật.</li>
+                <li>Dùng Gemini hoặc CloudAPI: kiểm tra mạng và khóa API.</li>
             </ul>
         </details>
         <details>
             <summary>Có bản dịch nhưng không nghe đọc</summary>
-            <p>Bật nút loa trên màn chơi, tăng âm lượng, kiểm tra tai nghe Bluetooth.</p>
+            <p>Bật nút loa trên màn chơi, tăng âm lượng iPhone, kiểm tra có đang kết nối tai nghe Bluetooth không.</p>
         </details>
         <details>
             <summary>Hình giật hoặc hay rớt mạng</summary>
-            <p>Cắm dây LAN cho PS5, điện thoại dùng Wi-Fi 5 GHz gần router, tạm dừng các thiết bị đang tải nặng.</p>
+            <p>Cắm dây mạng (LAN) cho PS5 nếu được. iPhone nên dùng Wi-Fi 5 GHz và để gần router. Tạm dừng các máy đang tải game hay xem phim.</p>
         </details>
 
-        <div class="tip"><strong>Báo lỗi:</strong> gửi vào <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">kênh Telegram</a> kèm ảnh chụp. Che Account ID, IP, mã PIN và khóa API trước khi gửi.</div>
+        <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn vào <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">kênh Telegram</a> kèm ảnh chụp màn hình. Nhớ che Account ID, địa chỉ IP, mã PIN và khóa API trước khi gửi.</div>
     </section>
 
     <footer>
