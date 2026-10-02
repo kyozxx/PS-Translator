@@ -394,16 +394,27 @@
 
     <section class="card" id="account">
         <div class="card-header"><h2 class="card-title">Lấy Account ID trong app, làm trước khi lấy PIN</h2></div>
+        <p>Mở màn <strong>Ghép nối PX5</strong>, chọn loại máy, nhập IP hoặc bấm <strong>Tự tìm máy</strong>. Ở mục <strong>Account ID</strong> có <strong>2 cách</strong>, chọn một trong hai.</p>
+
+        <h3 style="color:#fff;font-size:17px;margin:18px 0 8px;">Cách 1: Đăng nhập Sony</h3>
         <ol>
-            <li>Mở màn <strong>Ghép nối PX5</strong>. Chọn loại máy PX5, nhập IP hoặc bấm <strong>Tự tìm máy</strong>.</li>
-            <li>Ở mục <strong>Account ID</strong>, bấm <strong>Đăng nhập tài khoản trong Safari</strong>.</li>
-            <li>Đăng nhập đúng tài khoản PSN đã chọn trên máy. Nếu dùng nick phụ cho Remote Play, đăng nhập nick phụ ở bước này.</li>
-            <li>Sau khi đăng nhập, Safari có thể hiện trang trắng hoặc trang lỗi. Chạm thanh địa chỉ và sao chép <strong>toàn bộ đường dẫn có chứa <code>code=</code></strong>.</li>
-            <li>Quay lại app ngay. Dán vào ô <strong>Dán link trang trắng (hoặc Account ID)</strong>; app sẽ tự xử lý. Nếu cần, bấm <strong>Lấy Account ID</strong>.</li>
-            <li>Đợi thông báo <strong>Đã có Account ID</strong>, sau đó mới mở màn lấy PIN trên máy để tránh PIN hết hạn trong lúc đăng nhập.</li>
+            <li>Chọn <strong>Đăng nhập Sony</strong>, bấm <strong>Đăng nhập tài khoản trong Safari</strong>.</li>
+            <li>Đăng nhập đúng tài khoản PSN đang dùng trên máy. Nếu dùng nick phụ cho Remote Play, đăng nhập nick phụ ở bước này.</li>
+            <li>Safari có thể hiện trang trắng hoặc trang lỗi, đó là bình thường. Chạm thanh địa chỉ và sao chép <strong>toàn bộ đường dẫn có chứa <code>code=</code></strong>.</li>
+            <li>Quay lại app ngay và dán vào ô bên dưới nút. App tự lấy Account ID. Mã trong link hết hạn rất nhanh, nếu báo lỗi thì đăng nhập lại.</li>
         </ol>
-        <div class="success-box"><p>Hoàn thành khi app báo đã có Account ID. Bạn không cần tự chuyển đổi mã hay nhập email vào ô này.</p></div>
-        <div class="warning-box"><h4>Giữ riêng thông tin đăng nhập</h4><p>Chỉ đăng nhập qua Safari từ nút trong app. Không gửi mật khẩu, mã xác minh, Account ID, PIN hoặc link chứa <code>code=</code> cho người hỗ trợ. Nếu link hết hạn, mở lại nút đăng nhập để lấy link mới.</p></div>
+
+        <h3 style="color:#fff;font-size:17px;margin:18px 0 8px;">Cách 2: Tìm theo tên PSN (không cần đăng nhập)</h3>
+        <ol>
+            <li>Chọn <strong>Tìm theo tên PSN</strong>, bấm <strong>Mở trang tìm Account ID</strong> (trang <a href="https://www.psntools.com/psn/checker" target="_blank" rel="noopener noreferrer">psntools.com</a>).</li>
+            <li>Nhập <strong>tên PSN (Online ID)</strong> của tài khoản đang dùng trên máy, rồi <strong>đợi trang tìm xong</strong>.</li>
+            <li>Kéo xuống mục <strong>BASE64 (FOR REMOTE PLAY)</strong>. Sao chép dãy ký tự ngay bên dưới, thường kết thúc bằng dấu <code>=</code>.</li>
+            <li>Quay lại app, dán vào ô bên dưới nút. App tự nhận Account ID.</li>
+        </ol>
+        <div class="warning-box"><h4>Lấy đúng dòng</h4><p>Chỉ sao chép dòng <strong>BASE64 (FOR REMOTE PLAY)</strong>. Không lấy dòng HEX (FOR SAVE WIZARD) hay NPID, app sẽ không nhận.</p></div>
+
+        <div class="success-box"><p>Hoàn thành khi app báo <strong>Đã có Account ID</strong>. Sau đó mới mở màn lấy PIN trên máy, để PIN không hết hạn trong lúc bạn lấy Account ID.</p></div>
+        <div class="warning-box"><h4>Giữ riêng thông tin đăng nhập</h4><p>Không gửi mật khẩu, mã xác minh, Account ID, PIN hoặc link chứa <code>code=</code> cho người khác.</p></div>
     </section>
 
     <!-- BƯỚC 3 -->
