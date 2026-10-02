@@ -94,6 +94,31 @@
         .s4 { --accent: var(--orange); }
         .s5 { --accent: var(--pink); }
         .s6 { --accent: var(--amber); }
+
+        /* Donation: warm, visible, but below the download call-to-action */
+        .donate {
+            background: linear-gradient(135deg, rgba(244, 114, 182, 0.16), rgba(251, 146, 60, 0.14));
+            border: 1px solid rgba(244, 114, 182, 0.45); border-radius: 20px;
+            padding: 18px; margin-bottom: 18px; text-align: center;
+        }
+        .donate h2 { font-size: 20px; font-weight: 800; color: #fff; }
+        .donate .lead { color: var(--muted); font-size: 15px; margin: 4px 0 12px; }
+        .donate .qr {
+            display: block; width: 190px; height: 190px; margin: 0 auto 12px;
+            background: #fff; border-radius: 16px; padding: 10px;
+        }
+        .donate .bank {
+            display: inline-flex; flex-direction: column; gap: 2px; text-align: left;
+            background: rgba(11, 15, 25, 0.55); border-radius: 12px; padding: 10px 14px;
+            font-size: 14px; color: var(--muted);
+        }
+        .donate .bank b { color: var(--text); font-size: 15px; }
+        .donate .copy {
+            margin-top: 10px; border: 0; cursor: pointer; min-height: 44px;
+            background: var(--pink); color: #fff; font-weight: 800; font-size: 15px;
+            padding: 10px 22px; border-radius: 9999px;
+        }
+        .donate small { display: block; color: var(--muted); font-size: 12px; margin-top: 8px; }
         .styles { display: grid; gap: 8px; margin-top: 10px; }
         .style {
             background: #1a2438; border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px;
@@ -197,6 +222,19 @@
         <span class="btn">Vào kênh Telegram</span>
         <small>t.me/pstranslator</small>
     </a>
+
+    <section class="donate" id="ung-ho">
+        <h2>Ủng hộ tác giả</h2>
+        <p class="lead">App làm miễn phí cho anh em. Thấy hữu ích thì mời mình ly cà phê để có thêm động lực cập nhật nhé.</p>
+        <img class="qr" src="assets/donate-qr.jpg" alt="Mã QR chuyển khoản MB Bank 008808" width="190" height="190">
+        <div class="bank">
+            <span>Ngân hàng <b>MB Bank</b></span>
+            <span>Số tài khoản <b>008808</b></span>
+            <span>Chủ tài khoản <b>TRAN VAN NITO</b></span>
+        </div>
+        <div><button class="copy" type="button" onclick="navigator.clipboard.writeText('008808').then(()=>{this.textContent='Đã sao chép số tài khoản'})">Sao chép số tài khoản</button></div>
+        <small>Mở app ngân hàng, quét mã QR hoặc dán số tài khoản. Số tiền tùy tâm.</small>
+    </section>
 
     <nav class="overview" aria-label="Các bước">
         <a href="#cai-app"><b>1</b>Cài app</a>
