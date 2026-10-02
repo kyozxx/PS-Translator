@@ -229,6 +229,56 @@
         @media (max-width: 540px) { body { padding: 20px 12px; } .card { padding: 18px; } h1 { font-size: 25px; } .card-title { font-size: 18px; } }
         @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
         @media print { body { background: white; color: #111; padding: 0; } .card, details { background: white; box-shadow: none; break-inside: avoid; } p, li, .subtitle, .card-title, h1, p strong, li strong { color: #111; } .path-box { background: #eee; color: #111; } .quick-nav { display: none; } }
+
+        .tg-cta {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            background: linear-gradient(135deg, #229ed9 0%, #1b7fc4 100%);
+            border-radius: 20px;
+            padding: 28px 20px;
+            margin-bottom: 28px;
+            box-shadow: 0 12px 30px -8px rgba(34, 158, 217, 0.55);
+        }
+        .tg-cta .tg-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tg-cta h2 {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .tg-cta .tg-lead {
+            color: #e0f2fe;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+        .tg-cta .tg-lead strong { color: #ffffff; }
+        .tg-cta .tg-button {
+            display: inline-block;
+            background: #ffffff;
+            color: #1b7fc4;
+            font-size: 18px;
+            font-weight: 800;
+            padding: 14px 28px;
+            border-radius: 9999px;
+            min-height: 44px;
+        }
+        .tg-cta .tg-handle {
+            display: block;
+            color: #e0f2fe;
+            font-size: 14px;
+            margin-top: 12px;
+        }
+        .tg-cta:hover .tg-button, .tg-cta:focus-visible .tg-button { background: #e0f2fe; }
     </style>
 </head>
 <body>
@@ -239,6 +289,16 @@
         <h1>Hướng dẫn Remote Play cho người mới</h1>
         <p class="subtitle">Từ chuẩn bị máy, ghép nối lần đầu đến dịch phụ đề và xử lý lỗi thường gặp</p>
     </header>
+
+    <a class="tg-cta" href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">
+        <div class="tg-icon" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="#229ed9"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.2-8.3c.4-.4-.1-.6-.6-.2L6 13.6l-4.9-1.5c-1.1-.3-1.1-1.1.2-1.6L20.5 3.1c.9-.3 1.7.2 1.4 1.2z"/></svg>
+        </div>
+        <h2>Tham gia kênh Telegram PS Translator</h2>
+        <p class="tg-lead">Có sẵn <strong>link tải app (TestFlight)</strong>, thông báo bản mới, hướng dẫn và nơi báo lỗi.</p>
+        <span class="tg-button">Vào kênh Telegram</span>
+        <span class="tg-handle">t.me/pstranslator</span>
+    </a>
 
 
     <nav class="quick-nav" aria-label="Mục lục hướng dẫn">
