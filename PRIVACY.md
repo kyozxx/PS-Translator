@@ -1,6 +1,6 @@
 # Chính sách riêng tư — PS Translator
 
-Cập nhật: 01/10/2026
+Cập nhật: 03/10/2026
 
 PS Translator không có tài khoản người dùng, không có quảng cáo, không dùng công cụ theo dõi hay phân tích hành vi. Nhà phát triển không có máy chủ riêng và không thu thập dữ liệu cá nhân của bạn.
 
@@ -14,6 +14,7 @@ PS Translator không có tài khoản người dùng, không có quảng cáo, k
 
 ## Dữ liệu được gửi đi, chỉ khi bạn dùng tính năng tương ứng
 
+- **Dịch AI** (tuỳ chọn, hỏi ý bạn trước khi bật): câu phụ đề cần dịch và vài câu trước đó được gửi tới máy chủ dịch của PS Translator (Cloudflare) rồi tới nhà cung cấp AI để dịch. Máy chủ không lưu nội dung câu, chỉ đếm số câu đã dùng. Để tính lượt, app gửi mã giao dịch của gói Premium (máy chủ kiểm tra với Apple), hoặc mã thiết bị một lần dùng của Apple DeviceCheck cho phần dùng thử. Không có thông tin cá nhân nào khác được gửi đi.
 - **Dịch bằng CloudAPI hoặc Google Gemini** (tuỳ chọn, dùng khoá API của chính bạn): nội dung câu phụ đề cần dịch được gửi tới nhà cung cấp đó (ShopAIKey hoặc Google) để dịch. Việc xử lý tuân theo chính sách riêng tư của nhà cung cấp.
 - **Lấy PSN Account ID**: bạn đăng nhập Sony trong Safari. App không bao giờ thấy mật khẩu của bạn. App chỉ gửi mã uỷ quyền tới máy chủ của Sony để lấy Account ID.
 - **Chơi từ xa (Remote Play)**: app kết nối trực tiếp tới máy PlayStation của bạn trong mạng.
@@ -36,7 +37,7 @@ Kênh Telegram: https://t.me/pstranslator — hoặc tạo mục [Issues](https:
 
 # Privacy Policy — PS Translator (English)
 
-Last updated: October 1, 2026
+Last updated: October 3, 2026
 
 PS Translator has no user accounts, no ads, and no tracking or analytics. The developer runs no servers and does not collect your personal data.
 
@@ -50,6 +51,7 @@ PS Translator has no user accounts, no ads, and no tracking or analytics. The de
 
 ## Sent off the device, only when you use the feature
 
+- **AI translation** (optional, asked before it is turned on): the subtitle line and a few previous lines are sent to PS Translator's translation server (Cloudflare) and on to an AI provider to be translated. The server does not store the text; it only counts lines used. To count them, the app sends your Premium subscription's transaction ID (checked with Apple) or, for the free trial, a one-time Apple DeviceCheck token. No other personal data is sent.
 - **Translation with CloudAPI or Google Gemini** (optional, with your own API key): the subtitle text to translate is sent to that provider (ShopAIKey or Google) and handled under its privacy policy.
 - **Getting your PSN Account ID**: you sign in to Sony in Safari; the app never sees your password. The app only sends the authorization code to Sony's servers to get the Account ID.
 - **Remote Play**: the app connects directly to your PlayStation console.
