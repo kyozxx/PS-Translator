@@ -11,8 +11,8 @@ Phụ đề tiếng Việt hiện nổi ngay trên hình game ở TV. Máy chơi
 
 ## Bước 1: Tải app TV
 
-Tải file **PS-Translator-TV.apk** (khoảng 170 KB):
-https://github.com/kyozxx/PS-Translator/releases/download/tv-0.1.0/PS-Translator-TV.apk
+Tải file **Console-Translator-TV.apk** (khoảng 170 KB):
+https://github.com/kyozxx/PS-Translator/releases/download/tv-0.1.0/Console-Translator-TV.apk
 
 Cách cài dễ nhất bằng remote TV:
 
@@ -25,7 +25,7 @@ Mẹo: đường link dài khó gõ bằng remote. Bạn có thể tạo mã ng�
 
 ## Bước 2: Cấp quyền hiển thị phụ đề
 
-1. Mở app **PS Translator TV**.
+1. Mở app **Console Translator TV**.
 2. Bấm **Cấp quyền hiển thị trên ứng dụng khác**, bật quyền cho app.
 3. Nếu app hỏi **bỏ qua tối ưu hóa pin**, chọn **Cho phép** để TV không tắt app khi chuyển sang cổng HDMI.
 
@@ -38,7 +38,7 @@ adb shell appops set com.kyozx.consoletranslator.tv SYSTEM_ALERT_WINDOW allow
 
 ## Bước 3: Ghép nối với iPhone
 
-1. Trên TV, mở app PS Translator TV. Màn hình hiện **mã 8 số** (đổi mỗi phút).
+1. Trên TV, mở app Console Translator TV. Màn hình hiện **mã 8 số** (đổi mỗi phút).
 2. Trên iPhone: **Dịch khi chơi TV → nút TV** trên thanh công cụ.
 3. Chọn TV trong danh sách (hoặc nhập địa chỉ IP đang hiện trên TV), nhập mã 8 số, bấm **Kết nối**.
 4. Chuyển TV sang cổng HDMI của máy chơi game. Phụ đề hiện trên hình game.
