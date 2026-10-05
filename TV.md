@@ -40,13 +40,6 @@ Mẹo: đường link dài khó gõ bằng remote. Bạn có thể tạo mã ng�
 2. Bấm **Cấp quyền hiển thị trên ứng dụng khác**, bật quyền cho app.
 3. Nếu app hỏi **bỏ qua tối ưu hóa pin**, chọn **Cho phép** để TV không tắt app khi chuyển sang cổng HDMI.
 
-Nếu TV không có mục cấp quyền, bật bằng máy tính (cần bật Gỡ lỗi USB / Gỡ lỗi qua mạng trong Tùy chọn nhà phát triển của TV):
-
-```
-adb connect <IP của TV>:5555
-adb shell appops set com.kyozx.consoletranslator.tv SYSTEM_ALERT_WINDOW allow
-```
-
 ### Bước 3: Mở app
 
 Mở app Console Translator TV. Màn hình hiện **mã 8 số** và **địa chỉ TV**. Làm tiếp phần [Ghép nối với iPhone](#ghép-nối-với-iphone).
