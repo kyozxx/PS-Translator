@@ -70,7 +70,14 @@ Chế độ nhà phát triển có thời hạn (hiện trong app Developer Mode
 
 ### Bước 2: Cài app từ máy tính
 
-Máy tính cần có Node.js (tải tại nodejs.org). Mở Terminal và chạy lần lượt:
+Máy tính cần có Node.js (tải tại nodejs.org).
+
+1. Tải file `.ipk` nhận được vào thư mục **Tải về (Downloads)** của máy tính.
+2. Mở Terminal, kiểm tra file đã có và chỉ có một bản (xóa các bản cũ hoặc trùng tên):
+```
+ls ~/Downloads | grep consoletranslator
+```
+3. Chạy lần lượt:
 
 ```
 npx -y -p @webos-tools/cli ares-setup-device
@@ -82,10 +89,15 @@ npx -y -p @webos-tools/cli ares-novacom --device lg-tv --getkey
 ```
 Nhập passphrase đang hiện trong app Developer Mode trên TV.
 
+Nếu đã cài bản cũ, gỡ trước:
 ```
-npx -y -p @webos-tools/cli ares-install --device lg-tv com.consoletranslator.overlay_x.x.x_all.ipk
+npx -y -p @webos-tools/cli ares-install --device lg-tv --remove com.consoletranslator.overlay
 ```
-(thay tên file bằng file bạn nhận được)
+
+Cài bản mới (thay `x.x.x` bằng phiên bản trong tên file), phải hiện `Success`:
+```
+npx -y -p @webos-tools/cli ares-install --device lg-tv ~/Downloads/com.consoletranslator.overlay_x.x.x_all.ipk
+```
 
 ### Bước 3: Mở app khi đang chơi
 
