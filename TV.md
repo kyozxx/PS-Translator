@@ -25,10 +25,10 @@ Phụ đề tiếng Việt hiện nổi ngay trên hình game ở TV. Máy chơi
 
 ### Bước 1: Cài app
 
-Tải file **Console-Translator-TV.apk** (phiên bản 0.2.0, khoảng 170 KB):
+Tải file **Console-Translator-TV.apk** (phiên bản 0.2.1):
 
 ```
-https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.0/Console-Translator-TV.apk
+https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.1/Console-Translator-TV.apk
 ```
 
 Cách cài dễ nhất bằng remote TV:
@@ -38,13 +38,41 @@ Cách cài dễ nhất bằng remote TV:
 3. Mở Downloader, gõ đường link tải ở trên rồi bấm **Go**.
 4. Tải xong, bấm **Cài đặt**. Đã cài bản cũ thì cứ cài đè, không cần ghép nối lại.
 
-Mẹo: Sau khi tải **Downloader by AFTVnews** thì nhập mã  **2177827** để cài nhé
+Nếu dùng mã Downloader **2177827**, kiểm tra phiên bản khi cài. Nếu mã vẫn tải bản cũ, dùng đường link trực tiếp ở trên để lấy bản 0.2.1.
 
 ### Bước 2: Cấp quyền hiển thị phụ đề
 
-1. Mở app **Console Translator TV**.
-2. Bấm **Cấp quyền hiển thị trên ứng dụng khác**, bật quyền cho app.
-3. Nếu app hỏi **bỏ qua tối ưu hóa pin**, chọn **Cho phép** để TV không tắt app khi chuyển sang cổng HDMI.
+1. Mở app **Console Translator TV**, bấm **Cấp quyền hiển thị trên ứng dụng khác**.
+2. Trong trang cài đặt vừa mở, chọn **Console Translator TV** và bật **Cho phép hiển thị trên ứng dụng khác**. Nếu TV hiện danh sách ứng dụng, bạn cần chọn app trước.
+3. Bấm **Back** quay lại app. Khi đã cấp quyền, app hiện **Đã cấp quyền, sẵn sàng nhận phụ đề từ iPhone**.
+4. Nếu app hỏi **bỏ qua tối ưu hóa pin**, chọn **Cho phép** để TV không tắt app khi chuyển sang cổng HDMI.
+
+**Bấm nút nhưng không chuyển qua cài đặt, hoặc không thấy chỗ bật quyền?** Một số Android TV/Google TV không hỗ trợ mở thẳng trang quyền. Bản 0.2.1 thử thêm các trang cài đặt dự phòng và có nút **Hướng dẫn cấp quyền thủ công** ngay trong app.
+
+Dùng remote TV làm lần lượt:
+
+1. Bấm **Home**, mở **Cài đặt TV** (biểu tượng bánh răng).
+2. Vào **Ứng dụng → Quyền truy cập ứng dụng đặc biệt (Special app access) → Hiển thị trên ứng dụng khác (Display over other apps)**.
+3. Chọn **Console Translator TV**, bật **Cho phép** rồi mở lại app.
+
+Tên và vị trí menu có thể khác theo hãng: tìm **Quyền đặc biệt**, **Quyền truy cập đặc biệt**, **Xuất hiện trên cùng** hoặc xem trong **Cài đặt → Tùy chọn thiết bị → Ứng dụng**. Trang **Thông tin ứng dụng** và quyền **Cài đặt ứng dụng không rõ nguồn** không thay thế quyền hiển thị phụ đề.
+
+#### TV không có menu hiển thị trên ứng dụng khác
+
+Nếu TV cho phép ADB, có thể cấp quyền bằng máy tính cùng mạng:
+
+1. Cài [Android SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) trên máy tính.
+2. Trên TV, bật **Tùy chọn nhà phát triển** (thường bấm 7 lần vào **Số bản dựng/Build** trong **Giới thiệu**), rồi bật **Gỡ lỗi USB**, **Gỡ lỗi mạng** hoặc **Gỡ lỗi không dây**, tùy TV.
+3. Kết nối ADB theo cách TV hỗ trợ. Nếu TV có **Gỡ lỗi không dây**, dùng `adb pair <IP-TV>:<cổng-ghép-nối>` với mã TV hiển thị, sau đó `adb connect <IP-TV>:<cổng-kết-nối>`. Hai cổng có thể khác nhau. TV dùng gỡ lỗi mạng kiểu cũ thường dùng `adb connect <IP-TV>:5555`. Chấp nhận yêu cầu kết nối từ máy tính của bạn trên TV.
+4. Kiểm tra `adb devices` thấy TV ở trạng thái `device`, rồi chạy:
+
+```sh
+adb shell appops set com.kyozx.consoletranslator.tv SYSTEM_ALERT_WINDOW allow
+```
+
+5. Mở lại app TV để kiểm tra quyền. Tắt gỡ lỗi sau khi hoàn tất. Nếu kết nối nhiều thiết bị, thêm `-s <địa-chỉ-thiết-bị>` sau `adb` để chọn đúng TV.
+
+Một số firmware khóa quyền này hoàn toàn, app không thể tự cấp hoặc bảo đảm hiển thị trên HDMI. Nếu vẫn không được, gửi hãng/model TV, phiên bản Android và ảnh màn cài đặt vào [Telegram hỗ trợ](https://t.me/pstranslator).
 
 ### Bước 3: Mở app
 
@@ -141,6 +169,7 @@ Chỉnh cỡ chữ, màu chữ, nền, vị trí, độ rộng dòng và giọng
 | LG: không cài được, báo lỗi kết nối | Kiểm tra Developer Mode còn hạn, Key Server đang bật, IP đúng, máy tính cùng Wi-Fi với TV. |
 | iPhone không tìm thấy TV | Mở app TV trên TV, kiểm tra cùng Wi-Fi, hoặc nhập địa chỉ IP đang hiện trên TV. Kiểm tra iPhone đã cho phép **Mạng cục bộ** trong Cài đặt → Quyền riêng tư. |
 | Sai mã | Mã đổi mỗi phút, nhập mã đang hiện trên TV. |
+| Android TV: bấm cấp quyền nhưng không mở cài đặt | Cài bản 0.2.1, bấm **Hướng dẫn cấp quyền thủ công** trong app hoặc làm theo Bước 2 ở trên. |
 | Android TV: phụ đề không hiện trên hình game | Kiểm tra đã cấp quyền hiển thị trên ứng dụng khác. Một số TV mất quyền này sau khi khởi động lại, cấp lại là được. |
 | Android TV: không nghe giọng đọc khi đang ở cổng HDMI | Đổi âm thanh số của TV sang **PCM**. Kiểm tra âm lượng trong **Giọng đọc trên TV** trên iPhone. |
 | Phụ đề biến mất sau một lúc | Android TV: cho phép app bỏ qua tối ưu hóa pin. TV LG: mở lại app (thường do đã bấm Home trên remote). |
