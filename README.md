@@ -34,6 +34,10 @@ Nếu không có PC hoặc Mac để cài file IPA, hãy tham gia Telegram:
 
 Link **TestFlight** sẽ được cập nhật tại đây khi có bản thử nghiệm và còn suất tham gia.
 
+### App phụ đề cho Android TV
+
+Tải [Console Translator TV 0.2.1](https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.1/Console-Translator-TV.apk) và xem [hướng dẫn cài đặt, cấp quyền hiển thị phụ đề](TV.md). Nếu bấm nút cấp quyền mà TV không mở cài đặt, dùng **Hướng dẫn cấp quyền thủ công** trong app hoặc làm theo Bước 2 của hướng dẫn.
+
 ## Cách cài file IPA bằng máy tính
 
 App được cài ngoài App Store bằng một trong hai công cụ miễn phí:
