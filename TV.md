@@ -129,7 +129,7 @@ Nếu đã cài bản cũ, gỡ trước:
 npx -y -p @webos-tools/cli ares-install --device lg-tv --remove com.consoletranslator.overlay
 ```
 
-Cài bản mới (thay `x.x.x` bằng phiên bản trong tên file), phải hiện `Success`:
+Nếu chưa cài thì cài bản mới (thay tên bằng phiên bản trong tên file), phải hiện `Success`:
 ```
 npx -y -p @webos-tools/cli ares-install --device lg-tv ~/Downloads/com.consoletranslator.overlay_1.0.0_all.ipk
 ```
