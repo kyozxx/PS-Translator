@@ -133,16 +133,10 @@ Cài bản mới (thay `x.x.x` bằng phiên bản trong tên file), phải hi�
 ```
 npx -y -p @webos-tools/cli ares-install --device lg-tv ~/Downloads/com.consoletranslator.overlay_1.0.0_all.ipk
 ```
-Sau khi cài hiển thị Succces thì bật TV vào PS5 rồi máy tính chạy tiếp lệnh:
-```
-npx -y -p @webos-tools/cli ares-launch --device lg-tv com.consoletranslator.overlay
-```
-Trong quá trình chơi không được ấn nút cài đặt hay gì trên điều khiển TIVI chỉ được dùng tăng giảm âm lượng
-
 ### Bước 3: Mở app khi đang chơi
 
 1. Chuyển TV sang cổng HDMI của máy chơi game.
-2. Mở app **Console Translator TV** từ danh sách ứng dụng của TV, hoặc từ máy tính:
+2. Mở app **Console Translator TV** từ máy tính (Hiện tại không mở trực tiếp từ app TV được):
 ```
 npx -y -p @webos-tools/cli ares-launch --device lg-tv com.consoletranslator.overlay
 ```
@@ -150,7 +144,7 @@ npx -y -p @webos-tools/cli ares-launch --device lg-tv com.consoletranslator.over
 
 Lưu ý với TV LG:
 - Bấm nút **Home** trên remote TV sẽ đóng phụ đề (cách webOS hoạt động). Mở lại app là chạy tiếp, iPhone tự kết nối lại.
-- Không cần root TV.
+- Trong quá trình chơi không được ấn nút cài đặt hay gì trên điều khiển TIVI chỉ được dùng tăng giảm âm lượng
 
 ---
 
