@@ -33,12 +33,12 @@ https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.0/Conso
 
 Cách cài dễ nhất bằng remote TV:
 
-1. Trên TV, mở Google Play, tìm và cài app **Downloader**.
+1. Trên TV, mở Google Play, tìm và cài app **Downloader by AFTVnews**.
 2. Vào **Cài đặt TV → Ứng dụng → Quyền truy cập ứng dụng đặc biệt → Cài đặt ứng dụng không rõ nguồn**, bật cho **Downloader**.
 3. Mở Downloader, gõ đường link tải ở trên rồi bấm **Go**.
 4. Tải xong, bấm **Cài đặt**. Đã cài bản cũ thì cứ cài đè, không cần ghép nối lại.
 
-Mẹo: đường link dài khó gõ bằng remote. Bạn có thể tạo mã ngắn trên trang aftv.news rồi gõ mã số đó vào Downloader.
+Mẹo: Sau khi tải **Downloader by AFTVnews** thì nhập mã  **2177827** để cài nhé
 
 ### Bước 2: Cấp quyền hiển thị phụ đề
 
