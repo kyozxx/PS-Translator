@@ -2,7 +2,7 @@
 
 Phụ đề tiếng Việt hiện nổi ngay trên hình game ở TV. Máy chơi game vẫn cắm HDMI thẳng vào TV nên hình gốc, không trễ. Chỉ có chữ (và giọng đọc nếu bật) đi từ iPhone sang TV qua Wi-Fi.
 
-> **Đang thử nghiệm nội bộ.** App TV chưa phát hành công khai. Nếu bạn nằm trong nhóm thử nghiệm, nhắn qua Telegram https://t.me/pstranslator để nhận file cài.
+> **Android TV:** tải app ngay ở phần dưới. **TV LG:** bản LG vẫn đang thử nghiệm nội bộ, nhắn Telegram https://t.me/pstranslator để nhận file cài.
 
 **Mục lục**
 - [Cần có](#cần-có)
@@ -25,12 +25,18 @@ Phụ đề tiếng Việt hiện nổi ngay trên hình game ở TV. Máy chơi
 
 ### Bước 1: Cài app
 
-Bạn nhận file **Console-Translator-TV.apk** từ nhóm thử nghiệm. Cách cài dễ nhất bằng remote TV:
+Tải file **Console-Translator-TV.apk** (phiên bản 0.2.0, khoảng 170 KB):
+
+```
+https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.0/Console-Translator-TV.apk
+```
+
+Cách cài dễ nhất bằng remote TV:
 
 1. Trên TV, mở Google Play, tìm và cài app **Downloader**.
 2. Vào **Cài đặt TV → Ứng dụng → Quyền truy cập ứng dụng đặc biệt → Cài đặt ứng dụng không rõ nguồn**, bật cho **Downloader**.
-3. Mở Downloader, gõ đường link tải được gửi cho bạn rồi bấm **Go**.
-4. Tải xong, bấm **Cài đặt**.
+3. Mở Downloader, gõ đường link tải ở trên rồi bấm **Go**.
+4. Tải xong, bấm **Cài đặt**. Đã cài bản cũ thì cứ cài đè, không cần ghép nối lại.
 
 Mẹo: đường link dài khó gõ bằng remote. Bạn có thể tạo mã ngắn trên trang aftv.news rồi gõ mã số đó vào Downloader.
 
@@ -45,6 +51,14 @@ Mẹo: đường link dài khó gõ bằng remote. Bạn có thể tạo mã ng�
 Mở app Console Translator TV. Màn hình hiện **mã 8 số** và **địa chỉ TV**. Làm tiếp phần [Ghép nối với iPhone](#ghép-nối-với-iphone).
 
 Muốn tắt app: bấm **Tắt app** trong app TV.
+
+### Giọng đọc trên loa TV
+
+Từ bản 0.2.0, giọng đọc tiếng Việt có thể phát ra loa TV cùng tiếng game, điện thoại im lặng.
+
+1. Trên iPhone, mở **Phụ đề trên TV → Giọng đọc trên TV**, bật **Phát giọng đọc ra loa TV** và chỉnh âm lượng.
+2. Hoặc bấm **nút loa** trên thanh công cụ màn Dịch khi chơi TV, chọn **Đọc trên loa TV** (chỉ chọn được khi đang kết nối TV).
+3. Không nghe thấy khi đang chơi: vào cài đặt âm thanh của TV, đổi **âm thanh số (Digital Audio Out)** sang **PCM**.
 
 ---
 
@@ -128,6 +142,7 @@ Chỉnh cỡ chữ, màu chữ, nền, vị trí, độ rộng dòng và giọng
 | iPhone không tìm thấy TV | Mở app TV trên TV, kiểm tra cùng Wi-Fi, hoặc nhập địa chỉ IP đang hiện trên TV. Kiểm tra iPhone đã cho phép **Mạng cục bộ** trong Cài đặt → Quyền riêng tư. |
 | Sai mã | Mã đổi mỗi phút, nhập mã đang hiện trên TV. |
 | Android TV: phụ đề không hiện trên hình game | Kiểm tra đã cấp quyền hiển thị trên ứng dụng khác. Một số TV mất quyền này sau khi khởi động lại, cấp lại là được. |
+| Android TV: không nghe giọng đọc khi đang ở cổng HDMI | Đổi âm thanh số của TV sang **PCM**. Kiểm tra âm lượng trong **Giọng đọc trên TV** trên iPhone. |
 | Phụ đề biến mất sau một lúc | Android TV: cho phép app bỏ qua tối ưu hóa pin. TV LG: mở lại app (thường do đã bấm Home trên remote). |
 | Muốn xóa iPhone đã ghép | Android TV: bấm **Xóa iPhone đã ghép nối** trong app TV. iPhone: bấm **Ngắt** trong màn Phụ đề trên TV. |
 
