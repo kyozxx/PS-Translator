@@ -107,7 +107,7 @@ Chế độ nhà phát triển có thời hạn (hiện trong app Developer Mode
 
 Máy tính cần có Node.js (tải tại nodejs.org).
 
-1. Tải file `.ipk` nhận được vào thư mục **Tải về (Downloads)** của máy tính.
+1. Tải file `com.consoletranslator.overlay_1.0.0_all.ipk` nhận được vào thư mục **Tải về (Downloads)** của máy tính.
 2. Mở Terminal, kiểm tra file đã có và chỉ có một bản (xóa các bản cũ hoặc trùng tên):
 ```
 ls ~/Downloads | grep consoletranslator
@@ -131,8 +131,13 @@ npx -y -p @webos-tools/cli ares-install --device lg-tv --remove com.consoletrans
 
 Cài bản mới (thay `x.x.x` bằng phiên bản trong tên file), phải hiện `Success`:
 ```
-npx -y -p @webos-tools/cli ares-install --device lg-tv ~/Downloads/com.consoletranslator.overlay_x.x.x_all.ipk
+npx -y -p @webos-tools/cli ares-install --device lg-tv ~/Downloads/com.consoletranslator.overlay_1.0.0_all.ipk
 ```
+Sau khi cài hiển thị Succces thì bật TV vào PS5 rồi máy tính chạy tiếp lệnh:
+```
+npx -y -p @webos-tools/cli ares-launch --device lg-tv com.consoletranslator.overlay
+```
+Trong quá trình chơi không được ấn nút cài đặt hay gì trên điều khiển TIVI chỉ được dùng tăng giảm âm lượng
 
 ### Bước 3: Mở app khi đang chơi
 
