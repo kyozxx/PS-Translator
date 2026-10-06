@@ -92,7 +92,7 @@ Từ bản 0.2.0, giọng đọc tiếng Việt có thể phát ra loa TV cùng 
 
 ## TV LG (webOS)
 
-Bản LG cài qua **Chế độ nhà phát triển** của LG, cần một máy Mac hoặc máy tính cùng Wi-Fi với TV. Bạn nhận file **com.consoletranslator.overlay_x.x.x_all.ipk** từ nhóm thử nghiệm( Chưa mở public).
+Bản LG cài qua **Chế độ nhà phát triển** của LG, cần một máy Mac hoặc máy tính cùng Wi-Fi với TV. Bạn nhận file **com.consoletranslator.overlay_x.x.x_all.ipk** và **ConsoleTranslatorTV-source.zip** từ nhóm thử nghiệm( Chưa mở public).
 
 ### Bước 1: Bật Chế độ nhà phát triển trên TV (làm một lần)
 
