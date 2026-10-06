@@ -38,7 +38,7 @@ Cách cài dễ nhất bằng remote TV:
 3. Mở Downloader, gõ đường link tải ở trên rồi bấm **Go**.
 4. Tải xong, bấm **Cài đặt**. Đã cài bản cũ thì cứ cài đè, không cần ghép nối lại.
 
-Nếu dùng mã Downloader **2177827**, kiểm tra phiên bản khi cài. Nếu mã vẫn tải bản cũ, dùng đường link trực tiếp ở trên để lấy bản 0.2.1.
+Nếu dùng mã Downloader **4333187**, kiểm tra phiên bản khi cài. Nếu mã vẫn tải bản cũ, dùng đường link trực tiếp ở trên để lấy bản 0.2.1.
 
 ### Bước 2: Cấp quyền hiển thị phụ đề
 
@@ -92,7 +92,7 @@ Từ bản 0.2.0, giọng đọc tiếng Việt có thể phát ra loa TV cùng 
 
 ## TV LG (webOS)
 
-Bản LG cài qua **Chế độ nhà phát triển** của LG, cần một máy Mac hoặc máy tính cùng Wi-Fi với TV. Bạn nhận file **com.consoletranslator.overlay_x.x.x_all.ipk** từ nhóm thử nghiệm.
+Bản LG cài qua **Chế độ nhà phát triển** của LG, cần một máy Mac hoặc máy tính cùng Wi-Fi với TV. Bạn nhận file **com.consoletranslator.overlay_x.x.x_all.ipk** từ nhóm thử nghiệm( Chưa mở public).
 
 ### Bước 1: Bật Chế độ nhà phát triển trên TV (làm một lần)
 
