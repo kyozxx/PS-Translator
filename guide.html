@@ -204,6 +204,65 @@
             background: rgba(52, 211, 153, 0.15); color: var(--green); vertical-align: middle;
         }
 
+        /* TV guide */
+        .tv-jump {
+            display: flex; align-items: center; justify-content: space-between; gap: 14px;
+            text-decoration: none; color: var(--text); margin-bottom: 18px; padding: 14px 16px;
+            border: 1px solid rgba(52, 211, 153, 0.38); border-radius: 14px;
+            background: linear-gradient(135deg, rgba(52, 211, 153, 0.14), rgba(56, 189, 248, 0.09));
+        }
+        .tv-jump strong { display: block; font-size: 16px; }
+        .tv-jump small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+        .tv-jump .arrow { color: var(--green); font-size: 22px; font-weight: 800; }
+        .tv-card {
+            --accent: var(--green); position: relative; overflow: hidden;
+            background: linear-gradient(160deg, rgba(52, 211, 153, 0.08), var(--card) 32%);
+        }
+        .tv-card h2 { margin-bottom: 6px; }
+        .tv-card > .why { margin-bottom: 14px; }
+        .tv-requirements {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: 10px 0 14px;
+        }
+        .tv-requirements span {
+            text-align: center; padding: 9px 6px; border-radius: 10px; color: var(--muted);
+            background: #111d2e; border: 1px solid var(--border); font-size: 12px;
+        }
+        .tv-requirements b { display: block; color: var(--text); font-size: 13px; }
+        details.platform { border-color: rgba(56, 189, 248, 0.28); }
+        details.platform.lg { border-color: rgba(167, 139, 250, 0.34); }
+        details.platform > summary { align-items: center; font-size: 16px; }
+        .platform-name { display: flex; align-items: center; gap: 9px; }
+        .platform-icon {
+            display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 9px;
+            background: rgba(56, 189, 248, 0.15); color: var(--blue); font-size: 12px; font-weight: 900;
+        }
+        .platform.lg .platform-icon { background: rgba(167, 139, 250, 0.15); color: var(--purple); }
+        .download-tv {
+            display: block; text-align: center; text-decoration: none; margin: 10px 0 12px;
+            border-radius: 10px; padding: 11px 14px; background: var(--blue); color: #06131d; font-weight: 800;
+        }
+        .lg .download-tv { background: var(--purple); color: #110b20; }
+        .mini-title { color: var(--text); font-size: 14px; font-weight: 800; margin: 14px 0 6px; }
+        .play-every-time {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: 8px 0 12px;
+            counter-reset: playstep;
+        }
+        .play-every-time div {
+            counter-increment: playstep; padding: 10px; border-radius: 10px; color: var(--muted);
+            background: rgba(11, 15, 25, 0.55); border: 1px solid var(--border); font-size: 13px;
+        }
+        .play-every-time div::before {
+            content: counter(playstep); display: grid; place-items: center; width: 22px; height: 22px;
+            margin-bottom: 6px; border-radius: 50%; background: var(--green); color: #07101d; font-weight: 900;
+        }
+        .tv-troubleshooting { margin-top: 12px; }
+        .tv-troubleshooting summary { font-size: 14px; }
+
+        @media (max-width: 520px) {
+            .tv-requirements, .play-every-time { grid-template-columns: 1fr; }
+            .tv-requirements span { text-align: left; }
+        }
+
         footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 22px; }
     </style>
 </head>
@@ -236,6 +295,11 @@
         <small>Mở app ngân hàng, quét mã QR hoặc dán số tài khoản. Số tiền tùy tâm.</small>
     </section>
 
+    <a class="tv-jump" href="#phu-de-tv">
+        <span><strong>Muốn phụ đề hiện ngay trên TV?</strong><small>Hỗ trợ Android TV và LG webOS · Hình game gốc, không trễ</small></span>
+        <span class="arrow" aria-hidden="true">↓</span>
+    </a>
+
     <nav class="overview" aria-label="Các bước">
         <a href="#cai-app"><b>1</b>Cài app</a>
         <a href="#ps5"><b>2</b>Chỉnh PS5</a>
@@ -243,6 +307,91 @@
         <a href="#choi"><b>4</b>Chơi</a>
         <a href="#phong-cach"><b>5</b>Văn phong</a>
     </nav>
+
+    <section class="card tv-card" id="phu-de-tv">
+        <h2><span class="num">TV</span>Phụ đề ngay trên màn hình TV</h2>
+        <p class="why">Máy chơi game vẫn cắm HDMI thẳng vào TV. Chỉ phụ đề và giọng đọc đi từ iPhone sang TV qua Wi-Fi nên hình ảnh không bị giảm chất lượng hay thêm độ trễ.</p>
+
+        <div class="tv-requirements" aria-label="Điều kiện sử dụng">
+            <span><b>TV tương thích</b>Android TV hoặc LG webOS</span>
+            <span><b>Cùng mạng</b>TV và iPhone chung Wi-Fi</span>
+            <span><b>Trên iPhone</b>Cần gói Console Translator PRO</span>
+        </div>
+
+        <details class="platform">
+            <summary><span class="platform-name"><span class="platform-icon">A</span>Android TV</span><span class="tag">Cài bằng remote</span></summary>
+            <a class="download-tv" href="https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.1/Console-Translator-TV.apk">Tải Console Translator TV 0.2.1</a>
+
+            <p class="mini-title">Cài app</p>
+            <ol>
+                <li>Trên TV, cài <strong>Downloader by AFTVnews</strong> từ Google Play.</li>
+                <li>Vào <strong>Cài đặt → Ứng dụng → Quyền truy cập đặc biệt → Cài đặt ứng dụng không rõ nguồn</strong>, cho phép Downloader.</li>
+                <li>Mở Downloader, nhập link tải ở nút phía trên rồi cài file APK. Nếu dùng mã Downloader <strong>4333187</strong>, nhớ kiểm tra đúng phiên bản 0.2.1.</li>
+            </ol>
+
+            <p class="mini-title">Cấp quyền và mở app</p>
+            <ol>
+                <li>Mở <strong>Console Translator TV</strong>, bấm <strong>Cấp quyền hiển thị trên ứng dụng khác</strong>.</li>
+                <li>Bật quyền cho app rồi bấm Back. Nếu được hỏi, cho phép app bỏ qua tối ưu hóa pin.</li>
+                <li>App hiện mã 8 số và địa chỉ TV. Làm tiếp phần <strong>Ghép nối với iPhone</strong> ở dưới.</li>
+            </ol>
+            <div class="box warn"><strong>Không thấy quyền hiển thị?</strong>Tìm thủ công trong Cài đặt TV với các tên: Quyền truy cập đặc biệt, Hiển thị trên ứng dụng khác hoặc Xuất hiện trên cùng. Một số firmware khóa hoàn toàn quyền này.</div>
+            <div class="box tip"><strong>Giọng đọc trên loa TV</strong>Trên iPhone, vào Phụ đề trên TV → Giọng đọc trên TV. Nếu không nghe thấy khi ở HDMI, đổi Digital Audio Out của TV sang PCM.</div>
+        </details>
+
+        <details class="platform lg">
+            <summary><span class="platform-name"><span class="platform-icon">LG</span>TV LG (webOS)</span><span class="tag">Đang thử nghiệm</span></summary>
+            <p>Bản LG hiện cài bằng công cụ Windows. Nhắn <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">Telegram</a> để nhận bộ cài gồm ứng dụng Windows và file <code>com.consoletranslator.overlay_x.x.x_all.ipk</code>. File source ZIP không cần cho người dùng.</p>
+
+            <p class="mini-title">1. Bật Developer Mode trên TV — làm một lần</p>
+            <ol>
+                <li>Tạo tài khoản miễn phí tại <a href="https://webostv.developer.lge.com" target="_blank" rel="noopener noreferrer">webOS TV Developer</a>.</li>
+                <li>Trên TV, vào LG Content Store, cài và mở app <strong>Developer Mode</strong>, sau đó đăng nhập.</li>
+                <li>Bật <strong>Dev Mode Status</strong>. TV khởi động lại; mở Developer Mode lần nữa và bật <strong>Key Server</strong>.</li>
+            </ol>
+
+            <p class="mini-title">2. Cài app TV bằng máy Windows</p>
+            <ol>
+                <li>Cài <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">Node.js</a>, giải nén bộ cài nhận từ nhóm thử nghiệm.</li>
+                <li>Nhấp đúp <strong>Chay-Console-Translator.bat</strong>.</li>
+                <li>Nhập IP và passphrase đang hiện trong Developer Mode, bấm <strong>Kết nối TV</strong>.</li>
+                <li>Chọn file IPK rồi bấm <strong>Cài đặt lên TV</strong>. Công cụ tự gỡ bản cũ khi cần.</li>
+            </ol>
+
+            <p class="mini-title">Mỗi lần chơi chỉ cần 3 bước</p>
+            <div class="play-every-time">
+                <div>Chuyển TV sang HDMI của máy chơi game.</div>
+                <div>Mở file <strong>Chay-Console-Translator.bat</strong>.</div>
+                <div>Bấm <strong>Mở app trên TV</strong>.</div>
+            </div>
+
+            <div class="box warn"><strong>Đừng để Developer Mode hết hạn</strong>Mở app Developer Mode và bấm Extend trước khi hết hạn. Nếu hết hạn, webOS sẽ xóa app thử nghiệm.</div>
+            <div class="box warn"><strong>Khi đang chơi</strong>Nút Home hoặc nút cài đặt trên remote có thể đóng overlay. Chỉ nên dùng tăng/giảm âm lượng; nếu phụ đề mất, mở công cụ Windows và bấm Mở app trên TV lần nữa.</div>
+        </details>
+
+        <details class="platform">
+            <summary><span class="platform-name"><span class="platform-icon">iP</span>Ghép nối TV với iPhone</span><span class="tag">Dùng cho cả hai loại TV</span></summary>
+            <ol>
+                <li>Trên iPhone, mở màn <strong>Dịch khi chơi TV</strong> rồi bấm nút TV trên thanh công cụ.</li>
+                <li>Ở <strong>Loại TV</strong>, chọn Android TV hoặc TV LG.</li>
+                <li>Chọn TV trong danh sách; nếu không thấy, nhập địa chỉ đang hiện trên TV. Nhập mã 8 số rồi bấm <strong>Kết nối</strong>.</li>
+                <li>Chuyển TV sang HDMI của máy chơi game. Lần sau iPhone sẽ tự kết nối lại.</li>
+            </ol>
+            <p>Mã ghép nối đổi mỗi phút nhưng chỉ cần nhập một lần. Cỡ chữ, màu, nền, vị trí và giọng đọc đều chỉnh trên iPhone.</p>
+        </details>
+
+        <details class="tv-troubleshooting">
+            <summary>Lỗi thường gặp trên TV</summary>
+            <ul>
+                <li><strong>LG không kết nối:</strong> kiểm tra Developer Mode còn hạn, Key Server đang bật, IP đúng và máy tính cùng Wi-Fi với TV.</li>
+                <li><strong>LG báo IPK Extraction Failure:</strong> mở lại công cụ và cài lại; công cụ sẽ tự gỡ bản cũ trước.</li>
+                <li><strong>iPhone không tìm thấy TV:</strong> mở app TV, kiểm tra cùng Wi-Fi và quyền Mạng cục bộ trên iPhone, hoặc nhập IP bằng tay.</li>
+                <li><strong>Sai mã:</strong> nhập mã 8 số mới nhất đang hiện trên TV.</li>
+                <li><strong>Phụ đề biến mất:</strong> Android TV cần bỏ tối ưu hóa pin; LG webOS cần bấm Mở app trên TV lại nếu đã dùng nút Home.</li>
+            </ul>
+            <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">Telegram hỗ trợ</a> kèm hãng/model TV và ảnh lỗi.</div>
+        </details>
+    </section>
 
     <section class="card s1" id="cai-app">
         <h2><span class="num">1</span>Cài app</h2>
