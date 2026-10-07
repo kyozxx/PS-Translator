@@ -57,7 +57,7 @@ Nếu không có máy tính hoặc không muốn sideload thủ công, hãy vào
 
 - **Dịch thuật Apple**: cần app [Dịch thuật](https://apps.apple.com/app/id1514844618) của Apple và tải gói Tiếng Anh + Tiếng Việt trong app đó.
 - **Apple Intelligence**: chỉ có ở bản iOS 26 và trên các thiết bị được Apple hỗ trợ.
-- **Ghép nối PS5**: làm theo nút **?** trong màn Ghép nối. Account ID được lấy bằng cách đăng nhập trong Safari, app không nhận mật khẩu của bạn.
+- **Ghép nối PS5**: làm theo nút **?** trong màn Ghép nối. Account ID tra theo tên tài khoản trên trang tìm kiếm rồi dán vào app, không cần đăng nhập.
 - Đây là bản **thử nghiệm**. Nếu gặp lỗi, hãy tạo một mục [Issues](../../issues) kèm mô tả và ảnh chụp màn hình.
 - Thông báo bản mới và link TestFlight sẽ được cập nhật tại **https://t.me/pstranslator**.
 
@@ -71,7 +71,7 @@ Nếu không có máy tính hoặc không muốn sideload thủ công, hãy vào
   <img src="screenshots/05-ps5-remote-play.png" width="600" alt="Bật Enable Remote Play trên PS5">
 </p>
 
-- **Trùng khớp tài khoản (Cực kỳ quan trọng)**: Bấm vào **Avatar** ở góc trên bên phải màn hình PS5 để kiểm tra tài khoản User đang hoạt động. Tài khoản này **phải trùng khớp hoàn toàn** với tài khoản bạn đăng nhập trên Safari để lấy **Account ID** trong app PS Translator. Nếu trên PS5 đang ở User khác hoặc Guest, máy sẽ từ chối ghép nối.
+- **Trùng khớp tài khoản (Cực kỳ quan trọng)**: Bấm vào **Avatar** ở góc trên bên phải màn hình PS5 để kiểm tra tài khoản User đang hoạt động. Tài khoản này **phải trùng khớp hoàn toàn** với tài khoản bạn đã tra **Account ID** trong app PS Translator. Nếu trên PS5 đang ở User khác hoặc Guest, máy sẽ từ chối ghép nối.
 
 <p align="center">
   <img src="screenshots/06-ps5-user-match.png" width="400" alt="Kiểm tra User trùng khớp trên PS5">
