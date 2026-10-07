@@ -7,6 +7,7 @@ Phụ đề tiếng Việt hiện nổi ngay trên hình game ở TV. Máy chơi
 **Mục lục**
 - [Cần có](#cần-có)
 - [Android TV](#android-tv)
+  - [TV Xiaomi nội địa (Trung Quốc)](#tv-xiaomi-nội-địa-trung-quốc)
 - [TV LG (webOS)](#tv-lg-webos)
 - [Ghép nối với iPhone](#ghép-nối-với-iphone)
 - [Lỗi thường gặp](#lỗi-thường-gặp)
@@ -24,6 +25,8 @@ Phụ đề tiếng Việt hiện nổi ngay trên hình game ở TV. Máy chơi
 ## Android TV
 
 ### Bước 1: Cài app
+
+> **TV Xiaomi / Redmi mua từ Trung Quốc (hàng nội địa, giao diện tiếng Trung PatchWall)?** Dùng bản riêng ở mục [TV Xiaomi nội địa](#tv-xiaomi-nội-địa-trung-quốc). Bản thường bị TV này tự tắt.
 
 Tải file **Console-Translator-TV.apk** (phiên bản 0.2.1):
 
@@ -79,6 +82,29 @@ Một số firmware khóa quyền này hoàn toàn, app không thể tự cấp 
 Mở app Console Translator TV. Màn hình hiện **mã 8 số** và **địa chỉ TV**. Làm tiếp phần [Ghép nối với iPhone](#ghép-nối-với-iphone).
 
 Muốn tắt app: bấm **Tắt app** trong app TV.
+
+### TV Xiaomi nội địa (Trung Quốc)
+
+TV Xiaomi và Redmi bán ở Trung Quốc tự tắt app phụ đề bản thường: mở app lên là app bị đóng, hoặc phụ đề không bao giờ hiện. Dùng bản riêng dưới đây. TV Xiaomi bản quốc tế (Google TV, giao diện tiếng Anh/tiếng Việt) dùng bản thường ở trên.
+
+Tải file **Console-Translator-TV-Mi.apk** (phiên bản 0.2.1-mi):
+
+```
+https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.1-mi/Console-Translator-TV-Mi.apk
+```
+
+1. Cài như [Bước 1](#bước-1-cài-app), chỉ thay đường link bằng link ở trên. Nếu TV không có Google Play, cài **Downloader** hoặc **当贝市场 (Dangbei)** từ kho ứng dụng của Xiaomi, hoặc chép file APK qua USB rồi mở bằng trình quản lý tệp.
+2. App có tên **Console Translator TV (Mi)**, cài được song song với bản thường. Đã lỡ cài bản thường thì nên gỡ đi cho đỡ nhầm.
+3. Cấp quyền hiển thị như [Bước 2](#bước-2-cấp-quyền-hiển-thị-phụ-đề). Trên TV Xiaomi, quyền này thường nằm ở **设置 (Cài đặt) → 应用 (Ứng dụng) → 权限 / 特殊权限 → 显示在其他应用上层 (Hiển thị trên ứng dụng khác)**.
+4. Mở app, ghép nối với iPhone như bình thường.
+
+Khác với bản thường: lúc đang mở màn hình app thì **chưa có phụ đề**. Phụ đề chỉ hiện sau khi bấm **Home** hoặc chuyển sang cổng HDMI của máy chơi game. Đây là cách để TV Xiaomi không tự tắt app.
+
+Cấp quyền bằng máy tính (ADB) thì dùng tên gói của bản Mi:
+
+```sh
+adb shell appops set com.kyozx.consoletranslator.tv.mi SYSTEM_ALERT_WINDOW allow
+```
 
 ### Giọng đọc trên loa TV
 
@@ -171,6 +197,7 @@ Chỉnh cỡ chữ, màu chữ, nền, vị trí, độ rộng dòng và giọng
 | Android TV: bấm cấp quyền nhưng không mở cài đặt | Cài bản 0.2.1, bấm **Hướng dẫn cấp quyền thủ công** trong app hoặc làm theo Bước 2 ở trên. |
 | Android TV: phụ đề không hiện trên hình game | Kiểm tra đã cấp quyền hiển thị trên ứng dụng khác. Một số TV mất quyền này sau khi khởi động lại, cấp lại là được. |
 | Android TV: không nghe giọng đọc khi đang ở cổng HDMI | Đổi âm thanh số của TV sang **PCM**. Kiểm tra âm lượng trong **Giọng đọc trên TV** trên iPhone. |
+| TV Xiaomi nội địa: mở app thì app tự tắt, hoặc phụ đề không hiện | Dùng bản riêng [TV Xiaomi nội địa](#tv-xiaomi-nội-địa-trung-quốc). Phụ đề chỉ hiện sau khi chuyển sang cổng HDMI. |
 | Phụ đề biến mất sau một lúc | Android TV: cho phép app bỏ qua tối ưu hóa pin. TV LG: mở lại app (thường do đã bấm Home trên remote). |
 | Muốn xóa iPhone đã ghép | Android TV: bấm **Xóa iPhone đã ghép nối** trong app TV. iPhone: bấm **Ngắt** trong màn Phụ đề trên TV. |
 
