@@ -7,7 +7,7 @@ Phụ đề tiếng Việt hiện nổi ngay trên hình game ở TV. Máy chơi
 **Mục lục**
 - [Cần có](#cần-có)
 - [Android TV](#android-tv)
-  - [TV Xiaomi nội địa (Trung Quốc)](#tv-xiaomi-nội-địa-trung-quốc)
+  - [TV Xiaomi nội địa Trung Quốc](#tv-xiaomi-nội-địa-trung)
 - [TV LG (webOS)](#tv-lg-webos)
 - [Ghép nối với iPhone](#ghép-nối-với-iphone)
 - [Lỗi thường gặp](#lỗi-thường-gặp)
@@ -83,7 +83,7 @@ Mở app Console Translator TV. Màn hình hiện **mã 8 số** và **địa ch
 
 Muốn tắt app: bấm **Tắt app** trong app TV.
 
-### TV Xiaomi nội địa (Trung Quốc)
+### TV Xiaomi nội địa Trung
 
 TV Xiaomi và Redmi bán ở Trung Quốc tự tắt app phụ đề bản thường: mở app lên là app bị đóng, hoặc phụ đề không bao giờ hiện. Dùng bản riêng dưới đây. TV Xiaomi bản quốc tế (Google TV, giao diện tiếng Anh/tiếng Việt) dùng bản thường ở trên.
 
