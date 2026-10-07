@@ -242,6 +242,9 @@
             border-radius: 10px; padding: 11px 14px; background: var(--blue); color: #06131d; font-weight: 800;
         }
         .lg .download-tv { background: var(--purple); color: #110b20; }
+        .download-row { display: flex; gap: 8px; margin: 10px 0 12px; }
+        .download-row .download-tv { flex: 1; margin: 0; }
+        .download-tv.alt { background: transparent; color: var(--blue); border: 1px solid var(--blue); }
         .mini-title { color: var(--text); font-size: 14px; font-weight: 800; margin: 14px 0 6px; }
         .play-every-time {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: 8px 0 12px;
@@ -320,13 +323,16 @@
 
         <details class="platform">
             <summary><span class="platform-name"><span class="platform-icon">A</span>Android TV</span><span class="tag">Cài bằng remote</span></summary>
-            <a class="download-tv" href="https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.1/Console-Translator-TV.apk">Tải Console Translator TV 0.2.1</a>
+            <div class="download-row">
+                <a class="download-tv" href="https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.1/Console-Translator-TV.apk">Tải Console Translator TV 0.2.1</a>
+                <a class="download-tv alt" href="https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.1-mi/Console-Translator-TV-Mi.apk">TV Xiaomi nội địa</a>
+            </div>
 
             <p class="mini-title">Cài app</p>
             <ol>
                 <li>Trên TV, cài <strong>Downloader by AFTVnews</strong> từ Google Play.</li>
                 <li>Vào <strong>Cài đặt → Ứng dụng → Quyền truy cập đặc biệt → Cài đặt ứng dụng không rõ nguồn</strong>, cho phép Downloader.</li>
-                <li>Mở Downloader, nhập link tải ở nút phía trên rồi cài file APK. Nếu dùng mã Downloader <strong>4333187</strong>, nhớ kiểm tra đúng phiên bản 0.2.1.</li>
+                <li>Mở Downloader, nhập link tải ở nút phía trên rồi cài file APK. Nếu dùng mã Downloader <strong>4333187</strong>, nhớ kiểm tra đúng phiên bản 0.2.1. TV Xiaomi mua từ Trung Quốc dùng nút <strong>TV Xiaomi nội địa</strong> (mã Downloader <strong>1395764</strong>), phụ đề chỉ hiện sau khi chuyển sang cổng HDMI.</li>
             </ol>
 
             <p class="mini-title">Cấp quyền và mở app</p>
