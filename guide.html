@@ -345,34 +345,33 @@
             <div class="box tip"><strong>Giọng đọc trên loa TV</strong>Trên iPhone, vào Phụ đề trên TV → Giọng đọc trên TV. Nếu không nghe thấy khi ở HDMI, đổi Digital Audio Out của TV sang PCM.</div>
         </details>
 
-        <details class="platform lg">
-            <summary><span class="platform-name"><span class="platform-icon">LG</span>TV LG (webOS)</span><span class="tag">Đang thử nghiệm</span></summary>
-            <p>Bản LG hiện cài bằng công cụ Windows. Nhắn <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">Telegram</a> để nhận bộ cài gồm ứng dụng Windows và file <code>com.consoletranslator.overlay_x.x.x_all.ipk</code>. File source ZIP không cần cho người dùng.</p>
-
-            <p class="mini-title">1. Bật Developer Mode trên TV — làm một lần</p>
+        <details class="platform lg" id="lg-tv">
+            <summary><span class="platform-name"><span class="platform-icon">LG</span>TV LG (webOS)</span><span class="tag">Cài bằng Windows + mã</span></summary>
+            <p>Dùng Windows 10/11. Điện thoại vẫn chạy dịch; PC chỉ cài hoặc mở app nhận trên TV.</p>
+            <a class="download-tv" href="https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.2/ConsoleTranslator-LG-PC-1.2.2.zip">Tải bộ cài LG cho PC 1.2.2</a>
+            <p>Giải nén file ZIP, không tải Source code. <a href="https://t.me/pstranslator">Nhận mã cài PC qua Telegram</a>. Mã này khác mã beta Android và gói PRO trên iPhone.</p>
+            <p class="mini-title">1. Chuẩn bị TV, làm lần đầu</p>
             <ol>
-                <li>Tạo tài khoản miễn phí tại <a href="https://webostv.developer.lge.com" target="_blank" rel="noopener noreferrer">webOS TV Developer</a>.</li>
-                <li>Trên TV, vào LG Content Store, cài và mở app <strong>Developer Mode</strong>, sau đó đăng nhập.</li>
-                <li>Bật <strong>Dev Mode Status</strong>. TV khởi động lại; mở Developer Mode lần nữa và bật <strong>Key Server</strong>.</li>
+                <li>Tạo tài khoản <a href="https://webostv.developer.lge.com">LG Developer</a>. Trên TV, cài <strong>Developer Mode</strong> từ LG Apps / LG Content Store và đăng nhập.</li>
+                <li>Bật <strong>Dev Mode Status</strong>, chờ TV khởi động lại. Mở Developer Mode, bật <strong>Key Server</strong>.</li>
+                <li>PC, iPhone và TV cùng mạng. Ghi lại IP và Passphrase 6 ký tự đang hiện trên TV.</li>
             </ol>
-
-            <p class="mini-title">2. Cài app TV bằng máy Windows</p>
+            <p class="mini-title">2. Cài bằng Windows</p>
             <ol>
-                <li>Cài <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">Node.js</a>, giải nén bộ cài nhận từ nhóm thử nghiệm.</li>
-                <li>Nhấp đúp <strong>Chay-Console-Translator.bat</strong>.</li>
-                <li>Nhập IP và passphrase đang hiện trong Developer Mode, bấm <strong>Kết nối TV</strong>.</li>
-                <li>Chọn file IPK rồi bấm <strong>Cài đặt lên TV</strong>. Công cụ tự gỡ bản cũ khi cần.</li>
+                <li>Giải nén ZIP, mở <strong>Chay-Console-Translator.bat</strong>. Nếu thiếu Node.js, bấm <strong>Cài Node.js</strong>, cài bản LTS rồi mở lại công cụ.</li>
+                <li>Nhập IP và Passphrase, bấm <strong>Kết nối TV</strong>. Kiểm tra đúng IP trước khi xác nhận khóa kết nối.</li>
+                <li>Nhập <strong>mã cài PC</strong>, bấm <strong>Cài đặt lên TV</strong>, chờ hoàn tất. Công cụ tự tải gói qua mạng, không cần chọn IPK.</li>
             </ol>
-
-            <p class="mini-title">Mỗi lần chơi chỉ cần 3 bước</p>
+            <p class="mini-title">3. Mỗi lần chơi</p>
             <div class="play-every-time">
-                <div>Chuyển TV sang HDMI của máy chơi game.</div>
-                <div>Mở file <strong>Chay-Console-Translator.bat</strong>.</div>
-                <div>Bấm <strong>Mở app trên TV</strong>.</div>
+                <div>Bật máy chơi game trước, chuyển TV sang đúng HDMI. Bật Key Server nếu chưa bật, rồi quay về HDMI.</div>
+                <div>Mở công cụ Windows, bấm <strong>Mở app trên TV</strong>. Khi app hiện, có thể đóng công cụ PC.</div>
+                <div>Ghép iPhone bằng mã phụ đề <strong>8 số</strong> trên TV theo phần bên dưới, rồi chạy dịch.</div>
             </div>
-
-            <div class="box warn"><strong>Đừng để Developer Mode hết hạn</strong>Mở app Developer Mode và bấm Extend trước khi hết hạn. Nếu hết hạn, webOS sẽ xóa app thử nghiệm.</div>
-            <div class="box warn"><strong>Khi đang chơi</strong>Nút Home hoặc nút cài đặt trên remote có thể đóng overlay. Chỉ nên dùng tăng/giảm âm lượng; nếu phụ đề mất, mở công cụ Windows và bấm Mở app trên TV lần nữa.</div>
+            <div class="box tip"><strong>Không nhầm mã</strong>Mã cài PC nhập trong công cụ Windows. Passphrase dùng kết nối LG. Mã 8 số nhập trên iPhone để ghép phụ đề.</div>
+            <div class="box warn"><strong>Gia hạn và mở lại</strong>Bấm EXTEND trong Developer Mode trước khi hết hạn. Tránh bấm Home/Cài đặt trên remote khi chơi; chỉ nên tăng/giảm âm lượng. Nếu phụ đề đóng, bấm Mở app trên TV lại.</div>
+            <p>PC nhớ IP/Passphrase sau khi kết nối; nếu trên TV đổi, nhập lại. Thu hồi mã cài chỉ chặn cài tiếp, app TV đã cài vẫn mở được. Khả năng hiện trên HDMI tùy mẫu TV.</p>
+            <p><a href="https://github.com/kyozxx/PS-Translator/blob/main/LG.md">Hướng dẫn đầy đủ và xử lý lỗi</a> · <a href="https://webostv.developer.lge.com/develop/getting-started/developer-mode-app">Developer Mode của LG</a></p>
         </details>
 
         <details class="platform">
@@ -390,7 +389,7 @@
             <summary>Lỗi thường gặp trên TV</summary>
             <ul>
                 <li><strong>LG không kết nối:</strong> kiểm tra Developer Mode còn hạn, Key Server đang bật, IP đúng và máy tính cùng Wi-Fi với TV.</li>
-                <li><strong>LG báo IPK Extraction Failure:</strong> mở lại công cụ và cài lại; công cụ sẽ tự gỡ bản cũ trước.</li>
+                <li><strong>LG báo IPK Extraction Failure:</strong> mở lại công cụ và thử cài lại; nếu vẫn lỗi, gửi ảnh cho hỗ trợ trước khi gỡ app.</li>
                 <li><strong>iPhone không tìm thấy TV:</strong> mở app TV, kiểm tra cùng Wi-Fi và quyền Mạng cục bộ trên iPhone, hoặc nhập IP bằng tay.</li>
                 <li><strong>Sai mã:</strong> nhập mã 8 số mới nhất đang hiện trên TV.</li>
                 <li><strong>Phụ đề biến mất:</strong> Android TV cần bỏ tối ưu hóa pin; LG webOS cần bấm Mở app trên TV lại nếu đã dùng nút Home.</li>

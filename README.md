@@ -115,3 +115,7 @@ Nếu thấy ứng dụng hữu ích và muốn ủng hộ tác giả:
 ---
 
 Tên sản phẩm và nhãn hiệu thuộc về chủ sở hữu tương ứng. Dự án không liên kết với Sony Interactive Entertainment.
+
+## Cài app cho TV LG
+
+[Tải bộ cài Windows 1.2.2](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.2/ConsoleTranslator-LG-PC-1.2.2.zip) và xem [hướng dẫn TV LG từng bước](LG.md). Cần mã cài PC được cấp qua [Telegram](https://t.me/pstranslator); không cần tải hoặc chọn file IPK.

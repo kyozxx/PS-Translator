@@ -2,7 +2,7 @@
 
 Phụ đề tiếng Việt hiện nổi ngay trên hình game ở TV. Máy chơi game vẫn cắm HDMI thẳng vào TV nên hình gốc, không trễ. Chỉ có chữ (và giọng đọc nếu bật) đi từ iPhone sang TV qua Wi-Fi.
 
-> **Android TV:** tải app ngay ở phần dưới. **TV LG:** bản LG vẫn đang thử nghiệm nội bộ, nhắn Telegram https://t.me/pstranslator để nhận file cài.
+> **Android TV:** tải app ngay ở phần dưới. **TV LG:** xem [hướng dẫn cài bằng Windows](LG.md), nhắn Telegram https://t.me/pstranslator để nhận mã cài PC.
 
 **Mục lục**
 - [Cần có](#cần-có)
@@ -118,59 +118,7 @@ Từ bản 0.2.0, giọng đọc tiếng Việt có thể phát ra loa TV cùng 
 
 ## TV LG (webOS)
 
-Bản LG cài qua **Chế độ nhà phát triển** của LG, cần một máy Mac hoặc máy tính cùng Wi-Fi với TV. Bạn nhận file **com.consoletranslator.overlay_x.x.x_all.ipk** và **ConsoleTranslatorTV-source.zip** từ nhóm thử nghiệm( Chưa mở public).
-
-### Bước 1: Bật Chế độ nhà phát triển trên TV (làm một lần)
-
-1. Tạo tài khoản miễn phí tại https://webostv.developer.lge.com (Sign In → Create Account).
-2. Trên TV, mở **LG Content Store**, tìm và cài app **Developer Mode**.
-3. Mở Developer Mode, đăng nhập tài khoản vừa tạo.
-4. Bật **Dev Mode Status** (TV khởi động lại), mở lại app rồi bật **Key Server**.
-
-Chế độ nhà phát triển có thời hạn (hiện trong app Developer Mode). Khi sắp hết hạn, mở app và bấm **Extend**, nếu không app cài thêm sẽ bị xóa.
-
-### Bước 2: Cài app từ máy tính
-
-Máy tính cần có Node.js (tải tại nodejs.org).
-
-1. Tải file `com.consoletranslator.overlay_1.0.0_all.ipk` nhận được vào thư mục **Tải về (Downloads)** của máy tính.
-2. Mở Terminal, kiểm tra file đã có và chỉ có một bản (xóa các bản cũ hoặc trùng tên):
-```
-ls ~/Downloads | grep consoletranslator
-```
-3. Chạy lần lượt:
-
-```
-npx -y -p @webos-tools/cli ares-setup-device
-```
-Chọn **add**, nhập: tên `lg-tv`, IP của TV (xem trong app Developer Mode), port `9922`, user `prisoner`.
-
-```
-npx -y -p @webos-tools/cli ares-novacom --device lg-tv --getkey
-```
-Nhập passphrase đang hiện trong app Developer Mode trên TV.
-
-Nếu đã cài bản cũ, gỡ trước:
-```
-npx -y -p @webos-tools/cli ares-install --device lg-tv --remove com.consoletranslator.overlay
-```
-
-Nếu chưa cài thì cài bản mới (thay tên bằng phiên bản trong tên file), phải hiện `Success`:
-```
-npx -y -p @webos-tools/cli ares-install --device lg-tv ~/Downloads/com.consoletranslator.overlay_1.0.0_all.ipk
-```
-### Bước 3: Mở app khi đang chơi
-
-1. Chuyển TV sang cổng HDMI của máy chơi game.
-2. Mở app **Console Translator TV** từ máy tính (Hiện tại không mở trực tiếp từ app TV được):
-```
-npx -y -p @webos-tools/cli ares-launch --device lg-tv com.consoletranslator.overlay
-```
-3. Góc phải màn hình hiện **mã 8 số** và **địa chỉ TV**, hình game vẫn chạy phía sau. Làm tiếp phần [Ghép nối với iPhone](#ghép-nối-với-iphone).
-
-Lưu ý với TV LG:
-- Bấm nút **Home** trên remote TV sẽ đóng phụ đề (cách webOS hoạt động). Mở lại app là chạy tiếp, iPhone tự kết nối lại.
-- Trong quá trình chơi không được ấn nút cài đặt hay gì trên điều khiển TIVI chỉ được dùng tăng giảm âm lượng
+Cài bằng bộ cài Windows có mã riêng, không cần Terminal hoặc chọn file IPK. Xem [hướng dẫn cài TV LG từ PC](LG.md), gồm bật Developer Mode, tải bộ cài và mở app mỗi lần chơi.
 
 ---
 
