@@ -2,9 +2,9 @@
 
 Dùng Windows 10/11 để cài app nhận phụ đề lên TV LG webOS. Khi chơi, điện thoại vẫn phải chạy dịch và gửi phụ đề sang TV; PC chỉ dùng cài hoặc mở app TV.
 
-[Tải bộ cài PC 1.2.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.5/ConsoleTranslator-LG-PC-1.2.5.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
+[Tải bộ cài PC 1.2.6](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.6/ConsoleTranslator-LG-PC-1.2.6.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
 
-Tải file `ConsoleTranslator-LG-PC-1.2.5.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện phụ đề trên HDMI tùy mẫu TV/firmware.
+Tải file `ConsoleTranslator-LG-PC-1.2.6.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện phụ đề trên HDMI tùy mẫu TV/firmware.
 
 ## 1. Chuẩn bị trên TV, làm lần đầu
 
@@ -54,3 +54,5 @@ Mã cài PC hết hạn hoặc bị thu hồi sẽ chặn cài tiếp, app đã 
 - **Không thấy phụ đề:** kiểm tra điện thoại đang chạy dịch, vùng quét có chữ gốc và đã ghép TV. Nếu vừa bấm Home, mở app TV lại.
 
 [Hướng dẫn Developer Mode chính thức của LG](https://webostv.developer.lge.com/develop/getting-started/developer-mode-app) · [Telegram hỗ trợ](https://t.me/pstranslator)
+
+Mã cài PC mới bắt đầu bằng `LGTV`, kèm ngày giờ tạo theo giờ Việt Nam. Sao chép đầy đủ mã vào bộ cài PC 1.2.6. Mã `ANDROID` dành cho app Android; ngày giờ trong mã không phải hạn sử dụng. Mã cũ vẫn dùng được.
