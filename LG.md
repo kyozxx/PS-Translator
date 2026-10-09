@@ -18,7 +18,7 @@ Tải file `ConsoleTranslator-LG-PC-1.2.6.zip`, không tải **Source code**. B�
 1. Tải ZIP phía trên, chuột phải → **Extract All / Giải nén tất cả**. Mở thư mục đã giải nén.
 2. Nhấp đúp **Chay-Console-Translator.bat**. Nếu báo thiếu Node.js, bấm **Cài Node.js**, cài bản LTS từ trang chính thức rồi đóng và mở lại công cụ. Cần Node.js 22 trở lên.
 3. Nhập IP và Passphrase đang hiện trên TV, bấm **Kết nối TV**. Kiểm tra đúng IP TV trước khi xác nhận khóa kết nối.
-4. Nhập **mã cài PC** được cấp riêng qua Telegram, bấm **Cài đặt lên TV**, chờ thông báo hoàn tất. Cần Internet để kiểm tra mã và tải gói.
+4. Dán đầy đủ **mã cài PC bắt đầu bằng `LGTV-`** được cấp riêng qua Telegram, bấm **Cài đặt lên TV**, chờ thông báo hoàn tất. Cần Internet để kiểm tra mã và tải gói.
 
 Không cần tìm hoặc chọn file IPK. Công cụ tự tải và gửi sang TV. PC nhớ IP/Passphrase sau khi kết nối thành công; nếu thông tin trên TV đổi, nhập lại rồi kết nối.
 
@@ -37,22 +37,25 @@ Tránh bấm Home, Cài đặt hoặc mở app khác bằng remote TV khi chơi.
 3. Nhập mã phụ đề **8 số** đang hiện trên TV, bấm **Kết nối**. Đây không phải Passphrase hay mã cài PC.
 4. Giữ hình game trên iPhone, chọn đúng vùng chữ gốc và chạy dịch. Chỉnh chữ/giọng đọc trong phần phụ đề TV.
 
-## Ba loại mã khác nhau
+## Phân biệt các mã
 
 | Mã | Dùng ở đâu? |
 | --- | --- |
-| Mã cài PC do người hỗ trợ cấp | Nhập trong công cụ Windows để cài app TV. Mã beta Android không dùng thay được. |
+| `LGTV-YYYYMMDD-HHMMSS-…` | Nhập đầy đủ trong bộ cài Windows 1.2.6 để cài app TV. |
+| `ANDROID-YYYYMMDD-HHMMSS-…` | Kích hoạt app beta trên điện thoại Android; không dùng trong bộ cài PC. |
 | Passphrase 6 ký tự trên Developer Mode | Dùng kết nối TV, phân biệt chữ hoa/chữ thường. Dùng đúng giá trị đang hiện trên TV. |
 | Mã phụ đề 8 số trên Console Translator TV | Nhập trên điện thoại để ghép phụ đề; mã hiện trên TV đổi mỗi phút. |
 
-Mã cài PC hết hạn hoặc bị thu hồi sẽ chặn cài tiếp, app đã cài trên TV vẫn mở được. Thời hạn Developer Mode là riêng: TV cần kết nối mạng, mở Developer Mode và bấm **EXTEND** trước khi hết hạn. Nếu Developer Mode bị tắt, app cài ngoài có thể bị gỡ và phải cài lại.
+Mã cài PC hết hạn, bị thu hồi hoặc bị xóa sẽ chặn cài tiếp, app đã cài trên TV vẫn mở được. Thời hạn Developer Mode là riêng: TV cần kết nối mạng, mở Developer Mode và bấm **EXTEND** trước khi hết hạn. Nếu Developer Mode bị tắt, app cài ngoài có thể bị gỡ và phải cài lại.
 
 ## Nếu chưa được
 
 - **Không kết nối TV:** kiểm tra cùng mạng, IP/Passphrase mới nhất, Key Server bật và Developer Mode còn hạn.
-- **Không cài được:** kiểm tra mã cài PC còn hạn, Internet và giờ Windows đúng; gửi ảnh lỗi cho hỗ trợ trước khi gỡ bản đang dùng.
+- **Không cài được:** dùng bộ cài 1.2.6, kiểm tra mã LGTV còn hạn và kết nối Internet. Nếu vẫn lỗi, sao chép toàn bộ log gửi hỗ trợ; chưa cần gỡ app trên TV.
 - **Không thấy phụ đề:** kiểm tra điện thoại đang chạy dịch, vùng quét có chữ gốc và đã ghép TV. Nếu vừa bấm Home, mở app TV lại.
 
 [Hướng dẫn Developer Mode chính thức của LG](https://webostv.developer.lge.com/develop/getting-started/developer-mode-app) · [Telegram hỗ trợ](https://t.me/pstranslator)
 
-Mã cài PC mới bắt đầu bằng `LGTV`, kèm ngày giờ tạo theo giờ Việt Nam. Sao chép đầy đủ mã vào bộ cài PC 1.2.6. Mã `ANDROID` dành cho app Android; ngày giờ trong mã không phải hạn sử dụng. Mã cũ vẫn dùng được.
+Ngày giờ trong mã là lúc tạo theo giờ Việt Nam, không phải hạn sử dụng. Mã cũ 32 ký tự vẫn dùng được. Bản PC 1.2.5 trở xuống chỉ nhận mã cũ; mã LGTV mới cần bản 1.2.6.
+
+Cập nhật bộ cài: đóng bản cũ, giải nén ZIP 1.2.6 vào thư mục mới rồi mở `Chay-Console-Translator.bat`. Dùng cùng tài khoản Windows để giữ thông tin TV và máy đã kích hoạt. Nếu quên mã, nhắn người cấp mã qua Telegram.
