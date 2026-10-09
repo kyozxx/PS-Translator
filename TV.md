@@ -41,7 +41,7 @@ Cách cài dễ nhất bằng remote TV:
 3. Mở Downloader, gõ đường link tải ở trên rồi bấm **Go**.
 4. Tải xong, bấm **Cài đặt**. Đã cài bản cũ thì cứ cài đè, không cần ghép nối lại.
 
-Nếu dùng mã Downloader **4333187**, kiểm tra phiên bản khi cài. Nếu mã vẫn tải bản cũ, dùng đường link trực tiếp ở trên để lấy bản 0.2.1.
+Nếu dùng mã Downloader **4333187**, kiểm tra phiên bản khi cài. Nếu mã vẫn tải bản cũ, dùng đường link trực tiếp ở trên để lấy bản 0.2.2.
 
 ### Bước 2: Cấp quyền hiển thị phụ đề
 
@@ -50,7 +50,7 @@ Nếu dùng mã Downloader **4333187**, kiểm tra phiên bản khi cài. Nếu 
 3. Bấm **Back** quay lại app. Khi đã cấp quyền, app hiện **Đã cấp quyền, sẵn sàng nhận phụ đề từ iPhone**.
 4. Nếu app hỏi **bỏ qua tối ưu hóa pin**, chọn **Cho phép** để TV không tắt app khi chuyển sang cổng HDMI.
 
-**Bấm nút nhưng không chuyển qua cài đặt, hoặc không thấy chỗ bật quyền?** Một số Android TV/Google TV không hỗ trợ mở thẳng trang quyền. Bản 0.2.1 thử thêm các trang cài đặt dự phòng và có nút **Hướng dẫn cấp quyền thủ công** ngay trong app.
+**Bấm nút nhưng không chuyển qua cài đặt, hoặc không thấy chỗ bật quyền?** Một số Android TV/Google TV không hỗ trợ mở thẳng trang quyền. Từ bản 0.2.1, app thử thêm các trang cài đặt dự phòng và có nút **Hướng dẫn cấp quyền thủ công** ngay trong app.
 
 Dùng remote TV làm lần lượt:
 
@@ -142,7 +142,7 @@ Chỉnh cỡ chữ, màu chữ, nền, vị trí, độ rộng dòng và giọng
 | LG: không cài được, báo lỗi kết nối | Kiểm tra Developer Mode còn hạn, Key Server đang bật, IP đúng, máy tính cùng Wi-Fi với TV. |
 | iPhone không tìm thấy TV | Mở app TV trên TV, kiểm tra cùng Wi-Fi, hoặc nhập địa chỉ IP đang hiện trên TV. Kiểm tra iPhone đã cho phép **Mạng cục bộ** trong Cài đặt → Quyền riêng tư. |
 | Sai mã | Mã đổi mỗi phút, nhập mã đang hiện trên TV. |
-| Android TV: bấm cấp quyền nhưng không mở cài đặt | Cài bản 0.2.1, bấm **Hướng dẫn cấp quyền thủ công** trong app hoặc làm theo Bước 2 ở trên. |
+| Android TV: bấm cấp quyền nhưng không mở cài đặt | Cài bản 0.2.1 trở lên, bấm **Hướng dẫn cấp quyền thủ công** trong app hoặc làm theo Bước 2 ở trên. |
 | Android TV: phụ đề không hiện trên hình game | Kiểm tra đã cấp quyền hiển thị trên ứng dụng khác. Một số TV mất quyền này sau khi khởi động lại, cấp lại là được. |
 | Android TV: không nghe giọng đọc khi đang ở cổng HDMI | Đổi âm thanh số của TV sang **PCM**. Kiểm tra âm lượng trong **Giọng đọc trên TV** trên iPhone. |
 | TV Xiaomi nội địa: mở app thì app tự tắt, hoặc phụ đề không hiện | Dùng bản riêng [TV Xiaomi nội địa](#tv-xiaomi-nội-địa-trung). Phụ đề chỉ hiện sau khi chuyển sang cổng HDMI. |
