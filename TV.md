@@ -2,19 +2,20 @@
 
 Phụ đề tiếng Việt hiện nổi ngay trên hình game ở TV. Máy chơi game vẫn cắm HDMI thẳng vào TV nên hình gốc, không trễ. Chỉ có chữ (và giọng đọc nếu bật) đi từ iPhone sang TV qua Wi-Fi.
 
-> **Android TV:** tải app ngay ở phần dưới. **TV LG:** xem [hướng dẫn cài bằng Windows hoặc Mac](LG.md), nhắn Telegram https://t.me/pstranslator để nhận mã cài PC.
+> **Android TV:** tải app ngay ở phần dưới. **TV LG:** xem [hướng dẫn cài bằng Windows hoặc Mac](LG.md). **TV Samsung:** xem [hướng dẫn cài bằng Windows](SAMSUNG.md). Với LG và Samsung, nhắn Telegram https://t.me/pstranslator để nhận mã cài PC.
 
 **Mục lục**
 - [Cần có](#cần-có)
 - [Android TV](#android-tv)
   - [TV Xiaomi nội địa Trung Quốc](#tv-xiaomi-nội-địa-trung)
 - [TV LG (webOS)](#tv-lg-webos)
+- [TV Samsung (Tizen)](#tv-samsung-tizen)
 - [Ghép nối với iPhone](#ghép-nối-với-iphone)
 - [Lỗi thường gặp](#lỗi-thường-gặp)
 
 ## Cần có
 
-- TV chạy **Android TV** hoặc **TV LG chạy webOS** (bản LG đang thử nghiệm).
+- TV chạy **Android TV**, **TV LG chạy webOS** hoặc **TV Samsung (Tizen, 2017 trở lên)**. Bản LG và Samsung đang thử nghiệm.
 - **Không hỗ trợ** TV hệ điều hành khác và Android Box.
 - TV và iPhone dùng chung một mạng Wi-Fi.
 - App Console Translator trên iPhone có gói PRO.
@@ -119,6 +120,14 @@ Từ bản 0.2.0, giọng đọc tiếng Việt có thể phát ra loa TV cùng 
 ## TV LG (webOS)
 
 Cài bằng [bộ cài Windows 1.2.6](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.6/ConsoleTranslator-LG-PC-1.2.6.zip) hoặc [bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.1/ConsoleTranslator-LG-Mac-1.0.1.zip), nhập đầy đủ mã `LGTV-…` được cấp riêng, không cần dùng Terminal. Xem [hướng dẫn cài TV LG từ PC](LG.md), gồm bật Developer Mode, tải bộ cài và mở app mỗi lần chơi.
+
+---
+
+## TV Samsung (Tizen)
+
+Cài bằng [bộ cài Windows 1.0.0](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.0/ConsoleTranslator-Samsung-PC-1.0.0.zip), nhập đầy đủ mã `SSTV-…` được cấp riêng và đăng nhập tài khoản Samsung của bạn khi được hỏi. Xem [hướng dẫn cài TV Samsung từng bước](SAMSUNG.md).
+
+Trên Samsung, app tự hiện hình cổng HDMI bên trong nó: mở **Console Translator TV** trên TV để chơi, bấm Home sẽ thoát cả hình lẫn phụ đề.
 
 ---
 
