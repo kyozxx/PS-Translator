@@ -94,10 +94,18 @@ Nếu không có máy tính hoặc không muốn sideload thủ công, hãy vào
 ### 3. Kết nối được nhưng app không dịch lời thoại
 Nếu hình ảnh Remote Play vẫn hiển thị bình thường nhưng không thấy bản dịch:
 
-- Trên **thanh công cụ**, chọn **Chỉnh sửa khung**.
-- Điều chỉnh khung nhận diện đến đúng **khu vực hiển thị lời thoại/subtitle trong game**.
+- Trên **thanh công cụ**, bấm nút **khung cắt** (nút vàng) để mở **Chỉnh khung**.
+- Kéo khung **Thoại** (vàng nhạt) đến đúng **khu vực hiển thị lời thoại/subtitle trong game**.
 - Nên khoanh vùng vừa đủ phần lời thoại, tránh lấy quá nhiều khu vực khác trên màn hình.
 - Sau khi chọn đúng vùng, app sẽ nhận diện lời thoại trong khu vực này và tiến hành dịch.
+
+### 4. Muốn dịch nhiệm vụ, mô tả vật phẩm, thư trong game
+Bản mới nhất có thêm **Dịch vùng**:
+
+- Trong **Chỉnh khung**, kéo khung **Dịch vùng** (màu cam) tới chỗ chữ cần đọc.
+- Ở màn hình dịch, bật nút **Dịch vùng**. App tự dịch mỗi khi chữ trong khung đổi và hiện trong một hộp riêng.
+- Bấm nút đó lần nữa để tắt khi không cần.
+- Hai hộp phụ đề kéo lên xuống được, chạm 2 lần để đặt lại.
 
 ## Ủng hộ
 
