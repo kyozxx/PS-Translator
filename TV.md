@@ -118,7 +118,7 @@ Từ bản 0.2.0, giọng đọc tiếng Việt có thể phát ra loa TV cùng 
 
 ## TV LG (webOS)
 
-Cài bằng [bộ cài Windows 1.2.6](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.6/ConsoleTranslator-LG-PC-1.2.6.zip) hoặc [bộ cài Mac 1.0.0](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.0/ConsoleTranslator-LG-Mac-1.0.0.zip), nhập đầy đủ mã `LGTV-…` được cấp riêng, không cần dùng Terminal. Xem [hướng dẫn cài TV LG từ PC](LG.md), gồm bật Developer Mode, tải bộ cài và mở app mỗi lần chơi.
+Cài bằng [bộ cài Windows 1.2.6](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.6/ConsoleTranslator-LG-PC-1.2.6.zip) hoặc [bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.1/ConsoleTranslator-LG-Mac-1.0.1.zip), nhập đầy đủ mã `LGTV-…` được cấp riêng, không cần dùng Terminal. Xem [hướng dẫn cài TV LG từ PC](LG.md), gồm bật Developer Mode, tải bộ cài và mở app mỗi lần chơi.
 
 ---
 

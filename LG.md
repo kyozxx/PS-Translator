@@ -2,7 +2,7 @@
 
 Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề lên TV LG webOS. Khi chơi, điện thoại vẫn phải chạy dịch và gửi phụ đề sang TV; PC chỉ dùng cài hoặc mở app TV.
 
-[Tải bộ cài PC 1.2.6](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.6/ConsoleTranslator-LG-PC-1.2.6.zip) · [Tải bộ cài Mac 1.0.0](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.0/ConsoleTranslator-LG-Mac-1.0.0.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
+[Tải bộ cài PC 1.2.6](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.6/ConsoleTranslator-LG-PC-1.2.6.zip) · [Tải bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.1/ConsoleTranslator-LG-Mac-1.0.1.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
 
 Tải file `ConsoleTranslator-LG-PC-1.2.6.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện phụ đề trên HDMI tùy mẫu TV/firmware.
 
@@ -24,8 +24,8 @@ Công cụ tự chuẩn bị gói cài và cài đặt lên TV. PC nhớ IP/Pass
 
 ## Cài từ Mac, không cần Terminal
 
-1. [Tải bộ cài Mac 1.0.0](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.0/ConsoleTranslator-LG-Mac-1.0.0.zip), giải nén rồi kéo **Console Translator LG** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
-2. Cài [Node.js LTS](https://nodejs.org/en/download) nếu chưa có. Cần Node.js 22 trở lên.
+1. [Tải bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.1/ConsoleTranslator-LG-Mac-1.0.1.zip), giải nén rồi kéo **Console Translator LG** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
+2. Nếu thiếu Node.js, bấm **Cài Node.js** ngay trong app và chờ hoàn tất. App cũng tự nhắc **Cài và tiếp tục** khi cần, không phải tải riêng trên web. Nút **Hỗ trợ Telegram** dùng để nhận mã hoặc gửi log lỗi.
 3. Mở app, nhập IP và Passphrase trên TV, bấm **Kết nối TV**, xác nhận đúng TV.
 4. Nhập mã **LGTV** cấp riêng cho Mac, bấm **Cài đặt lên TV**, chờ hoàn tất.
 
@@ -51,7 +51,7 @@ Nếu chưa thấy **Vẫn mở**, thử mở app một lần nữa rồi quay l
 
 1. Bật PX5/máy chơi game trước, chuyển TV sang cổng HDMI có hình game.
 2. Bật Key Server trong Developer Mode nếu chưa bật, sau đó quay về HDMI.
-3. Mở công cụ Windows hoặc Mac, bấm **Mở app trên TV**. Khi mã phụ đề hiện trên TV, có thể đóng công cụ PC.
+3. Mở công cụ Windows hoặc Mac, bấm **Mở app trên TV**. Trên Mac, xác nhận **Đã hiện hình, mở app** sau khi TV đã hiện hình PS5 qua HDMI. Khi mã phụ đề hiện trên TV, có thể đóng công cụ PC.
 
 Tránh bấm Home, Cài đặt hoặc mở app khác bằng remote TV khi chơi. Chỉ nên dùng tăng/giảm âm lượng. Nếu phụ đề đóng, bấm **Mở app trên TV** lại.
 
@@ -66,7 +66,7 @@ Tránh bấm Home, Cài đặt hoặc mở app khác bằng remote TV khi chơi.
 
 | Mã | Dùng ở đâu? |
 | --- | --- |
-| `LGTV-YYYYMMDD-HHMMSS-…` | Nhập đầy đủ trong bộ cài Windows 1.2.6 hoặc Mac 1.0.0 để cài app TV. |
+| `LGTV-YYYYMMDD-HHMMSS-…` | Nhập đầy đủ trong bộ cài Windows 1.2.6 hoặc Mac 1.0.1 để cài app TV. |
 | `ANDROID-YYYYMMDD-HHMMSS-…` | Kích hoạt app beta trên điện thoại Android; không dùng trong bộ cài PC. |
 | Passphrase 6 ký tự trên Developer Mode | Dùng kết nối TV, phân biệt chữ hoa/chữ thường. Dùng đúng giá trị đang hiện trên TV. |
 | Mã phụ đề 8 số trên Console Translator TV | Nhập trên điện thoại để ghép phụ đề; mã hiện trên TV đổi mỗi phút. |
@@ -76,7 +76,7 @@ Mã cài PC hết hạn, bị thu hồi hoặc bị xóa sẽ chặn cài tiếp
 ## Nếu chưa được
 
 - **Không kết nối TV:** kiểm tra cùng mạng, IP/Passphrase mới nhất, Key Server bật và Developer Mode còn hạn.
-- **Không cài được:** dùng Windows 1.2.6 hoặc Mac 1.0.0, kiểm tra mã LGTV còn hạn và kết nối Internet. Nếu vẫn lỗi, sao chép toàn bộ log gửi hỗ trợ; chưa cần gỡ app trên TV.
+- **Không cài được:** dùng Windows 1.2.6 hoặc Mac 1.0.1, kiểm tra mã LGTV còn hạn và kết nối Internet. Nếu vẫn lỗi, sao chép toàn bộ log gửi hỗ trợ; chưa cần gỡ app trên TV.
 - **Không thấy phụ đề:** kiểm tra điện thoại đang chạy dịch, vùng quét có chữ gốc và đã ghép TV. Nếu vừa bấm Home, mở app TV lại.
 
 [Hướng dẫn Developer Mode chính thức của LG](https://webostv.developer.lge.com/develop/getting-started/developer-mode-app) · [Telegram hỗ trợ](https://t.me/pstranslator)
