@@ -2,9 +2,9 @@
 
 Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề lên TV Samsung Smart TV (Tizen, 2017 trở lên). Khi chơi, điện thoại vẫn chạy dịch và gửi phụ đề sang TV; PC chỉ cần lúc cài.
 
-[Tải bộ cài PC 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.2/ConsoleTranslator-Samsung-PC-1.0.2.zip) · [Tải bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.1/ConsoleTranslator-Samsung-Mac-1.0.1.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
+[Tải bộ cài PC 1.0.3](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.3/ConsoleTranslator-Samsung-PC-1.0.3.zip) · [Tải bộ cài Mac 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.2/ConsoleTranslator-Samsung-Mac-1.0.2.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
 
-Tải file `ConsoleTranslator-Samsung-PC-1.0.2.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
+Tải file `ConsoleTranslator-Samsung-PC-1.0.3.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
 
 ## Khác TV LG và Android TV ở đâu
 
@@ -21,14 +21,14 @@ TV Samsung không cho app nằm đè lên cổng HDMI. App **Console Translator 
 ## 2. Cài từ Windows, không cần dòng lệnh
 
 1. Nếu công cụ báo thiếu Node.js, bấm **Cài Node.js**, cài bản LTS từ trang chính thức rồi mở lại công cụ. Cần Node.js 22 trở lên.
-2. Nhập IP của TV, bấm **Kiểm tra kết nối TV**.
+2. Nhập **IP của TV** vào ô Địa chỉ IP của TV, bấm **Kiểm tra kết nối TV**. Đây là IP xem trên TV ở mục 1, không phải IP máy tính; nhập nhầm IP máy tính thì công cụ báo không kết nối được.
 3. Dán đầy đủ **mã cài bắt đầu bằng `SSTV-`** được cấp riêng qua Telegram, bấm **Cài đặt lên TV**.
 4. Trình duyệt mở trang Samsung: **đăng nhập tài khoản Samsung của bạn** (miễn phí, email đã xác minh). Samsung chỉ cho cài app ngoài cửa hàng khi gói cài được cấp chứng chỉ cho đúng TV của bạn; công cụ dùng lần đăng nhập này để xin chứng chỉ đó và không thấy mật khẩu.
 5. Chờ thông báo **Cài đặt hoàn tất**. Cần Internet để kiểm tra mã và tải gói.
 
 ## Cài từ Mac, không cần Terminal
 
-1. [Tải bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.1/ConsoleTranslator-Samsung-Mac-1.0.1.zip), giải nén rồi kéo **Console Translator Samsung** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
+1. [Tải bộ cài Mac 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.2/ConsoleTranslator-Samsung-Mac-1.0.2.zip), giải nén rồi kéo **Console Translator Samsung** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
 2. Mở app. Nếu macOS chặn vì app chưa notarize: bấm **Xong**, vào **Cài đặt hệ thống → Quyền riêng tư & Bảo mật → Vẫn mở**, rồi bấm **Mở**. Chỉ làm với ZIP từ GitHub chính thức.
 3. Nếu thiếu Node.js, bấm **Cài Node.js** trong app. Mac Apple Silicon cần thêm **Rosetta** của Apple; app sẽ hỏi và cài giúp.
 4. Làm phần chuẩn bị TV ở mục 1, dùng **IP máy Mac** hiện trong app cho ô **Host PC IP**.

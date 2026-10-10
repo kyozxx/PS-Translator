@@ -128,8 +128,8 @@ Tên sản phẩm và nhãn hiệu thuộc về chủ sở hữu tương ứng. 
 
 ## Cài app cho TV Samsung
 
-[Tải bộ cài Windows 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.2/ConsoleTranslator-Samsung-PC-1.0.2.zip) · [Tải bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.1/ConsoleTranslator-Samsung-Mac-1.0.1.zip) và xem [hướng dẫn TV Samsung từng bước](SAMSUNG.md). Cần mã `SSTV-…` được cấp qua [Telegram](https://t.me/pstranslator) và một tài khoản Samsung miễn phí.
+[Tải bộ cài Windows 1.0.3](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.3/ConsoleTranslator-Samsung-PC-1.0.3.zip) · [Tải bộ cài Mac 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.2/ConsoleTranslator-Samsung-Mac-1.0.2.zip) và xem [hướng dẫn TV Samsung từng bước](SAMSUNG.md). Cần mã `SSTV-…` được cấp qua [Telegram](https://t.me/pstranslator) và một tài khoản Samsung miễn phí.
 
 ## Cài app cho TV LG
 
-[Tải bộ cài Windows 1.2.8](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.8/ConsoleTranslator-LG-PC-1.2.8.zip) · [Tải bộ cài Mac 1.0.4](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.4/ConsoleTranslator-LG-Mac-1.0.4.zip) và xem [hướng dẫn TV LG từng bước](LG.md). Cần mã `LGTV-…` được cấp qua [Telegram](https://t.me/pstranslator); công cụ tự chuẩn bị gói cài và cài đặt lên TV.
+[Tải bộ cài Windows 1.2.9](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.9/ConsoleTranslator-LG-PC-1.2.9.zip) · [Tải bộ cài Mac 1.0.4](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.4/ConsoleTranslator-LG-Mac-1.0.4.zip) và xem [hướng dẫn TV LG từng bước](LG.md). Cần mã `LGTV-…` được cấp qua [Telegram](https://t.me/pstranslator); công cụ tự chuẩn bị gói cài và cài đặt lên TV.
