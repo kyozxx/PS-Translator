@@ -2,9 +2,9 @@
 
 Dùng Windows 10/11 để cài app nhận phụ đề lên TV Samsung Smart TV (Tizen, 2017 trở lên). Khi chơi, điện thoại vẫn chạy dịch và gửi phụ đề sang TV; PC chỉ cần lúc cài.
 
-[Tải bộ cài PC 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.1/ConsoleTranslator-Samsung-PC-1.0.1.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
+[Tải bộ cài PC 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.2/ConsoleTranslator-Samsung-PC-1.0.2.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
 
-Tải file `ConsoleTranslator-Samsung-PC-1.0.1.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
+Tải file `ConsoleTranslator-Samsung-PC-1.0.2.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
 
 ## Khác TV LG và Android TV ở đâu
 
@@ -38,6 +38,12 @@ Phím remote trong app: **Lên** đổi cổng HDMI, **Đỏ** xóa điện tho�
 
 1. Mở **Phụ đề trên TV** trong app trên iPhone hoặc Android, chọn TV hoặc nhập địa chỉ hiện trên TV.
 2. Nhập mã phụ đề **8 số** đang hiện trên TV, bấm **Kết nối**. Chỉ cần làm lần đầu. Đây không phải mã cài PC.
+
+## Cập nhật app trên TV
+
+Không cần tải lại bộ cài (từ bản 1.0.2). Mở công cụ trên máy tính, bấm **Kiểm tra kết nối TV**: nếu có bản mới, nhật ký hiện dòng **CÓ BẢN MỚI**. Bấm **Cài đặt lên TV** để cập nhật. Máy tính đã kích hoạt có thể để trống ô mã cài; vẫn đăng nhập tài khoản Samsung như lần đầu. TV không tự cập nhật được app cài qua Developer Mode.
+
+Đang dùng bộ cài 1.0.0 hoặc 1.0.1: tải bản 1.0.2 một lần, giải nén vào thư mục mới.
 
 ## Phân biệt các mã
 
