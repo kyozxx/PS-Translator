@@ -131,7 +131,7 @@ Bản dịch của **Chọn vùng dịch** (nhiệm vụ, mô tả vật phẩm,
 
 ## TV LG (webOS)
 
-Cài bằng [bộ cài Windows 1.2.7](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.7/ConsoleTranslator-LG-PC-1.2.7.zip) hoặc [bộ cài Mac 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.2/ConsoleTranslator-LG-Mac-1.0.2.zip), nhập đầy đủ mã `LGTV-…` được cấp riêng, không cần dùng Terminal. Xem [hướng dẫn cài TV LG từ PC](LG.md), gồm bật Developer Mode, tải bộ cài và mở app mỗi lần chơi.
+Cài bằng [bộ cài Windows 1.2.8](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.8/ConsoleTranslator-LG-PC-1.2.8.zip) hoặc [bộ cài Mac 1.0.3](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.3/ConsoleTranslator-LG-Mac-1.0.3.zip), nhập đầy đủ mã `LGTV-…` được cấp riêng, không cần dùng Terminal. Xem [hướng dẫn cài TV LG từ PC](LG.md), gồm bật Developer Mode, tải bộ cài và mở app mỗi lần chơi.
 
 ---
 
@@ -159,8 +159,8 @@ Chỉnh cỡ chữ, màu chữ, nền, vị trí, độ rộng dòng và giọng
 | Lỗi | Cách xử lý |
 |---|---|
 | Android TV: "Đã xảy ra sự cố khi phân tích cú pháp gói" | File tải chưa xong hoặc bị hỏng. Tải lại bằng Downloader, đừng gửi file qua tin nhắn. |
-| LG: `LG-INSTALL` khi cài | Dùng bộ cài PC 1.2.7, kiểm tra Developer Mode còn hạn và thử cài lại. Nếu vẫn lỗi, gửi toàn bộ log cho hỗ trợ trước khi gỡ app; không cần gỡ app trước khi được hỗ trợ. |
-| PC không nhận mã LGTV mới | Cập nhật bộ cài PC lên 1.2.7 rồi dán đầy đủ mã. Mã ANDROID không dùng trong bộ cài PC. |
+| LG: `LG-INSTALL` khi cài | Dùng bộ cài PC 1.2.8, kiểm tra Developer Mode còn hạn và thử cài lại. Nếu vẫn lỗi, gửi toàn bộ log cho hỗ trợ trước khi gỡ app; không cần gỡ app trước khi được hỗ trợ. |
+| PC không nhận mã LGTV mới | Cập nhật bộ cài PC lên 1.2.8 rồi dán đầy đủ mã. Mã ANDROID không dùng trong bộ cài PC. |
 | LG: không cài được, báo lỗi kết nối | Kiểm tra Developer Mode còn hạn, Key Server đang bật, IP đúng, máy tính cùng Wi-Fi với TV. |
 | iPhone không tìm thấy TV | Mở app TV trên TV, kiểm tra cùng Wi-Fi, hoặc nhập địa chỉ IP đang hiện trên TV. Kiểm tra iPhone đã cho phép **Mạng cục bộ** trong Cài đặt → Quyền riêng tư. |
 | Sai mã | Mã đổi mỗi phút, nhập mã đang hiện trên TV. |
