@@ -117,6 +117,16 @@ Từ bản 0.2.0, giọng đọc tiếng Việt có thể phát ra loa TV cùng 
 2. Hoặc bấm **nút loa** trên thanh công cụ màn Dịch khi chơi TV, chọn **Đọc trên loa TV** (chỉ chọn được khi đang kết nối TV).
 3. Không nghe thấy khi đang chơi: vào cài đặt âm thanh của TV, đổi **âm thanh số (Digital Audio Out)** sang **PCM**.
 
+### Dịch vùng trên TV
+
+Bản dịch của **Chọn vùng dịch** (nhiệm vụ, mô tả vật phẩm, bảng lựa chọn) hiện trên TV trong một hộp riêng, tách khỏi phụ đề thoại. Cần app TV 0.2.3 trở lên (TV LG: app 1.2.0, TV Samsung: app 1.1.0, cài bằng bộ cài mới nhất).
+
+1. Trên iPhone, ở màn hình dịch bấm **Chọn vùng dịch**, kéo khung cam tới chỗ cần dịch rồi thả tay. Bản dịch hiện trên điện thoại và trên TV.
+2. Chọn chỗ hiện trên TV: bấm nút **khung cắt** (nút vàng) → **Hiển thị trên TV**. Kéo khung **Thoại** và khung **Dịch vùng** ngay trên hình game, kéo chấm tròn để đổi độ rộng. TV đổi theo khi bạn thả tay.
+3. Chạm vào khung nào thì chỉnh cỡ chữ, màu chữ và nền của khung đó. Khung Dịch vùng có thêm **Tự ẩn sau** (mặc định 10 giây).
+4. Bật **Đè lên chữ gốc trong game** nếu muốn bản dịch nằm đúng chỗ chữ tiếng Anh: chữ dịch bắt đầu đúng chỗ chữ gốc bắt đầu.
+5. Bấm **Hiển thị thử** để xem cả hai khung trên TV mà không cần vào game. Nút loa bên cạnh phát thử giọng đọc ra loa TV.
+
 ---
 
 ## TV LG (webOS)

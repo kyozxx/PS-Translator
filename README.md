@@ -100,12 +100,14 @@ Nếu hình ảnh Remote Play vẫn hiển thị bình thường nhưng không t
 - Sau khi chọn đúng vùng, app sẽ nhận diện lời thoại trong khu vực này và tiến hành dịch.
 
 ### 4. Muốn dịch nhiệm vụ, mô tả vật phẩm, thư trong game
-Bản mới nhất có thêm **Dịch vùng**:
+Bản mới nhất có thêm **Chọn vùng dịch**:
 
-- Trong **Chỉnh khung**, kéo khung **Dịch vùng** (màu cam) tới chỗ chữ cần đọc.
-- Ở màn hình dịch, bật nút **Dịch vùng**. App tự dịch mỗi khi chữ trong khung đổi và hiện trong một hộp riêng.
-- Bấm nút đó lần nữa để tắt khi không cần.
+- Ở màn hình dịch, bấm **Chọn vùng dịch**: hình game hiện ra ngay trên điện thoại cùng một khung màu cam.
+- Kéo khung cam tới nhiệm vụ, mô tả vật phẩm, lá thư hay bảng lựa chọn rồi thả tay. App dịch ngay và hiện bản dịch trong hộp bên dưới hình. Mỗi lựa chọn nằm trên một dòng riêng.
+- Bấm **Ẩn hình game** để đóng. Lúc không mở hình, điện thoại không phải vẽ hình game nên đỡ nóng máy.
+- Muốn app tự dịch mỗi khi chữ trong khung đổi: bấm nút **khung cắt** (nút vàng), bật **Tự dịch khi chữ trong khung đổi**.
 - Hai hộp phụ đề kéo lên xuống được, chạm 2 lần để đặt lại.
+- Đang dùng **Phụ đề trên TV**: bản dịch vùng cũng hiện trên TV, xem [hướng dẫn TV](TV.md#dịch-vùng-trên-tv).
 
 ## Ủng hộ
 
