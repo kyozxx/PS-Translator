@@ -31,6 +31,19 @@ Công cụ tự chuẩn bị gói cài và cài đặt lên TV. PC nhớ IP/Pass
 
 Mac nhớ IP/Passphrase trong Keychain. Mã đã kích hoạt trên Windows không chuyển sang Mac, hãy nhận mã riêng. Nếu macOS chặn mở vì app chưa notarize, vào **Cài đặt hệ thống → Quyền riêng tư & Bảo mật → Vẫn mở** với ZIP từ GitHub chính thức; không cần tắt Gatekeeper.
 
+### Mac báo “Console Translator LG chưa được mở”
+
+![Cảnh báo macOS khi mở Console Translator LG](assets/lg-mac-open-warning.png)
+
+1. Ở cảnh báo như ảnh, bấm **Xong**. Không chọn **Chuyển vào Thùng rác** nếu muốn tiếp tục cài.
+2. Mở **Cài đặt hệ thống → Quyền riêng tư & Bảo mật**, kéo xuống phần **Bảo mật**.
+3. Tại thông báo chặn **Console Translator LG**, bấm **Vẫn mở / Open Anyway**. Nhập mật khẩu Mac hoặc dùng Touch ID nếu được hỏi.
+4. Khi cảnh báo xuất hiện lại, bấm **Mở / Open** để chạy app.
+
+Nếu chưa thấy **Vẫn mở**, thử mở app một lần nữa rồi quay lại mục Bảo mật. Chỉ thực hiện với bản tải từ GitHub chính thức.
+
+[Hướng dẫn của Apple](https://support.apple.com/102445).
+
 ## 3. Mở app mỗi lần chơi
 
 1. Bật PX5/máy chơi game trước, chuyển TV sang cổng HDMI có hình game.
