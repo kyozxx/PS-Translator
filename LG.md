@@ -20,7 +20,7 @@ Tải file `ConsoleTranslator-LG-PC-1.2.6.zip`, không tải **Source code**. B�
 3. Nhập IP và Passphrase đang hiện trên TV, bấm **Kết nối TV**. Kiểm tra đúng IP TV trước khi xác nhận khóa kết nối.
 4. Dán đầy đủ **mã cài PC bắt đầu bằng `LGTV-`** được cấp riêng qua Telegram, bấm **Cài đặt lên TV**, chờ thông báo hoàn tất. Cần Internet để kiểm tra mã và tải gói.
 
-Không cần tìm hoặc chọn file IPK. Công cụ tự tải và gửi sang TV. PC nhớ IP/Passphrase sau khi kết nối thành công; nếu thông tin trên TV đổi, nhập lại rồi kết nối.
+Công cụ tự chuẩn bị gói cài và cài đặt lên TV. PC nhớ IP/Passphrase sau khi kết nối thành công; nếu thông tin trên TV đổi, nhập lại rồi kết nối.
 
 ## Cài từ Mac, không cần Terminal
 
