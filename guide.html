@@ -245,6 +245,14 @@
         .download-row { display: flex; gap: 8px; margin: 10px 0 12px; }
         .download-row .download-tv { flex: 1; margin: 0; }
         .download-tv.alt { background: transparent; color: var(--blue); border: 1px solid var(--blue); }
+        .tv-downloads { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+        .tv-version { background: #1a2438; border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+        .tv-version h3 { font-size: 16px; margin: 0; }
+        .tv-version p { font-size: 13px; margin: 8px 0 0; }
+        .download-code { display: block; font-size: 29px; letter-spacing: 2px; font-variant-numeric: tabular-nums; color: var(--green); margin: 2px 0 12px; }
+        .download-button { display: flex; align-items: center; justify-content: center; text-decoration: none; min-height: 44px; padding: 10px 8px; border-radius: 10px; border: 1px solid #38bdf855; background: #38bdf818; color: var(--blue); font-size: 14px; font-weight: 600; }
+        @media (max-width: 480px) { .tv-downloads { grid-template-columns: 1fr; } }
+        .other-guide { display: block; text-align: center; padding: 12px; margin-bottom: 18px; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; background: var(--card); }
         .mini-title { color: var(--text); font-size: 14px; font-weight: 800; margin: 14px 0 6px; }
         .play-every-time {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: 8px 0 12px;
@@ -298,6 +306,8 @@
         <small>Mở app ngân hàng, quét mã QR hoặc dán số tài khoản. Số tiền tùy tâm.</small>
     </section>
 
+    <a class="other-guide" href="https://kyozxx.github.io/Console-Translator/guide.html">Dùng điện thoại Android? Xem hướng dẫn bản Android →</a>
+
     <a class="tv-jump" href="#phu-de-tv">
         <span><strong>Muốn phụ đề hiện ngay trên TV?</strong><small>Hỗ trợ Android TV và LG webOS · Hình game gốc, không trễ</small></span>
         <span class="arrow" aria-hidden="true">↓</span>
@@ -323,16 +333,27 @@
 
         <details class="platform">
             <summary><span class="platform-name"><span class="platform-icon">A</span>Android TV</span><span class="tag">Cài bằng remote</span></summary>
-            <div class="download-row">
-                <a class="download-tv" href="https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.2/Console-Translator-TV.apk">Tải Console Translator TV 0.2.2</a>
-                <a class="download-tv alt" href="https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.2-mi/Console-Translator-TV-Mi.apk">TV Xiaomi nội địa</a>
+            <div class="tv-downloads">
+                <div class="tv-version">
+                    <h3>Android TV thông thường</h3>
+                    <p>Mã Downloader</p>
+                    <strong class="download-code">8966093</strong>
+                    <a class="download-button" href="https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.2/Console-Translator-TV.apk">Tải APK TV 0.2.2</a>
+                </div>
+                <div class="tv-version">
+                    <h3>TV Xiaomi nội địa</h3>
+                    <p>Mã Downloader</p>
+                    <strong class="download-code">8342297</strong>
+                    <a class="download-button" href="https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.2-mi/Console-Translator-TV-Mi.apk">Tải APK Xiaomi 0.2.2-mi</a>
+                </div>
             </div>
+            <p class="why">Mã Downloader dùng để tải app trên TV. Khác với mã ghép phụ đề 8 số.</p>
 
             <p class="mini-title">Cài app</p>
             <ol>
                 <li>Trên TV, cài <strong>Downloader by AFTVnews</strong> từ Google Play.</li>
                 <li>Vào <strong>Cài đặt → Ứng dụng → Quyền truy cập đặc biệt → Cài đặt ứng dụng không rõ nguồn</strong>, cho phép Downloader.</li>
-                <li>Mở Downloader, nhập link tải ở nút phía trên rồi cài file APK. Hoặc nhập mã Downloader <strong>8966093</strong> (bản 0.2.2). TV Xiaomi mua từ Trung Quốc dùng nút <strong>TV Xiaomi nội địa</strong> (mã Downloader <strong>8342297</strong>), phụ đề chỉ hiện sau khi chuyển sang cổng HDMI.</li>
+                <li>Mở Downloader, nhập mã đúng loại TV ở trên, tải rồi cài file APK. TV Xiaomi mua từ Trung Quốc dùng bản <strong>TV Xiaomi nội địa</strong>, phụ đề chỉ hiện sau khi chuyển sang cổng HDMI.</li>
             </ol>
 
             <p class="mini-title">Cấp quyền và mở app</p>
