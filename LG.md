@@ -38,6 +38,9 @@ Mac nhớ IP/Passphrase trong Keychain. Mã đã kích hoạt trên Windows khô
 1. Ở cảnh báo như ảnh, bấm **Xong**. Không chọn **Chuyển vào Thùng rác** nếu muốn tiếp tục cài.
 2. Mở **Cài đặt hệ thống → Quyền riêng tư & Bảo mật**, kéo xuống phần **Bảo mật**.
 3. Tại thông báo chặn **Console Translator LG**, bấm **Vẫn mở / Open Anyway**. Nhập mật khẩu Mac hoặc dùng Touch ID nếu được hỏi.
+
+   ![Nút Vẫn mở trong Quyền riêng tư và Bảo mật](assets/lg-mac-open-anyway.png)
+
 4. Khi cảnh báo xuất hiện lại, bấm **Mở / Open** để chạy app.
 
 Nếu chưa thấy **Vẫn mở**, thử mở app một lần nữa rồi quay lại mục Bảo mật. Chỉ thực hiện với bản tải từ GitHub chính thức.
