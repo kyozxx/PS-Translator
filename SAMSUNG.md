@@ -1,8 +1,8 @@
-# Cài phụ đề cho TV Samsung bằng Windows
+# Cài phụ đề cho TV Samsung bằng Windows hoặc Mac
 
-Dùng Windows 10/11 để cài app nhận phụ đề lên TV Samsung Smart TV (Tizen, 2017 trở lên). Khi chơi, điện thoại vẫn chạy dịch và gửi phụ đề sang TV; PC chỉ cần lúc cài.
+Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề lên TV Samsung Smart TV (Tizen, 2017 trở lên). Khi chơi, điện thoại vẫn chạy dịch và gửi phụ đề sang TV; PC chỉ cần lúc cài.
 
-[Tải bộ cài PC 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.2/ConsoleTranslator-Samsung-PC-1.0.2.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
+[Tải bộ cài PC 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.2/ConsoleTranslator-Samsung-PC-1.0.2.zip) · [Tải bộ cài Mac 1.0.0](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.0/ConsoleTranslator-Samsung-Mac-1.0.0.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
 
 Tải file `ConsoleTranslator-Samsung-PC-1.0.2.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
 
@@ -25,6 +25,16 @@ TV Samsung không cho app nằm đè lên cổng HDMI. App **Console Translator 
 3. Dán đầy đủ **mã cài bắt đầu bằng `SSTV-`** được cấp riêng qua Telegram, bấm **Cài đặt lên TV**.
 4. Trình duyệt mở trang Samsung: **đăng nhập tài khoản Samsung của bạn** (miễn phí, email đã xác minh). Samsung chỉ cho cài app ngoài cửa hàng khi gói cài được cấp chứng chỉ cho đúng TV của bạn; công cụ dùng lần đăng nhập này để xin chứng chỉ đó và không thấy mật khẩu.
 5. Chờ thông báo **Cài đặt hoàn tất**. Cần Internet để kiểm tra mã và tải gói.
+
+## Cài từ Mac, không cần Terminal
+
+1. [Tải bộ cài Mac 1.0.0](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.0/ConsoleTranslator-Samsung-Mac-1.0.0.zip), giải nén rồi kéo **Console Translator Samsung** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
+2. Mở app. Nếu macOS chặn vì app chưa notarize: bấm **Xong**, vào **Cài đặt hệ thống → Quyền riêng tư & Bảo mật → Vẫn mở**, rồi bấm **Mở**. Chỉ làm với ZIP từ GitHub chính thức.
+3. Nếu thiếu Node.js, bấm **Cài Node.js** trong app. Mac Apple Silicon cần thêm **Rosetta** của Apple; app sẽ hỏi và cài giúp.
+4. Làm phần chuẩn bị TV ở mục 1, dùng **IP máy Mac** hiện trong app cho ô **Host PC IP**.
+5. Nhập IP của TV, bấm **Kiểm tra kết nối TV**. Nhập mã **SSTV** cấp riêng cho Mac, bấm **Cài đặt lên TV**, đăng nhập tài khoản Samsung khi trình duyệt mở, chờ hoàn tất.
+
+Mã đã kích hoạt trên Windows không chuyển sang Mac, hãy nhận mã riêng.
 
 ## 3. Mỗi lần chơi
 
@@ -49,7 +59,7 @@ Không cần tải lại bộ cài (từ bản 1.0.2). Mở công cụ trên má
 
 | Mã | Dùng ở đâu? |
 | --- | --- |
-| `SSTV-YYYYMMDD-HHMMSS-…` | Nhập trong bộ cài Windows cho TV Samsung. |
+| `SSTV-YYYYMMDD-HHMMSS-…` | Nhập trong bộ cài Windows hoặc Mac cho TV Samsung. |
 | `LGTV-YYYYMMDD-HHMMSS-…` | Chỉ dùng cho bộ cài TV LG, không dùng cho Samsung. |
 | `ANDROID-YYYYMMDD-HHMMSS-…` | Kích hoạt app beta trên điện thoại Android. |
 | Mã phụ đề 8 số trên Console Translator TV | Nhập trên điện thoại để ghép phụ đề; mã đổi mỗi phút. |
