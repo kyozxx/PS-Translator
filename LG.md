@@ -2,9 +2,9 @@
 
 Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề lên TV LG webOS. Khi chơi, điện thoại vẫn phải chạy dịch và gửi phụ đề sang TV; PC chỉ dùng cài hoặc mở app TV.
 
-[Tải bộ cài PC 1.2.6](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.6/ConsoleTranslator-LG-PC-1.2.6.zip) · [Tải bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.1/ConsoleTranslator-LG-Mac-1.0.1.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
+[Tải bộ cài PC 1.2.7](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.7/ConsoleTranslator-LG-PC-1.2.7.zip) · [Tải bộ cài Mac 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.2/ConsoleTranslator-LG-Mac-1.0.2.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
 
-Tải file `ConsoleTranslator-LG-PC-1.2.6.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện phụ đề trên HDMI tùy mẫu TV/firmware.
+Tải file `ConsoleTranslator-LG-PC-1.2.7.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện phụ đề trên HDMI tùy mẫu TV/firmware.
 
 ## 1. Chuẩn bị trên TV, làm lần đầu
 
@@ -24,7 +24,7 @@ Công cụ tự chuẩn bị gói cài và cài đặt lên TV. PC nhớ IP/Pass
 
 ## Cài từ Mac, không cần Terminal
 
-1. [Tải bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.1/ConsoleTranslator-LG-Mac-1.0.1.zip), giải nén rồi kéo **Console Translator LG** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
+1. [Tải bộ cài Mac 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.2/ConsoleTranslator-LG-Mac-1.0.2.zip), giải nén rồi kéo **Console Translator LG** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
 2. Nếu thiếu Node.js, bấm **Cài Node.js** ngay trong app và chờ hoàn tất. App cũng tự nhắc **Cài và tiếp tục** khi cần, không phải tải riêng trên web. Nút **Hỗ trợ Telegram** dùng để nhận mã hoặc gửi log lỗi.
 3. Mở app, nhập IP và Passphrase trên TV, bấm **Kết nối TV**, xác nhận đúng TV.
 4. Nhập mã **LGTV** cấp riêng cho Mac, bấm **Cài đặt lên TV**, chờ hoàn tất.
@@ -66,7 +66,7 @@ Tránh bấm Home, Cài đặt hoặc mở app khác bằng remote TV khi chơi.
 
 | Mã | Dùng ở đâu? |
 | --- | --- |
-| `LGTV-YYYYMMDD-HHMMSS-…` | Nhập đầy đủ trong bộ cài Windows 1.2.6 hoặc Mac 1.0.1 để cài app TV. |
+| `LGTV-YYYYMMDD-HHMMSS-…` | Nhập đầy đủ trong bộ cài Windows 1.2.7 hoặc Mac 1.0.2 để cài app TV. |
 | `ANDROID-YYYYMMDD-HHMMSS-…` | Kích hoạt app beta trên điện thoại Android; không dùng trong bộ cài PC. |
 | Passphrase 6 ký tự trên Developer Mode | Dùng kết nối TV, phân biệt chữ hoa/chữ thường. Dùng đúng giá trị đang hiện trên TV. |
 | Mã phụ đề 8 số trên Console Translator TV | Nhập trên điện thoại để ghép phụ đề; mã hiện trên TV đổi mỗi phút. |
@@ -76,11 +76,11 @@ Mã cài PC hết hạn, bị thu hồi hoặc bị xóa sẽ chặn cài tiếp
 ## Nếu chưa được
 
 - **Không kết nối TV:** kiểm tra cùng mạng, IP/Passphrase mới nhất, Key Server bật và Developer Mode còn hạn.
-- **Không cài được:** dùng Windows 1.2.6 hoặc Mac 1.0.1, kiểm tra mã LGTV còn hạn và kết nối Internet. Nếu vẫn lỗi, sao chép toàn bộ log gửi hỗ trợ; chưa cần gỡ app trên TV.
+- **Không cài được:** dùng Windows 1.2.7 hoặc Mac 1.0.2, kiểm tra mã LGTV còn hạn và kết nối Internet. Nếu vẫn lỗi, sao chép toàn bộ log gửi hỗ trợ; chưa cần gỡ app trên TV.
 - **Không thấy phụ đề:** kiểm tra điện thoại đang chạy dịch, vùng quét có chữ gốc và đã ghép TV. Nếu vừa bấm Home, mở app TV lại.
 
 [Hướng dẫn Developer Mode chính thức của LG](https://webostv.developer.lge.com/develop/getting-started/developer-mode-app) · [Telegram hỗ trợ](https://t.me/pstranslator)
 
-Ngày giờ trong mã là lúc tạo theo giờ Việt Nam, không phải hạn sử dụng. Mã cũ 32 ký tự vẫn dùng được. Bản PC 1.2.5 trở xuống chỉ nhận mã cũ; mã LGTV mới cần bản 1.2.6.
+Ngày giờ trong mã là lúc tạo theo giờ Việt Nam, không phải hạn sử dụng. Mã cũ 32 ký tự vẫn dùng được. Bản PC 1.2.5 trở xuống chỉ nhận mã cũ; mã LGTV mới cần bản 1.2.7.
 
-Cập nhật bộ cài: đóng bản cũ, giải nén ZIP 1.2.6 vào thư mục mới rồi mở `Chay-Console-Translator.bat`. Dùng cùng tài khoản Windows để giữ thông tin TV và máy đã kích hoạt. Nếu quên mã, nhắn người cấp mã qua Telegram.
+Cập nhật bộ cài: đóng bản cũ, giải nén ZIP 1.2.7 vào thư mục mới rồi mở `Chay-Console-Translator.bat`. Dùng cùng tài khoản Windows để giữ thông tin TV và máy đã kích hoạt. Nếu quên mã, nhắn người cấp mã qua Telegram.

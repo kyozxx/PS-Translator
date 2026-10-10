@@ -2,9 +2,9 @@
 
 Dùng Windows 10/11 để cài app nhận phụ đề lên TV Samsung Smart TV (Tizen, 2017 trở lên). Khi chơi, điện thoại vẫn chạy dịch và gửi phụ đề sang TV; PC chỉ cần lúc cài.
 
-[Tải bộ cài PC 1.0.0](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.0/ConsoleTranslator-Samsung-PC-1.0.0.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
+[Tải bộ cài PC 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.1/ConsoleTranslator-Samsung-PC-1.0.1.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
 
-Tải file `ConsoleTranslator-Samsung-PC-1.0.0.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
+Tải file `ConsoleTranslator-Samsung-PC-1.0.1.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
 
 ## Khác TV LG và Android TV ở đâu
 
