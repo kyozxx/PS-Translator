@@ -2,7 +2,7 @@
 
 Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề lên TV Samsung Smart TV (Tizen, 2017 trở lên). Khi chơi, điện thoại vẫn chạy dịch và gửi phụ đề sang TV; PC chỉ cần lúc cài.
 
-[Tải bộ cài PC 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.2/ConsoleTranslator-Samsung-PC-1.0.2.zip) · [Tải bộ cài Mac 1.0.0](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.0/ConsoleTranslator-Samsung-Mac-1.0.0.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
+[Tải bộ cài PC 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.2/ConsoleTranslator-Samsung-PC-1.0.2.zip) · [Tải bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.1/ConsoleTranslator-Samsung-Mac-1.0.1.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
 
 Tải file `ConsoleTranslator-Samsung-PC-1.0.2.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
 
@@ -28,7 +28,7 @@ TV Samsung không cho app nằm đè lên cổng HDMI. App **Console Translator 
 
 ## Cài từ Mac, không cần Terminal
 
-1. [Tải bộ cài Mac 1.0.0](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.0/ConsoleTranslator-Samsung-Mac-1.0.0.zip), giải nén rồi kéo **Console Translator Samsung** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
+1. [Tải bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.1/ConsoleTranslator-Samsung-Mac-1.0.1.zip), giải nén rồi kéo **Console Translator Samsung** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
 2. Mở app. Nếu macOS chặn vì app chưa notarize: bấm **Xong**, vào **Cài đặt hệ thống → Quyền riêng tư & Bảo mật → Vẫn mở**, rồi bấm **Mở**. Chỉ làm với ZIP từ GitHub chính thức.
 3. Nếu thiếu Node.js, bấm **Cài Node.js** trong app. Mac Apple Silicon cần thêm **Rosetta** của Apple; app sẽ hỏi và cài giúp.
 4. Làm phần chuẩn bị TV ở mục 1, dùng **IP máy Mac** hiện trong app cho ô **Host PC IP**.

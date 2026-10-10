@@ -131,13 +131,13 @@ Bản dịch của **Chọn vùng dịch** (nhiệm vụ, mô tả vật phẩm,
 
 ## TV LG (webOS)
 
-Cài bằng [bộ cài Windows 1.2.8](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.8/ConsoleTranslator-LG-PC-1.2.8.zip) hoặc [bộ cài Mac 1.0.3](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.3/ConsoleTranslator-LG-Mac-1.0.3.zip), nhập đầy đủ mã `LGTV-…` được cấp riêng, không cần dùng Terminal. Xem [hướng dẫn cài TV LG từ PC](LG.md), gồm bật Developer Mode, tải bộ cài và mở app mỗi lần chơi.
+Cài bằng [bộ cài Windows 1.2.8](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.8/ConsoleTranslator-LG-PC-1.2.8.zip) hoặc [bộ cài Mac 1.0.4](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.4/ConsoleTranslator-LG-Mac-1.0.4.zip), nhập đầy đủ mã `LGTV-…` được cấp riêng, không cần dùng Terminal. Xem [hướng dẫn cài TV LG từ PC](LG.md), gồm bật Developer Mode, tải bộ cài và mở app mỗi lần chơi.
 
 ---
 
 ## TV Samsung (Tizen)
 
-Cài bằng [bộ cài Windows 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.2/ConsoleTranslator-Samsung-PC-1.0.2.zip) hoặc [bộ cài Mac 1.0.0](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.0/ConsoleTranslator-Samsung-Mac-1.0.0.zip), nhập đầy đủ mã `SSTV-…` được cấp riêng và đăng nhập tài khoản Samsung của bạn khi được hỏi. Xem [hướng dẫn cài TV Samsung từng bước](SAMSUNG.md).
+Cài bằng [bộ cài Windows 1.0.2](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.2/ConsoleTranslator-Samsung-PC-1.0.2.zip) hoặc [bộ cài Mac 1.0.1](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.1/ConsoleTranslator-Samsung-Mac-1.0.1.zip), nhập đầy đủ mã `SSTV-…` được cấp riêng và đăng nhập tài khoản Samsung của bạn khi được hỏi. Xem [hướng dẫn cài TV Samsung từng bước](SAMSUNG.md).
 
 Trên Samsung, app tự hiện hình cổng HDMI bên trong nó: mở **Console Translator TV** trên TV để chơi, bấm Home sẽ thoát cả hình lẫn phụ đề.
 
