@@ -2,9 +2,9 @@
 
 Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề lên TV Samsung Smart TV (Tizen, 2017 trở lên). Khi chơi, điện thoại vẫn chạy dịch và gửi phụ đề sang TV; PC chỉ cần lúc cài.
 
-[Tải bộ cài PC 1.0.4](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.4/ConsoleTranslator-Samsung-PC-1.0.4.zip) · [Tải bộ cài Mac 1.0.3](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.3/ConsoleTranslator-Samsung-Mac-1.0.3.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
+[Tải bộ cài PC 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.5/ConsoleTranslator-Samsung-PC-1.0.5.zip) · [Tải bộ cài Mac 1.0.4](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.4/ConsoleTranslator-Samsung-Mac-1.0.4.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
 
-Tải file `ConsoleTranslator-Samsung-PC-1.0.4.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
+Tải file `ConsoleTranslator-Samsung-PC-1.0.5.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
 
 ## Khác TV LG và Android TV ở đâu
 
@@ -38,7 +38,7 @@ PC, điện thoại và TV cần cùng mạng Wi-Fi/LAN.
 
 ## Cài từ Mac, không cần Terminal
 
-1. [Tải bộ cài Mac 1.0.3](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.3/ConsoleTranslator-Samsung-Mac-1.0.3.zip), giải nén rồi kéo **Console Translator Samsung** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
+1. [Tải bộ cài Mac 1.0.4](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.4/ConsoleTranslator-Samsung-Mac-1.0.4.zip), giải nén rồi kéo **Console Translator Samsung** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
 2. Mở app. Nếu macOS chặn vì app chưa notarize: bấm **Xong**, vào **Cài đặt hệ thống → Quyền riêng tư & Bảo mật → Vẫn mở**, rồi bấm **Mở**. Chỉ làm với ZIP từ GitHub chính thức.
 3. Nếu thiếu Node.js, bấm **Cài Node.js** trong app. Mac Apple Silicon cần thêm **Rosetta** của Apple; app sẽ hỏi và cài giúp.
 4. Làm theo ba bước đánh số trong app, giống bản Windows ở trên: **Bước 1** nhập **IP máy Mac** (số lớn trong app) vào ô **Host PC IP** trên TV rồi rút điện TV; **Bước 2** nhập IP của TV, bấm **Kiểm tra kết nối TV**; **Bước 3** nhập mã **SSTV** cấp riêng cho Mac, bấm **Cài đặt lên TV**, đăng nhập tài khoản Samsung khi trình duyệt mở.
@@ -63,6 +63,8 @@ Phím remote trong app: **Lên** đổi cổng HDMI, **Đỏ** xóa điện tho�
 Không cần tải lại bộ cài (từ bản 1.0.2). Mở công cụ trên máy tính, bấm **Kiểm tra kết nối TV**: nếu có bản mới, nhật ký hiện dòng **CÓ BẢN MỚI**. Bấm **Cài đặt lên TV** để cập nhật. Máy tính đã kích hoạt có thể để trống ô mã cài; vẫn đăng nhập tài khoản Samsung như lần đầu. TV không tự cập nhật được app cài qua Developer Mode.
 
 Đang dùng bộ cài 1.0.0 hoặc 1.0.1: tải bản 1.0.2 một lần, giải nén vào thư mục mới.
+
+Bộ cài cũng tự báo khi chính nó có bản mới: mỗi lần bấm một nút, nhật ký hiện dòng **BỘ CÀI CÓ BẢN MỚI** kèm link tải nếu bạn đang dùng bản cũ.
 
 ## Phân biệt các mã
 
