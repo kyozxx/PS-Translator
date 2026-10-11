@@ -161,14 +161,48 @@ Trên Samsung, app tự hiện hình cổng HDMI bên trong nó: mở **Console 
 
 ## Ghép nối với iPhone
 
-1. Trên iPhone: **Dịch khi chơi TV → nút TV** trên thanh công cụ.
-2. Ở **Loại TV**, chọn **Android TV** hoặc **TV LG**.
-3. Chọn TV trong danh sách (hoặc nhập địa chỉ đang hiện trên TV), nhập **mã 8 số**, bấm **Kết nối**.
-4. Chuyển TV sang cổng HDMI của máy chơi game. Phụ đề hiện trên hình game.
+Làm lần lượt theo các bước sau:
 
-Mã đổi mỗi phút, chỉ cần nhập một lần: lần sau iPhone tự kết nối lại.
+### Bước 1: Mở app Console Translator TV trên TV
+Mở app nhận phụ đề đã cài trên TV (Android TV, TV LG hoặc TV Samsung). Trên màn hình TV sẽ hiển thị **Địa chỉ TV** và **Mã ghép nối (8 số)**:
 
-Chỉnh cỡ chữ, màu chữ, nền, vị trí, độ rộng dòng và giọng đọc ngay trên iPhone. Có nút **Gửi câu thử** để chỉnh mà không cần chơi.
+| Màn hình trên TV LG | Màn hình trên Android TV |
+| :---: | :---: |
+| <img src="assets/tv-lg-code.jpg" width="380" alt="Màn hình TV LG" /> | <img src="assets/tv-android-code.png" width="380" alt="Màn hình Android TV" /> |
+
+*(Lưu ý: Mã 8 số đổi mỗi 60 giây để bảo mật, bạn chỉ cần nhập ghép nối 1 lần đầu, các lần sau iPhone sẽ tự động nhớ).*
+
+---
+
+### Bước 2: Bấm Chơi từ xa và chọn Dịch khi chơi TV
+Trên iPhone, mở app **Console Translator**:
+1. Ở màn hình chính, bấm vào nút **Chơi từ xa**:
+
+<img src="assets/step1-remote-play.jpg" width="360" alt="Chơi từ xa" />
+
+2. Chọn **Dịch khi chơi TV**:
+
+<img src="assets/step2-play-on-tv.png" width="360" alt="Dịch khi chơi TV" />
+
+---
+
+### Bước 3: Bấm nút TV trên thanh công cụ
+Tại màn hình dịch, bấm vào biểu tượng **TV** 📺 trên thanh công cụ trên cùng:
+
+<img src="assets/step3-tv-button.jpg" width="360" alt="Nút TV" />
+
+---
+
+### Bước 4: Nhập IP và mã 8 số để kết nối
+Ở bảng **Phụ đề trên TV** hiện ra:
+1. Nhập **Địa chỉ TV** (ví dụ: `192.168.1.40` hoặc `192.168.1.11` như đang hiện trên màn hình TV).
+2. Nhập **Mã 8 số trên TV** rồi bấm **Kết nối**:
+
+<img src="assets/step4-tv-connect.jpg" width="360" alt="Nhập mã TV và kết nối" />
+
+3. Sau khi báo đã kết nối thành công, bạn chỉ cần chuyển TV sang cổng HDMI của máy chơi game (PS5 / PS4 / Xbox) là phụ đề tiếng Việt sẽ tự động nổi lên trên hình game!
+
+Chỉnh cỡ chữ, màu chữ, nền, vị trí, độ rộng dòng và giọng đọc ngay trên iPhone. Có nút **Gửi câu thử** để kiểm tra vị trí phụ đề mà không cần vào game.
 
 ## Lỗi thường gặp
 
