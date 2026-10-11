@@ -134,4 +134,4 @@ Tên sản phẩm và nhãn hiệu thuộc về chủ sở hữu tương ứng. 
 
 ## Cài app cho TV LG
 
-[Tải bộ cài Windows 1.2.11](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.11/ConsoleTranslator-LG-PC-1.2.11.zip) · [Tải bộ cài Mac 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip) và xem [hướng dẫn TV LG từng bước](LG.md). Cần mã `LGTV-…` được cấp qua [Telegram](https://t.me/pstranslator); công cụ tự chuẩn bị gói cài và cài đặt lên TV.
+[Tải bộ cài Windows 1.2.12](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.12/ConsoleTranslator-LG-PC-1.2.12.zip) · [Tải bộ cài Mac 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip) và xem [hướng dẫn TV LG từng bước](LG.md). Cần mã `LGTV-…` được cấp qua [Telegram](https://t.me/pstranslator); công cụ tự chuẩn bị gói cài và cài đặt lên TV.
