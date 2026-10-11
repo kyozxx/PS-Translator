@@ -6,6 +6,8 @@ Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề
 
 Tải file `ConsoleTranslator-LG-PC-1.2.10.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện phụ đề trên HDMI tùy mẫu TV/firmware.
 
+> **Trước khi mua gói PRO hoặc donate để dùng phụ đề trên TV LG:** bản LG đang thử nghiệm, mới kiểm tra trên webOS 7 (TV 2022). Hãy cài app lên TV trước (không mất tiền); khi TV hiện được mã ghép nối 8 số trên hình game thì hãy mua.
+
 ## 1. Chuẩn bị trên TV, làm lần đầu
 
 1. Tạo tài khoản tại [LG Developer](https://webostv.developer.lge.com).

@@ -6,6 +6,15 @@ Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề
 
 Tải file `ConsoleTranslator-Samsung-PC-1.0.9.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
 
+## TV nào dùng được
+
+- **Được (thử nghiệm):** TV Samsung từ năm 2017 trở lên, tức Tizen 3.0 trở lên. Một số TV đời 2018 đang gặp lỗi khi cài, chưa xử lý xong.
+- **Không dùng được:** TV Samsung 2016 trở về trước (Tizen 2.x). Bộ cài sẽ báo `SS-OLD_TV` và dừng.
+
+Xem đời TV Samsung: trên TV vào **Cài đặt → Hỗ trợ → Giới thiệu về TV**, xem mã model. Chữ cái sau số inch thường cho biết năm: K = 2016, M = 2017, N = 2018, R = 2019, T = 2020, A = 2021, B = 2022, C = 2023, D = 2024. Chắc chắn hơn: bấm **Kiểm tra kết nối TV** trong bộ cài, nhật ký hiện dòng "TV: Tizen ..."; Tizen 2.x là TV 2016 trở về trước.
+
+Nếu bạn định mua gói PRO hoặc donate chỉ để dùng phụ đề trên TV Samsung, hãy cài app lên TV trước. Cài app TV không mất tiền; khi TV hiện được hình cổng HDMI và mã ghép nối 8 số thì hãy mua.
+
 ## Khác TV LG và Android TV ở đâu
 
 TV Samsung không cho app nằm đè lên cổng HDMI. App **Console Translator TV** tự hiện hình cổng HDMI bên trong nó rồi vẽ phụ đề lên trên. Vì vậy bạn mở app trên TV để chơi, và bấm **Home** hoặc đổi nguồn sẽ thoát cả hình lẫn phụ đề; mở lại app để chơi tiếp.

@@ -5,6 +5,7 @@ Phụ đề tiếng Việt hiện nổi ngay trên hình game ở TV. Máy chơi
 > **Android TV:** tải app ngay ở phần dưới. **TV LG:** xem [hướng dẫn cài bằng Windows hoặc Mac](LG.md). **TV Samsung:** xem [hướng dẫn cài bằng Windows hoặc Mac](SAMSUNG.md). Với LG và Samsung, nhắn Telegram https://t.me/pstranslator để nhận mã cài PC.
 
 **Mục lục**
+- [Kiểm tra TV trước khi mua](#kiểm-tra-tv-trước-khi-mua)
 - [Cần có](#cần-có)
 - [Android TV](#android-tv)
   - [TV Xiaomi nội địa Trung Quốc](#tv-xiaomi-nội-địa-trung)
@@ -13,10 +14,25 @@ Phụ đề tiếng Việt hiện nổi ngay trên hình game ở TV. Máy chơi
 - [Ghép nối với iPhone](#ghép-nối-với-iphone)
 - [Lỗi thường gặp](#lỗi-thường-gặp)
 
+## Kiểm tra TV trước khi mua
+
+Tính năng Phụ đề trên TV không chạy trên mọi TV. Hãy kiểm tra trước khi mua gói PRO hoặc donate, vì khoản đã mua không đổi lại được chỉ vì TV không tương thích.
+
+| TV của bạn | Dùng được không |
+| --- | --- |
+| Android TV / Google TV | **Được.** Riêng TV nào khóa quyền "Hiển thị trên ứng dụng khác" thì không hiện được phụ đề. |
+| TV LG webOS | **Thử nghiệm.** Cần bật Developer Mode và cài bằng máy tính hoặc điện thoại Android. Đã chạy trên webOS 7 (TV 2022), các đời khác chưa kiểm tra hết. |
+| TV Samsung từ 2017 (Tizen 3.0 trở lên) | **Thử nghiệm.** Cần bật Developer Mode, máy tính Windows hoặc Mac để cài, và một tài khoản Samsung. Một số TV đời 2018 đang gặp lỗi khi cài, chưa xử lý xong. |
+| TV Samsung 2016 trở về trước (Tizen 2.x) | **Không dùng được.** |
+| TV hệ điều hành khác, Android Box | **Không hỗ trợ.** |
+
+**Cách chắc nhất, không mất tiền:** cài app nhận phụ đề lên TV trước. Khi TV hiện được mã ghép nối 8 số (và với Samsung là hiện được hình cổng HDMI) thì TV đó dùng được, lúc đó hãy mua.
+
+Xem đời TV Samsung: trên TV vào **Cài đặt → Hỗ trợ → Giới thiệu về TV**, xem mã model. Chữ cái sau số inch thường cho biết năm: K = 2016, M = 2017, N = 2018, R = 2019, T = 2020, A = 2021, B = 2022, C = 2023, D = 2024. Chắc chắn hơn: bấm **Kiểm tra kết nối TV** trong bộ cài, nhật ký hiện dòng "TV: Tizen ..."; Tizen 2.x là TV 2016 trở về trước.
+
 ## Cần có
 
-- TV chạy **Android TV**, **TV LG chạy webOS** hoặc **TV Samsung (Tizen, 2017 trở lên)**. Bản LG và Samsung đang thử nghiệm.
-- **Không hỗ trợ** TV hệ điều hành khác và Android Box.
+- Một TV nằm trong bảng tương thích ở trên.
 - TV và iPhone dùng chung một mạng Wi-Fi.
 - App Console Translator trên iPhone có gói PRO.
 - Trên iPhone, chọn đúng loại TV trong màn **Phụ đề trên TV → Loại TV**.
