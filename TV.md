@@ -163,14 +163,21 @@ Trên Samsung, app tự hiện hình cổng HDMI bên trong nó: mở **Console 
 
 Làm lần lượt theo các bước sau:
 
-### Bước 1: Mở app Console Translator TV trên TV
-Mở app nhận phụ đề đã cài trên TV (Android TV, TV LG hoặc TV Samsung). Trên màn hình TV sẽ hiển thị **Địa chỉ TV** và **Mã ghép nối (8 số)**:
+### Bước 1: Mở máy PS5 và mở app trên TV
+Sau khi đã hoàn tất cài đặt app lên TV theo hướng dẫn ở trên, bạn bật máy PS5 trên TV rồi mở app nhận phụ đề theo từng dòng TV:
+- **TV Samsung:** Bấm trực tiếp vào app **Console Translator TV** trên màn hình TV để mở.
+- **TV LG (webOS):**
+  - Dùng **iPhone**: Mở app qua máy tính (PC/Mac) bằng cách bấm **Mở app trên TV**.
+  - Dùng **Android**: Bấm mở app ngay trong app Android (Cài đặt → Phụ đề trên TV).
+- **Android TV / Google TV:** Mở trực tiếp app **Console Translator TV** trên màn hình TV.
+
+Khi app mở lên, màn hình TV sẽ hiển thị **Địa chỉ TV** và **Mã ghép nối (8 số)**:
 
 | Màn hình trên TV LG | Màn hình trên Android TV |
 | :---: | :---: |
-| <img src="assets/tv-lg-code.jpg" width="380" alt="Màn hình TV LG" /> | <img src="assets/tv-android-code.png" width="380" alt="Màn hình Android TV" /> |
+| <img src="assets/tv-lg-code.jpg" width="360" alt="Màn hình TV LG" /> | <img src="assets/tv-android-code.png" width="360" alt="Màn hình Android TV" /> |
 
-*(Lưu ý: Mã 8 số đổi mỗi 60 giây để bảo mật, bạn chỉ cần nhập ghép nối 1 lần đầu, các lần sau iPhone sẽ tự động nhớ).*
+*(Lưu ý: Mã 8 số đổi mỗi 60 giây để bảo mật, bạn chỉ cần ghép nối 1 lần đầu, các lần sau điện thoại sẽ tự động kết nối lại).*
 
 ---
 
