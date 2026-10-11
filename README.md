@@ -128,7 +128,7 @@ Tên sản phẩm và nhãn hiệu thuộc về chủ sở hữu tương ứng. 
 
 ## Cài app cho TV Samsung
 
-[Tải bộ cài Windows 1.0.7](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.7/ConsoleTranslator-Samsung-PC-1.0.7.zip) · [Tải bộ cài Mac 1.0.6](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.6/ConsoleTranslator-Samsung-Mac-1.0.6.zip) và xem [hướng dẫn TV Samsung từng bước](SAMSUNG.md). Cần mã `SSTV-…` được cấp qua [Telegram](https://t.me/pstranslator) và một tài khoản Samsung miễn phí.
+[Tải bộ cài Windows 1.0.8](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.8/ConsoleTranslator-Samsung-PC-1.0.8.zip) · [Tải bộ cài Mac 1.0.7](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.7/ConsoleTranslator-Samsung-Mac-1.0.7.zip) và xem [hướng dẫn TV Samsung từng bước](SAMSUNG.md). Cần mã `SSTV-…` được cấp qua [Telegram](https://t.me/pstranslator) và một tài khoản Samsung miễn phí.
 
 ## Cài app cho TV LG
 
