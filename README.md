@@ -130,7 +130,7 @@ Tên sản phẩm và nhãn hiệu thuộc về chủ sở hữu tương ứng. 
 
 **Chỉ TV Samsung từ 2017 trở lên (Tizen 3.0+).** TV 2016 trở về trước không dùng được. Hãy cài thử app TV trước khi mua PRO hoặc donate, xem [TV nào dùng được](SAMSUNG.md#tv-nào-dùng-được).
 
-[Tải bộ cài Windows 1.0.9](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.9/ConsoleTranslator-Samsung-PC-1.0.9.zip) · [Tải bộ cài Mac 1.0.8](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.8/ConsoleTranslator-Samsung-Mac-1.0.8.zip) và xem [hướng dẫn TV Samsung từng bước](SAMSUNG.md). Cần mã `SSTV-…` được cấp qua [Telegram](https://t.me/pstranslator) và một tài khoản Samsung miễn phí.
+[Tải bộ cài Windows 1.0.10](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.10/ConsoleTranslator-Samsung-PC-1.0.10.zip) · [Tải bộ cài Mac 1.0.8](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.8/ConsoleTranslator-Samsung-Mac-1.0.8.zip) và xem [hướng dẫn TV Samsung từng bước](SAMSUNG.md). Cần mã `SSTV-…` được cấp qua [Telegram](https://t.me/pstranslator) và một tài khoản Samsung miễn phí.
 
 ## Cài app cho TV LG
 
