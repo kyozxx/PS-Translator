@@ -434,9 +434,9 @@
                 </div>
 
                 <p class="mini-title" style="margin-top: 16px;">Bước 2: Mở app trên iPhone và chọn Dịch khi chơi TV</p>
-                <p>1. Tại màn hình chính, bấm vào nút <strong>Chơi từ xa</strong>.</p>
+                <p>1. Tại màn hình chính, bấm <strong>Bắt đầu dịch game</strong>.</p>
                 <div style="text-align: center; margin: 10px 0;">
-                    <img src="assets/step1-remote-play.jpg" alt="Bấm Chơi từ xa" style="width: 100%; max-width: 320px; border-radius: 12px; border: 1px solid var(--border);" />
+                    <img src="assets/step1-remote-play.jpg" alt="Bấm Bắt đầu dịch game" style="width: 100%; max-width: 320px; border-radius: 12px; border: 1px solid var(--border);" />
                 </div>
                 <p>2. Chọn chế độ <strong>Dịch khi chơi TV</strong>:</p>
                 <div style="text-align: center; margin: 10px 0;">
@@ -464,7 +464,7 @@
             <ul>
                 <li><strong>LG không kết nối:</strong> kiểm tra Developer Mode còn hạn, Key Server đang bật, IP đúng và máy tính cùng Wi-Fi với TV.</li>
                 <li><strong>LG báo lỗi cài đặt:</strong> mở lại công cụ và thử cài lại; nếu vẫn lỗi, gửi ảnh cho hỗ trợ trước khi gỡ app.</li>
-                <li><strong>iPhone không tìm thấy TV:</strong> mở app TV, kiểm tra cùng Wi-Fi và quyền Mạng cục bộ trên iPhone, hoặc nhập IP bằng tay.</li>
+                <li><strong>Không kết nối được TV:</strong> mở app trên TV trước, kiểm tra TV và iPhone cùng Wi-Fi, bật quyền Mạng cục bộ cho app trên iPhone, rồi nhập đúng địa chỉ đang hiện trên TV.</li>
                 <li><strong>Sai mã:</strong> nhập mã 8 số mới nhất đang hiện trên TV.</li>
                 <li><strong>Phụ đề biến mất:</strong> Android TV cần bỏ tối ưu hóa pin; LG webOS cần bấm Mở app trên TV lại nếu đã dùng nút Home.</li>
             </ul>
@@ -493,7 +493,7 @@
             <li><span class="on" aria-hidden="true"></span><div><b>Enable Remote Play</b><small>Bấm vào mục này, rồi bật đúng User PS5 mà app sẽ dùng để kết nối. Nếu chọn sai User, app sẽ không kết nối được.</small></div></li>
             <li><span class="on" aria-hidden="true"></span><div><b>Hide Remote Play Connection Status</b><small>Nên bật. Ẩn dòng thông báo "đang chơi từ xa" trên TV cho màn hình gọn khi chơi.</small></div></li>
         </ul>
-        <div class="box warn"><strong>Chọn đúng User</strong>Trong <strong>Enable Remote Play</strong>, PS5 sẽ hiện danh sách User. Hãy bật đúng User có tên trùng với tài khoản đang dùng để kết nối trong app.</div>
+        <div class="box warn"><strong>Chọn đúng User</strong>Trong <strong>Enable Remote Play</strong>, PS5 sẽ hiện danh sách User. Hãy bật đúng người chơi bạn sẽ ghép nối với app.</div>
         <figure>
             <img src="screenshots/05-ps5-remote-play.png" alt="Màn hình Remote Play trên PS5" loading="lazy" onerror="this.parentElement.hidden=true">
             <figcaption>Bấm Enable Remote Play để chọn User; nên bật thêm Hide Remote Play Connection Status</figcaption>
@@ -514,66 +514,48 @@
 
     <section class="card s3" id="account">
         <h2><span class="num">3</span>Ghép nối iPhone với PS5 (làm một lần)</h2>
-        <p class="why">Để PS5 tin cậy iPhone của bạn. Cần 3 thứ: địa chỉ IP của máy, Account ID (mã số tài khoản PSN) và mã PIN hiện trên TV.</p>
+        <p class="why">Để PS5 tin cậy iPhone của bạn. App có 3 bước: tìm máy, lấy mã người chơi và nhập mã 8 số hiện trên TV.</p>
 
         <div class="box warn"><strong>Trước khi bắt đầu</strong>iPhone và PS5 phải dùng chung một mạng Wi-Fi ở nhà. Lần đầu mở app, iPhone hỏi quyền "Mạng cục bộ", hãy bấm <strong>Cho phép</strong>.</div>
 
-        <h3>Bước 1: Địa chỉ IP</h3>
-        <p>Ở màn chính của app, bấm nút xanh <span class="btn-app">Ghép nối thiết bị</span>. Chọn loại máy rồi bấm <span class="btn-app">Tự tìm máy</span>, app tự điền địa chỉ IP của PS5.</p>
-        <div class="phones">
-            <figure class="phone">
-                <img src="screenshots/guide/01-home.jpg" alt="Màn chính của app" loading="lazy">
-                <figcaption>Màn chính: bấm Ghép nối thiết bị</figcaption>
-            </figure>
-            <figure class="phone">
-                <img src="screenshots/guide/02-pairing-signin.jpg" alt="Màn Ghép nối" loading="lazy">
-                <figcaption>Màn Ghép nối: bấm Tự tìm máy</figcaption>
-            </figure>
-        </div>
-
-        <h3>Bước 2: Account ID, chọn 1 trong 2 cách</h3>
-        <details class="method">
-            <summary>Cách 1: Đăng nhập Sony</summary>
-            <ol>
-                <li>Bấm <span class="btn-app">Đăng nhập tài khoản trong Safari</span>.</li>
-                <li>Đăng nhập tài khoản PSN đang dùng trên PS5. Mật khẩu chỉ nhập trên trang của Sony, app không thấy được.</li>
-                <li>Đăng nhập xong, Safari hiện <strong>trang trắng hoặc trang lỗi, đó là bình thường</strong>.</li>
-                <li>Chạm vào thanh địa chỉ ở trên cùng Safari, copy <strong>toàn bộ link</strong> (link có chữ <code>code=</code>).</li>
-                <li>Quay lại app và dán ngay vào ô bên dưới nút. Link chỉ dùng được trong ít phút, nếu báo lỗi thì đăng nhập lại.</li>
-            </ol>
-        </details>
-        <details class="method">
-            <summary>Cách 2: Tìm theo tên PSN <span class="tag">Dễ hơn</span></summary>
-            <ol>
-                <li>Trong app, chọn <span class="btn-app">Tìm theo tên PSN</span> rồi bấm <span class="btn-app">Mở trang tìm Account ID</span>.</li>
-                <li>Gõ <strong>tên PSN</strong> (tên hiển thị khi chơi online) và bấm tìm. <strong>Đợi trang tìm xong.</strong></li>
-                <li>Kéo xuống tìm mục <strong>BASE64 (FOR REMOTE PLAY)</strong>. Copy dãy ký tự ngay bên dưới, thường kết thúc bằng dấu <code>=</code>.</li>
-                <li>Quay lại app, dán vào ô bên dưới nút. App tự nhận.</li>
-            </ol>
-            <div class="box warn"><strong>Copy đúng dòng</strong>Chỉ lấy dòng BASE64 (FOR REMOTE PLAY). Không lấy dòng HEX hay NPID.</div>
+        <h3>Bước 1: Tìm máy chơi game</h3>
+        <p>Ở màn chính của app, bấm <span class="btn-app">Ghép nối máy chơi game</span>, rồi bấm <span class="btn-app">Tìm máy</span>. App tự tìm và điền địa chỉ của PS5. Không thấy thì nhập địa chỉ bằng tay (xem phần Gặp lỗi bên dưới).</p>
         <figure class="phone">
-            <img src="screenshots/guide/03-pairing-lookup.jpg" alt="Chọn Tìm theo tên PSN" loading="lazy">
-            <figcaption>Chọn Tìm theo tên PSN, dán mã vào ô bên dưới</figcaption>
-        </figure>
-        </details>
-        <p>Thấy chữ <strong style="color:var(--green)">Đã có Account ID</strong> màu xanh là xong.</p>
-
-        <h3>Bước 3: Mã PIN</h3>
-        <div class="ps-path"><span>Settings</span><i>→</i><span>System</span><i>→</i><span>Remote Play</span><i>→</i><span>Pair Device</span></div>
-        <p>TV hiện mã 8 số kèm đồng hồ đếm ngược. Nhập ngay 8 số vào app rồi bấm <span class="btn-app">Ghép nối</span>.</p>
-        <figure class="phone">
-            <img src="screenshots/guide/04-pairing-pin.jpg" alt="Ô nhập mã PIN và nút Ghép nối" loading="lazy">
-            <figcaption>Nhập mã PIN rồi bấm nút Ghép nối màu xanh</figcaption>
+            <img src="screenshots/guide/01-home.jpg" alt="Màn chính của app" loading="lazy">
+            <figcaption>Màn chính: bấm Ghép nối máy chơi game</figcaption>
         </figure>
 
-        <div class="box tip"><strong>Mẹo để tay cầm không bị ngắt</strong>Account ID phải của đúng tài khoản đang chọn trên PS5. Nên dùng <strong>một nick phụ</strong> để ghép nối với app, còn <strong>nick chính</strong> để cầm tay cầm chơi. Hai nick khác nhau thì tay cầm không bị app tranh mất.</div>
+        <h3>Bước 2: Lấy mã người chơi</h3>
+        <ol>
+            <li>Trên PS5: bấm <strong>ảnh đại diện</strong> ở góc phải trên cùng, chọn <strong>Hồ sơ</strong>. Tên đăng nhập (Online ID) nằm ngay dưới tên bạn.</li>
+            <li>Trong app, bấm <span class="btn-app">Mở trang tra mã</span>, gõ tên đăng nhập đó vào và đợi trang tìm xong.</li>
+            <li>Ở dòng <strong>BASE64 (FOR REMOTE PLAY)</strong>, sao chép dãy ký tự kết thúc bằng dấu <code>=</code>.</li>
+            <li>Quay lại app, bấm <span class="btn-app">Dán mã</span>.</li>
+        </ol>
+        <div class="box warn"><strong>Copy đúng dòng</strong>Chỉ lấy dòng BASE64 (FOR REMOTE PLAY). Không lấy dòng HEX hay NPID. Trang tra mã là trang bên ngoài, app không đăng nhập thay bạn.</div>
+        <p>Thấy chữ <strong style="color:var(--green)">Đã nhận mã</strong> là xong.</p>
+
+        <h3>Bước 3: Nhập mã hiện trên máy</h3>
+        <ol>
+            <li>Trên PS5, chuyển sang đúng người chơi vừa tra mã (giữ nút PS giữa tay cầm → chuyển người dùng).</li>
+            <li>Bật chơi từ xa cho người chơi này (xem bước 2 ở trên: <strong>Enable Remote Play</strong>).</li>
+            <li>Vào <strong>Settings → System → Remote Play → Link Device</strong>. TV hiện mã 8 số kèm đồng hồ đếm ngược.</li>
+            <li>Nhập ngay 8 số vào app rồi bấm <span class="btn-app">Ghép nối</span>.</li>
+        </ol>
+        <figure class="phone">
+            <img src="screenshots/guide/04-pairing-pin.jpg" alt="Ô nhập mã 8 số và nút Ghép nối" loading="lazy">
+            <figcaption>Nhập mã 8 số rồi bấm Ghép nối</figcaption>
+        </figure>
+
+        <div class="box tip"><strong>Mẹo để tay cầm không bị ngắt</strong>Mã người chơi phải đúng người chơi đang chọn trên PS5. Nên ghép nối bằng <strong>một người chơi phụ</strong>, còn <strong>người chơi chính</strong> để cầm tay cầm chơi. Hai người chơi khác nhau thì tay cầm không bị app tranh mất.</div>
     </section>
 
     <section class="card s4" id="choi">
         <h2><span class="num">4</span>Chơi và dịch</h2>
         <p class="why">Ghép nối xong, từ lần sau chỉ cần làm bước này.</p>
         <ol>
-            <li>Ở màn chính của app, bấm <span class="btn-app">Kết nối</span>. Nếu PS5 đang nghỉ, app tự bật máy, đợi khoảng 30 giây.</li>
+            <li>Ở màn chính của app, bấm <span class="btn-app">Bắt đầu dịch game</span>, rồi chọn <span class="btn-app">Dịch khi chơi TV</span> (chơi trên TV) hoặc <span class="btn-app">Chơi trên điện thoại</span>. Nếu PS5 đang nghỉ, app tự bật máy, đợi khoảng 30 giây.</li>
+            <li>Khi app kết nối, tay cầm tắt một lát là bình thường: bấm nút PS giữa tay cầm rồi chọn lại người chơi của bạn.</li>
             <li>Vào game, bật <strong>phụ đề tiếng Anh (English)</strong> trong phần cài đặt của game.</li>
             <li>Trong app, bấm nút <span class="btn-app">khung cắt</span> và kéo khung <strong>Thoại</strong> (vàng nhạt) trùm lên chỗ phụ đề hiện trên màn hình.</li>
             <li>Chơi bình thường bằng tay cầm. Nhân vật nói gì, app dịch và đọc to bằng tiếng Việt.</li>
@@ -581,7 +563,7 @@
         <div class="box tip"><strong>Dịch nhiệm vụ, vật phẩm, lựa chọn (Chọn vùng dịch)</strong>
             Ở bản mới nhất, bấm <strong>Chọn vùng dịch</strong> trên màn hình dịch: hình game hiện ra cùng một khung màu cam. Kéo khung tới nhiệm vụ, mô tả vật phẩm, lá thư hay bảng lựa chọn rồi thả tay, app dịch ngay và hiện bản dịch bên dưới, mỗi lựa chọn một dòng. Bấm <strong>Ẩn hình game</strong> để đóng. Muốn app tự dịch khi chữ trong khung đổi thì bật <strong>Tự dịch khi chữ trong khung đổi</strong> trong nút <strong>khung cắt</strong>. Hai hộp phụ đề kéo lên xuống được, chạm 2 lần để đặt lại chỗ cũ.</div>
         <div class="box tip"><strong>Nên thử</strong>
-            Bật <strong>Đọc theo cảm xúc</strong> trong Cài đặt → Giọng đọc để giọng đổi theo nhân vật giận, buồn hay sợ. Game hiện chữ từng chữ một thì bật <strong>Chữ hiện dần</strong> trong nút khung cắt. Thoại nhanh quá giọng đọc không kịp thì bật <strong>Tự đọc nhanh khi câu dồn lại</strong> trong Cài đặt → Giọng đọc. Muốn đỡ tốn pin, bấm nút <strong>mặt trăng</strong> để tắt màn hình, app vẫn đọc.</div>
+            Xem phim Vietsub hay chơi game đã Việt hóa? Chọn <strong>Thuyết minh</strong> ở màn chính (cạnh chữ Sẵn sàng): app đọc to phụ đề tiếng Việt có sẵn, không dịch. Bật <strong>Đọc theo cảm xúc</strong> trong Cài đặt → Giọng đọc để giọng đổi theo nhân vật giận, buồn hay sợ. Game hiện chữ từng chữ một thì bật <strong>Chữ hiện dần</strong> trong nút khung cắt. Thoại nhanh quá giọng đọc không kịp thì bật <strong>Tự đọc nhanh khi câu dồn lại</strong> trong Cài đặt → Giọng đọc. Muốn đỡ tốn pin, bấm nút <strong>mặt trăng</strong> để tắt màn hình, app vẫn đọc.</div>
         <div class="box warn"><strong>Dùng Dịch thuật Apple</strong>Cần cài app <strong>Dịch thuật</strong> (Translate) của Apple và tải sẵn gói Tiếng Anh, Tiếng Việt trong app đó.</div>
 
         <h3>Chọn bộ dịch và giọng đọc</h3>
@@ -656,7 +638,7 @@
             <summary>Ghép nối thất bại</summary>
             <ul>
                 <li>Vào <strong>Enable Remote Play</strong> và kiểm tra đã bật đúng User PS5 mà app đang dùng để kết nối.</li>
-                <li>Account ID phải đúng tài khoản đang chọn trên PS5.</li>
+                <li>Mã người chơi phải đúng người chơi đang chọn trên PS5.</li>
                 <li>Mã PIN hết hạn rất nhanh, lấy mã mới rồi nhập ngay.</li>
             </ul>
         </details>
@@ -670,7 +652,7 @@
         </details>
         <details>
             <summary>Tay cầm bị ngắt khi app kết nối</summary>
-            <p>Bấm nút PS giữa tay cầm, chọn lại tài khoản để chơi. Để không bị nữa, làm theo mẹo nick phụ ở bước 3.</p>
+            <p>Đây là bình thường, không phải lỗi. Bấm nút PS giữa tay cầm, chọn lại người chơi của bạn. Để không bị nữa, làm theo mẹo người chơi phụ ở bước 3.</p>
         </details>
         <details>
             <summary>Có hình nhưng không ra bản dịch</summary>
@@ -689,7 +671,7 @@
             <p>Cắm dây mạng (LAN) cho PS5 nếu được. iPhone nên dùng Wi-Fi 5 GHz và để gần router. Tạm dừng các máy đang tải game hay xem phim.</p>
         </details>
 
-        <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn vào <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">kênh Telegram</a> kèm ảnh chụp màn hình. Nhớ che Account ID, địa chỉ IP, mã PIN và khóa API trước khi gửi.</div>
+        <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn vào <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">kênh Telegram</a> kèm ảnh chụp màn hình. Nhớ che mã người chơi, địa chỉ IP, mã 8 số và khóa API trước khi gửi.</div>
     </section>
 
     <footer>
