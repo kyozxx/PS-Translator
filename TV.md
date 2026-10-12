@@ -147,13 +147,13 @@ Bản dịch của **Chọn vùng dịch** (nhiệm vụ, mô tả vật phẩm,
 
 ## TV LG (webOS)
 
-Cài bằng [bộ cài Windows 1.2.13](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.13/ConsoleTranslator-LG-PC-1.2.13.zip) hoặc [bộ cài Mac 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip), nhập đầy đủ mã `LGTV-…` được cấp riêng, không cần dùng Terminal. Xem [hướng dẫn cài TV LG từ PC](LG.md), gồm bật Developer Mode, tải bộ cài và mở app mỗi lần chơi.
+Cài bằng [bộ cài Windows 1.2.14](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.14/ConsoleTranslator-LG-PC-1.2.14.zip) hoặc [bộ cài Mac 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip), nhập đầy đủ mã `LGTV-…` được cấp riêng, không cần dùng Terminal. Xem [hướng dẫn cài TV LG từ PC](LG.md), gồm bật Developer Mode, tải bộ cài và mở app mỗi lần chơi.
 
 ---
 
 ## TV Samsung (Tizen)
 
-Cài bằng [bộ cài Windows 1.0.10](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.10/ConsoleTranslator-Samsung-PC-1.0.10.zip) hoặc [bộ cài Mac 1.0.8](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.8/ConsoleTranslator-Samsung-Mac-1.0.8.zip), nhập đầy đủ mã `SSTV-…` được cấp riêng và đăng nhập tài khoản Samsung của bạn khi được hỏi. Xem [hướng dẫn cài TV Samsung từng bước](SAMSUNG.md).
+Cài bằng [bộ cài Windows 1.0.11](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.11/ConsoleTranslator-Samsung-PC-1.0.11.zip) hoặc [bộ cài Mac 1.0.8](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.8/ConsoleTranslator-Samsung-Mac-1.0.8.zip), nhập đầy đủ mã `SSTV-…` được cấp riêng và đăng nhập tài khoản Samsung của bạn khi được hỏi. Xem [hướng dẫn cài TV Samsung từng bước](SAMSUNG.md).
 
 Trên Samsung, app tự hiện hình cổng HDMI bên trong nó: mở **Console Translator TV** trên TV để chơi, bấm Home sẽ thoát cả hình lẫn phụ đề.
 
@@ -216,8 +216,8 @@ Chỉnh cỡ chữ, màu chữ, nền, vị trí, độ rộng dòng và giọng
 | Lỗi | Cách xử lý |
 |---|---|
 | Android TV: "Đã xảy ra sự cố khi phân tích cú pháp gói" | File tải chưa xong hoặc bị hỏng. Tải lại bằng Downloader, đừng gửi file qua tin nhắn. |
-| LG: `LG-INSTALL` khi cài | Dùng bộ cài PC 1.2.13, kiểm tra Developer Mode còn hạn và thử cài lại. Nếu vẫn lỗi, gửi toàn bộ log cho hỗ trợ trước khi gỡ app; không cần gỡ app trước khi được hỗ trợ. |
-| PC không nhận mã LGTV mới | Cập nhật bộ cài PC lên 1.2.13 rồi dán đầy đủ mã. Mã ANDROID không dùng trong bộ cài PC. |
+| LG: `LG-INSTALL` khi cài | Dùng bộ cài PC 1.2.14, kiểm tra Developer Mode còn hạn và thử cài lại. Nếu vẫn lỗi, gửi toàn bộ log cho hỗ trợ trước khi gỡ app; không cần gỡ app trước khi được hỗ trợ. |
+| PC không nhận mã LGTV mới | Cập nhật bộ cài PC lên 1.2.14 rồi dán đầy đủ mã. Mã ANDROID không dùng trong bộ cài PC. |
 | LG: không cài được, báo lỗi kết nối | Kiểm tra Developer Mode còn hạn, Key Server đang bật, IP đúng, máy tính cùng Wi-Fi với TV. |
 | iPhone không tìm thấy TV | Mở app TV trên TV, kiểm tra cùng Wi-Fi, hoặc nhập địa chỉ IP đang hiện trên TV. Kiểm tra iPhone đã cho phép **Mạng cục bộ** trong Cài đặt → Quyền riêng tư. |
 | Sai mã | Mã đổi mỗi phút, nhập mã đang hiện trên TV. |
