@@ -45,10 +45,10 @@ Xem đời TV Samsung: trên TV vào **Cài đặt → Hỗ trợ → Giới thi
 
 > **TV Xiaomi / Redmi mua từ Trung Quốc (hàng nội địa, giao diện tiếng Trung PatchWall)?** Dùng bản riêng ở mục [TV Xiaomi nội địa](#tv-xiaomi-nội-địa-trung). Bản thường bị TV này tự tắt.
 
-Tải file **Console-Translator-TV.apk** (phiên bản 0.2.3):
+Tải file **Console-Translator-TV.apk** (phiên bản 0.2.4):
 
 ```
-https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.3/Console-Translator-TV.apk
+https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.4/Console-Translator-TV.apk
 ```
 
 Cách cài dễ nhất bằng remote TV:
@@ -58,7 +58,7 @@ Cách cài dễ nhất bằng remote TV:
 3. Mở Downloader, gõ đường link tải ở trên rồi bấm **Go**.
 4. Tải xong, bấm **Cài đặt**. Đã cài bản cũ thì cứ cài đè, không cần ghép nối lại.
 
-Hoặc nhập mã Downloader **2230684** (bản 0.2.3).
+Hoặc nhập mã Downloader **2230684**: mã này cài bản 0.2.3, mở app TV sẽ hiện nút **Cập nhật** lên 0.2.4.
 
 Từ bản 0.2.3, khi có bản mới app TV tự hiện nút **Cập nhật** ngay trên màn hình ghép nối: bấm vào là app tự tải và cài, không cần Downloader nữa.
 
@@ -106,10 +106,10 @@ Muốn tắt app: bấm **Tắt app** trong app TV.
 
 TV Xiaomi và Redmi bán ở Trung Quốc tự tắt app phụ đề bản thường: mở app lên là app bị đóng, hoặc phụ đề không bao giờ hiện. Dùng bản riêng dưới đây. TV Xiaomi bản quốc tế (Google TV, giao diện tiếng Anh/tiếng Việt) dùng bản thường ở trên.
 
-Tải file **Console-Translator-TV-Mi.apk** (phiên bản 0.2.3-mi):
+Tải file **Console-Translator-TV-Mi.apk** (phiên bản 0.2.4-mi):
 
 ```
-https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.3-mi/Console-Translator-TV-Mi.apk
+https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.4-mi/Console-Translator-TV-Mi.apk
 ```
 
 1. Cài như [Bước 1](#bước-1-cài-app), chỉ thay đường link bằng link ở trên (hoặc mã Downloader **5056889**). Nếu TV không có Google Play, cài **Downloader** hoặc **当贝市场 (Dangbei)** từ kho ứng dụng của Xiaomi, hoặc chép file APK qua USB rồi mở bằng trình quản lý tệp.
@@ -136,6 +136,8 @@ Từ bản 0.2.0, giọng đọc tiếng Việt có thể phát ra loa TV cùng 
 ### Dịch vùng trên TV
 
 Bản dịch của **Chọn vùng dịch** (nhiệm vụ, mô tả vật phẩm, bảng lựa chọn) hiện trên TV trong một hộp riêng, tách khỏi phụ đề thoại. Cần app TV 0.2.3 trở lên (TV LG: app 1.2.0, TV Samsung: app 1.1.0, cài bằng bộ cài mới nhất).
+
+**Dịch menu**: trên màn dịch của iPhone, bấm **Dịch menu** khi đang mở menu, kỹ năng, túi đồ hay hướng dẫn. Bản dịch từng đoạn hiện ngay tại chữ gốc trên TV: đặt bên cạnh không che chữ, hoặc đè lên chữ gốc, cỡ chữ chỉnh được. Bật **Tự động** (giữ nút) để app tự dịch khi màn hình đứng yên. Cần app TV 0.2.4 trở lên (TV LG: app 1.2.3, TV Samsung: app 1.1.4); app TV cũ vẫn chạy phụ đề bình thường, chỉ chưa hiện Dịch menu.
 
 1. Trên iPhone, ở màn hình dịch bấm **Chọn vùng dịch**, kéo khung cam tới chỗ cần dịch rồi thả tay. Bản dịch hiện trên điện thoại và trên TV.
 2. Chọn chỗ hiện trên TV: bấm nút **khung cắt** (nút vàng) → **Hiển thị trên TV**. Kéo khung **Thoại** và khung **Dịch vùng** ngay trên hình game, kéo chấm tròn để đổi độ rộng. TV đổi theo khi bạn thả tay.
