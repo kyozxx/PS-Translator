@@ -130,8 +130,8 @@ Tên sản phẩm và nhãn hiệu thuộc về chủ sở hữu tương ứng. 
 
 **Chỉ TV Samsung từ 2017 trở lên (Tizen 3.0+).** TV 2016 trở về trước không dùng được. Hãy cài thử app TV trước khi mua PRO hoặc donate, xem [TV nào dùng được](SAMSUNG.md#tv-nào-dùng-được).
 
-[Tải bộ cài Windows 1.0.12](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.12/ConsoleTranslator-Samsung-PC-1.0.12.zip) · [Tải bộ cài Mac 1.0.8](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.8/ConsoleTranslator-Samsung-Mac-1.0.8.zip) và xem [hướng dẫn TV Samsung từng bước](SAMSUNG.md). Cần mã `SSTV-…` được cấp qua [Telegram](https://t.me/pstranslator) và một tài khoản Samsung miễn phí.
+[Tải bộ cài Windows 1.0.13](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.13/ConsoleTranslator-Samsung-PC-1.0.13.zip) · [Tải bộ cài Mac 1.0.8](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.8/ConsoleTranslator-Samsung-Mac-1.0.8.zip) và xem [hướng dẫn TV Samsung từng bước](SAMSUNG.md). Cần mã `SSTV-…` được cấp qua [Telegram](https://t.me/pstranslator) và một tài khoản Samsung miễn phí.
 
 ## Cài app cho TV LG
 
-[Tải bộ cài Windows 1.2.15](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.15/ConsoleTranslator-LG-PC-1.2.15.zip) · [Tải bộ cài Mac 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip) và xem [hướng dẫn TV LG từng bước](LG.md). Cần mã `LGTV-…` được cấp qua [Telegram](https://t.me/pstranslator); công cụ tự chuẩn bị gói cài và cài đặt lên TV.
+[Tải bộ cài Windows 1.2.16](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.16/ConsoleTranslator-LG-PC-1.2.16.zip) · [Tải bộ cài Mac 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip) và xem [hướng dẫn TV LG từng bước](LG.md). Cần mã `LGTV-…` được cấp qua [Telegram](https://t.me/pstranslator); công cụ tự chuẩn bị gói cài và cài đặt lên TV.
