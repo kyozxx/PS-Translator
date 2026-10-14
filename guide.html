@@ -70,7 +70,7 @@
 
         /* Overview */
         .overview {
-            display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 18px;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 18px;
         }
         .overview a {
             text-decoration: none; text-align: center; border-radius: 12px; padding: 10px 4px;
@@ -307,7 +307,7 @@
         .download-tv.alt { background: transparent; color: var(--text); border: 1px solid var(--text); }
         .download-code { color: var(--text); }
         .play-store { display: block; margin: 4px 0 12px; }
-        .ps-path em, .toggle-list em { font-style: normal; font-size: 12px; color: var(--muted); }
+        .ps-path em, .toggle-list em, li em, .box em { font-style: normal; font-size: 12px; color: var(--muted); }
         .ps-path em { display: block; font-weight: 400; }
     </style>
 </head>
@@ -353,7 +353,6 @@
         <a href="#ps5"><b>2</b>Chỉnh PS5</a>
         <a href="#account"><b>3</b>Ghép nối</a>
         <a href="#choi"><b>4</b>Chơi</a>
-        <a href="#phong-cach"><b>5</b>Văn phong</a>
     </nav>
 
     <section class="card tv-card" id="phu-de-tv">
@@ -418,7 +417,7 @@
 
         <details class="platform lg" id="lg-tv">
             <summary><span class="platform-name"><span class="platform-icon">LG</span>TV LG (webOS)</span><span class="tag">Windows / Mac + mã</span></summary>
-            <p>Dùng Windows 10/11 hoặc macOS 12 trở lên. Điện thoại vẫn chạy dịch; PC chỉ cài hoặc mở app nhận trên TV.</p>
+            <p>Dùng Windows 10/11 hoặc macOS 12 trở lên. Điện thoại vẫn chạy dịch; máy tính chỉ cần để cài app lên TV lần đầu, sau đó iPhone tự mở app trên TV.</p>
             <a class="download-tv" href="https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.17/ConsoleTranslator-LG-PC-1.2.17.zip">Tải bộ cài LG cho PC 1.2.17</a>
 <a class="download-tv" href="https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip">Tải bộ cài LG cho Mac 1.0.5</a>
             <p>Giải nén file ZIP, không tải Source code. <a href="https://t.me/pstranslator">Nhận mã LGTV qua Telegram</a>. Mã này khác mã beta Android và gói PRO trên iPhone.</p>
@@ -434,15 +433,15 @@
                 <li>Nhập IP và Passphrase, bấm <strong>Kết nối TV</strong>. Kiểm tra đúng IP trước khi xác nhận khóa kết nối.</li>
                 <li>Nhập <strong>mã LGTV đầy đủ</strong>, bấm <strong>Cài đặt lên TV</strong>, chờ hoàn tất. Công cụ tự chuẩn bị gói cài và cài đặt lên TV.</li>
             </ol>
-            <p><strong>Cài bằng Mac:</strong> giải nén ZIP, kéo Console Translator LG vào Applications rồi mở app. Cần macOS 12 trở lên (Intel/Apple Silicon). Nếu thiếu Node.js, bấm <strong>Cài Node.js</strong> ngay trong app và chờ hoàn tất. Nút <strong>Hỗ trợ Telegram</strong> dùng để nhận mã hoặc gửi log. Nhập IP/Passphrase, kết nối TV rồi nhập mã LGTV và cài. Nếu macOS chặn mở, vào Cài đặt hệ thống → Quyền riêng tư &amp; Bảo mật → Vẫn mở với ZIP từ GitHub chính thức.</p><details id="lg-mac-warning"><summary>Mac báo “Console Translator LG chưa được mở”</summary><div style="padding:0 16px 12px"><figure style="max-width:340px;margin:14px auto"><a href="assets/lg-mac-open-warning.png"><img src="assets/lg-mac-open-warning.png" alt="Cảnh báo macOS khi mở Console Translator LG, với nút Xong và Chuyển vào Thùng rác" width="604" height="700" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px"></a></figure><ol><li>Bấm <strong>Xong</strong> trong cảnh báo. Không chọn Chuyển vào Thùng rác nếu muốn tiếp tục cài.</li><li>Mở <strong>Cài đặt hệ thống → Quyền riêng tư &amp; Bảo mật</strong>, kéo xuống phần <strong>Bảo mật</strong>.</li><li>Tại thông báo chặn Console Translator LG, bấm <strong>Vẫn mở / Open Anyway</strong>. Nhập mật khẩu Mac hoặc dùng Touch ID nếu được hỏi.<figure style="max-width:100%;margin:14px auto"><a href="assets/lg-mac-open-anyway.png"><img src="assets/lg-mac-open-anyway.png" alt="Trong Quyền riêng tư và Bảo mật, bấm nút Vẫn mở cạnh Console Translator LG" width="1578" height="358" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px"></a><figcaption>Chạm ảnh để xem lớn. Bấm Vẫn mở ở bên phải.</figcaption></figure></li><li>Khi cảnh báo xuất hiện lại, bấm <strong>Mở / Open</strong>.</li></ol><p>Nếu chưa thấy Vẫn mở, thử mở app lần nữa rồi quay lại mục Bảo mật. Chỉ thực hiện với bản tải từ GitHub chính thức. <a href="https://support.apple.com/102445">Hướng dẫn của Apple</a>.</p></div></details><p>Mac nhớ thông tin TV trong Keychain. Mã đã gắn với Windows cần cấp riêng cho Mac. Mỗi lần chơi bấm Mở app trên TV trong công cụ Windows hoặc Mac.</p>
+            <p><strong>Cài bằng Mac:</strong> giải nén ZIP, kéo Console Translator LG vào Applications rồi mở app. Cần macOS 12 trở lên (Intel/Apple Silicon). Nếu thiếu Node.js, bấm <strong>Cài Node.js</strong> ngay trong app và chờ hoàn tất. Nút <strong>Hỗ trợ Telegram</strong> dùng để nhận mã hoặc gửi log. Nhập IP/Passphrase, kết nối TV rồi nhập mã LGTV và cài. Nếu macOS chặn mở, vào Cài đặt hệ thống → Quyền riêng tư &amp; Bảo mật → Vẫn mở với ZIP từ GitHub chính thức.</p><details id="lg-mac-warning"><summary>Mac báo “Console Translator LG chưa được mở”</summary><div style="padding:0 16px 12px"><figure style="max-width:340px;margin:14px auto"><a href="assets/lg-mac-open-warning.png"><img src="assets/lg-mac-open-warning.png" alt="Cảnh báo macOS khi mở Console Translator LG, với nút Xong và Chuyển vào Thùng rác" width="604" height="700" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px"></a></figure><ol><li>Bấm <strong>Xong</strong> trong cảnh báo. Không chọn Chuyển vào Thùng rác nếu muốn tiếp tục cài.</li><li>Mở <strong>Cài đặt hệ thống → Quyền riêng tư &amp; Bảo mật</strong>, kéo xuống phần <strong>Bảo mật</strong>.</li><li>Tại thông báo chặn Console Translator LG, bấm <strong>Vẫn mở / Open Anyway</strong>. Nhập mật khẩu Mac hoặc dùng Touch ID nếu được hỏi.<figure style="max-width:100%;margin:14px auto"><a href="assets/lg-mac-open-anyway.png"><img src="assets/lg-mac-open-anyway.png" alt="Trong Quyền riêng tư và Bảo mật, bấm nút Vẫn mở cạnh Console Translator LG" width="1578" height="358" loading="lazy" style="display:block;width:100%;height:auto;border-radius:12px"></a><figcaption>Chạm ảnh để xem lớn. Bấm Vẫn mở ở bên phải.</figcaption></figure></li><li>Khi cảnh báo xuất hiện lại, bấm <strong>Mở / Open</strong>.</li></ol><p>Nếu chưa thấy Vẫn mở, thử mở app lần nữa rồi quay lại mục Bảo mật. Chỉ thực hiện với bản tải từ GitHub chính thức. <a href="https://support.apple.com/102445">Hướng dẫn của Apple</a>.</p></div></details><p>Mac nhớ thông tin TV trong Keychain. Mã đã gắn với Windows cần cấp riêng cho Mac. </p>
             <p class="mini-title">3. Mỗi lần chơi</p>
             <div class="play-every-time">
                 <div>Bật máy chơi game trước, chuyển TV sang đúng HDMI. Bật Key Server nếu chưa bật, rồi quay về HDMI.</div>
-                <div>Mở công cụ Windows hoặc Mac, bấm <strong>Mở app trên TV</strong>. Trên Mac, xác nhận <strong>Đã hiện hình, mở app</strong> khi TV đã hiện hình PS5 qua HDMI. Khi app hiện, có thể đóng công cụ PC.</div>
+                <div>Trên iPhone, vào mục <strong>Kết nối TV</strong>, bấm <strong>Mở app trên TV LG</strong> khi TV đã hiện hình game. Không cần mở máy tính. Lần đầu TV hỏi cho phép thì bấm Đồng ý.</div>
                 <div>Ghép iPhone bằng mã phụ đề <strong>8 số</strong> trên TV theo phần bên dưới, rồi chạy dịch.</div>
             </div>
             <div class="box tip"><strong>Không nhầm mã</strong>Mã LGTV nhập đầy đủ trong Windows 1.2.17 hoặc Mac 1.0.5. Mã ANDROID dành cho APK điện thoại. Passphrase dùng kết nối LG, mã 8 số dùng ghép phụ đề. Ngày giờ trong mã là lúc tạo, không phải hạn dùng.</div>
-            <div class="box warn"><strong>Gia hạn và mở lại</strong>Bấm EXTEND trong Developer Mode trước khi hết hạn. Tránh bấm Home/Cài đặt trên remote khi chơi; chỉ nên tăng/giảm âm lượng. Nếu phụ đề đóng, bấm Mở app trên TV lại.</div>
+            <div class="box warn"><strong>Gia hạn và mở lại</strong>Bấm EXTEND trong Developer Mode trước khi hết hạn. Tránh bấm Home/Cài đặt trên remote khi chơi; chỉ nên tăng/giảm âm lượng. Nếu phụ đề đóng, bấm Mở app trên TV LG trên iPhone lại.</div>
             <p>PC nhớ IP/Passphrase sau khi kết nối; nếu trên TV đổi, nhập lại. Thu hồi hoặc xóa mã cài chỉ chặn cài tiếp, app TV đã cài vẫn mở được. Khả năng hiện trên HDMI tùy mẫu TV.</p>
             <p>Mã cũ 32 ký tự vẫn dùng được. PC 1.2.5 trở xuống không nhận mã LGTV mới: đóng bản cũ, giải nén 1.2.17 vào thư mục mới rồi mở file .bat.</p>
             <p><a href="https://github.com/kyozxx/PS-Translator/blob/main/LG.md">Hướng dẫn đầy đủ và xử lý lỗi</a> · <a href="https://webostv.developer.lge.com/develop/getting-started/developer-mode-app">Developer Mode của LG</a></p>
@@ -455,7 +454,7 @@
                 <p>Sau khi đã cài app lên TV theo hướng dẫn ở trên, bạn bật máy PS5 trên TV rồi mở app nhận phụ đề theo từng dòng TV:</p>
                 <ul style="margin: 8px 0 12px 20px; font-size: 14.5px; color: var(--text);">
                     <li><strong>TV Samsung:</strong> Mở trực tiếp app <strong>Console Translator TV</strong> trên màn hình TV.</li>
-                    <li><strong>TV LG (webOS):</strong> Với iPhone thì mở app qua máy tính (PC/Mac) bằng nút <em>Mở app trên TV</em>; với Android thì bấm mở app ngay trong app điện thoại.</li>
+                    <li><strong>TV LG (webOS):</strong> máy tính chỉ cần để cài app lên TV lần đầu. Mỗi lần chơi, bấm <em>Mở app trên TV LG</em> ngay trong mục Kết nối TV của iPhone (Android cũng có nút tương tự).</li>
                     <li><strong>Android TV / Google TV:</strong> Bấm mở trực tiếp app <strong>Console Translator TV</strong> trên TV.</li>
                 </ul>
                 <p>Màn hình TV sẽ hiển thị <strong>Địa chỉ TV</strong> và <strong>Mã ghép nối (8 số)</strong>:</p>
@@ -503,7 +502,7 @@
                 <li><strong>LG báo lỗi cài đặt:</strong> mở lại công cụ và thử cài lại; nếu vẫn lỗi, gửi ảnh cho hỗ trợ trước khi gỡ app.</li>
                 <li><strong>Không kết nối được TV:</strong> mở app trên TV trước, kiểm tra TV và iPhone cùng Wi-Fi, bật quyền Mạng cục bộ cho app trên iPhone, rồi nhập đúng địa chỉ đang hiện trên TV.</li>
                 <li><strong>Sai mã:</strong> nhập mã 8 số mới nhất đang hiện trên TV.</li>
-                <li><strong>Phụ đề biến mất:</strong> Android TV cần bỏ tối ưu hóa pin; LG webOS cần bấm Mở app trên TV lại nếu đã dùng nút Home.</li>
+                <li><strong>Phụ đề biến mất:</strong> Android TV cần bỏ tối ưu hóa pin; LG webOS cần bấm Mở app trên TV LG trên iPhone lại nếu đã dùng nút Home.</li>
             </ul>
             <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">Telegram hỗ trợ</a> kèm hãng/model TV và ảnh lỗi.</div>
         </details>
@@ -551,40 +550,74 @@
 
     <section class="card s3" id="account">
         <h2><span class="num">3</span>Ghép nối iPhone với PS5 (làm một lần)</h2>
-        <p class="why">Để PS5 tin cậy iPhone của bạn. App có 3 bước: tìm máy, lấy mã người chơi và nhập mã 8 số hiện trên TV.</p>
+        <p class="why">Để PS5 tin cậy iPhone của bạn. Trong app có 3 bước: tìm máy, lấy mã người chơi, nhập mã 8 số hiện trên TV. Làm một lần, lần sau chỉ cần bấm Kết nối.</p>
 
-        <div class="box warn"><strong>Trước khi bắt đầu</strong>iPhone và PS5 phải dùng chung một mạng Wi-Fi ở nhà. Lần đầu mở app, iPhone hỏi quyền "Mạng cục bộ", hãy bấm <strong>Cho phép</strong>.</div>
+        <div class="box warn"><strong>Chuẩn bị trước khi bắt đầu</strong>
+            <ul style="margin:6px 0 0 18px;padding:0">
+                <li>iPhone và PS5 dùng chung một mạng Wi-Fi ở nhà (không dùng Wi-Fi khách, tắt VPN).</li>
+                <li>Đã làm xong bước 2: bật <strong>Chơi từ xa</strong> <em>(Enable Remote Play)</em> trên PS5.</li>
+                <li>Lần đầu mở app, iPhone hỏi quyền <strong>Mạng cục bộ</strong>: bấm <strong>Cho phép</strong>.</li>
+            </ul>
+        </div>
+
+        <h3>Nên dùng người chơi phụ</h3>
+        <p>App sẽ kết nối vào PS5 bằng một người chơi. Nếu dùng chung người chơi bạn đang cầm tay cầm, tay cầm sẽ bị ngắt. Vì vậy nên tạo một <strong>người chơi phụ</strong> cho app:</p>
+        <ol>
+            <li>Trên PS5, ở màn hình chính bấm <strong>ảnh đại diện</strong> góc phải trên cùng → <strong>Chuyển người dùng</strong> <em>(Switch User)</em> → <strong>Thêm người dùng</strong> <em>(Add User)</em>.</li>
+            <li>Đăng nhập bằng một tài khoản PlayStation khác (tạo mới miễn phí nếu chưa có). Đăng nhập một lần là đủ.</li>
+            <li>Bật <strong>Chơi từ xa</strong> cho người chơi phụ này như bước 2.</li>
+        </ol>
+        <p>Người chơi chính vẫn để chơi game bằng tay cầm như bình thường.</p>
 
         <h3>Bước 1: Tìm máy chơi game</h3>
-        <p>Ở màn chính của app, bấm <span class="btn-app">Ghép nối máy chơi game</span>, rồi bấm <span class="btn-app">Tìm máy</span>. App tự tìm và điền địa chỉ của PS5. Không thấy thì nhập địa chỉ bằng tay (xem phần Gặp lỗi bên dưới).</p>
+        <ol>
+            <li>Bật PS5 (hoặc để ở chế độ nghỉ, đèn cam).</li>
+            <li>Mở app, ở màn chính bấm <span class="btn-app">Ghép nối máy chơi game</span>.</li>
+            <li>App tự tìm máy. Thấy dòng <strong>Đã tìm thấy PS5</strong> thì bấm <span class="btn-app">Tiếp tục</span>. Có nhiều máy thì chọn đúng máy của bạn.</li>
+        </ol>
+        <details>
+            <summary>App không tìm thấy máy? Nhập địa chỉ bằng tay</summary>
+            <ol>
+                <li>Trên PS5 vào <strong>Cài đặt</strong> <em>(Settings)</em> → <strong>Mạng</strong> <em>(Network)</em> → <strong>Trạng thái kết nối</strong> <em>(Connection Status)</em> → <strong>Xem trạng thái kết nối</strong> <em>(View Connection Status)</em>.</li>
+                <li>Tìm dòng <strong>IPv4 Address</strong>, dạng <code>192.168.x.x</code>.</li>
+                <li>Trong app bấm <span class="btn-app">Không tìm thấy? Nhập địa chỉ bằng tay</span>, gõ đúng dãy số đó.</li>
+            </ol>
+            <p>Tắt router hoặc mất điện thì dãy số có thể đổi, khi đó tìm lại.</p>
+        </details>
         <figure class="phone">
             <img src="screenshots/guide/01-home.jpg" alt="Màn chính của app" loading="lazy">
             <figcaption>Màn chính: bấm Ghép nối máy chơi game</figcaption>
         </figure>
 
         <h3>Bước 2: Lấy mã người chơi</h3>
+        <p>Mã người chơi là một dãy ký tự cho biết app kết nối bằng người chơi nào. Lấy mã của <strong>người chơi phụ</strong>.</p>
         <ol>
-            <li>Trên PS5: bấm <strong>ảnh đại diện</strong> ở góc phải trên cùng, chọn <strong>Hồ sơ</strong>. Tên đăng nhập (Online ID) nằm ngay dưới tên bạn.</li>
-            <li>Trong app, bấm <span class="btn-app">Mở trang tra mã</span>, gõ tên đăng nhập đó vào và đợi trang tìm xong.</li>
-            <li>Ở dòng <strong>BASE64 (FOR REMOTE PLAY)</strong>, sao chép dãy ký tự kết thúc bằng dấu <code>=</code>.</li>
-            <li>Quay lại app, bấm <span class="btn-app">Dán mã</span>.</li>
+            <li>Trên PS5, chuyển sang người chơi phụ. Bấm <strong>ảnh đại diện</strong> góc phải trên cùng → <strong>Hồ sơ</strong> <em>(Profile)</em>. Tên đăng nhập <em>(Online ID)</em> nằm ngay dưới tên hiển thị. Ghi lại cho đúng từng chữ.</li>
+            <li>Trong app bấm <span class="btn-app">Mở trang tra mã</span>. Trang tra mã mở trong Safari.</li>
+            <li>Gõ tên đăng nhập vào ô tìm kiếm của trang, đợi trang tìm xong.</li>
+            <li>Tìm dòng <strong>BASE64 (FOR REMOTE PLAY)</strong>. Chạm giữ dãy ký tự ở dòng đó, chọn <strong>Sao chép</strong>. Dãy này kết thúc bằng dấu <code>=</code>.</li>
+            <li>Quay lại app, bấm <span class="btn-app">Dán mã</span>. Thấy chữ <strong>Đã nhận mã</strong> là xong, bấm <span class="btn-app">Tiếp tục</span>.</li>
         </ol>
-        <div class="box warn"><strong>Copy đúng dòng</strong>Chỉ lấy dòng BASE64 (FOR REMOTE PLAY). Không lấy dòng HEX hay NPID. Trang tra mã là trang bên ngoài, app không đăng nhập thay bạn.</div>
-        <p>Thấy chữ <strong style="color:var(--green)">Đã nhận mã</strong> là xong.</p>
+        <div class="box warn"><strong>Copy đúng dòng</strong>Chỉ lấy dòng BASE64 (FOR REMOTE PLAY). Không lấy dòng HEX hay NPID. App báo "Chưa đúng mã" nghĩa là đã copy nhầm dòng hoặc thiếu dấu =. Trang tra mã là trang bên ngoài, app không đăng nhập tài khoản PlayStation của bạn.</div>
+        <figure class="phone">
+            <img src="screenshots/guide/03-pairing-lookup.jpg" alt="Bước lấy mã người chơi trong app" loading="lazy" onerror="this.parentElement.hidden=true">
+            <figcaption>Bấm Mở trang tra mã, copy dòng BASE64 rồi bấm Dán mã</figcaption>
+        </figure>
 
-        <h3>Bước 3: Nhập mã hiện trên máy</h3>
+        <h3>Bước 3: Nhập mã 8 số hiện trên TV</h3>
         <ol>
-            <li>Trên PS5, chuyển sang đúng người chơi vừa tra mã (giữ nút PS giữa tay cầm → chuyển người dùng).</li>
-            <li>Bật chơi từ xa cho người chơi này (xem bước 2 ở trên: <strong>Enable Remote Play</strong>).</li>
-            <li>Vào <strong>Settings → System → Remote Play → Link Device</strong>. TV hiện mã 8 số kèm đồng hồ đếm ngược.</li>
-            <li>Nhập ngay 8 số vào app rồi bấm <span class="btn-app">Ghép nối</span>.</li>
+            <li>Trên PS5, đảm bảo đang ở đúng <strong>người chơi phụ</strong> vừa tra mã (giữ nút PS giữa tay cầm → <strong>Chuyển người dùng</strong>).</li>
+            <li>Vào <strong>Cài đặt</strong> <em>(Settings)</em> → <strong>Hệ thống</strong> <em>(System)</em> → <strong>Chơi từ xa</strong> <em>(Remote Play)</em> → <strong>Liên kết thiết bị</strong> <em>(Link Device)</em>.</li>
+            <li>TV hiện <strong>8 chữ số</strong> kèm đồng hồ đếm ngược. Mã chỉ dùng được vài phút.</li>
+            <li>Nhập ngay 8 số vào app, bấm <span class="btn-app">Ghép nối</span>. Chờ vài giây đến khi app báo ghép nối thành công.</li>
         </ol>
         <figure class="phone">
             <img src="screenshots/guide/04-pairing-pin.jpg" alt="Ô nhập mã 8 số và nút Ghép nối" loading="lazy">
             <figcaption>Nhập mã 8 số rồi bấm Ghép nối</figcaption>
         </figure>
+        <div class="box warn"><strong>Máy từ chối mã?</strong>Thường do mã người chơi ở bước 2 là của người khác với người đang chọn trên PS5. Chuyển đúng người chơi, lấy mã 8 số mới rồi nhập lại. Mã hết giờ thì bấm Liên kết thiết bị lần nữa để lấy mã mới.</div>
 
-        <div class="box tip"><strong>Mẹo để tay cầm không bị ngắt</strong>Mã người chơi phải đúng người chơi đang chọn trên PS5. Nên ghép nối bằng <strong>một người chơi phụ</strong>, còn <strong>người chơi chính</strong> để cầm tay cầm chơi. Hai người chơi khác nhau thì tay cầm không bị app tranh mất.</div>
+        <div class="box tip"><strong>Xong rồi, lần sau thế nào?</strong>Không cần ghép lại. Mở app, bấm <strong>Kết nối</strong>. PS5 đang nghỉ (đèn cam) sẽ tự bật nếu bạn đã bật "Cho phép bật PS5 qua mạng" ở bước 2. Bị đá tay cầm thì bấm nút PS, chọn lại người chơi chính.</div>
     </section>
 
     <section class="card s4" id="choi">
@@ -618,48 +651,6 @@
         </div>
     </section>
 
-    <section class="card s6" id="phong-cach">
-        <h2><span class="num">5</span>Chọn văn phong dịch</h2>
-        <p class="why">Cùng một câu, mỗi game hợp một cách nói khác nhau. Chọn văn phong để bản dịch nghe đúng chất nhân vật.</p>
-        <div class="ps-path"><span>Cài đặt</span><i>→</i><span>Hồ sơ game</span><i>→</i><span>Phong cách dịch</span></div>
-        <p>Mỗi hồ sơ game lưu văn phong riêng. Ví dụ tạo hồ sơ "GTA" để giọng giang hồ, hồ sơ "RDR2" để giọng cao bồi, đổi game là đổi hồ sơ, không phải chỉnh lại.</p>
-        <figure class="phone">
-            <img src="screenshots/guide/07-style-picker.jpg" alt="Danh sách phong cách dịch" loading="lazy">
-            <figcaption>Bấm vào ô Phong cách dịch để chọn</figcaption>
-        </figure>
-
-        <p class="group-label">Cho game</p>
-        <p style="margin-bottom:0">Câu gốc ví dụ: <em>"Get in the car, we don't have time!"</em></p>
-        <div class="styles">
-            <div class="style"><span class="for">Mặc định</span><b>Tự nhiên</b>
-                <p>Dễ nghe, xưng tôi, bạn. Hợp với hầu hết game.</p>
-                <q>Lên xe đi, chúng ta không còn thời gian đâu!</q></div>
-            <div class="style"><span class="for">Game nhiều cốt truyện</span><b>Sát nghĩa</b>
-                <p>Bám sát câu gốc, không thêm bớt ý.</p>
-                <q>Vào xe đi, chúng ta không có thời gian!</q></div>
-            <div class="style"><span class="for">Game tình cảm</span><b>Anh – em</b>
-                <p>Người nói xưng anh, gọi người nghe là em.</p>
-                <q>Lên xe đi em, bọn anh không còn thời gian đâu!</q></div>
-            <div class="style"><span class="for">GTA, game giang hồ</span><b>Bụi bặm, đường phố</b>
-                <p>Xưng tao, mày, giữ tiếng lóng đúng chất đường phố.</p>
-                <q>Lên xe mau, tao với mày hết thời gian rồi!</q></div>
-            <div class="style"><span class="for">Red Dead Redemption</span><b>Cao bồi miền Tây</b>
-                <p>Mộc mạc, phong trần như phim cao bồi.</p>
-                <q>Lên xe mau đi anh bạn, ta chẳng còn thì giờ đâu!</q></div>
-        </div>
-
-        <p class="group-label">Cho video YouTube</p>
-        <div class="styles">
-            <div class="style"><b>Podcast</b><p>Như đang trò chuyện, gần gũi, dễ nghe.</p></div>
-            <div class="style"><b>Thuyết minh</b><p>Giọng điềm tĩnh như phim tài liệu.</p></div>
-            <div class="style"><b>Tin tức</b><p>Trung lập, ngắn gọn, giữ đúng tên và số liệu.</p></div>
-            <div class="style"><b>Học tập</b><p>Giữ đúng thuật ngữ, câu gọn, dễ hiểu.</p></div>
-            <div class="style"><b>Prompt riêng</b><p>Tự viết yêu cầu cho AI, ví dụ cách xưng hô hay tên nhân vật cần giữ nguyên.</p></div>
-        </div>
-
-        <div class="box warn"><strong>Văn phong đầy đủ cần bộ dịch AI</strong>Văn phong chỉ được áp dụng trọn vẹn khi dùng <strong>Apple Intelligence, CloudAPI hoặc Gemini</strong> (các bộ dịch có nhãn AI HỖ TRỢ). Với Dịch thuật Apple, app chỉ đổi được cách xưng hô cho hai kiểu Anh – em và Bụi bặm, đường phố.</div>
-        <p style="font-size:13px;margin-top:8px">Các câu dịch mẫu ở trên chỉ để minh hoạ, bản dịch thật có thể khác tuỳ bộ dịch.</p>
-    </section>
 
     <section class="card s5">
         <h2>Gặp lỗi? Bấm vào lỗi giống bạn</h2>
@@ -707,6 +698,20 @@
         <details>
             <summary>Hình giật hoặc hay rớt mạng</summary>
             <p>Cắm dây mạng (LAN) cho PS5 nếu được. iPhone nên dùng Wi-Fi 5 GHz và để gần router. Tạm dừng các máy đang tải game hay xem phim.</p>
+        </details>
+
+        <details>
+            <summary>Không tìm thấy hoặc không kết nối được TV</summary>
+            <ul>
+                <li>Mở app nhận phụ đề trên TV, kiểm tra TV đang hiện mã ghép 8 số.</li>
+                <li>iPhone và TV cùng mạng Wi-Fi, đã bật quyền <strong>Mạng cục bộ</strong> cho app.</li>
+                <li>Không tìm thấy TV thì nhập địa chỉ đang hiện trên màn hình app TV. Mã 8 số đổi mỗi phút, dùng mã mới nhất.</li>
+                <li>TV chưa có app nhận phụ đề thì xem phần <a href="#phu-de-tv">Phụ đề ngay trên màn hình TV</a>.</li>
+            </ul>
+        </details>
+        <details>
+            <summary>Dịch cả chữ menu, bảng điểm</summary>
+            <p>Thu nhỏ khung quét cho vừa dòng phụ đề, dời bản dịch ra chỗ khác để không che chữ gốc.</p>
         </details>
 
         <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn vào <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">kênh Telegram</a> kèm ảnh chụp màn hình. Nhớ che mã người chơi, địa chỉ IP, mã 8 số và khóa API trước khi gửi.</div>
