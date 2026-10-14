@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>App Store Preview</title>
+<!--
+  App Store screenshots for Console Translator.
+  index.html            : App Store page mock (view all shots together)
+  index.html?shot=N     : shot N alone at 1320x2868 (iPhone 6.9"), for export
+-->
+<style>
+  :root { --ink: #1b1a17; --amber: #f2a516; --cream: #fff8e6; }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif; background: #f2f2f7; color: #000; }
+
+  /* ---------- one screenshot, 1320 x 2868 ---------- */
+  .shot { width: 1320px; height: 2868px; position: relative; overflow: hidden; color: var(--cream);
+    background: radial-gradient(120% 70% at 50% 0%, #3a2a10 0%, #14110c 55%, #0b0a08 100%); }
+  .shot::before { content: ""; position: absolute; inset: 0; opacity: .18;
+    background: repeating-radial-gradient(circle at 20% 110%, transparent 0 46px, #c9953a 46px 48px); }
+  .cap { position: absolute; top: 150px; left: 0; right: 0; text-align: center; padding: 0 90px; }
+  .cap .k { display: inline-block; font-size: 44px; font-weight: 800; letter-spacing: .08em; color: var(--ink);
+    background: var(--amber); border-radius: 999px; padding: 12px 34px; margin-bottom: 40px; }
+  .cap h2 { font-size: 112px; line-height: 1.08; font-weight: 800; letter-spacing: -.03em; }
+  .cap h2 em { font-style: normal; color: var(--amber); }
+  .cap p { font-size: 50px; line-height: 1.35; margin-top: 34px; color: #e9dfc8; font-weight: 500; }
+
+  .phone { position: absolute; left: 50%; transform: translateX(-50%); width: 980px; top: 880px;
+    border-radius: 150px; padding: 28px; background: #050505;
+    box-shadow: 0 0 0 6px #3a3a3c, 0 0 0 12px #1c1c1e, 0 80px 160px -40px #000; }
+  .phone img { display: block; width: 100%; border-radius: 124px; }
+  .phone.low { top: 1150px; }
+
+  .tv { position: absolute; left: 50%; transform: translateX(-50%); width: 1160px; top: 760px; }
+  .tv .bezel { background: #0c0c0d; border-radius: 28px; padding: 22px; box-shadow: 0 0 0 3px #2c2c2e, 0 60px 120px -40px #000; }
+  .tv .screen { position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: 6px; }
+  .tv .screen img { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .tv .stand { width: 260px; height: 36px; margin: 0 auto; background: linear-gradient(#2a2a2c, #0c0c0d); border-radius: 0 0 18px 18px; }
+  .tv .sub { position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%); width: max-content; max-width: 80%;
+    background: rgba(0,0,0,.66); color: #fff; font-weight: 700; font-size: 40px; line-height: 1.3; padding: 12px 26px; border-radius: 12px; text-align: center; }
+  .tv .box { position: absolute; background: rgba(0,0,0,.86); color: #fff; font-weight: 600; font-size: 25px; line-height: 1.3; padding: 10px 16px; border-radius: 10px; }
+  .tv + .phone { top: 1560px; width: 640px; border-radius: 100px; padding: 18px; }
+  .tv + .phone img { border-radius: 84px; }
+
+  /* ---------- App Store page mock ---------- */
+  .store { max-width: 980px; margin: 0 auto; padding: 40px 24px 80px; }
+  .head { display: flex; gap: 24px; align-items: center; }
+  .head img { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 0 0 1px #0001; }
+  .head h1 { font-size: 30px; font-weight: 700; }
+  .head .sub { color: #6e6e73; font-size: 17px; margin-top: 2px; }
+  .get { display: inline-block; margin-top: 12px; background: #0a84ff; color: #fff; font-weight: 700; font-size: 16px; padding: 7px 22px; border-radius: 999px; }
+  .meta { display: flex; justify-content: space-around; margin: 28px 0 22px; padding: 14px 0; border-top: 1px solid #d1d1d6; border-bottom: 1px solid #d1d1d6; text-align: center; color: #6e6e73; font-size: 12px; }
+  .meta b { display: block; color: #3a3a3c; font-size: 20px; }
+  .row { display: flex; gap: 14px; overflow-x: auto; padding: 4px 2px 18px; scroll-snap-type: x mandatory; }
+  .row .frame { flex: 0 0 auto; width: 290px; height: 630px; border-radius: 26px; overflow: hidden; box-shadow: 0 0 0 1px #0002; scroll-snap-align: start; background: #000; }
+  .row .frame .shot { transform: scale(calc(290 / 1320)); transform-origin: top left; }
+  .desc { margin-top: 18px; font-size: 16px; line-height: 1.5; color: #1d1d1f; }
+  .desc h3 { font-size: 22px; margin: 24px 0 8px; }
+  .note { margin-top: 30px; font-size: 14px; color: #6e6e73; }
+  .note code { background: #e5e5ea; padding: 2px 6px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<template id="shots">
+  <section class="shot">
+    <div class="cap"><span class="k">CHƠI GAME NÀO CŨNG HIỂU</span><h2>Dịch phụ đề game<br>sang <em>tiếng Việt</em></h2><p>Đọc to bằng giọng tự nhiên. Không cần capture card.</p></div>
+    <div class="tv"><div class="bezel"><div class="screen"><img src="tv-scene-road.jpg" alt=""><div class="sub" style="background:rgba(0,0,0,.4);font-weight:600">Grab the supplies and let's move out.</div></div></div><div class="stand"></div></div>
+    <div class="phone" style="top:1470px;width:560px"><img src="raw/live.png" alt=""></div>
+  </section>
+  <section class="shot">
+    <div class="cap"><span class="k">PHỤ ĐỀ TRÊN TV</span><h2>Bản dịch hiện<br><em>ngay trên TV</em></h2><p>Đè lên hình game, không trễ. Android TV, LG, Samsung.</p></div>
+    <div class="tv"><div class="bezel"><div class="screen"><img src="tv-scene-road.jpg" alt=""><div class="sub">Ta phải tới thành phố trước khi trời tối.</div></div></div><div class="stand"></div></div>
+    <div class="phone"><img src="raw/tv.png" alt=""></div>
+  </section>
+  <section class="shot">
+    <div class="cap"><span class="k">CÀI MỘT LẦN</span><h2>Kéo khung<br>tới <em>dòng phụ đề</em></h2><p>App tự đọc và dịch từng câu thoại.</p></div>
+    <div class="phone low"><img src="raw/scan.png" alt=""></div>
+  </section>
+  <section class="shot">
+    <div class="cap"><span class="k">CHỌN VÙNG DỊCH</span><h2>Dịch <em>nhiệm vụ</em>,<br>thư, vật phẩm</h2><p>Kéo khung cam tới chữ, thả tay là ra bản dịch.</p></div>
+    <div class="phone low"><img src="raw/area.png" alt=""></div>
+  </section>
+  <section class="shot">
+    <div class="cap"><span class="k">DỊCH MENU TỰ ĐỘNG</span><h2>Mở menu là<br><em>tự dịch</em></h2><p>Kỹ năng, túi đồ, hướng dẫn: không cần bấm.</p></div>
+    <div class="tv"><div class="bezel"><div class="screen"><img src="tv-scene-menu.jpg" alt=""><div class="box" style="left:43.4%;top:42.5%;width:47.6%">Lướt xuyên qua kẻ địch, làm chúng choáng trong ba giây. Tốn một thanh thể lực.</div><div class="box" style="left:43.4%;top:70.5%;width:47.6%">Mở khóa lần lướt thứ hai và giảm thể lực tốn cho mỗi lần né.</div></div></div><div class="stand"></div></div>
+    <div class="phone"><img src="raw/menu.png" alt=""></div>
+  </section>
+  <section class="shot">
+    <div class="cap"><span class="k">KẾT NỐI QUA WI-FI</span><h2>Chơi trên TV,<br><em>dịch trên iPhone</em></h2><p>Ghép nối một lần, lần sau chỉ cần bấm Bắt đầu.</p></div>
+    <div class="phone low"><img src="raw/home.png" alt=""></div>
+  </section>
+</template>
+
+<div class="store" id="store">
+  <div class="head">
+    <img src="icon.png" alt="">
+    <div><h1>Console Translator: Dịch game</h1><div class="sub">Chơi game nào cũng hiểu</div><span class="get">NHẬN</span></div>
+  </div>
+  <div class="meta"><div><b>4+</b>Tuổi</div><div><b>Tiện ích</b>Thể loại</div><div><b>VI</b>Ngôn ngữ</div></div>
+  <div class="row" id="row"></div>
+  <div class="desc">
+    <h3>Mô tả</h3>
+    <p>Chơi game tiếng Anh mà không hiểu thoại? Console Translator đọc phụ đề trên màn hình, dịch sang tiếng Việt và đọc to cho bạn nghe, ngay trên iPhone. Bản dịch còn hiện được trên TV, đè lên hình game.</p>
+  </div>
+  <p class="note">Xuất từng ảnh 1320×2868: mở <code>index.html?shot=1</code> … <code>?shot=6</code>.</p>
+</div>
+
+<script>
+  const tpl = document.getElementById('shots').content;
+  const shots = [...tpl.querySelectorAll('.shot')];
+  const n = +new URLSearchParams(location.search).get('shot');
+  if (n) {
+    document.getElementById('store').remove();
+    document.body.style.background = '#000';
+    document.body.appendChild(shots[n - 1].cloneNode(true));
+  } else {
+    const row = document.getElementById('row');
+    shots.forEach(s => { const f = document.createElement('div'); f.className = 'frame'; f.appendChild(s.cloneNode(true)); row.appendChild(f); });
+  }
+</script>
+</body>
+</html>
