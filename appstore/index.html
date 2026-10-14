@@ -62,36 +62,48 @@
   .desc h3 { font-size: 22px; margin: 24px 0 8px; }
   .note { margin-top: 30px; font-size: 14px; color: #6e6e73; }
   .note code { background: #e5e5ea; padding: 2px 6px; border-radius: 6px; }
+
+  .cap { top: 120px; }
+  .phone.big { top: 640px; width: 1060px; }
+  .phone.duo { top: 1380px; width: 760px; border-radius: 116px; padding: 22px; }
+  .phone.duo img { border-radius: 96px; }
+  .phone.half { top: 1640px; width: 900px; }
+  .tv .sub.en { background: rgba(0,0,0,.35); font-weight: 600; }
+  .flow { position: absolute; left: 80px; right: 80px; top: 1520px; }
+  .card { border-radius: 44px; padding: 56px 60px; font-size: 80px; line-height: 1.25; font-weight: 700; }
+  .card span { display: block; font-size: 38px; font-weight: 700; letter-spacing: .04em; margin-bottom: 14px; opacity: .75; }
+  .card.en { background: #2a2620; color: #e9dfc8; border: 2px solid #4a4030; }
+  .card.vi { background: linear-gradient(135deg, #ffd27a, #f2a516); color: #1b1a17; box-shadow: 0 30px 80px -20px #f2a51688; }
+  .arrow { text-align: center; font-size: 90px; color: var(--amber); line-height: 1.2; }
+  .chips { position: absolute; left: 0; right: 0; bottom: 200px; display: flex; justify-content: center; gap: 22px; }
+  .chips b { font-size: 54px; padding: 22px 42px; border-radius: 999px; border: 3px solid var(--amber); color: var(--amber); }
+  .steps { position: absolute; left: 90px; right: 90px; top: 640px; display: grid; gap: 30px; }
+  .steps div { display: grid; grid-template-columns: 130px 1fr; column-gap: 36px; align-items: center; background: #221d15; border: 2px solid #4a4030; border-radius: 40px; padding: 36px 44px; }
+  .steps i { grid-row: span 2; width: 130px; height: 130px; border-radius: 50%; background: var(--amber); color: #1b1a17; font: 800 72px/130px -apple-system, sans-serif; text-align: center; font-style: normal; }
+  .steps b { font-size: 60px; } .steps span { font-size: 42px; color: #cfc3a8; }
 </style>
 </head>
 <body>
 <template id="shots">
   <section class="shot">
-    <div class="cap"><span class="k">CHƠI GAME NÀO CŨNG HIỂU</span><h2>Dịch phụ đề game<br>sang <em>tiếng Việt</em></h2><p>Đọc to bằng giọng tự nhiên. Không cần capture card.</p></div>
-    <div class="tv"><div class="bezel"><div class="screen"><img src="tv-scene-road.jpg" alt=""><div class="sub" style="background:rgba(0,0,0,.4);font-weight:600">Grab the supplies and let's move out.</div></div></div><div class="stand"></div></div>
-    <div class="phone" style="top:1470px;width:560px"><img src="raw/live.png" alt=""></div>
+    <div class="cap"><span class="k">CHƠI GAME NÀO CŨNG HIỂU</span><h2>Game tiếng Anh?<br><em>Nghe tiếng Việt</em></h2><p>App đọc phụ đề trên màn hình, dịch và đọc to cho bạn.</p></div><div class="tv" style="top:700px"><div class="bezel"><div class="screen"><img src="tv-scene-road.jpg" alt=""><div class="sub en">We need to reach the city before nightfall.</div></div></div><div class="stand"></div></div><div class="flow"><div class="card en"><span>Game nói</span>We need to reach the city before nightfall.</div><div class="arrow">↓</div><div class="card vi"><span>🔊 App dịch và đọc</span>Ta phải tới thành phố trước khi trời tối.</div></div>
+ <div class="chips"><b>Thoại</b><b>Nhiệm vụ</b><b>Menu</b><b>Trên TV</b></div>
   </section>
   <section class="shot">
-    <div class="cap"><span class="k">PHỤ ĐỀ TRÊN TV</span><h2>Bản dịch hiện<br><em>ngay trên TV</em></h2><p>Đè lên hình game, không trễ. Android TV, LG, Samsung.</p></div>
-    <div class="tv"><div class="bezel"><div class="screen"><img src="tv-scene-road.jpg" alt=""><div class="sub">Ta phải tới thành phố trước khi trời tối.</div></div></div><div class="stand"></div></div>
-    <div class="phone"><img src="raw/tv.png" alt=""></div>
+    <div class="cap"><span class="k">PHỤ ĐỀ TRÊN TV</span><h2>Bản dịch hiện<br><em>ngay trên TV</em></h2><p>Đè lên hình game, không trễ. Android TV, LG, Samsung.</p></div><div class="tv" style="top:640px"><div class="bezel"><div class="screen"><img src="tv-scene-road.jpg" alt=""><div class="sub">Ta phải tới thành phố trước khi trời tối.</div><div class="box" style="left:43%;top:6%;width:42%">Tìm người lái buôn ở cây cầu cũ và hỏi về đoàn xe bị mất tích.</div></div></div><div class="stand"></div></div><div class="phone duo"><img src="raw/tv.png" alt=""></div>
   </section>
   <section class="shot">
-    <div class="cap"><span class="k">CÀI MỘT LẦN</span><h2>Kéo khung<br>tới <em>dòng phụ đề</em></h2><p>App tự đọc và dịch từng câu thoại.</p></div>
-    <div class="phone low"><img src="raw/scan.png" alt=""></div>
+    <div class="cap"><span class="k">CÀI MỘT LẦN</span><h2>Kéo khung<br>tới <em>dòng phụ đề</em></h2><p>App tự đọc và dịch từng câu thoại.</p></div><div class="phone big"><img src="raw/scan.png" alt=""></div>
   </section>
   <section class="shot">
-    <div class="cap"><span class="k">CHỌN VÙNG DỊCH</span><h2>Dịch <em>nhiệm vụ</em>,<br>thư, vật phẩm</h2><p>Kéo khung cam tới chữ, thả tay là ra bản dịch.</p></div>
-    <div class="phone low"><img src="raw/area.png" alt=""></div>
+    <div class="cap"><span class="k">CHỌN VÙNG DỊCH</span><h2>Dịch <em>nhiệm vụ</em>,<br>thư, vật phẩm</h2><p>Kéo khung cam tới chữ, thả tay là ra bản dịch.</p></div><div class="phone big"><img src="raw/area.png" alt=""></div>
   </section>
   <section class="shot">
-    <div class="cap"><span class="k">DỊCH MENU TỰ ĐỘNG</span><h2>Mở menu là<br><em>tự dịch</em></h2><p>Kỹ năng, túi đồ, hướng dẫn: không cần bấm.</p></div>
-    <div class="tv"><div class="bezel"><div class="screen"><img src="tv-scene-menu.jpg" alt=""><div class="box" style="left:43.4%;top:42.5%;width:47.6%">Lướt xuyên qua kẻ địch, làm chúng choáng trong ba giây. Tốn một thanh thể lực.</div><div class="box" style="left:43.4%;top:70.5%;width:47.6%">Mở khóa lần lướt thứ hai và giảm thể lực tốn cho mỗi lần né.</div></div></div><div class="stand"></div></div>
-    <div class="phone"><img src="raw/menu.png" alt=""></div>
+    <div class="cap"><span class="k">DỊCH MENU TỰ ĐỘNG</span><h2>Mở menu là<br><em>tự dịch</em></h2><p>Kỹ năng, túi đồ, hướng dẫn: không cần bấm.</p></div><div class="tv" style="top:640px"><div class="bezel"><div class="screen"><img src="tv-scene-menu.jpg" alt=""><div class="box" style="left:43.4%;top:42.5%;width:47.6%">Lướt xuyên qua kẻ địch, làm chúng choáng trong ba giây. Tốn một thanh thể lực.</div><div class="box" style="left:43.4%;top:70.5%;width:47.6%">Mở khóa lần lướt thứ hai và giảm thể lực tốn cho mỗi lần né.</div></div></div><div class="stand"></div></div><div class="phone duo"><img src="raw/menu.png" alt=""></div>
   </section>
   <section class="shot">
-    <div class="cap"><span class="k">KẾT NỐI QUA WI-FI</span><h2>Chơi trên TV,<br><em>dịch trên iPhone</em></h2><p>Ghép nối một lần, lần sau chỉ cần bấm Bắt đầu.</p></div>
-    <div class="phone low"><img src="raw/home.png" alt=""></div>
+    <div class="cap"><span class="k">DỄ DÙNG</span><h2>3 bước là <em>chơi</em></h2><p>Không cần capture card, không cần máy tính.</p></div><div class="steps"><div><i>1</i><b>Ghép nối qua Wi-Fi</b><span>Chỉ làm một lần</span></div><div><i>2</i><b>Chơi trên TV như thường</b><span>Tay cầm, hình gốc, không trễ</span></div><div><i>3</i><b>iPhone dịch và đọc to</b><span>Hoặc hiện thẳng trên TV</span></div></div>
+ <div class="phone half"><img src="raw/home.png" alt=""></div>
   </section>
 </template>
 
