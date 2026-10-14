@@ -117,6 +117,12 @@ https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.4-mi/Co
 3. Cấp quyền hiển thị như [Bước 2](#bước-2-cấp-quyền-hiển-thị-phụ-đề). Trên TV Xiaomi, quyền này thường nằm ở **设置 (Cài đặt) → 应用 (Ứng dụng) → 权限 / 特殊权限 → 显示在其他应用上层 (Hiển thị trên ứng dụng khác)**.
 4. Mở app, ghép nối với iPhone như bình thường.
 
+**Không bật được quyền hiển thị trên ứng dụng khác?**
+
+1. TV: **Settings → Accounts and Security → ADB** → bật, chọn **ALLOW**.
+2. Mở app **Permissions Manager** (khiên xanh).
+3. Chọn **Console Translator TV (Mi)** → `android.permission.SYSTEM_ALERT_WINDOW` → **Allow**.
+
 Khác với bản thường: lúc đang mở màn hình app thì **chưa có phụ đề**. Phụ đề chỉ hiện sau khi bấm **Home** hoặc chuyển sang cổng HDMI của máy chơi game. Đây là cách để TV Xiaomi không tự tắt app.
 
 Cấp quyền bằng máy tính (ADB) thì dùng tên gói của bản Mi:
