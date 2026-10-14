@@ -350,7 +350,7 @@
         <button role="tab" data-panel="fix" aria-selected="false">Gặp lỗi</button>
     </div>
     <div class="panel" id="panel-phone" role="tabpanel">
-        <p class="panel-intro">Làm lần lượt 4 bước, bấm vào bước để mở.</p>
+        <p class="panel-intro">Làm lần lượt 3 bước, bấm vào bước để mở.</p>
     <section class="card s1" id="cai-app">
         <details class="tv-fold"><summary><h2><span class="num">1</span>Cài app</h2></summary>
         <p class="why">App phát hành qua TestFlight, cách cài thử nghiệm chính thức của Apple. Không cần máy tính, không phải cài lại sau 7 ngày.</p>
@@ -363,63 +363,53 @@
         </details>
     </section>
 
-    <section class="card s2" id="ps5">
-        <details class="tv-fold"><summary><h2><span class="num">2</span>Chỉnh trên PS5 (làm một lần)</h2></summary>
-        <p class="why">Cầm tay cầm PS5, vào <strong>Cài đặt</strong> (biểu tượng bánh răng ở góc trên bên phải màn hình chính). PS5 không có tiếng Việt nên chữ trong ngoặc là tên tiếng Anh bạn sẽ thấy trên máy.</p>
+    <section class="card s2" id="account">
+        <details class="tv-fold"><summary><h2><span class="num">2</span>Chuẩn bị PS5 và ghép nối (làm một lần)</h2></summary>
+        <p class="why">Làm một lần, lần sau chỉ cần mở app bấm Kết nối. PS5 để tiếng Anh thì xem chữ trong ngoặc.</p>
 
-        <h3>Bật chơi từ xa</h3>
+        <div class="box warn"><strong>Chuẩn bị</strong>
+            <ul style="margin:6px 0 0 18px;padding:0">
+                <li>iPhone và PS5 dùng chung một mạng Wi-Fi ở nhà (không dùng Wi-Fi khách, tắt VPN).</li>
+                <li>Lần đầu mở app, iPhone hỏi quyền <strong>Mạng cục bộ</strong>: bấm <strong>Cho phép</strong>.</li>
+            </ul>
+        </div>
+
+        <h3 id="ps5">A. Tạo tài khoản phụ trên PS5</h3>
+        <p>App kết nối vào PS5 bằng một tài khoản PlayStation. Dùng chung tài khoản bạn đang cầm tay cầm chơi thì tay cầm bị ngắt, nên dùng một <strong>tài khoản phụ</strong> cho app. Tài khoản chính vẫn để chơi như bình thường.</p>
+        <ol>
+            <li>Ở màn hình chính PS5, bấm <strong>ảnh đại diện</strong> góc phải trên cùng → <strong>Chuyển người dùng</strong> <em>(Switch User)</em> → <strong>Thêm người dùng</strong> <em>(Add User)</em>.</li>
+            <li>Đăng nhập bằng một tài khoản PlayStation khác (tạo mới miễn phí nếu chưa có).</li>
+            <li>Chuyển sang tài khoản phụ này để làm các bước dưới.</li>
+        </ol>
+
+        <h3>B. Bật Chơi từ xa cho tài khoản phụ</h3>
         <div class="ps-path"><span>Cài đặt <em>Settings</em></span><i>→</i><span>Hệ thống <em>System</em></span><i>→</i><span>Chơi từ xa <em>Remote Play</em></span></div>
-        <ul class="toggle-list">
-            <li><span class="on" aria-hidden="true"></span><div><b>Bật chơi từ xa</b> <em>Enable Remote Play</em><small>Bấm vào mục này, rồi bật đúng người chơi PS5 mà app sẽ dùng để kết nối. Chọn sai người chơi thì app sẽ không kết nối được.</small></div></li>
-            <li><span class="on" aria-hidden="true"></span><div><b>Ẩn trạng thái chơi từ xa</b> <em>Hide Remote Play Connection Status</em><small>Nên bật. Ẩn dòng thông báo "đang chơi từ xa" trên TV cho màn hình gọn khi chơi.</small></div></li>
-        </ul>
-        <div class="box warn"><strong>Chọn đúng người chơi</strong>Trong <strong>Bật chơi từ xa</strong>, PS5 sẽ hiện danh sách người chơi (User). Hãy bật đúng người chơi bạn sẽ ghép nối với app.</div>
+        <ol>
+            <li>Bấm <strong>Bật Chơi từ xa</strong> <em>(Enable Remote Play)</em>, bật công tắc cạnh <strong>tài khoản phụ</strong>. Bật sai người thì app không kết nối được.</li>
+            <li>Quay lại, bật <strong>Ẩn trạng thái kết nối Chơi từ xa</strong> <em>(Hide Remote Play Connection Status)</em> để TV không hiện dòng "đã kết nối Chơi từ xa" khi chơi.</li>
+        </ol>
         <figure>
             <img src="screenshots/app/ps5-remote-play-steps.jpg" alt="Trên PS5: bấm Bật Chơi từ xa, bật cho tài khoản phụ, rồi bật Ẩn trạng thái kết nối Chơi từ xa" loading="lazy">
             <figcaption>Bấm Bật Chơi từ xa, bật đúng tài khoản phụ, rồi bật Ẩn trạng thái kết nối</figcaption>
         </figure>
-        <figure>
-            <img src="screenshots/06-ps5-user-match.png" alt="Kiểm tra đúng User PS5 đang dùng trong app" loading="lazy" onerror="this.parentElement.hidden=true">
-            <figcaption>Tên người chơi trên PS5 phải đúng với người chơi mà app đang dùng để kết nối</figcaption>
-        </figure>
 
-        <h3>Cho app tự bật PS5 khi máy đang nghỉ</h3>
+        <h3>C. Cho app tự bật PS5 khi máy đang nghỉ (nên làm)</h3>
         <div class="ps-path"><span>Cài đặt <em>Settings</em></span><i>→</i><span>Hệ thống <em>System</em></span><i>→</i><span>Tiết kiệm điện <em>Power Saving</em></span><i>→</i><span>Tính năng khi nghỉ <em>Features Available in Rest Mode</em></span></div>
         <ul class="toggle-list">
             <li><span class="on" aria-hidden="true"></span><div><b>Giữ kết nối Internet</b> <em>Stay Connected to the Internet</em></div></li>
             <li><span class="on" aria-hidden="true"></span><div><b>Cho phép bật PS5 qua mạng</b> <em>Enable Turning On PS5 from Network</em></div></li>
         </ul>
-        <div class="box tip"><strong>Lợi ích</strong>Để PS5 ở chế độ nghỉ (đèn cam), mở app bấm Kết nối là máy tự bật. Máy tắt hẳn thì phải bật bằng tay.</div>
-        </details>
-    </section>
+        <p>Để PS5 ở chế độ nghỉ (đèn cam), mở app bấm Kết nối là máy tự bật. Máy tắt hẳn thì phải bật bằng tay.</p>
 
-    <section class="card s3" id="account">
-        <details class="tv-fold"><summary><h2><span class="num">3</span>Ghép nối iPhone với PS5 (làm một lần)</h2></summary>
-        <p class="why">Để PS5 tin cậy iPhone của bạn. Trong app có 3 bước: tìm máy, lấy mã người chơi, nhập mã 8 số hiện trên TV. Làm một lần, lần sau chỉ cần bấm Kết nối.</p>
-
-        <div class="box warn"><strong>Chuẩn bị trước khi bắt đầu</strong>
-            <ul style="margin:6px 0 0 18px;padding:0">
-                <li>iPhone và PS5 dùng chung một mạng Wi-Fi ở nhà (không dùng Wi-Fi khách, tắt VPN).</li>
-                <li>Đã làm xong bước 2: bật <strong>Chơi từ xa</strong> <em>(Enable Remote Play)</em> trên PS5.</li>
-                <li>Lần đầu mở app, iPhone hỏi quyền <strong>Mạng cục bộ</strong>: bấm <strong>Cho phép</strong>.</li>
-            </ul>
-        </div>
-
-        <h3>Nên dùng tài khoản phụ</h3>
-        <p>App sẽ kết nối vào PS5 bằng một tài khoản PlayStation. Nếu dùng chung tài khoản bạn đang cầm tay cầm chơi, tay cầm sẽ bị ngắt. Vì vậy nên dùng một <strong>tài khoản phụ</strong> cho app:</p>
+        <h3>D. Trên iPhone: tìm máy</h3>
         <ol>
-            <li>Trên PS5, ở màn hình chính bấm <strong>ảnh đại diện</strong> góc phải trên cùng → <strong>Chuyển người dùng</strong> <em>(Switch User)</em> → <strong>Thêm người dùng</strong> <em>(Add User)</em>.</li>
-            <li>Đăng nhập bằng một tài khoản PlayStation khác (tạo mới miễn phí nếu chưa có). Đăng nhập một lần là đủ.</li>
-            <li>Bật <strong>Chơi từ xa</strong> cho tài khoản phụ này như bước 2.</li>
+            <li>Mở app, bấm <span class="btn-app">Ghép nối máy chơi game</span>.</li>
+            <li>App tự tìm máy. Thấy dấu tích xanh <strong>Đã có máy ở địa chỉ...</strong> thì bấm <span class="btn-app">Tiếp tục</span>.</li>
         </ol>
-        <p>Tài khoản chính vẫn để chơi game bằng tay cầm như bình thường. Ở các bước dưới, "người chơi phụ" chính là tài khoản phụ này.</p>
-
-        <h3>Bước 1: Tìm máy chơi game</h3>
-        <ol>
-            <li>Bật PS5 (hoặc để ở chế độ nghỉ, đèn cam).</li>
-            <li>Mở app, ở màn chính bấm <span class="btn-app">Ghép nối máy chơi game</span>.</li>
-            <li>App tự tìm máy. Thấy dòng <strong>Đã tìm thấy PS5</strong> thì bấm <span class="btn-app">Tiếp tục</span>. Có nhiều máy thì chọn đúng máy của bạn.</li>
-        </ol>
+        <figure class="phone">
+            <img src="screenshots/app/03-pair-1-found.jpg" alt="App đã tìm thấy máy chơi game" loading="lazy">
+            <figcaption>App tự tìm máy. Thấy dấu tích xanh là bấm Tiếp tục</figcaption>
+        </figure>
         <details>
             <summary>App không tìm thấy máy? Nhập địa chỉ bằng tay</summary>
             <ol>
@@ -427,73 +417,56 @@
                 <li>Tìm dòng <strong>IPv4 Address</strong>, dạng <code>192.168.x.x</code>.</li>
                 <li>Trong app bấm <span class="btn-app">Không tìm thấy? Nhập địa chỉ bằng tay</span>, gõ đúng dãy số đó.</li>
             </ol>
-            <p>Tắt router hoặc mất điện thì dãy số có thể đổi, khi đó tìm lại.</p>
         </details>
-        <figure class="phone">
-            <img src="screenshots/app/01-home.jpg" alt="Màn chính của app" loading="lazy">
-            <figcaption>Màn chính: bấm Ghép nối máy chơi game</figcaption>
-        </figure>
-        <figure class="phone">
-            <img src="screenshots/app/03-pair-1-found.jpg" alt="App đã tìm thấy máy chơi game" loading="lazy">
-            <figcaption>App tự tìm máy. Thấy dấu tích xanh là bấm Tiếp tục</figcaption>
-        </figure>
 
-        <h3>Bước 2: Lấy mã người chơi</h3>
-        <details>
-            <summary>Tìm tên đăng nhập (Online ID) ở đâu?</summary>
-            <p>Online ID là tên hiện khi chơi online, không phải email. Cách tìm, chọn một:</p>
-            <figure>
-                <img src="screenshots/app/07-find-online-id.jpg" alt="Trên PS5: chuyển sang người chơi phụ, bấm ảnh đại diện, chọn Hồ sơ, xem Online ID dưới tên hiển thị" loading="lazy">
-                <figcaption>Chuyển sang người chơi phụ → ảnh đại diện → Hồ sơ → Online ID nằm dưới tên</figcaption>
-            </figure>
-            <ul>
-                <li><strong>Trên PS5:</strong> đăng nhập tài khoản phụ, bấm <strong>ảnh đại diện</strong> góc phải trên cùng → <strong>Hồ sơ</strong> <em>(Profile)</em>. Online ID là dòng chữ nhỏ ngay dưới tên hiển thị.</li>
-                <li><strong>Trên PS5, cách khác:</strong> <strong>Cài đặt</strong> <em>(Settings)</em> → <strong>Người dùng và tài khoản</strong> <em>(Users and Accounts)</em> → <strong>Tài khoản</strong> <em>(Account)</em> → <strong>Hồ sơ</strong> <em>(Profile)</em> → <strong>Online ID</strong>.</li>
-                <li><strong>Trên điện thoại:</strong> mở app <strong>PlayStation App</strong>, đăng nhập tài khoản phụ, bấm ảnh đại diện. Online ID nằm dưới ảnh.</li>
-            </ul>
-            <p>Gõ đúng từng chữ, kể cả chữ hoa, chữ thường, số và dấu gạch (- hoặc _).</p>
-        </details>
-        <p>Mã người chơi là một dãy ký tự cho biết app kết nối bằng người chơi nào. Lấy mã của <strong>người chơi phụ</strong>.</p>
+        <h3>E. Lấy mã người chơi của tài khoản phụ</h3>
         <ol>
-            <li>Trên PS5, chuyển sang người chơi phụ. Bấm <strong>ảnh đại diện</strong> góc phải trên cùng → <strong>Hồ sơ</strong> <em>(Profile)</em>. Tên đăng nhập <em>(Online ID)</em> nằm ngay dưới tên hiển thị. Ghi lại cho đúng từng chữ.</li>
-            <li>Trong app bấm <span class="btn-app">Mở trang tra mã</span>, hoặc mở thẳng <a href="https://www.psntools.com/psn/checker" target="_blank" rel="noopener noreferrer">psntools.com/psn/checker</a>. Trang mở trong Safari. Bảng hỏi cookie thì bấm Configure rồi tắt hết, hoặc bỏ qua.</li>
-            <li>Gõ tên đăng nhập vào ô tìm kiếm của trang, đợi trang tìm xong.</li>
-            <li>Tìm dòng <strong>BASE64 (FOR REMOTE PLAY)</strong>. Chạm giữ dãy ký tự ở dòng đó, chọn <strong>Sao chép</strong>. Dãy này kết thúc bằng dấu <code>=</code>.</li>
-            <li>Quay lại app, bấm <span class="btn-app">Dán mã</span>. Thấy chữ <strong>Đã nhận mã</strong> là xong, bấm <span class="btn-app">Tiếp tục</span>.</li>
+            <li>Trên PS5 (đang ở tài khoản phụ): bấm <strong>ảnh đại diện</strong> → <strong>Hồ sơ</strong> <em>(Profile)</em>. Ghi lại <strong>Online ID</strong> nằm dưới tên hiển thị, đúng từng chữ.</li>
+            <li>Trong app bấm <span class="btn-app">Mở trang tra mã</span>, hoặc mở <a href="https://www.psntools.com/psn/checker" target="_blank" rel="noopener noreferrer">psntools.com/psn/checker</a>.</li>
+            <li>Gõ Online ID, bấm <strong>Search</strong>.</li>
+            <li>Ở dòng <strong>BASE64 (FOR REMOTE PLAY)</strong>, chạm giữ dãy ký tự kết thúc bằng <code>=</code> → <strong>Sao chép</strong>.</li>
+            <li>Quay lại app, bấm <span class="btn-app">Dán mã</span>. Thấy <strong>Đã nhận mã</strong> thì bấm <span class="btn-app">Tiếp tục</span>.</li>
         </ol>
         <figure>
-            <img src="screenshots/app/07-pair-2-lookup-howto.jpg" alt="Trang tra mã: nhập tên đăng nhập, bấm Search, copy dòng BASE64" loading="lazy">
-            <figcaption>Nhập tên đăng nhập, bấm Search, rồi copy đoạn ở dòng BASE64 (FOR REMOTE PLAY)</figcaption>
+            <img src="screenshots/app/07-find-online-id.jpg" alt="Trên PS5: ảnh đại diện, Hồ sơ, Online ID dưới tên" loading="lazy">
+            <figcaption>Online ID nằm ngay dưới tên hiển thị trong Hồ sơ</figcaption>
         </figure>
-        <div class="box warn"><strong>Copy đúng dòng</strong>Chỉ lấy dòng BASE64 (FOR REMOTE PLAY). Không lấy dòng HEX hay NPID. App báo "Chưa đúng mã" nghĩa là đã copy nhầm dòng hoặc thiếu dấu =. Trang tra mã là trang bên ngoài, app không đăng nhập tài khoản PlayStation của bạn.</div>
-        <figure class="phone">
-            <img src="screenshots/app/05-pair-2-player-code.jpg" alt="Bước lấy mã người chơi trong app" loading="lazy" onerror="this.parentElement.hidden=true">
-            <figcaption>Bấm Mở trang tra mã, copy dòng BASE64 rồi bấm Dán mã</figcaption>
+        <figure>
+            <img src="screenshots/app/07-pair-2-lookup-howto.jpg" alt="Trang tra mã: nhập Online ID, bấm Search, copy dòng BASE64" loading="lazy">
+            <figcaption>Nhập Online ID, bấm Search, copy đoạn ở dòng BASE64 (FOR REMOTE PLAY)</figcaption>
         </figure>
+        <div class="box warn"><strong>Copy đúng dòng</strong>Chỉ lấy dòng BASE64 (FOR REMOTE PLAY), không lấy HEX hay NPID. App báo "Chưa đúng mã" là đã copy nhầm dòng hoặc thiếu dấu =. Trang tra mã là trang bên ngoài, không cần đăng nhập.</div>
+        <details>
+            <summary>Không tìm thấy Online ID trên PS5?</summary>
+            <ul>
+                <li><strong>Trên PS5, cách khác:</strong> <strong>Cài đặt</strong> → <strong>Người dùng và tài khoản</strong> <em>(Users and Accounts)</em> → <strong>Tài khoản</strong> → <strong>Hồ sơ</strong> → <strong>Online ID</strong>.</li>
+                <li><strong>Trên điện thoại:</strong> mở <strong>PlayStation App</strong>, đăng nhập tài khoản phụ, bấm ảnh đại diện. Online ID nằm dưới ảnh.</li>
+            </ul>
+            <p>Online ID là tên hiện khi chơi online, không phải email.</p>
+        </details>
 
-        <h3>Bước 3: Nhập mã 8 số hiện trên TV</h3>
+        <h3>F. Lấy mã 8 số trên PS5 và ghép nối</h3>
         <ol>
-            <li>Trên PS5, đảm bảo đang ở đúng <strong>người chơi phụ</strong> vừa tra mã (giữ nút PS giữa tay cầm → <strong>Chuyển người dùng</strong>).</li>
-            <li>Vào <strong>Cài đặt</strong> <em>(Settings)</em> → <strong>Hệ thống</strong> <em>(System)</em> → <strong>Chơi từ xa</strong> <em>(Remote Play)</em> → <strong>Ghép nối thiết bị</strong> <em>(Link Device)</em>.</li>
-            <li>TV hiện <strong>8 chữ số</strong> kèm đồng hồ đếm ngược. Mã chỉ dùng được vài phút.</li>
-            <li>Nhập ngay 8 số vào app, bấm <span class="btn-app">Ghép nối</span>. Chờ vài giây đến khi app báo ghép nối thành công.</li>
+            <li>Trên PS5 (vẫn ở tài khoản phụ): <strong>Cài đặt</strong> → <strong>Hệ thống</strong> → <strong>Chơi từ xa</strong> → <strong>Ghép nối thiết bị</strong> <em>(Link Device)</em>.</li>
+            <li>TV hiện <strong>8 chữ số</strong> kèm thời gian còn lại.</li>
+            <li>Nhập ngay 8 số vào app, bấm <span class="btn-app">Ghép nối</span>, chờ vài giây đến khi app báo thành công.</li>
         </ol>
         <figure>
             <img src="screenshots/app/ps5-link-device-code.jpg" alt="Trên PS5: Chơi từ xa, Ghép nối thiết bị, TV hiện mã 8 số kèm thời gian còn lại" loading="lazy">
-            <figcaption>Cài đặt → Hệ thống → Chơi từ xa → Ghép nối thiết bị. Nhập mã 8 số vào app trước khi hết giờ</figcaption>
+            <figcaption>Cài đặt → Hệ thống → Chơi từ xa → Ghép nối thiết bị</figcaption>
         </figure>
         <figure class="phone">
-            <img src="screenshots/app/09-pair-3-pin.jpg" alt="Ô nhập mã 8 số và nút Ghép nối" loading="lazy">
+            <img src="screenshots/app/09-pair-3-pin.jpg" alt="Ô nhập mã 8 số và nút Ghép nối trong app" loading="lazy">
             <figcaption>Nhập mã 8 số rồi bấm Ghép nối</figcaption>
         </figure>
-        <div class="box warn"><strong>Máy từ chối mã?</strong>Thường do mã người chơi ở bước 2 là của người khác với người đang chọn trên PS5. Chuyển đúng người chơi, lấy mã 8 số mới rồi nhập lại. Mã hết giờ thì bấm Liên kết thiết bị lần nữa để lấy mã mới.</div>
+        <div class="box warn"><strong>Máy từ chối mã?</strong>Thường do mã người chơi ở mục E là của tài khoản khác với tài khoản đang chọn trên PS5. Chuyển đúng tài khoản phụ, lấy mã 8 số mới rồi nhập lại. Hết giờ thì bấm Ghép nối thiết bị lần nữa.</div>
 
-        <div class="box tip"><strong>Xong rồi, lần sau thế nào?</strong>Không cần ghép lại. Mở app, bấm <strong>Kết nối</strong>. PS5 đang nghỉ (đèn cam) sẽ tự bật nếu bạn đã bật "Cho phép bật PS5 qua mạng" ở bước 2. Bị đá tay cầm thì bấm nút PS, chọn lại người chơi chính.</div>
+        <div class="box tip"><strong>Xong rồi, lần sau thế nào?</strong>Không cần ghép lại. Mở app, bấm <strong>Kết nối</strong>. Chuyển PS5 về tài khoản chính để chơi. Bị đá tay cầm thì bấm nút PS, chọn lại tài khoản chính.</div>
         </details>
     </section>
 
     <section class="card s4" id="choi">
-        <details class="tv-fold"><summary><h2><span class="num">4</span>Chơi và dịch</h2></summary>
+        <details class="tv-fold"><summary><h2><span class="num">3</span>Chơi và dịch</h2></summary>
         <p class="why">Ghép nối xong, từ lần sau chỉ cần làm bước này.</p>
         <ol>
             <li>Ở màn chính của app, bấm <span class="btn-app">Bắt đầu dịch game</span>, rồi chọn <span class="btn-app">Dịch khi chơi TV</span> (chơi trên TV) hoặc <span class="btn-app">Chơi trên điện thoại</span>. Nếu PS5 đang nghỉ, app tự bật máy, đợi khoảng 30 giây.</li>
@@ -709,7 +682,7 @@
         </details>
         <details>
             <summary>Tay cầm bị ngắt khi app kết nối</summary>
-            <p>Đây là bình thường, không phải lỗi. Bấm nút PS giữa tay cầm, chọn lại người chơi của bạn. Để không bị nữa, làm theo mẹo người chơi phụ ở bước 3.</p>
+            <p>Đây là bình thường, không phải lỗi. Bấm nút PS giữa tay cầm, chọn lại người chơi của bạn. Để không bị nữa, dùng tài khoản phụ như ở bước 2.</p>
         </details>
         <details>
             <summary>Có hình nhưng không ra bản dịch</summary>
