@@ -4,9 +4,9 @@
 Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đọc thành giọng nói.
 
 <p align="center">
-  <img src="screenshots/01-home.png" width="200">
-  <img src="screenshots/02-settings.png" width="200">
-  <img src="screenshots/04-pairing.png" width="200">
+  <img src="screenshots/app/d01-home-paired.jpg" width="200">
+  <img src="screenshots/app/30-settings-01.jpg" width="200">
+  <img src="screenshots/app/d07-live.jpg" width="200">
 </p>
 
 ## Tính năng
@@ -68,13 +68,13 @@ Nếu không có máy tính hoặc không muốn sideload thủ công, hãy vào
 - **Bật Remote Play**: Trên PS5 vào **Cài đặt (Settings) → Hệ thống (System) → Chơi từ xa (Remote Play) → Cho phép chơi từ xa (Enable Remote Play)** (bắt buộc phải bật On).
 
 <p align="center">
-  <img src="screenshots/05-ps5-remote-play.png" width="600" alt="Bật Enable Remote Play trên PS5">
+  <img src="screenshots/app/ps5-remote-play-steps.jpg" width="500" alt="Bật Chơi từ xa cho tài khoản phụ trên PS5">
 </p>
 
 - **Trùng khớp tài khoản (Cực kỳ quan trọng)**: Bấm vào **Avatar** ở góc trên bên phải màn hình PS5 để kiểm tra tài khoản User đang hoạt động. Tài khoản này **phải trùng khớp hoàn toàn** với tài khoản bạn đã tra **Account ID** trong app PS Translator. Nếu trên PS5 đang ở User khác hoặc Guest, máy sẽ từ chối ghép nối.
 
 <p align="center">
-  <img src="screenshots/06-ps5-user-match.png" width="400" alt="Kiểm tra User trùng khớp trên PS5">
+  <img src="screenshots/app/ps5-link-device-code.jpg" width="500" alt="Kiểm tra User trùng khớp trên PS5">
 </p>
 
 - **Nhập đúng IP**: Trên PS5 vào **Cài đặt (Settings) → Mạng (Network) → Trạng thái kết nối (Connection Status) → Xem trạng thái kết nối (View Connection Status)** để lấy **Địa chỉ IPv4**. Sau đó nhập chính xác địa chỉ này vào mục IP trong app.
@@ -82,7 +82,7 @@ Nếu không có máy tính hoặc không muốn sideload thủ công, hãy vào
 - **Chung mạng**: Ở lần ghép nối đầu tiên, iPhone và PS5 nên kết nối cùng một mạng Wi-Fi/LAN nội bộ.
 
 > [!TIP]
-> Bạn có thể xem bản hướng dẫn chi tiết định dạng web tại file [**guide.html**](guide.html).
+> Bạn có thể xem bản hướng dẫn chi tiết định dạng web tại file [**trang hướng dẫn**](https://kyozxx.github.io/PS-Translator/guide.html).
 
 ### 2. Kết nối Remote Play xong nhưng tay cầm bị ngắt hoặc không điều khiển được
 - **Nhấn giữ nút PS trên tay cầm**.

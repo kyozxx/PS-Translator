@@ -767,60 +767,70 @@
         <details>
             <summary>Không tìm thấy máy</summary>
             <ul>
-                <li>Kiểm tra iPhone và PS5 cùng một mạng Wi-Fi. Tắt VPN nếu có, không dùng Wi-Fi dành cho khách.</li>
-                <li>Mở Cài đặt iPhone → Quyền riêng tư &amp; Bảo mật → <strong>Mạng cục bộ</strong>, bật cho app.</li>
-                <li>Vẫn không thấy thì nhập IP bằng tay. Trên PS5 vào Settings → Network → Connection Status → View Connection Status, xem dòng <strong>IPv4 Address</strong> (dạng 192.168.x.x).</li>
-            </ul>
+                <li>iPhone và PS5 cùng một mạng Wi-Fi. Tắt VPN, không dùng Wi-Fi dành cho khách.</li>
+                <li>Bật quyền mạng: Cài đặt iPhone → <strong>Quyền riêng tư &amp; Bảo mật</strong> → <strong>Mạng cục bộ</strong> → bật <strong>Console Translator</strong>.</li>
+                <li>Vẫn không thấy thì nhập IP bằng tay: trên PS5 vào <strong>Cài đặt</strong> → <strong>Mạng</strong> → <strong>Trạng thái kết nối</strong> → <strong>Xem trạng thái kết nối</strong>, xem dòng <strong>IPv4 Address</strong> (dạng 192.168.x.x), rồi bấm <strong>Không tìm thấy? Nhập địa chỉ bằng tay</strong> trong app.</li>
+            </ul><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/ios-local-network.jpg" alt="Cài đặt iPhone: Mạng cục bộ" loading="lazy"></div><figcaption>Cài đặt iPhone: Mạng cục bộ</figcaption></figure><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/04-pair-1-manual-ip.jpg" alt="Nhập địa chỉ bằng tay" loading="lazy"></div><figcaption>Nhập địa chỉ bằng tay</figcaption></figure></div>
         </details>
         <details>
-            <summary>Ghép nối thất bại</summary>
+            <summary>App báo "Chưa đúng mã" ở bước lấy mã người chơi</summary>
             <ul>
-                <li>Vào <strong>Enable Remote Play</strong> và kiểm tra đã bật đúng User PS5 mà app đang dùng để kết nối.</li>
-                <li>Mã người chơi phải đúng người chơi đang chọn trên PS5.</li>
-                <li>Mã PIN hết hạn rất nhanh, lấy mã mới rồi nhập ngay.</li>
+                <li>Chỉ copy dòng <strong>BASE64 (FOR REMOTE PLAY)</strong>, dãy kết thúc bằng dấu <code>=</code>. Không lấy dòng HEX hay NPID.</li>
+                <li>Copy đủ cả dãy, không thừa khoảng trắng. Xem lại bước 6 tab iPhone.</li>
+            </ul><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/08-pair-2-wrong-code.jpg" alt="App báo Chưa đúng mã" loading="lazy"></div><figcaption>App báo Chưa đúng mã</figcaption></figure></div>
+        </details>
+        <details>
+            <summary>Ghép nối thất bại (PS5 từ chối mã 8 số)</summary>
+            <ul>
+                <li>Trên PS5 vào <strong>Bật Chơi từ xa</strong>, kiểm tra đã bật đúng tài khoản phụ mà app dùng.</li>
+                <li>Mã người chơi (bước 6) phải là của tài khoản đang chọn trên PS5.</li>
+                <li>Mã 8 số hết hạn rất nhanh: bấm <strong>Ghép nối thiết bị</strong> lấy mã mới rồi nhập ngay.</li>
             </ul>
         </details>
         <details>
             <summary>Ghép nối xong nhưng không vào được game</summary>
             <ul>
-                <li>Tắt Remote Play đang mở ở thiết bị khác (PC, điện thoại khác).</li>
+                <li>Tắt Chơi từ xa đang mở ở thiết bị khác (PC, điện thoại khác).</li>
                 <li>Đợi khoảng 30 giây rồi bấm <strong>Thử lại</strong>.</li>
-                <li>Vẫn lỗi thì xoá ghép nối cũ trên PS5 và ghép nối lại từ đầu.</li>
+                <li>Vẫn lỗi thì xóa ghép nối cũ trên PS5 và ghép nối lại từ đầu.</li>
             </ul>
         </details>
         <details>
             <summary>Tay cầm bị ngắt khi app kết nối</summary>
-            <p>Đây là bình thường, không phải lỗi. Bấm nút PS giữa tay cầm, chọn lại người chơi của bạn. Để không bị nữa, dùng tài khoản phụ như ở bước 2 tab iPhone.</p>
+            <p>Đây là bình thường, không phải lỗi. Bấm nút PS giữa tay cầm, chọn lại người chơi của bạn. Để không bị nữa, dùng tài khoản phụ như bước 2 tab iPhone.</p><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d03-controller-notice.jpg" alt="App báo trước khi kết nối" loading="lazy"></div><figcaption>App báo trước khi kết nối</figcaption></figure></div>
         </details>
         <details>
             <summary>Có hình nhưng không ra bản dịch</summary>
             <ul>
-                <li>Kiểm tra game đã bật phụ đề tiếng Anh, khung quét trùm hết chữ phụ đề.</li>
-                <li>Dùng Dịch thuật Apple: tải gói Tiếng Anh, Tiếng Việt trong app Dịch thuật.</li>
+                <li>Game phải bật phụ đề tiếng Anh.</li>
+                <li>Khung <strong>Thoại</strong> phải trùm đúng dòng phụ đề: bấm nút khung cắt vàng, xem ô bên dưới có hiện chữ tiếng Anh không.</li>
+                <li>Dùng Dịch thuật Apple: cài app <strong>Dịch thuật</strong> và tải gói Tiếng Anh, Tiếng Việt trong đó.</li>
                 <li>Dùng Gemini hoặc CloudAPI: kiểm tra mạng và khóa API.</li>
-            </ul>
+            </ul><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d04-scan-area.jpg" alt="Ô dưới hiện chữ đọc được và bản dịch" loading="lazy"></div><figcaption>Ô dưới hiện chữ đọc được và bản dịch</figcaption></figure><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/30-settings-01.jpg" alt="Chọn bộ dịch" loading="lazy"></div><figcaption>Chọn bộ dịch</figcaption></figure></div>
         </details>
         <details>
             <summary>Có bản dịch nhưng không nghe đọc</summary>
-            <p>Bật nút loa trên màn chơi, tăng âm lượng iPhone, kiểm tra có đang kết nối tai nghe Bluetooth không.</p>
+            <p>Bật nút <strong>loa</strong> trên thanh công cụ màn dịch, tăng âm lượng iPhone, kiểm tra có đang nối tai nghe Bluetooth không. Đổi giọng trong Cài đặt → Giọng đọc.</p><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d07-live.jpg" alt="Nút loa trên thanh công cụ" loading="lazy"></div><figcaption>Nút loa trên thanh công cụ</figcaption></figure><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/30-settings-02.jpg" alt="Cài đặt giọng đọc" loading="lazy"></div><figcaption>Cài đặt giọng đọc</figcaption></figure></div>
         </details>
         <details>
-            <summary>Hình giật hoặc hay rớt mạng</summary>
-            <p>Cắm dây mạng (LAN) cho PS5 nếu được. iPhone nên dùng Wi-Fi 5 GHz và để gần router. Tạm dừng các máy đang tải game hay xem phim.</p>
+            <summary>Máy nóng, hình giật hoặc hay rớt mạng</summary>
+            <ul>
+                <li>Cắm dây mạng (LAN) cho PS5 nếu được. iPhone dùng Wi-Fi 5 GHz, để gần router.</li>
+                <li>Máy nóng: Cài đặt → <strong>Nâng cao: máy nóng hoặc sót câu thoại</strong>, chọn đọc <strong>Nhanh, nhẹ máy</strong> và giảm xuống <strong>3</strong> lần mỗi giây. Bật <strong>mặt trăng</strong> trên màn dịch để tắt màn hình.</li>
+            </ul><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/31-advanced-01.jpg" alt="Nâng cao: giảm tải cho máy" loading="lazy"></div><figcaption>Nâng cao: giảm tải cho máy</figcaption></figure></div>
         </details>
-
         <details>
             <summary>Không tìm thấy hoặc không kết nối được TV</summary>
             <ul>
-                <li>Mở app nhận phụ đề trên TV, kiểm tra TV đang hiện mã ghép 8 số.</li>
-                <li>iPhone và TV cùng mạng Wi-Fi, đã bật quyền <strong>Mạng cục bộ</strong> cho app.</li>
-                <li>Không tìm thấy TV thì nhập địa chỉ đang hiện trên màn hình app TV. Mã 8 số đổi mỗi phút, dùng mã mới nhất.</li>
-                <li>TV chưa có app nhận phụ đề thì xem phần <a href="#phu-de-tv">Phụ đề ngay trên màn hình TV</a>.</li>
-            </ul>
+                <li>Mở app nhận phụ đề trên TV, kiểm tra TV đang hiện mã 8 số.</li>
+                <li>iPhone và TV cùng mạng Wi-Fi, đã bật quyền <strong>Mạng cục bộ</strong>.</li>
+                <li>Không thấy TV trong danh sách thì gõ địa chỉ đang hiện trên TV. Mã đổi mỗi phút, dùng mã mới nhất.</li>
+                <li>TV chưa có app thì xem tab <a href="#phu-de-tv">Phụ đề TV</a>.</li>
+            </ul><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d09-tv-pair-code.jpg" alt="Gõ địa chỉ TV và mã 8 số" loading="lazy"></div><figcaption>Gõ địa chỉ TV và mã 8 số</figcaption></figure></div>
         </details>
         <details>
-            <summary>Dịch cả chữ menu, bảng điểm</summary>
-            <p>Thu nhỏ khung quét cho vừa dòng phụ đề, dời bản dịch ra chỗ khác để không che chữ gốc.</p>
+            <summary>Dịch cả chữ menu, bảng điểm, HUD</summary>
+            <p>Thu nhỏ khung <strong>Thoại</strong> cho vừa dòng phụ đề. Chữ menu thì dùng <strong>Dịch menu</strong>, chữ nhiệm vụ thì dùng <strong>Chọn vùng dịch</strong> (xem tab Cách dùng).</p>
         </details>
 
         <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn vào <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">kênh Telegram</a> kèm ảnh chụp màn hình. Nhớ che mã người chơi, địa chỉ IP, mã 8 số và khóa API trước khi gửi.</div>
