@@ -336,6 +336,15 @@
         .tagline { font-size: 17px; margin-top: 6px; }
         .badge { display: inline-block; font-size: 12px; letter-spacing: .06em; font-weight: 700; background: var(--text); color: var(--soft); border-radius: 6px; padding: 4px 9px; margin-left: 6px; vertical-align: middle; }
         @media (max-width: 540px) { h1 { font-size: 27px; } .slogan { font-size: 18px; } .app-icon { width: 88px; height: 88px; border-radius: 20px; } }
+        .tabs button { font-size: 14px; padding: 0 4px; white-space: nowrap; }
+        @media (max-width: 400px) { .tabs button { font-size: 13px; } }
+        .iphones { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 12px; margin: 14px 0 6px; }
+        figure.iphone { margin: 0; width: 220px; text-align: center; }
+        .iphone-screen { position: relative; border-radius: 38px; padding: 9px; background: #121212;
+            box-shadow: 0 0 0 2px #3a3a3c, 0 0 0 4px #1c1c1e, 0 18px 36px -14px #0008; }
+        .iphone-screen img { display: block; width: 100%; border-radius: 30px; border: 0; }
+        figure.iphone figcaption { margin-top: 10px; }
+        @media (max-width: 520px) { figure.iphone { width: calc(50% - 6px); } .iphone-screen { border-radius: 28px; padding: 6px; } .iphone-screen img { border-radius: 23px; } }
     </style>
 </head>
 <body>
@@ -360,6 +369,7 @@
 
     <div class="tabs" role="tablist">
         <button role="tab" data-panel="phone" aria-selected="true">iPhone</button>
+        <button role="tab" data-panel="use" aria-selected="false">Cách dùng</button>
         <button role="tab" data-panel="tv" aria-selected="false">Phụ đề TV</button>
         <button role="tab" data-panel="fix" aria-selected="false">Gặp lỗi</button>
     </div>
@@ -503,6 +513,62 @@
             </figure>
         </div>
         </div></details>
+    </div>
+    <div class="panel" id="panel-use" role="tabpanel" hidden>
+        <p class="panel-intro">Mỗi chức năng một mục, bấm để xem.</p>
+        <details class="step" id="dung-man-chinh"><summary><span class="num">1</span>Màn chính</summary><div class="step-body"><ul>
+<li><strong>Sẵn sàng</strong>: máy đã ghép nối. Bấm <strong>Bắt đầu dịch game</strong> để vào dịch.</li>
+<li><strong>Dịch / Thuyết minh</strong>: Dịch là dịch phụ đề tiếng Anh sang tiếng Việt. Thuyết minh là đọc to phụ đề tiếng Việt có sẵn (game đã Việt hóa, phim Vietsub), không dịch.</li>
+<li><strong>Vương miện</strong>: gói Premium và PRO. <strong>Bánh răng</strong>: Cài đặt.</li>
+<li>Các ô bên dưới mở nhanh: Phụ đề trên TV, Dịch video trên web, Cách dịch, Giọng đọc, Hồ sơ game, Ghép nối.</li></ul><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d01-home-paired.jpg" alt="Màn chính, chế độ Dịch" loading="lazy"></div><figcaption>Màn chính, chế độ Dịch</figcaption></figure><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/13-home-narrate-mode.jpg" alt="Chế độ Thuyết minh" loading="lazy"></div><figcaption>Chế độ Thuyết minh</figcaption></figure></div></div></details>
+        <details class="step" id="dung-ket-noi"><summary><span class="num">2</span>Kết nối máy chơi game</summary><div class="step-body"><ol>
+<li>Bấm <strong>Bắt đầu dịch game</strong>. App tự tìm máy, thấy <strong>Đã tìm thấy máy</strong> là được.</li>
+<li><strong>Dịch khi chơi TV</strong>: chơi trên TV bằng tay cầm, điện thoại chỉ hiện và đọc bản dịch.</li>
+<li><strong>Chơi trên điện thoại</strong>: hình game hiện trên điện thoại, chơi bằng tay cầm nối điện thoại hoặc nút ảo (cần PRO).</li>
+<li>Nút <strong>TV LG</strong>: mở app phụ đề trên TV LG rồi vào dịch luôn.</li>
+<li><strong>Người chơi đã ghép nối</strong>: chọn người chơi dùng khi dịch và khi chơi trên điện thoại. Bấm Thêm để ghép người chơi khác.</li></ol>
+<div class="box tip"><strong>Tay cầm tắt một lát là bình thường</strong>Khi app kết nối, bấm nút PS giữa tay cầm rồi chọn lại người chơi của bạn.</div><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d02-connect.jpg" alt="Màn Kết nối" loading="lazy"></div><figcaption>Màn Kết nối</figcaption></figure><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d03-controller-notice.jpg" alt="Thông báo tay cầm" loading="lazy"></div><figcaption>Thông báo tay cầm</figcaption></figure></div></div></details>
+        <details class="step" id="dung-khung"><summary><span class="num">3</span>Chỉnh khung đọc phụ đề</summary><div class="step-body"><p>Lần đầu vào dịch, app mở <strong>Chỉnh khung</strong> kèm hình game.</p><ol>
+<li>Kéo khung <strong>Thoại</strong> (vàng nhạt) trùm lên chỗ phụ đề tiếng Anh. Kéo chấm ở góc để đổi cỡ.</li>
+<li>Ô bên dưới hiện chữ app đọc được và bản dịch thử. Đúng rồi thì bấm <strong>Xong, bắt đầu dịch</strong>.</li>
+<li><strong>Chữ hiện dần</strong>: bật khi game hiện phụ đề từng chữ một.</li></ol>
+<p>Mở lại bất cứ lúc nào bằng nút <strong>khung cắt</strong> màu vàng trên màn dịch.</p><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d04-scan-area.jpg" alt="Kéo khung Thoại lên phụ đề" loading="lazy"></div><figcaption>Kéo khung Thoại lên phụ đề</figcaption></figure></div></div></details>
+        <details class="step" id="dung-man-dich"><summary><span class="num">4</span>Màn dịch và thanh công cụ</summary><div class="step-body"><p>Bản dịch hiện ở hộp dưới cùng. Kéo hộp lên xuống để đổi chỗ, chạm 2 lần để đặt lại. Thanh trên cùng, từ trái sang:</p><ul>
+<li><strong>Hồ sơ</strong>: đổi game, phong cách dịch, xem lại hướng dẫn.</li>
+<li><strong>Khung cắt</strong>: chỉnh khung đọc phụ đề.</li>
+<li><strong>aA</strong>: cỡ chữ, màu, thời gian hiện phụ đề.</li>
+<li><strong>TV</strong>: phụ đề trên TV.</li>
+<li><strong>Mặt trăng</strong>: tắt màn hình cho đỡ tốn pin, vẫn dịch và đọc. Chạm 2 lần để bật lại.</li>
+<li><strong>Loa</strong>: bật, tắt giọng đọc.</li>
+<li><strong>Bánh răng</strong>: chỉnh nhanh bộ dịch, giọng đọc.</li></ul><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d06-live-help.jpg" alt="Hướng dẫn ngay trên màn dịch" loading="lazy"></div><figcaption>Hướng dẫn ngay trên màn dịch</figcaption></figure><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d07-live.jpg" alt="Bản dịch hiện khi nhân vật nói" loading="lazy"></div><figcaption>Bản dịch hiện khi nhân vật nói</figcaption></figure></div></div></details>
+        <details class="step" id="dung-vung"><summary><span class="num">5</span>Chọn vùng dịch và Dịch menu</summary><div class="step-body"><p><strong>Chọn vùng dịch</strong>: cho chữ đứng yên như nhiệm vụ, mô tả vật phẩm, thư, các lựa chọn hội thoại.</p><ol>
+<li>Bấm <strong>Chọn vùng dịch</strong>, hình game hiện ra với khung cam.</li>
+<li>Kéo khung cam phủ lên chữ rồi thả tay, bản dịch hiện ngay.</li>
+<li>Bật <strong>Tự dịch khi chữ trong khung đổi</strong> nếu muốn app tự dịch lại.</li></ol>
+<p><strong>Dịch menu</strong>: mở menu trong game (kỹ năng, túi đồ, hướng dẫn) rồi bấm Dịch menu. App đọc cả màn hình và chỉ dịch đoạn chữ dài.</p><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d12-area-translate.jpg" alt="Chọn vùng dịch" loading="lazy"></div><figcaption>Chọn vùng dịch</figcaption></figure></div></div></details>
+        <details class="step" id="dung-kieu"><summary><span class="num">6</span>Kiểu phụ đề (aA)</summary><div class="step-body"><ul><li><strong>Cỡ chữ</strong> phụ đề trên điện thoại.</li>
+<li><strong>Thời gian hiện</strong>: Theo phụ đề game (tắt khi game tắt phụ đề) hoặc Cố định.</li>
+<li><strong>Hiện câu thoại trước</strong>: câu vừa dịch hiện nhỏ phía trên.</li>
+<li><strong>Màu chữ, màu nền, độ đậm nền</strong>.</li></ul><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/22-web-subtitle-style.jpg" alt="Kiểu phụ đề" loading="lazy"></div><figcaption>Kiểu phụ đề</figcaption></figure></div></div></details>
+        <details class="step" id="dung-tv"><summary><span class="num">7</span>Phụ đề trên TV (PRO)</summary><div class="step-body"><p>Bản dịch hiện ngay trên TV, đè lên hình game, giọng đọc phát ra loa TV. Cài app lên TV theo tab <a href="#phu-de-tv">Phụ đề TV</a> trước.</p><ol>
+<li>Trên màn dịch, bấm nút <strong>TV</strong>.</li>
+<li>TV LG: bấm <strong>Mở app trên TV</strong>.</li>
+<li>Ghép nối: chọn TV, nhập mã 8 số trên TV, bấm <strong>Kết nối</strong>. Lần sau tự kết nối.</li>
+<li>Kéo khung trên hình mẫu để đặt vị trí phụ đề trên TV, chỉnh cỡ chữ, nền, màu. Bấm <strong>Hiển thị thử</strong> để xem trên TV.</li></ol><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d08-tv-sheet-lg.jpg" alt="Mở app trên TV LG, ghép nối" loading="lazy"></div><figcaption>Mở app trên TV LG, ghép nối</figcaption></figure><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/d10-tv-connected.jpg" alt="Đã kết nối, chỉnh phụ đề trên TV" loading="lazy"></div><figcaption>Đã kết nối, chỉnh phụ đề trên TV</figcaption></figure></div></div></details>
+        <details class="step" id="dung-web"><summary><span class="num">8</span>Dịch video trên web (miễn phí)</summary><div class="step-body"><p>Xem YouTube hay trang video khác ngay trong app, phụ đề tự sang tiếng Việt.</p><ol>
+<li>Ở màn chính bấm <strong>Dịch video trên web</strong>, mở video và bật phụ đề (CC).</li>
+<li>Bấm nút <strong>dịch</strong> ở góc trái thanh dưới để bắt đầu.</li>
+<li><strong>OCR</strong>: đọc chữ trên hình khi video không có phụ đề dạng chữ. Nút khung cắt chọn vùng chữ, aA chỉnh kiểu, loa bật giọng đọc.</li></ol><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/20-web-video.jpg" alt="Dịch video trên web" loading="lazy"></div><figcaption>Dịch video trên web</figcaption></figure></div></div></details>
+        <details class="step" id="dung-cai-dat"><summary><span class="num">9</span>Cài đặt: cách dịch, giọng đọc, hồ sơ</summary><div class="step-body"><ul>
+<li><strong>Cách dịch</strong>: Dịch AI (hay nhất, Premium, có dùng thử), Dịch thuật Apple (miễn phí, không cần mạng, tải gói Anh và Việt trong app Dịch thuật), Apple Intelligence, CloudAPI, Google Gemini (cần khóa).</li>
+<li><strong>Giọng đọc</strong>: Giọng cơ bản hoặc Giọng AI. Chỉnh tốc độ, <strong>Đọc theo cảm xúc</strong>, tải thêm giọng.</li>
+<li><strong>Phụ đề</strong>: hiện câu gốc tiếng Anh, câu trước, cỡ chữ.</li>
+<li><strong>Nâng cao</strong>: máy nóng thì chọn đọc Nhanh và giảm số lần đọc mỗi giây xuống 3.</li>
+<li><strong>Hồ sơ game</strong>: mỗi game một hồ sơ (khung đọc, phong cách dịch riêng).</li></ul><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/30-settings-01.jpg" alt="Cách dịch" loading="lazy"></div><figcaption>Cách dịch</figcaption></figure><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/30-settings-02.jpg" alt="Giọng đọc" loading="lazy"></div><figcaption>Giọng đọc</figcaption></figure></div><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/31-advanced-01.jpg" alt="Nâng cao: máy nóng hoặc sót thoại" loading="lazy"></div><figcaption>Nâng cao: máy nóng hoặc sót thoại</figcaption></figure><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/30-settings-05.jpg" alt="Hồ sơ game" loading="lazy"></div><figcaption>Hồ sơ game</figcaption></figure></div></div></details>
+        <details class="step" id="dung-goi"><summary><span class="num">10</span>Gói Premium và PRO</summary><div class="step-body"><ul>
+<li><strong>Premium</strong> (theo tuần, tháng, năm): Dịch AI, 4 giọng AI, hồ sơ không giới hạn.</li>
+<li><strong>PRO mua 1 lần</strong>: giọng AI, Chơi trên điện thoại, Phụ đề trên TV. Không gồm Dịch AI.</li>
+<li>Đổi máy hay cài lại: bấm <strong>Khôi phục</strong>.</li></ul><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/19-premium.jpg" alt="Premium" loading="lazy"></div><figcaption>Premium</figcaption></figure><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/18-pro-1.jpg" alt="PRO mua 1 lần" loading="lazy"></div><figcaption>PRO mua 1 lần</figcaption></figure></div></div></details>
     </div>
     <div class="panel" id="panel-tv" role="tabpanel" hidden>
     <section class="card tv-card" id="phu-de-tv">
@@ -763,7 +829,7 @@
 <script>
 // Tabs, plus deep links: a #hash inside a panel shows that panel and opens its folds.
 var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
-function show(name){tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.panel===name)});['phone','tv','fix'].forEach(function(n){document.getElementById('panel-'+n).hidden=n!==name});}
+function show(name){tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.panel===name)});['phone','use','tv','fix'].forEach(function(n){document.getElementById('panel-'+n).hidden=n!==name});}
 tabs.forEach(function(t){t.onclick=function(){show(t.dataset.panel)}});
 function openTarget(){var t=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));if(!t)return;var p=t.closest('.panel');if(p)show(p.id.slice(6));for(var e=t;e;e=e.parentElement)if(e.tagName==='DETAILS')e.open=true;if(t.tagName==='DETAILS')t.open=true;var f=t.querySelector(':scope > details.tv-fold');if(f)f.open=true;t.scrollIntoView();}
 addEventListener('hashchange',openTarget);openTarget();
