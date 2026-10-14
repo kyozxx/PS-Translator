@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Console Translator: Link tải &amp; hướng dẫn</title>
+    <title>Console Translator: Dịch game · Chơi game nào cũng hiểu</title>
     <meta name="description" content="Dịch phụ đề game PS5 và YouTube sang tiếng Việt, đọc to bằng giọng AI. Link tải TestFlight trong kênh Telegram t.me/pstranslator.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kyozxx.github.io/PS-Translator/guide.html">
@@ -19,17 +19,19 @@
     <link rel="apple-touch-icon" href="assets/icon-180.png">
     <style>
         :root {
-            --bg: #0b0f19;
-            --card: #141c2d;
-            --border: #24324d;
-            --text: #f1f5f9;
-            --muted: #a3b1c6;
-            --blue: #38bdf8;
-            --purple: #a78bfa;
-            --green: #34d399;
-            --orange: #fb923c;
-            --amber: #fbbf24;
-            --pink: #f472b6;
+            --bg: #f7f3ea;
+            --card: #fffdf8;
+            --border: #e7dfcd;
+            --text: #1b1a17;
+            --muted: #5f5a50;
+            --blue: #9a5b00;
+            --purple: #9a5b00;
+            --green: #9a5b00;
+            --orange: #9a5b00;
+            --amber: #f2a516;
+            --pink: #9a5b00;
+            --soft: #fcecc4;
+            --sub: #f3ecdc;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -275,6 +277,36 @@
         }
 
         footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 22px; }
+        /* brand overrides: replace the old dark-theme literals */
+        .app-icon { box-shadow: none; filter: drop-shadow(0 6px 18px #f2a51655); }
+        h1::after { content: ""; display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--amber); margin: 12px auto 0; }
+        .slogan { color: var(--blue); font-size: 18px; font-weight: 700; margin-top: 4px; }
+        .tg { background: var(--text); box-shadow: none; }
+        .tg h2 { color: #fff8e6; } .tg p, .tg small { color: #e9dfc8; } .tg p strong { color: #fff; }
+        .tg .btn { background: var(--amber); color: var(--text); }
+        .card { border-left-color: var(--amber); }
+        .num, .play-every-time div::before { background: var(--amber); color: var(--text); }
+        .donate { background: var(--card); border-color: var(--border); }
+        .donate h2 { color: var(--text); }
+        .donate .bank, .play-every-time div { background: var(--sub); }
+        .donate .copy { background: var(--text); color: #fff8e6; }
+        .style, .toggle-list li, details, .tv-version, .tv-requirements span { background: var(--sub); }
+        code, .ps-path span { background: var(--sub); }
+        .ps-path span:last-child { border-color: var(--amber); color: var(--text); }
+        .btn-app { background: var(--soft); color: var(--text); border-color: #ecd59a; }
+        .box.tip, .box.warn { background: var(--soft); border: 0; border-left: 3px solid var(--amber); }
+        .box.tip > strong:first-child, .box.warn > strong:first-child { color: var(--text); }
+        .toggle-list .on { background: var(--amber); }
+        figure.phone img { border-color: var(--border); box-shadow: 0 10px 24px -12px #0003; }
+        details.method, details.platform, details.platform.lg { border-color: var(--border); }
+        .tag { background: var(--soft); color: var(--text); }
+        .tv-jump { background: var(--soft); border-color: #ecd59a; }
+        .tv-card { background: var(--card); }
+        .platform-icon, .platform.lg .platform-icon { background: var(--text); color: var(--amber); }
+        .download-tv, .lg .download-tv, .download-button { background: var(--text); color: #fff8e6; border: 0; }
+        .download-tv.alt { background: transparent; color: var(--text); border: 1px solid var(--text); }
+        .download-code { color: var(--text); }
+        .play-store { display: block; margin: 4px 0 12px; }
     </style>
 </head>
 <body>
@@ -282,7 +314,8 @@
 
     <header>
         <img class="app-icon" src="assets/icon-180.png" alt="Biểu tượng Console Translator" width="88" height="88">
-        <h1>Console Translator</h1>
+        <h1>Console Translator: Dịch game</h1>
+        <p class="slogan">Chơi game nào cũng hiểu</p>
         <p class="tagline">Dịch phụ đề game PS5 sang tiếng Việt và đọc to, ngay trên iPhone. Không cần capture card.</p>
     </header>
 
@@ -335,6 +368,7 @@
 
         <details class="platform">
             <summary><span class="platform-name"><span class="platform-icon">A</span>Android TV</span><span class="tag">Cài bằng remote</span></summary>
+            <div class="box tip"><strong>Dễ nhất: cài từ Google Play (thử nghiệm)</strong>Trên TV, mở link bằng Gmail của bạn, bấm “Trở thành người thử nghiệm” rồi cài <strong>Console Translator TV</strong>. Nhờ ae cài và giữ app, đừng xóa trong 14 ngày nhé.<a class="download-tv play-store" href="https://play.google.com/apps/testing/com.kyozx.consoletranslator.tv.play">Tải Console Translator TV trên Google Play</a>Không mở được Google Play trên TV thì cài bằng mã Downloader bên dưới.</div>
             <div class="tv-downloads">
                 <div class="tv-version">
                     <h3>Android TV thông thường</h3>
