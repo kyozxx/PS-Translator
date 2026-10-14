@@ -30,6 +30,9 @@
     border-radius: 150px; padding: 28px; background: #050505;
     box-shadow: 0 0 0 6px #3a3a3c, 0 0 0 12px #1c1c1e, 0 80px 160px -40px #000; }
   .phone img { display: block; width: 100%; border-radius: 124px; }
+  .phone::after { content: ""; position: absolute; top: 2.65%; left: 50%; transform: translateX(-50%);
+    width: 31%; height: 4%; background: #000; border-radius: 999px; }
+  .phone { container-type: inline-size; }
   .phone.low { top: 1150px; }
 
   .tv { position: absolute; left: 50%; transform: translateX(-50%); width: 1160px; top: 760px; }
