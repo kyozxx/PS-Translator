@@ -47,7 +47,6 @@ Cần iPhone hoặc iPad chạy **iOS 18 trở lên**.
 | Phụ đề trên TV, giọng đọc ra loa TV | | ✓ |
 | Dịch AI, 4 giọng AI | | ✓ |
 | Chơi trên điện thoại | | ✓ |
-| Ai được cài | Tất cả | Ae đã donate |
 
 <details>
 <summary>Cài file IPA bằng máy tính (Sideloadly, AltStore)</summary>
