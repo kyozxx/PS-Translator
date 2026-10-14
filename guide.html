@@ -307,6 +307,8 @@
         .download-tv.alt { background: transparent; color: var(--text); border: 1px solid var(--text); }
         .download-code { color: var(--text); }
         .play-store { display: block; margin: 4px 0 12px; }
+        .ps-path em, .toggle-list em { font-style: normal; font-size: 12px; color: var(--muted); }
+        .ps-path em { display: block; font-weight: 400; }
     </style>
 </head>
 <body>
@@ -520,29 +522,29 @@
 
     <section class="card s2" id="ps5">
         <h2><span class="num">2</span>Chỉnh trên PS5 (làm một lần)</h2>
-        <p class="why">Cầm tay cầm PS5, vào Settings (biểu tượng bánh răng ở góc trên bên phải màn hình chính).</p>
+        <p class="why">Cầm tay cầm PS5, vào <strong>Cài đặt</strong> (biểu tượng bánh răng ở góc trên bên phải màn hình chính). PS5 không có tiếng Việt nên chữ trong ngoặc là tên tiếng Anh bạn sẽ thấy trên máy.</p>
 
         <h3>Bật chơi từ xa</h3>
-        <div class="ps-path"><span>Settings</span><i>→</i><span>System</span><i>→</i><span>Remote Play</span></div>
+        <div class="ps-path"><span>Cài đặt <em>Settings</em></span><i>→</i><span>Hệ thống <em>System</em></span><i>→</i><span>Chơi từ xa <em>Remote Play</em></span></div>
         <ul class="toggle-list">
-            <li><span class="on" aria-hidden="true"></span><div><b>Enable Remote Play</b><small>Bấm vào mục này, rồi bật đúng User PS5 mà app sẽ dùng để kết nối. Nếu chọn sai User, app sẽ không kết nối được.</small></div></li>
-            <li><span class="on" aria-hidden="true"></span><div><b>Hide Remote Play Connection Status</b><small>Nên bật. Ẩn dòng thông báo "đang chơi từ xa" trên TV cho màn hình gọn khi chơi.</small></div></li>
+            <li><span class="on" aria-hidden="true"></span><div><b>Bật chơi từ xa</b> <em>Enable Remote Play</em><small>Bấm vào mục này, rồi bật đúng người chơi PS5 mà app sẽ dùng để kết nối. Chọn sai người chơi thì app sẽ không kết nối được.</small></div></li>
+            <li><span class="on" aria-hidden="true"></span><div><b>Ẩn trạng thái chơi từ xa</b> <em>Hide Remote Play Connection Status</em><small>Nên bật. Ẩn dòng thông báo "đang chơi từ xa" trên TV cho màn hình gọn khi chơi.</small></div></li>
         </ul>
-        <div class="box warn"><strong>Chọn đúng User</strong>Trong <strong>Enable Remote Play</strong>, PS5 sẽ hiện danh sách User. Hãy bật đúng người chơi bạn sẽ ghép nối với app.</div>
+        <div class="box warn"><strong>Chọn đúng người chơi</strong>Trong <strong>Bật chơi từ xa</strong>, PS5 sẽ hiện danh sách người chơi (User). Hãy bật đúng người chơi bạn sẽ ghép nối với app.</div>
         <figure>
             <img src="screenshots/05-ps5-remote-play.png" alt="Màn hình Remote Play trên PS5" loading="lazy" onerror="this.parentElement.hidden=true">
-            <figcaption>Bấm Enable Remote Play để chọn User; nên bật thêm Hide Remote Play Connection Status</figcaption>
+            <figcaption>Bấm Bật chơi từ xa (Enable Remote Play) để chọn người chơi; nên bật thêm Ẩn trạng thái chơi từ xa</figcaption>
         </figure>
         <figure>
             <img src="screenshots/06-ps5-user-match.png" alt="Kiểm tra đúng User PS5 đang dùng trong app" loading="lazy" onerror="this.parentElement.hidden=true">
-            <figcaption>Tên User trên PS5 phải đúng với User mà app đang dùng để kết nối</figcaption>
+            <figcaption>Tên người chơi trên PS5 phải đúng với người chơi mà app đang dùng để kết nối</figcaption>
         </figure>
 
         <h3>Cho app tự bật PS5 khi máy đang nghỉ</h3>
-        <div class="ps-path"><span>Settings</span><i>→</i><span>System</span><i>→</i><span>Power Saving</span><i>→</i><span>Features Available in Rest Mode</span></div>
+        <div class="ps-path"><span>Cài đặt <em>Settings</em></span><i>→</i><span>Hệ thống <em>System</em></span><i>→</i><span>Tiết kiệm điện <em>Power Saving</em></span><i>→</i><span>Tính năng khi nghỉ <em>Features Available in Rest Mode</em></span></div>
         <ul class="toggle-list">
-            <li><span class="on" aria-hidden="true"></span><div><b>Stay Connected to the Internet</b></div></li>
-            <li><span class="on" aria-hidden="true"></span><div><b>Enable Turning On PS5 from Network</b></div></li>
+            <li><span class="on" aria-hidden="true"></span><div><b>Giữ kết nối Internet</b> <em>Stay Connected to the Internet</em></div></li>
+            <li><span class="on" aria-hidden="true"></span><div><b>Cho phép bật PS5 qua mạng</b> <em>Enable Turning On PS5 from Network</em></div></li>
         </ul>
         <div class="box tip"><strong>Lợi ích</strong>Để PS5 ở chế độ nghỉ (đèn cam), mở app bấm Kết nối là máy tự bật. Máy tắt hẳn thì phải bật bằng tay.</div>
     </section>
