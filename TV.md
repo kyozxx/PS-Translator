@@ -20,7 +20,8 @@ Tính năng Phụ đề trên TV không chạy trên mọi TV. Hãy kiểm tra t
 
 | TV của bạn | Dùng được không |
 | --- | --- |
-| Android TV / Google TV | **Được.** Riêng TV nào khóa quyền "Hiển thị trên ứng dụng khác" thì không hiện được phụ đề. |
+| Android TV / Google TV, Android 9 trở lên | **Được.** Riêng TV nào khóa quyền "Hiển thị trên ứng dụng khác" thì không hiện được phụ đề. |
+| Android TV 8 trở xuống (thường là TV đời 2018 về trước) | **Không cài được.** |
 | TV LG webOS | **Thử nghiệm.** Cần bật Developer Mode và cài bằng máy tính hoặc điện thoại Android. Đã chạy trên webOS 7 (TV 2022), các đời khác chưa kiểm tra hết. |
 | TV Samsung từ 2017 (Tizen 3.0 trở lên) | **Thử nghiệm.** Cần bật Developer Mode, máy tính Windows hoặc Mac để cài, và một tài khoản Samsung. Một số TV đời 2018 đang gặp lỗi khi cài, chưa xử lý xong. |
 | TV Samsung 2016 trở về trước (Tizen 2.x) | **Không dùng được.** |
