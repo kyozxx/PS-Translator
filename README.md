@@ -1,137 +1,106 @@
-# PS Translator
-
-## Cập nhật phiên bản mới, TestFlight và thông báo tại: https://t.me/pstranslator
-Dịch phụ đề game và video sang tiếng Việt ngay trên iPhone, có đọc thành giọng nói.
-
 <p align="center">
-  <img src="screenshots/app/d01-home-paired.jpg" width="200">
-  <img src="screenshots/app/30-settings-01.jpg" width="200">
-  <img src="screenshots/app/d07-live.jpg" width="200">
+  <img src="assets/icon-180.png" width="110" alt="Console Translator">
 </p>
 
-## Tính năng
-
-- **Chơi từ xa PS5 và PS4** (PS4 đang thử nghiệm): xem và dịch phụ đề game trực tiếp qua mạng Wi-Fi, không cần capture card. Có nút **Tự tìm máy** trong cùng Wi-Fi.
-- **Xem YouTube & web**: dịch phụ đề cứng trong video bằng nhận dạng chữ (OCR), hoặc dùng phụ đề CC.
-- **Nhiều bộ dịch**: Dịch thuật Apple (ngoại tuyến, miễn phí), Apple Intelligence, CloudAPI, Google Gemini.
-- **Đọc phụ đề**: giọng Piper tiếng Việt có sẵn trong app, hoặc giọng Apple.
-- **Tùy chỉnh phụ đề**: cỡ chữ, màu chữ, màu nền, vị trí (nút "Aa").
-- **Hồ sơ game**: lưu vùng quét và phong cách dịch riêng cho từng game.
-
-## Tải về
-
-### Có máy tính
-
-Vào mục [**Releases**](../../releases/latest) và tải file `PS-Translator.ipa`. Một file dùng chung cho **iOS 18 trở lên**: app tự nhận biết máy, Apple Intelligence chỉ bật trên iOS 26 và iPhone hỗ trợ.
-
-Không tải file **Source code**, đó là file GitHub tự tạo.
-
-### Không có máy tính
-
-Nếu không có PC hoặc Mac để cài file IPA, hãy tham gia Telegram:
-
-**https://t.me/pstranslator**
-
-Link **TestFlight** sẽ được cập nhật tại đây khi có bản thử nghiệm và còn suất tham gia.
-
-### App phụ đề cho Android TV
-
-Tải [Console Translator TV 0.2.4](https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.4/Console-Translator-TV.apk) và xem [hướng dẫn cài đặt, cấp quyền hiển thị phụ đề](TV.md). Nếu bấm nút cấp quyền mà TV không mở cài đặt, dùng **Hướng dẫn cấp quyền thủ công** trong app hoặc làm theo Bước 2 của hướng dẫn.
-
-## Cách cài file IPA bằng máy tính
-
-App được cài ngoài App Store bằng một trong hai công cụ miễn phí:
-
-1. Cài [Sideloadly](https://sideloadly.io) (Windows hoặc macOS) hoặc [AltStore](https://altstore.io).
-2. Cắm iPhone vào máy tính, kéo file `PS-Translator.ipa` vào công cụ và đăng nhập Apple ID của bạn.
-3. Trên iPhone: **Cài đặt → Cài đặt chung → VPN & Quản lý thiết bị**, chọn Apple ID của bạn rồi bấm **Tin cậy**.
-4. Bật **Chế độ nhà phát triển** nếu iPhone yêu cầu: **Cài đặt → Quyền riêng tư & Bảo mật → Chế độ nhà phát triển**.
-
-Với Apple ID miễn phí, app hết hạn sau **7 ngày** và cần cài lại. AltStore có thể tự làm mới ứng dụng.
-
-Nếu không có máy tính hoặc không muốn sideload thủ công, hãy vào Telegram để nhận link TestFlight:
-
-**https://t.me/pstranslator**
-
-## Lưu ý
-
-- **Dịch thuật Apple**: cần app [Dịch thuật](https://apps.apple.com/app/id1514844618) của Apple và tải gói Tiếng Anh + Tiếng Việt trong app đó.
-- **Apple Intelligence**: chỉ có ở bản iOS 26 và trên các thiết bị được Apple hỗ trợ.
-- **Ghép nối PS5**: làm theo nút **?** trong màn Ghép nối. Account ID tra theo tên tài khoản trên trang tìm kiếm rồi dán vào app, không cần đăng nhập.
-- Đây là bản **thử nghiệm**. Nếu gặp lỗi, hãy tạo một mục [Issues](../../issues) kèm mô tả và ảnh chụp màn hình.
-- Thông báo bản mới và link TestFlight sẽ được cập nhật tại **https://t.me/pstranslator**.
-
-## Các lỗi thường gặp và cách khắc phục
-
-### 1. Báo lỗi "PS5 từ chối đăng ký" khi ghép nối
-
-- **Bật Remote Play**: Trên PS5 vào **Cài đặt (Settings) → Hệ thống (System) → Chơi từ xa (Remote Play) → Cho phép chơi từ xa (Enable Remote Play)** (bắt buộc phải bật On).
+<h1 align="center">Console Translator: Dịch game</h1>
+<p align="center"><b>Chơi game nào cũng hiểu</b><br>Dịch phụ đề game sang tiếng Việt và đọc to, ngay trên iPhone. Không cần capture card.</p>
 
 <p align="center">
-  <img src="screenshots/app/ps5-remote-play-steps.jpg" width="500" alt="Bật Chơi từ xa cho tài khoản phụ trên PS5">
+  <a href="https://kyozxx.github.io/PS-Translator/guide.html"><b>📖 Hướng dẫn đầy đủ</b></a> ·
+  <a href="https://t.me/consoletranslatorbot"><b>📲 Nhận link cài app</b></a> ·
+  <a href="https://t.me/pstranslator"><b>💬 Kênh Telegram</b></a> ·
+  <a href="https://kyozxx.github.io/Console-Translator/guide.html"><b>🤖 Bản Android</b></a>
 </p>
-
-- **Trùng khớp tài khoản (Cực kỳ quan trọng)**: Bấm vào **Avatar** ở góc trên bên phải màn hình PS5 để kiểm tra tài khoản User đang hoạt động. Tài khoản này **phải trùng khớp hoàn toàn** với tài khoản bạn đã tra **Account ID** trong app PS Translator. Nếu trên PS5 đang ở User khác hoặc Guest, máy sẽ từ chối ghép nối.
 
 <p align="center">
-  <img src="screenshots/app/ps5-link-device-code.jpg" width="500" alt="Kiểm tra User trùng khớp trên PS5">
+  <img src="screenshots/app/d01-home-paired.jpg" width="200" alt="Màn chính">
+  <img src="screenshots/app/d04-scan-area.jpg" width="200" alt="Chỉnh khung phụ đề">
+  <img src="screenshots/app/d07-live.jpg" width="200" alt="Màn dịch">
 </p>
 
-- **Nhập đúng IP**: Trên PS5 vào **Cài đặt (Settings) → Mạng (Network) → Trạng thái kết nối (Connection Status) → Xem trạng thái kết nối (View Connection Status)** để lấy **Địa chỉ IPv4**. Sau đó nhập chính xác địa chỉ này vào mục IP trong app.
-- **Nhập mã PIN mới**: Trên PS5 chọn **Liên kết thiết bị (Link Device)**, giữ nguyên màn hình hiển thị mã và nhập ngay **8 số** đó vào app rồi bấm **Ghép nối**.
-- **Chung mạng**: Ở lần ghép nối đầu tiên, iPhone và PS5 nên kết nối cùng một mạng Wi-Fi/LAN nội bộ.
+## Làm được gì
+
+- **Dịch thoại tự động**: kết nối thẳng tới máy chơi game qua Wi-Fi nhà, đọc phụ đề tiếng Anh, hiện và đọc to bản dịch tiếng Việt.
+- **Chọn vùng dịch**: kéo khung tới nhiệm vụ, thư, mô tả vật phẩm, bảng lựa chọn hội thoại.
+- **Dịch menu**: mở menu kỹ năng, túi đồ, bản đồ là app tự dịch các đoạn mô tả.
+- **Phụ đề trên TV**: bản dịch hiện ngay trên TV, đè lên hình game, giọng đọc ra loa TV. Android TV, TV LG, TV Samsung từ 2017.
+- **Chơi trên điện thoại**: xem và điều khiển máy chơi game ngay trên iPhone, kèm phụ đề dịch.
+- **Dịch video trên web**: YouTube và trang video khác, miễn phí.
+- **Nhiều bộ dịch và giọng đọc**: Dịch thuật Apple (miễn phí, không cần mạng), Dịch AI, Apple Intelligence, Gemini; giọng cơ bản hoặc giọng AI.
+
+<p align="center">
+  <img src="screenshots/app/gif-keo-khung-thoai.gif" width="320" alt="Kéo khung Thoại tới dòng phụ đề">
+  <img src="screenshots/app/gif-chon-vung-dich.gif" width="320" alt="Chọn vùng dịch nhiệm vụ">
+</p>
+
+## Cài app
+
+Cần iPhone hoặc iPad chạy **iOS 18 trở lên**.
+
+1. Cài [TestFlight](https://apps.apple.com/app/testflight/id899247664) từ App Store.
+2. Mở bot [**t.me/consoletranslatorbot**](https://t.me/consoletranslatorbot), bấm **Start** → **🍎 Bản iOS** để nhận link.
+3. TestFlight mở ra, bấm **Chấp nhận** rồi **Cài đặt**.
+
+| | Bản Free | Bản Premium |
+|---|---|---|
+| Dịch thoại, Chọn vùng dịch, Dịch menu | ✓ | ✓ |
+| Phụ đề trên TV, giọng đọc ra loa TV | | ✓ |
+| Dịch AI, 4 giọng AI | | ✓ |
+| Chơi trên điện thoại | | ✓ |
+| Ai được cài | Tất cả | Ae đã donate |
+
+<details>
+<summary>Cài file IPA bằng máy tính (Sideloadly, AltStore)</summary>
+
+1. Tải `PS-Translator.ipa` ở mục [**Releases**](../../releases/latest). Không tải file Source code.
+2. Cài [Sideloadly](https://sideloadly.io) hoặc [AltStore](https://altstore.io), cắm iPhone, kéo file IPA vào và đăng nhập Apple ID.
+3. Trên iPhone: **Cài đặt → Cài đặt chung → VPN & Quản lý thiết bị**, chọn Apple ID rồi bấm **Tin cậy**. Nếu được hỏi, bật **Chế độ nhà phát triển** trong Quyền riêng tư & Bảo mật.
+
+Apple ID miễn phí: app hết hạn sau 7 ngày và phải cài lại.
+</details>
+
+## Bắt đầu nhanh
+
+1. **Trên máy chơi game**: tạo một tài khoản phụ, bật **Chơi từ xa** cho tài khoản đó.
+2. **Trong app**: tìm máy, dán mã người chơi tra từ [psntools.com/psn/checker](https://www.psntools.com/psn/checker), nhập mã 8 số hiện trên TV.
+3. **Chơi**: bấm **Bắt đầu dịch game → Dịch khi chơi TV**, kéo khung Thoại tới dòng phụ đề.
+
+Từng bước có ảnh: [**Hướng dẫn cài và ghép nối**](https://kyozxx.github.io/PS-Translator/guide.html) · [**Cách dùng từng chức năng**](https://kyozxx.github.io/PS-Translator/guide.html#dung-man-chinh) · [**Gặp lỗi**](https://kyozxx.github.io/PS-Translator/guide.html#panel-fix)
+
+<p align="center">
+  <img src="screenshots/app/ps5-remote-play-steps.jpg" width="420" alt="Bật Chơi từ xa cho tài khoản phụ">
+  <img src="screenshots/app/ps5-link-device-code.jpg" width="420" alt="Lấy mã 8 số trên máy">
+</p>
 
 > [!TIP]
-> Bạn có thể xem bản hướng dẫn chi tiết định dạng web tại file [**trang hướng dẫn**](https://kyozxx.github.io/PS-Translator/guide.html).
+> Nên dùng **tài khoản phụ** cho app. Mỗi tài khoản chỉ dùng được ở một nơi cùng lúc: dùng chung tài khoản đang cầm tay cầm thì tay cầm bị ngắt. Đây là cách máy chơi game hoạt động, không ảnh hưởng gì tới tài khoản.
 
-### 2. Kết nối Remote Play xong nhưng tay cầm bị ngắt hoặc không điều khiển được
-- **Nhấn giữ nút PS trên tay cầm**.
-- Chọn lại **User bạn muốn chơi**.
-- Sau khi chuyển đúng User, tiếp tục chơi game bình thường bằng tay cầm.
+## Phụ đề trên TV
 
-**Khuyến nghị:** nên dùng **một tài khoản phụ để kết nối Remote Play**, sau đó trên tay cầm chuyển sang **tài khoản chính để chơi game**.
+Cài app nhận phụ đề lên TV **trước khi mua**: TV hiện được mã 8 số là dùng được.
 
-### 3. Kết nối được nhưng app không dịch lời thoại
-Nếu hình ảnh Remote Play vẫn hiển thị bình thường nhưng không thấy bản dịch:
+| TV | Cách cài | Hướng dẫn |
+|---|---|---|
+| Android TV / Google TV (Android 9+) | [Google Play](https://play.google.com/apps/testing/com.kyozx.consoletranslator.tv.play) hoặc [APK 0.2.4](https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.4/Console-Translator-TV.apk) | [TV.md](TV.md) |
+| TV LG webOS | [Windows 1.2.17](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.17/ConsoleTranslator-LG-PC-1.2.17.zip) · [Mac 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip), cần mã `LGTV-…` | [LG.md](LG.md) |
+| TV Samsung từ 2017 (Tizen 3.0+) | [Windows 1.0.15](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.15/ConsoleTranslator-Samsung-PC-1.0.15.zip) · [Mac 1.0.9](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.9/ConsoleTranslator-Samsung-Mac-1.0.9.zip), cần mã `SSTV-…` | [SAMSUNG.md](SAMSUNG.md) |
 
-- Trên **thanh công cụ**, bấm nút **khung cắt** (nút vàng) để mở **Chỉnh khung**.
-- Kéo khung **Thoại** (vàng nhạt) đến đúng **khu vực hiển thị lời thoại/subtitle trong game**.
-- Nên khoanh vùng vừa đủ phần lời thoại, tránh lấy quá nhiều khu vực khác trên màn hình.
-- Sau khi chọn đúng vùng, app sẽ nhận diện lời thoại trong khu vực này và tiến hành dịch.
+Mã `LGTV-…` và `SSTV-…` nhận qua bot [t.me/consoletranslatorbot](https://t.me/consoletranslatorbot). TV LG chỉ cần máy tính lần cài đầu, sau đó iPhone tự mở app trên TV. Samsung 2016 trở về trước, TV hệ điều hành khác và Android Box không dùng được.
 
-### 4. Muốn dịch nhiệm vụ, mô tả vật phẩm, thư trong game
-Bản mới nhất có thêm **Chọn vùng dịch**:
+## Hỏi đáp và báo lỗi
 
-- Ở màn hình dịch, bấm **Chọn vùng dịch**: hình game hiện ra ngay trên điện thoại cùng một khung màu cam.
-- Kéo khung cam tới nhiệm vụ, mô tả vật phẩm, lá thư hay bảng lựa chọn rồi thả tay. App dịch ngay và hiện bản dịch trong hộp bên dưới hình. Mỗi lựa chọn nằm trên một dòng riêng.
-- Bấm **Ẩn hình game** để đóng. Lúc không mở hình, điện thoại không phải vẽ hình game nên đỡ nóng máy.
-- Muốn app tự dịch mỗi khi chữ trong khung đổi: bấm nút **khung cắt** (nút vàng), bật **Tự dịch khi chữ trong khung đổi**.
-- Hai hộp phụ đề kéo lên xuống được, chạm 2 lần để đặt lại.
-- Đang dùng **Phụ đề trên TV**: bản dịch vùng cũng hiện trên TV, xem [hướng dẫn TV](TV.md#dịch-vùng-trên-tv).
+Xem mục [**Gặp lỗi**](https://kyozxx.github.io/PS-Translator/guide.html#panel-fix) trên trang hướng dẫn. Chưa được thì nhắn [kênh Telegram](https://t.me/pstranslator) kèm ảnh chụp màn hình (che mã người chơi, IP, mã 8 số).
 
 ## Ủng hộ
 
-PS Translator được phát hành miễn phí.
+Thấy app hữu ích thì mời mình ly cà phê nhé.
 
-Nếu thấy ứng dụng hữu ích và muốn ủng hộ tác giả:
-
-**MB Bank**  
-**Số tài khoản: 008808**
+**MB Bank · 008808 · TRAN VAN NITO**
 
 <p align="center">
-  <img src="https://img.vietqr.io/image/MB-008808-qr_only.png" width="280">
+  <img src="assets/donate-qr.jpg" width="220" alt="Mã QR MB Bank 008808">
 </p>
 
 ---
 
-Tên sản phẩm và nhãn hiệu thuộc về chủ sở hữu tương ứng. Dự án không liên kết với Sony Interactive Entertainment.
-
-## Cài app cho TV Samsung
-
-**Chỉ TV Samsung từ 2017 trở lên (Tizen 3.0+).** TV 2016 trở về trước không dùng được. Hãy cài thử app TV trước khi mua PRO hoặc donate, xem [TV nào dùng được](SAMSUNG.md#tv-nào-dùng-được).
-
-[Tải bộ cài Windows 1.0.15](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.15/ConsoleTranslator-Samsung-PC-1.0.15.zip) · [Tải bộ cài Mac 1.0.9](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.9/ConsoleTranslator-Samsung-Mac-1.0.9.zip) và xem [hướng dẫn TV Samsung từng bước](SAMSUNG.md). Cần mã `SSTV-…` được cấp qua [Telegram](https://t.me/pstranslator) và một tài khoản Samsung miễn phí.
-
-## Cài app cho TV LG
-
-[Tải bộ cài Windows 1.2.17](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.17/ConsoleTranslator-LG-PC-1.2.17.zip) · [Tải bộ cài Mac 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip) và xem [hướng dẫn TV LG từng bước](LG.md). Cần mã `LGTV-…` được cấp qua [Telegram](https://t.me/pstranslator); công cụ tự chuẩn bị gói cài và cài đặt lên TV.
+<sub>Console Translator là ứng dụng độc lập, không liên kết hay được bảo trợ bởi bất kỳ hãng máy chơi game nào. Tên sản phẩm và nhãn hiệu thuộc về chủ sở hữu tương ứng. [Chính sách riêng tư](PRIVACY.md)</sub>
