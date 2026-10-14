@@ -328,16 +328,24 @@
         details.step > summary::after { margin-left: auto; }
         details.step[open] > summary { border-bottom: 1px solid var(--border); background: var(--soft); border-radius: 14px 14px 0 0; }
         .step-body { padding: 4px 16px 14px; }
+        header { padding-top: 12px; }
+        .app-icon { width: 120px; height: 120px; border-radius: 26px; box-shadow: 0 10px 28px -10px #0007; filter: none; margin-bottom: 18px; }
+        h1 { font-size: 34px; letter-spacing: -0.035em; line-height: 1.2; }
+        h1::after { width: 64px; height: 5px; margin: 18px auto 16px; }
+        .slogan { font-size: 22px; margin-top: 0; }
+        .tagline { font-size: 17px; margin-top: 6px; }
+        .badge { display: inline-block; font-size: 12px; letter-spacing: .06em; font-weight: 700; background: var(--text); color: var(--soft); border-radius: 6px; padding: 4px 9px; margin-left: 6px; vertical-align: middle; }
+        @media (max-width: 540px) { h1 { font-size: 27px; } .slogan { font-size: 18px; } .app-icon { width: 88px; height: 88px; border-radius: 20px; } }
     </style>
 </head>
 <body>
 <div class="wrap">
 
     <header>
-        <img class="app-icon" src="assets/icon-180.png" alt="Biểu tượng Console Translator" width="88" height="88">
+        <img class="app-icon" src="assets/icon-180.png?v=2" alt="Biểu tượng Console Translator" width="88" height="88">
         <h1>Console Translator: Dịch game</h1>
         <p class="slogan">Chơi game nào cũng hiểu</p>
-        <p class="tagline">Dịch phụ đề game PS5 sang tiếng Việt và đọc to, ngay trên iPhone. Không cần capture card.</p>
+        <p class="tagline">Dịch phụ đề game sang tiếng Việt. <span class="badge">IPHONE</span></p>
     </header>
 
     <a class="tg" href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">
