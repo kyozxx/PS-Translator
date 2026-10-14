@@ -322,6 +322,12 @@
         .card details.tv-fold[open] > summary::after { content: "−"; }
         .tg { padding: 16px 18px; }
         .tg p { margin: 4px 0 10px; }
+        details.step { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 0; margin: 0 0 10px; }
+        details.step > summary { display: flex; align-items: center; gap: 12px; padding: 14px 16px; min-height: 58px; font-size: 16px; font-weight: 650; }
+        details.step > summary .num { width: 28px; height: 28px; font-size: 14px; }
+        details.step > summary::after { margin-left: auto; }
+        details.step[open] > summary { border-bottom: 1px solid var(--border); background: var(--soft); border-radius: 14px 14px 0 0; }
+        .step-body { padding: 4px 16px 14px; }
     </style>
 </head>
 <body>
@@ -350,9 +356,8 @@
         <button role="tab" data-panel="fix" aria-selected="false">Gặp lỗi</button>
     </div>
     <div class="panel" id="panel-phone" role="tabpanel">
-        <p class="panel-intro">Làm lần lượt 3 bước, bấm vào bước để mở.</p>
-    <section class="card s1" id="cai-app">
-        <details class="tv-fold"><summary><h2><span class="num">1</span>Cài app</h2></summary>
+        <p class="panel-intro">Làm lần lượt từng bước, bấm vào bước để mở. Bước 2 đến 7 chỉ làm một lần.</p>
+        <details class="step" id="cai-app"><summary><span class="num">1</span>Cài app</summary><div class="step-body">
         <p class="why">App phát hành qua TestFlight, cách cài thử nghiệm chính thức của Apple. Không cần máy tính, không phải cài lại sau 7 ngày.</p>
         <ol>
             <li>Cài app <a href="https://apps.apple.com/app/testflight/id899247664" target="_blank" rel="noopener noreferrer"><strong>TestFlight</strong></a> từ App Store (biểu tượng chiếc máy bay màu xanh).</li>
@@ -360,29 +365,16 @@
             <li>TestFlight mở ra, bấm <span class="btn-app">Chấp nhận</span> rồi <span class="btn-app">Cài đặt</span>.</li>
         </ol>
         <div class="box warn"><strong>Yêu cầu</strong>iPhone hoặc iPad chạy iOS 18 trở lên.</div>
-        </details>
-    </section>
-
-    <section class="card s2" id="account">
-        <details class="tv-fold"><summary><h2><span class="num">2</span>Chuẩn bị PS5 và ghép nối (làm một lần)</h2></summary>
-        <p class="why">Làm một lần, lần sau chỉ cần mở app bấm Kết nối. PS5 để tiếng Anh thì xem chữ trong ngoặc.</p>
-
-        <div class="box warn"><strong>Chuẩn bị</strong>
-            <ul style="margin:6px 0 0 18px;padding:0">
-                <li>iPhone và PS5 dùng chung một mạng Wi-Fi ở nhà (không dùng Wi-Fi khách, tắt VPN).</li>
-                <li>Lần đầu mở app, iPhone hỏi quyền <strong>Mạng cục bộ</strong>: bấm <strong>Cho phép</strong>.</li>
-            </ul>
-        </div>
-
-        <h3 id="ps5">A. Tạo tài khoản phụ trên PS5</h3>
+        </div></details>
+        <details class="step" id="ps5"><summary><span class="num">2</span>Tạo tài khoản phụ trên PS5</summary><div class="step-body">
         <p>App kết nối vào PS5 bằng một tài khoản PlayStation. Dùng chung tài khoản bạn đang cầm tay cầm chơi thì tay cầm bị ngắt, nên dùng một <strong>tài khoản phụ</strong> cho app. Tài khoản chính vẫn để chơi như bình thường.</p>
         <ol>
             <li>Ở màn hình chính PS5, bấm <strong>ảnh đại diện</strong> góc phải trên cùng → <strong>Chuyển người dùng</strong> <em>(Switch User)</em> → <strong>Thêm người dùng</strong> <em>(Add User)</em>.</li>
             <li>Đăng nhập bằng một tài khoản PlayStation khác (tạo mới miễn phí nếu chưa có).</li>
             <li>Chuyển sang tài khoản phụ này để làm các bước dưới.</li>
         </ol>
-
-        <h3>B. Bật Chơi từ xa cho tài khoản phụ</h3>
+        </div></details>
+        <details class="step" id="remote-play"><summary><span class="num">3</span>Bật Chơi từ xa cho tài khoản phụ</summary><div class="step-body">
         <div class="ps-path"><span>Cài đặt <em>Settings</em></span><i>→</i><span>Hệ thống <em>System</em></span><i>→</i><span>Chơi từ xa <em>Remote Play</em></span></div>
         <ol>
             <li>Bấm <strong>Bật Chơi từ xa</strong> <em>(Enable Remote Play)</em>, bật công tắc cạnh <strong>tài khoản phụ</strong>. Bật sai người thì app không kết nối được.</li>
@@ -392,16 +384,21 @@
             <img src="screenshots/app/ps5-remote-play-steps.jpg" alt="Trên PS5: bấm Bật Chơi từ xa, bật cho tài khoản phụ, rồi bật Ẩn trạng thái kết nối Chơi từ xa" loading="lazy">
             <figcaption>Bấm Bật Chơi từ xa, bật đúng tài khoản phụ, rồi bật Ẩn trạng thái kết nối</figcaption>
         </figure>
-
-        <h3>C. Cho app tự bật PS5 khi máy đang nghỉ (nên làm)</h3>
+        </div></details>
+        <details class="step" id="rest-mode"><summary><span class="num">4</span>Cho app tự bật PS5 khi máy đang nghỉ (nên làm)</summary><div class="step-body">
         <div class="ps-path"><span>Cài đặt <em>Settings</em></span><i>→</i><span>Hệ thống <em>System</em></span><i>→</i><span>Tiết kiệm điện <em>Power Saving</em></span><i>→</i><span>Tính năng khi nghỉ <em>Features Available in Rest Mode</em></span></div>
         <ul class="toggle-list">
             <li><span class="on" aria-hidden="true"></span><div><b>Giữ kết nối Internet</b> <em>Stay Connected to the Internet</em></div></li>
             <li><span class="on" aria-hidden="true"></span><div><b>Cho phép bật PS5 qua mạng</b> <em>Enable Turning On PS5 from Network</em></div></li>
         </ul>
         <p>Để PS5 ở chế độ nghỉ (đèn cam), mở app bấm Kết nối là máy tự bật. Máy tắt hẳn thì phải bật bằng tay.</p>
-
-        <h3>D. Trên iPhone: tìm máy</h3>
+        </div></details>
+        <details class="step" id="tim-may"><summary><span class="num">5</span>Trên iPhone: tìm máy</summary><div class="step-body"><div class="box warn"><strong>Chuẩn bị</strong>
+            <ul style="margin:6px 0 0 18px;padding:0">
+                <li>iPhone và PS5 dùng chung một mạng Wi-Fi ở nhà (không dùng Wi-Fi khách, tắt VPN).</li>
+                <li>Lần đầu mở app, iPhone hỏi quyền <strong>Mạng cục bộ</strong>: bấm <strong>Cho phép</strong>.</li>
+            </ul>
+        </div>
         <ol>
             <li>Mở app, bấm <span class="btn-app">Ghép nối máy chơi game</span>.</li>
             <li>App tự tìm máy. Thấy dấu tích xanh <strong>Đã có máy ở địa chỉ...</strong> thì bấm <span class="btn-app">Tiếp tục</span>.</li>
@@ -418,8 +415,8 @@
                 <li>Trong app bấm <span class="btn-app">Không tìm thấy? Nhập địa chỉ bằng tay</span>, gõ đúng dãy số đó.</li>
             </ol>
         </details>
-
-        <h3>E. Lấy mã người chơi của tài khoản phụ</h3>
+        </div></details>
+        <details class="step" id="ma-nguoi-choi"><summary><span class="num">6</span>Lấy mã người chơi của tài khoản phụ</summary><div class="step-body">
         <ol>
             <li>Trên PS5 (đang ở tài khoản phụ): bấm <strong>ảnh đại diện</strong> → <strong>Hồ sơ</strong> <em>(Profile)</em>. Ghi lại <strong>Online ID</strong> nằm dưới tên hiển thị, đúng từng chữ.</li>
             <li>Trong app bấm <span class="btn-app">Mở trang tra mã</span>, hoặc mở <a href="https://www.psntools.com/psn/checker" target="_blank" rel="noopener noreferrer">psntools.com/psn/checker</a>.</li>
@@ -444,8 +441,8 @@
             </ul>
             <p>Online ID là tên hiện khi chơi online, không phải email.</p>
         </details>
-
-        <h3>F. Lấy mã 8 số trên PS5 và ghép nối</h3>
+        </div></details>
+        <details class="step" id="account"><summary><span class="num">7</span>Lấy mã 8 số trên PS5 và ghép nối</summary><div class="step-body">
         <ol>
             <li>Trên PS5 (vẫn ở tài khoản phụ): <strong>Cài đặt</strong> → <strong>Hệ thống</strong> → <strong>Chơi từ xa</strong> → <strong>Ghép nối thiết bị</strong> <em>(Link Device)</em>.</li>
             <li>TV hiện <strong>8 chữ số</strong> kèm thời gian còn lại.</li>
@@ -459,14 +456,11 @@
             <img src="screenshots/app/09-pair-3-pin.jpg" alt="Ô nhập mã 8 số và nút Ghép nối trong app" loading="lazy">
             <figcaption>Nhập mã 8 số rồi bấm Ghép nối</figcaption>
         </figure>
-        <div class="box warn"><strong>Máy từ chối mã?</strong>Thường do mã người chơi ở mục E là của tài khoản khác với tài khoản đang chọn trên PS5. Chuyển đúng tài khoản phụ, lấy mã 8 số mới rồi nhập lại. Hết giờ thì bấm Ghép nối thiết bị lần nữa.</div>
+        <div class="box warn"><strong>Máy từ chối mã?</strong>Thường do mã người chơi ở bước 6 là của tài khoản khác với tài khoản đang chọn trên PS5. Chuyển đúng tài khoản phụ, lấy mã 8 số mới rồi nhập lại. Hết giờ thì bấm Ghép nối thiết bị lần nữa.</div>
 
         <div class="box tip"><strong>Xong rồi, lần sau thế nào?</strong>Không cần ghép lại. Mở app, bấm <strong>Kết nối</strong>. Chuyển PS5 về tài khoản chính để chơi. Bị đá tay cầm thì bấm nút PS, chọn lại tài khoản chính.</div>
-        </details>
-    </section>
-
-    <section class="card s4" id="choi">
-        <details class="tv-fold"><summary><h2><span class="num">3</span>Chơi và dịch</h2></summary>
+        </div></details>
+        <details class="step" id="choi"><summary><span class="num">8</span>Chơi và dịch</summary><div class="step-body">
         <p class="why">Ghép nối xong, từ lần sau chỉ cần làm bước này.</p>
         <ol>
             <li>Ở màn chính của app, bấm <span class="btn-app">Bắt đầu dịch game</span>, rồi chọn <span class="btn-app">Dịch khi chơi TV</span> (chơi trên TV) hoặc <span class="btn-app">Chơi trên điện thoại</span>. Nếu PS5 đang nghỉ, app tự bật máy, đợi khoảng 30 giây.</li>
@@ -494,8 +488,7 @@
                 <figcaption>Giọng đọc: tải thêm giọng nam, bật Đọc theo cảm xúc</figcaption>
             </figure>
         </div>
-        </details>
-    </section>
+        </div></details>
     </div>
     <div class="panel" id="panel-tv" role="tabpanel" hidden>
     <section class="card tv-card" id="phu-de-tv">
@@ -682,7 +675,7 @@
         </details>
         <details>
             <summary>Tay cầm bị ngắt khi app kết nối</summary>
-            <p>Đây là bình thường, không phải lỗi. Bấm nút PS giữa tay cầm, chọn lại người chơi của bạn. Để không bị nữa, dùng tài khoản phụ như ở bước 2.</p>
+            <p>Đây là bình thường, không phải lỗi. Bấm nút PS giữa tay cầm, chọn lại người chơi của bạn. Để không bị nữa, dùng tài khoản phụ như ở bước 2 tab iPhone.</p>
         </details>
         <details>
             <summary>Có hình nhưng không ra bản dịch</summary>
@@ -742,7 +735,7 @@
 var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
 function show(name){tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.panel===name)});['phone','tv','fix'].forEach(function(n){document.getElementById('panel-'+n).hidden=n!==name});}
 tabs.forEach(function(t){t.onclick=function(){show(t.dataset.panel)}});
-function openTarget(){var t=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));if(!t)return;var p=t.closest('.panel');if(p)show(p.id.slice(6));for(var e=t;e;e=e.parentElement)if(e.tagName==='DETAILS')e.open=true;var f=t.querySelector(':scope > details.tv-fold');if(f)f.open=true;t.scrollIntoView();}
+function openTarget(){var t=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));if(!t)return;var p=t.closest('.panel');if(p)show(p.id.slice(6));for(var e=t;e;e=e.parentElement)if(e.tagName==='DETAILS')e.open=true;if(t.tagName==='DETAILS')t.open=true;var f=t.querySelector(':scope > details.tv-fold');if(f)f.open=true;t.scrollIntoView();}
 addEventListener('hashchange',openTarget);openTarget();
 </script>
 </body>
