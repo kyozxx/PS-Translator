@@ -309,6 +309,10 @@
         .play-store { display: block; margin: 4px 0 12px; }
         .ps-path em, .toggle-list em, li em, .box em { font-style: normal; font-size: 12px; color: var(--muted); }
         .ps-path em { display: block; font-weight: 400; }
+        details.tv-fold { background: none; border: 0; padding: 0; margin: 0; }
+        details.tv-fold > summary { padding: 0; min-height: 0; align-items: center; }
+        details.tv-fold > summary h2 { margin: 0; }
+        details.tv-fold[open] > summary { margin-bottom: 6px; }
     </style>
 </head>
 <body>
@@ -356,7 +360,7 @@
     </nav>
 
     <section class="card tv-card" id="phu-de-tv">
-        <h2><span class="num">TV</span>Phụ đề ngay trên màn hình TV</h2>
+        <details class="tv-fold"><summary><h2><span class="num">TV</span>Phụ đề ngay trên màn hình TV</h2></summary>
         <p class="why">Máy chơi game vẫn cắm HDMI thẳng vào TV. Chỉ phụ đề và giọng đọc đi từ iPhone sang TV qua Wi-Fi nên hình ảnh không bị giảm chất lượng hay thêm độ trễ.</p>
 
         <div class="tv-requirements" aria-label="Điều kiện sử dụng">
@@ -505,6 +509,7 @@
                 <li><strong>Phụ đề biến mất:</strong> Android TV cần bỏ tối ưu hóa pin; LG webOS cần bấm Mở app trên TV LG trên iPhone lại nếu đã dùng nút Home.</li>
             </ul>
             <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">Telegram hỗ trợ</a> kèm hãng/model TV và ảnh lỗi.</div>
+        </details>
         </details>
     </section>
 
@@ -740,5 +745,10 @@
     </footer>
 
 </div>
+<script>
+// Open any folded section that holds the linked part (e.g. #phu-de-tv, #lg-tv).
+function openTarget(){var t=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));for(var e=t;e;e=e.parentElement)if(e.tagName==='DETAILS')e.open=true;var f=t&&t.querySelector(':scope > details.tv-fold');if(f)f.open=true;if(t)t.scrollIntoView();}
+addEventListener('hashchange',openTarget);openTarget();
+</script>
 </body>
 </html>
