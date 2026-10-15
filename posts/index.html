@@ -35,6 +35,9 @@
   .tag { position: absolute; z-index: 3; font-size: 30px; font-weight: 900; color: #ff3d7f; letter-spacing: .06em;
     background: #fff36b; padding: 10px 22px; border-radius: 14px; box-shadow: 0 14px 30px -10px #0006; transform: rotate(-4deg); }
   .tag::after { content: ""; position: absolute; left: 50%; bottom: -14px; transform: translateX(-50%); border: 14px solid transparent; border-top-color: #fff36b; border-bottom: 0; }
+  .card.duo .stage:not(.back) { left: 62%; width: 330px; }
+  .stage.back { left: 31%; width: 280px; top: 410px; transform: translateX(-50%) perspective(2200px) rotateY(12deg) rotateX(3deg) rotateZ(-4deg); z-index: 0; opacity: .95; }
+  .tag.small { font-size: 24px; padding: 8px 16px; white-space: nowrap; }
   .grid { display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; }
   .grid .wrap { width: 378px; height: 378px; overflow: hidden; border-radius: 18px; }
   .grid .card { transform: scale(.35); transform-origin: top left; }
@@ -47,10 +50,18 @@ const POSTS = [
   { id: '1.3.2', eyebrow: 'MỚI TRONG 1.3.2', title: 'Phụ đề lên TV<br><em>chỉ một chạm</em>',
     text: 'Bấm TV LG: app tự mở phụ đề trên TV và vào dịch luôn.',
     phone: 'connect.png', hl: [76, 79.6, 19.6, 6.6], tag: 'MỚI' },
+  { id: 'lg-iphone', eyebrow: 'TÍNH NĂNG MỚI', title: 'Cài app TV LG<br><em>ngay trên iPhone</em>',
+    text: 'Không cần máy tính: chọn TV LG, nhập IP, Passphrase, bấm Cài.',
+    phone: 'lg-install-real.png', hl: [9.5, 77.8, 31.6, 4.4], tag: 'MỚI',
+    back: 'tv-pick-lg.png', backHl: [36.5, 47.8, 26.5, 12.4], backTag: 'Chọn TV LG' },
 ];
 const card = p => {
   const [x, y, w, h] = p.hl || [];
-  return `<section class="card"><div class="cap"><span class="eyebrow">${p.eyebrow}</span><h1>${p.title}</h1><p>${p.text}</p></div>
+  const back = p.back ? (() => { const [a, b, c, d] = p.backHl;
+    return `<div class="stage back"><div class="phone"><img src="../appstore/raw/${p.back}" alt="">
+    <div style="position:absolute;inset:12px;border-radius:57px;overflow:hidden"><div class="hl" style="left:${a}%;top:${b}%;width:${c}%;height:${d}%"></div></div>
+    <div class="tag small" style="left:calc(12px + ${a + c / 2}% - 90px);top:calc(12px + ${b}% - 62px)">${p.backTag}</div></div></div>`; })() : '';
+  return `<section class="card${p.back ? ' duo' : ''}">${back}<div class="cap"><span class="eyebrow">${p.eyebrow}</span><h1>${p.title}</h1><p>${p.text}</p></div>
   <div class="stage"><div class="phone"><img src="../appstore/raw/${p.phone}" alt="">
   ${p.hl ? `<div style="position:absolute;inset:12px;border-radius:57px;overflow:hidden"><div class="hl" style="left:${x}%;top:${y}%;width:${w}%;height:${h}%"></div></div>
   <div class="tag" style="left:calc(12px + ${x + w / 2}% - 52px);top:calc(12px + ${y}% - 76px)">${p.tag}</div>` : ''}
