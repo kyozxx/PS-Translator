@@ -313,9 +313,10 @@
         details.tv-fold > summary { padding: 0; min-height: 0; align-items: center; }
         details.tv-fold > summary h2 { margin: 0; }
         details.tv-fold[open] > summary { margin-bottom: 6px; }
-        .tabs { display: flex; gap: 4px; padding: 4px; background: #ece4d2; border-radius: 12px; margin: 0 0 16px; }
-        .tabs button { flex: 1; min-height: 44px; border: 0; border-radius: 9px; background: transparent; color: var(--muted); font: inherit; font-size: 15px; cursor: pointer; }
+        .tabs { display: flex; align-items: center; gap: 4px; padding: 4px; background: #ece4d2; border-radius: 12px; margin: 0 0 16px; }
+        .tabs button { flex: 1; min-height: 44px; border: 0; border-radius: 9px; background: transparent; color: var(--muted); font: inherit; font-size: 14px; padding: 0 4px; cursor: pointer; white-space: nowrap; }
         .tabs button[aria-selected=true] { background: var(--text); color: #fff8e6; font-weight: 700; }
+        .tab-arrow { color: var(--muted); opacity: 0.55; font-size: 13px; font-weight: 700; flex-shrink: 0; user-select: none; }
         .panel[hidden] { display: none; }
         .panel-intro { margin: 0 0 12px; }
         .card details.tv-fold > summary::after { content: "+"; }
@@ -336,8 +337,7 @@
         .tagline { font-size: 17px; margin-top: 6px; }
         .badge { display: inline-block; font-size: 12px; letter-spacing: .06em; font-weight: 700; background: var(--text); color: var(--soft); border-radius: 6px; padding: 4px 9px; margin-left: 6px; vertical-align: middle; }
         @media (max-width: 540px) { h1 { font-size: 27px; } .slogan { font-size: 18px; } .app-icon { width: 88px; height: 88px; border-radius: 20px; } }
-        .tabs button { font-size: 14px; padding: 0 4px; white-space: nowrap; }
-        @media (max-width: 400px) { .tabs button { font-size: 13px; } }
+        @media (max-width: 420px) { .tabs { gap: 2px; } .tabs button { font-size: 12px; padding: 0 2px; } .tab-arrow { font-size: 11px; } }
         .iphones { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 12px; margin: 14px 0 6px; }
         figure.iphone { margin: 0; width: 220px; text-align: center; }
         .iphone-screen { position: relative; border-radius: 38px; padding: 9px; background: #121212;
@@ -387,9 +387,12 @@
 
     <div class="tabs" role="tablist">
         <button role="tab" data-panel="phone" aria-selected="true">iPhone</button>
-        <button role="tab" data-panel="use" aria-selected="false">Cách dùng</button>
+        <span class="tab-arrow" aria-hidden="true">→</span>
         <button role="tab" data-panel="tv" aria-selected="false">Phụ đề TV</button>
-        <button role="tab" data-panel="fix" aria-selected="false">Gặp lỗi</button>
+        <span class="tab-arrow" aria-hidden="true">→</span>
+        <button role="tab" data-panel="use" aria-selected="false">Cách dùng</button>
+        <span class="tab-arrow" aria-hidden="true">→</span>
+        <button role="tab" data-panel="fix" aria-selected="false">Báo lỗi</button>
     </div>
     <div class="panel" id="panel-phone" role="tabpanel">
         <p class="panel-intro">Làm lần lượt từng bước, bấm vào bước để mở. Bước 2 đến 7 chỉ làm một lần.</p>
