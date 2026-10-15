@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telegram Posts</title>
+<!--
+  Telegram post images, same look as the App Store shots.
+  index.html          : every post card, small
+  index.html?post=ID  : one card at 1280x1280 for export
+  New post: add one entry to POSTS below (phone = a file in ../appstore/raw, tv = road|menu|none).
+-->
+<style>
+  :root { --ink: #1b1a17; --amber: #f2a516; --cream: #fff8e6; }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif; background: #f2f2f7; }
+  .card { width: 1280px; height: 1280px; position: relative; overflow: hidden; color: var(--cream);
+    background: radial-gradient(120% 80% at 20% 0%, #3a2a10 0%, #14110c 55%, #0b0a08 100%); }
+  .card::before { content: ""; position: absolute; inset: 0; opacity: .16;
+    background: repeating-radial-gradient(circle at 100% 110%, transparent 0 40px, #c9953a 40px 42px); }
+  .brand { position: absolute; top: 64px; left: 72px; display: flex; align-items: center; gap: 20px; font-size: 34px; font-weight: 700; }
+  .brand img { width: 72px; height: 72px; border-radius: 16px; }
+  .brand small { display: block; font-size: 24px; color: var(--amber); font-weight: 600; }
+  .ver { position: absolute; top: 76px; right: 72px; font-size: 30px; font-weight: 800; color: var(--ink); background: var(--amber); padding: 10px 26px; border-radius: 999px; }
+  .text { position: absolute; left: 72px; top: 230px; width: 620px; }
+  .k { display: inline-block; font-size: 26px; font-weight: 800; letter-spacing: .08em; color: var(--amber); border: 3px solid var(--amber); border-radius: 999px; padding: 8px 22px; margin-bottom: 30px; }
+  h1 { font-size: 78px; line-height: 1.08; font-weight: 800; letter-spacing: -.03em; }
+  h1 em { font-style: normal; color: var(--amber); }
+  ul { list-style: none; padding: 0; margin-top: 40px; }
+  li { font-size: 34px; line-height: 1.3; margin: 0 0 22px; padding-left: 52px; position: relative; color: #efe5cc; }
+  li::before { content: ""; position: absolute; left: 0; top: 8px; width: 30px; height: 30px; border-radius: 50%; background: var(--amber);
+    -webkit-mask: radial-gradient(circle, #000 0 40%, transparent 41%), linear-gradient(#000 0 0); }
+  .foot { position: absolute; left: 72px; bottom: 60px; font-size: 26px; color: #b9ad92; }
+  .foot b { color: var(--amber); }
+  .phone { position: absolute; right: 70px; top: 200px; width: 470px; border-radius: 74px; padding: 14px; background: #050505;
+    box-shadow: 0 0 0 4px #3a3a3c, 0 0 0 8px #1c1c1e, 0 50px 100px -30px #000; }
+  .phone img { display: block; width: 100%; border-radius: 61px; }
+  .phone::after { content: ""; position: absolute; top: 2.65%; left: 50%; transform: translateX(-50%); width: 31%; height: 4%; background: #000; border-radius: 999px; }
+  .tv { position: absolute; right: 60px; top: 230px; width: 600px; }
+  .tv .bezel { background: #0c0c0d; border-radius: 16px; padding: 12px; box-shadow: 0 0 0 2px #2c2c2e, 0 40px 80px -30px #000; }
+  .tv .screen { position: relative; aspect-ratio: 16/9; overflow: hidden; border-radius: 4px; }
+  .tv .screen img { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .tv .stand { width: 140px; height: 20px; margin: 0 auto; background: linear-gradient(#2a2a2c, #0c0c0d); border-radius: 0 0 10px 10px; }
+  .tv .sub { position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%); width: max-content; max-width: 84%; background: rgba(0,0,0,.66); color: #fff; font-weight: 700; font-size: 21px; line-height: 1.3; padding: 7px 14px; border-radius: 7px; text-align: center; }
+  .tv + .phone { top: 590px; right: 150px; width: 400px; border-radius: 64px; padding: 12px; }
+  .tv + .phone img { border-radius: 52px; }
+  .grid { display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; }
+  .grid .wrap { width: 448px; height: 448px; overflow: hidden; border-radius: 18px; }
+  .grid .card { transform: scale(.35); transform-origin: top left; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+const POSTS = [
+  { id: '1.3.2', ver: '1.3.2', k: 'BẢN MỚI', title: 'Nhanh hơn,<br><em>gọn hơn</em>',
+    items: ['Nút TV LG ngay màn Kết nối', 'Bỏ "Uh...", "Hmm" khỏi bản dịch', 'Nhận đúng tên người nói hơn', 'Sửa lỗi màn dịch bị đứng'],
+    tv: 'road', sub: 'Ta phải tới thành phố trước khi trời tối.', phone: 'tv.png' },
+  { id: 'free', ver: 'FREE', k: 'MIỄN PHÍ', title: 'Có bản<br><em>Free</em> cho<br>mọi người',
+    items: ['Dịch thoại trên điện thoại', 'Chọn vùng dịch, Dịch menu', 'Đọc to bằng giọng tiếng Việt', 'Nhận link ở bot Telegram'],
+    phone: 'scan.png', foot: 'Nhận link cài: <b>t.me/consoletranslatorbot</b>' },
+];
+const card = p => `<section class="card">
+  <div class="brand"><img src="../appstore/icon.png" alt=""><div>Console Translator<small>Chơi game nào cũng hiểu</small></div></div>
+  <span class="ver">${p.ver}</span>
+  <div class="text"><span class="k">${p.k}</span><h1>${p.title}</h1><ul>${p.items.map(i => `<li>${i}</li>`).join('')}</ul></div>
+  ${p.tv ? `<div class="tv"><div class="bezel"><div class="screen"><img src="../appstore/tv-scene-${p.tv}.jpg" alt="">${p.sub ? `<div class="sub">${p.sub}</div>` : ''}</div></div><div class="stand"></div></div>` : ''}
+  <div class="phone"><img src="../appstore/raw/${p.phone}" alt=""></div>
+  <div class="foot">${p.foot || 'Hướng dẫn: <b>kyozxx.github.io/PS-Translator</b>'}</div>
+</section>`;
+const id = new URLSearchParams(location.search).get('post');
+const root = document.getElementById('root');
+if (id) { document.body.style.background = '#000'; root.innerHTML = card(POSTS.find(p => p.id === id)); }
+else { root.className = 'grid'; root.innerHTML = POSTS.map(p => `<div class="wrap">${card(p)}</div>`).join(''); }
+</script>
+</body>
+</html>
