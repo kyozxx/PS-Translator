@@ -1,4 +1,6 @@
-# Cài phụ đề cho TV LG bằng Windows hoặc Mac
+# Cài phụ đề cho TV LG
+
+> **Mới: cài ngay trên iPhone, không cần máy tính.** Bật Developer Mode và Key Server trên TV, rồi trong app iPhone vào **Phụ đề trên TV → TV LG → Cài từ iPhone**, nhập IP và Passphrase, bấm **Cài lên TV** (cần gói PRO). Xem [hướng dẫn có ảnh](https://kyozxx.github.io/PS-Translator/guide.html#lg-tv). Phần dưới đây là cách cài bằng Windows hoặc Mac.
 
 Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề lên TV LG webOS. Khi chơi, điện thoại vẫn phải chạy dịch và gửi phụ đề sang TV; PC chỉ dùng cài hoặc mở app TV.
 
