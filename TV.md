@@ -46,10 +46,10 @@ Xem đời TV Samsung: trên TV vào **Cài đặt → Hỗ trợ → Giới thi
 
 > **TV Xiaomi / Redmi mua từ Trung Quốc (hàng nội địa, giao diện tiếng Trung PatchWall)?** Dùng bản riêng ở mục [TV Xiaomi nội địa](#tv-xiaomi-nội-địa-trung). Bản thường bị TV này tự tắt.
 
-Tải file **Console-Translator-TV.apk** (phiên bản 0.2.4):
+Tải file **Console-Translator-TV.apk** (phiên bản 0.2.8):
 
 ```
-https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.4/Console-Translator-TV.apk
+https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.8/Console-Translator-TV.apk
 ```
 
 Cách cài dễ nhất bằng remote TV:
@@ -107,10 +107,10 @@ Muốn tắt app: bấm **Tắt app** trong app TV.
 
 TV Xiaomi và Redmi bán ở Trung Quốc tự tắt app phụ đề bản thường: mở app lên là app bị đóng, hoặc phụ đề không bao giờ hiện. Dùng bản riêng dưới đây. TV Xiaomi bản quốc tế (Google TV, giao diện tiếng Anh/tiếng Việt) dùng bản thường ở trên.
 
-Tải file **Console-Translator-TV-Mi.apk** (phiên bản 0.2.4-mi):
+Tải file **Console-Translator-TV-Mi.apk** (phiên bản 0.2.8-mi):
 
 ```
-https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.4-mi/Console-Translator-TV-Mi.apk
+https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.8-mi/Console-Translator-TV-Mi.apk
 ```
 
 1. Cài như [Bước 1](#bước-1-cài-app), chỉ thay đường link bằng link ở trên (hoặc mã Downloader **5807802**). Nếu TV không có Google Play, cài **Downloader** hoặc **当贝市场 (Dangbei)** từ kho ứng dụng của Xiaomi, hoặc chép file APK qua USB rồi mở bằng trình quản lý tệp.
