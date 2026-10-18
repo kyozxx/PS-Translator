@@ -58,6 +58,14 @@ Cần iPhone hoặc iPad chạy **iOS 18 trở lên**.
 Apple ID miễn phí: app hết hạn sau 7 ngày và phải cài lại.
 </details>
 
+### Bản Mac
+
+Cần Mac chip Apple (**M1 trở lên**) chạy **macOS 15 trở lên**.
+
+1. Tải [**ConsoleTranslator-Mac-1.3.dmg**](https://github.com/kyozxx/PS-Translator/releases/download/mac-1.3.0/ConsoleTranslator-Mac-1.3.dmg).
+2. Mở file, kéo **Console Translator Mac** vào **Applications**.
+3. Mở bot [**t.me/consoletranslatorbot**](https://t.me/consoletranslatorbot), bấm **💻 App Mac** để nhận mã, dán mã vào app.
+
 ## Bắt đầu nhanh
 
 1. **Trên máy chơi game**: tạo một tài khoản phụ, bật **Chơi từ xa** cho tài khoản đó.
@@ -80,7 +88,7 @@ Cài app nhận phụ đề lên TV **trước khi mua**: TV hiện được mã
 
 | TV | Cách cài | Hướng dẫn |
 |---|---|---|
-| Android TV / Google TV (Android 9+) | [Google Play](https://play.google.com/apps/testing/com.kyozx.consoletranslator.tv.play) hoặc [APK 0.2.4](https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.4/Console-Translator-TV.apk) | [TV.md](TV.md) |
+| Android TV / Google TV (Android 9+) | [Google Play](https://play.google.com/apps/testing/com.kyozx.consoletranslator.tv.play) hoặc [APK 0.2.8](https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.8/Console-Translator-TV.apk) | [TV.md](TV.md) |
 | TV LG webOS | **Ngay trên iPhone** (cần PRO) hoặc [Windows 1.2.17](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.17/ConsoleTranslator-LG-PC-1.2.17.zip) · [Mac 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip), máy tính cần mã `LGTV-…` | [LG.md](LG.md) |
 | TV Samsung từ 2017 (Tizen 3.0+) | [Windows 1.0.15](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.15/ConsoleTranslator-Samsung-PC-1.0.15.zip) · [Mac 1.0.9](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.9/ConsoleTranslator-Samsung-Mac-1.0.9.zip), cần mã `SSTV-…` | [SAMSUNG.md](SAMSUNG.md) |
 
