@@ -1,24 +1,22 @@
 (() => {
- const panel=document.getElementById('setup-panel');
- const chosen=document.getElementById('chosen-setup');
- const result=document.getElementById('setup-result');
- const tvResult=document.getElementById('tv-result');
+ const dialog=document.getElementById('setup-dialog');
+ const title=document.getElementById('wizard-title');
+ const result=document.getElementById('wizard-result');
+ let step=1,device=null,tv=null,opener=null;
  const devices={
   ios:{title:'Cài trên iPhone / iPad',steps:['Cài TestFlight từ App Store. Đây là app của Apple dùng để cài bản thử nghiệm.','Mở bot Telegram, bấm Start rồi chọn Bản iOS để nhận link. Mở link bằng TestFlight, bấm Chấp nhận rồi Cài đặt.'],action:'Nhận link cài iPhone / iPad',url:'https://t.me/consoletranslatorbot',guide:'guide.html#cai-app',note:'Cài xong, mở hướng dẫn có hình để bật Chơi từ xa và ghép máy lần đầu. iPhone và máy chơi game cần cùng mạng Wi-Fi.'},
   android:{title:'Cài trên điện thoại Android',steps:['Mở hướng dẫn Android, làm theo các bước cài app qua Google Play.','Cài và kết nối một app Chơi từ xa riêng theo hướng dẫn. Có hình game rồi mới mở Console Translator và chọn chia sẻ đúng app đó.'],action:'Xem các bước cài Android',url:'android-guide.html',guide:'android-guide.html',note:'Android cần phiên bản 11 trở lên. Console Translator đọc hình đang hiển thị, không tự kết nối với máy chơi game. Trang hướng dẫn có link app Chơi từ xa.'},
   mac:{title:'Cài trên máy Mac',steps:['Mở trang tải app Mac và tải file cài đặt. Máy cần macOS 15 trở lên.','Mở bot Telegram, chọn App Mac để nhận mã, rồi dán mã vào ứng dụng.'],action:'Mở trang tải app Mac',url:'guide.html#mac',guide:'guide.html#mac',note:'Nếu Mac hỏi có cho phép mở ứng dụng hay không, làm theo hướng dẫn kèm bản cài.'}
  };
- function link(label,url,className){const a=document.createElement('a');a.textContent=label;a.href=url;a.className=className;return a;}
- function showDevice(key){const d=devices[key];if(!d)return;
-  panel.querySelectorAll('[data-device]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.device===key)));
-  result.replaceChildren();const heading=document.createElement('h3');heading.textContent=d.title;
-  const list=document.createElement('ol');for(const text of d.steps){const li=document.createElement('li');li.textContent=text;list.append(li);}
-  const actions=document.createElement('div');actions.className='setup-actions';actions.append(link(d.action,d.url,'button primary'),link('Hướng dẫn có hình →',d.guide,'text-link'));
-  const note=document.createElement('p');note.className='setup-note';note.textContent=d.note;
-  result.append(heading,list,actions,note);document.getElementById('setup-placeholder').hidden=true;chosen.hidden=false;
- }
  const tvs={android:['Android TV / Google TV','Cài app nhận phụ đề trên TV trước, rồi ghép với điện thoại hoặc Mac bằng mã 8 số.','guide.html#phu-de-tv','Cách cài Android TV'],lg:['TV LG','Kiểm tra TV trước khi mua gói. Có thể cài từ iPhone, Android hoặc máy tính theo hướng dẫn. Bản LG đang thử nghiệm, chưa kiểm tra hết các đời TV.','guide.html#lg-tv','Cách cài trên TV LG'],samsung:['TV Samsung','Kiểm tra đời TV rồi làm theo hướng dẫn bộ cài trên máy tính. Không phải TV Samsung nào cũng hỗ trợ.','guide.html#samsung-tv','Cách cài trên TV Samsung'],unknown:['Bạn chưa biết TV thuộc loại nào?','Mở bảng hướng dẫn kiểm tra hãng và đời TV. Nếu vẫn chưa rõ, gửi ảnh mã model TV vào nhóm hỗ trợ.','tv.html#kiểm-tra-tv-trước-khi-mua','Xem cách kiểm tra TV']};
- function showTV(key){panel.querySelectorAll('[data-tv]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tv===key)));tvResult.replaceChildren();const data=tvs[key];if(!data)return;const box=document.createElement('div');box.className='tv-next-step';const title=document.createElement('h3');title.textContent=data[0];const text=document.createElement('p');text.textContent=data[1];box.append(title,text,link(data[3]+' →',data[2],'button secondary'));tvResult.append(box);}
- panel.addEventListener('click',e=>{const device=e.target.closest('[data-device]');if(device)showDevice(device.dataset.device);const tv=e.target.closest('[data-tv]');if(tv)showTV(tv.dataset.tv);});
- panel.hidden=false;
+
+ const titles={1:'Bạn dùng thiết bị nào?',2:'Bạn muốn xem phụ đề ở đâu?',3:'Bản cài dành cho bạn'};
+ function showStep(next){step=next;dialog.querySelectorAll('[data-step]').forEach(el=>el.hidden=Number(el.dataset.step)!==step);title.textContent=titles[step];document.getElementById('wizard-progress').textContent=`Bước ${step} / 3`;document.getElementById('wizard-back').hidden=step===1;dialog.scrollTop=0;title.focus({preventScroll:true});}
+ function link(label,url,cls){const a=document.createElement('a');a.textContent=label;a.href=url;a.className=cls;return a;}
+ function card(heading,text,action,url,guide){const box=document.createElement('section');box.className='wizard-download';const h=document.createElement('h3');h.textContent=heading;const p=document.createElement('p');p.textContent=text;box.append(h,p,link(action,url,'button primary'));if(guide&&guide!==url)box.append(link('Hướng dẫn có hình →',guide,'text-link'));return box;}
+ function finish(){result.replaceChildren();const selection=document.getElementById('wizard-selection');if(device==='pc'){selection.textContent='PC / Windows';result.append(card('PC sắp hỗ trợ','Hiện bạn có thể dùng bản iPhone, Android hoặc Mac. Vào nhóm để xem thông báo khi có bản PC.','Xem thông báo trong nhóm','https://www.facebook.com/groups/4501840066744701'));}else{const d=devices[device];selection.textContent=d.title.replace('Cài trên ','')+(tv?' · '+tvs[tv][0]:' · Xem trên thiết bị');result.append(card(tv?'1. '+d.title:d.title,d.steps.join(' '),d.action,d.url,d.guide));if(tv){const t=tvs[tv];result.append(card('2. '+(tv==='unknown'?'Kiểm tra TV':t[0]),t[1],t[3],t[2]));}const note=document.createElement('p');note.className='wizard-note';note.textContent=tv?'Điện thoại hoặc Mac vẫn cần chạy dịch. Dùng chung Wi-Fi và kiểm tra TV tương thích trước khi mua gói.':d.note;result.append(note);}showStep(3);}
+ function close(){dialog.close();document.documentElement.classList.remove('setup-open');opener?.focus({preventScroll:true});}
+ document.querySelectorAll('a[href="#tai-app"]').forEach(a=>a.addEventListener('click',event=>{if(!dialog.showModal)return;event.preventDefault();opener=a;device=null;tv=null;document.getElementById('wizard-tv').hidden=true;dialog.querySelectorAll('[data-where]').forEach(b=>b.setAttribute('aria-pressed','false'));dialog.showModal();document.documentElement.classList.add('setup-open');showStep(1);}));
+ dialog.addEventListener('click',event=>{const d=event.target.closest('[data-device]');if(d){device=d.dataset.device;tv=null;document.getElementById('wizard-tv').hidden=true;if(device==='pc')finish();else showStep(2);}const where=event.target.closest('[data-where]');if(where){dialog.querySelectorAll('[data-where]').forEach(b=>b.setAttribute('aria-pressed',String(b===where)));if(where.dataset.where==='device'){tv=null;finish();}else document.getElementById('wizard-tv').hidden=false;}const t=event.target.closest('[data-tv]');if(t){tv=t.dataset.tv;finish();}});
+ document.getElementById('wizard-back').addEventListener('click',()=>showStep(step===3?(device==='pc'?1:2):1));document.getElementById('wizard-close').addEventListener('click',close);dialog.addEventListener('cancel',event=>{event.preventDefault();close();});
 })();

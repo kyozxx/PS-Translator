@@ -57,7 +57,7 @@
   function render() {
     const q = fold(field.value.trim());
     const found = games.filter(g => fold(g.name + ' ' + g.genre).includes(q));
-    const shown = found.slice(0, q ? 40 : 8);
+    const shown = found.slice(0, q ? 40 : 4);
     state.textContent = !found.length ? 'Chưa có game này? Bấm Yêu cầu game để gửi tên cho quản trị viên.'
       : q ? `Tìm thấy ${found.length} game${found.length > shown.length ? '. Xem đầy đủ tại Danh sách game.' : ''}`
       : `${games.length} game có hướng dẫn dịch riêng · Đang hiển thị ${shown.length} game`;
