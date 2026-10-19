@@ -49,7 +49,7 @@ Xem đời TV Samsung: trên TV vào **Cài đặt → Hỗ trợ → Giới thi
 Tải file **Console-Translator-TV.apk** (phiên bản 0.2.14):
 
 ```
-https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.14/Console-Translator-TV.apk
+https://api.kyozx.cloud/tv/latest
 ```
 
 Cách cài dễ nhất bằng remote TV:
@@ -59,7 +59,7 @@ Cách cài dễ nhất bằng remote TV:
 3. Mở Downloader, gõ đường link tải ở trên rồi bấm **Go**.
 4. Tải xong, bấm **Cài đặt**. Đã cài bản cũ thì cứ cài đè, không cần ghép nối lại.
 
-Hoặc nhập mã Downloader **5580719**.
+Hoặc nhập mã Downloader **8179089**.
 
 Từ bản 0.2.3, khi có bản mới app TV tự hiện nút **Cập nhật** ngay trên màn hình ghép nối: bấm vào là app tự tải và cài, không cần Downloader nữa.
 
@@ -110,10 +110,10 @@ TV Xiaomi và Redmi bán ở Trung Quốc tự tắt app phụ đề bản thư�
 Tải file **Console-Translator-TV-Mi.apk** (phiên bản 0.2.14-mi):
 
 ```
-https://github.com/kyozxx/PS-Translator/releases/download/tv-android-0.2.14-mi/Console-Translator-TV-Mi.apk
+https://api.kyozx.cloud/tv/latest-mi
 ```
 
-1. Cài như [Bước 1](#bước-1-cài-app), chỉ thay đường link bằng link ở trên (hoặc mã Downloader **1698710**). Nếu TV không có Google Play, cài **Downloader** hoặc **当贝市场 (Dangbei)** từ kho ứng dụng của Xiaomi, hoặc chép file APK qua USB rồi mở bằng trình quản lý tệp.
+1. Cài như [Bước 1](#bước-1-cài-app), chỉ thay đường link bằng link ở trên (hoặc mã Downloader **2484675**). Nếu TV không có Google Play, cài **Downloader** hoặc **当贝市场 (Dangbei)** từ kho ứng dụng của Xiaomi, hoặc chép file APK qua USB rồi mở bằng trình quản lý tệp.
 2. App có tên **Console Translator TV (Mi)**, cài được song song với bản thường. Đã lỡ cài bản thường thì nên gỡ đi cho đỡ nhầm.
 3. Cấp quyền hiển thị như [Bước 2](#bước-2-cấp-quyền-hiển-thị-phụ-đề). Trên TV Xiaomi, quyền này thường nằm ở **设置 (Cài đặt) → 应用 (Ứng dụng) → 权限 / 特殊权限 → 显示在其他应用上层 (Hiển thị trên ứng dụng khác)**.
 4. Mở app, ghép nối với iPhone như bình thường.
