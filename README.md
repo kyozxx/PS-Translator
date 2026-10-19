@@ -9,7 +9,8 @@
   <a href="https://kyozxx.github.io/PS-Translator/guide.html"><b>📖 Hướng dẫn đầy đủ</b></a> ·
   <a href="https://t.me/consoletranslatorbot"><b>📲 Nhận link cài app</b></a> ·
   <a href="https://t.me/pstranslator"><b>💬 Kênh Telegram</b></a> ·
-  <a href="https://kyozxx.github.io/Console-Translator/guide.html"><b>🤖 Bản Android</b></a>
+  <a href="https://kyozxx.github.io/Console-Translator/guide.html"><b>🤖 Bản Android</b></a> ·
+  <a href="https://kyozxx.github.io/PS-Translator/guide.html#mac"><b>💻 Bản Mac</b></a>
 </p>
 
 <p align="center">
