@@ -10,7 +10,8 @@
   <a href="https://t.me/consoletranslatorbot"><b>📲 Nhận link cài app</b></a> ·
   <a href="https://t.me/pstranslator"><b>💬 Kênh Telegram</b></a> ·
   <a href="https://kyozxx.github.io/Console-Translator/guide.html"><b>🤖 Bản Android</b></a> ·
-  <a href="https://kyozxx.github.io/PS-Translator/guide.html#mac"><b>💻 Bản Mac</b></a>
+  <a href="https://kyozxx.github.io/PS-Translator/guide.html#mac"><b>💻 Bản Mac</b></a> ·
+  <a href="https://kyozxx.github.io/PS-Translator/desktop.html#pc"><b>🖥️ Bản PC</b></a>
 </p>
 
 <p align="center">
@@ -63,9 +64,17 @@ Apple ID miễn phí: app hết hạn sau 7 ngày và phải cài lại.
 
 Cần Mac chip Apple (**M1 trở lên**) chạy **macOS 15 trở lên**.
 
-1. Tải [**ConsoleTranslator-Mac-1.3.dmg**](https://github.com/kyozxx/PS-Translator/releases/download/mac-1.3.0/ConsoleTranslator-Mac-1.3.dmg).
+1. Tải [**ConsoleTranslator-Mac-1.4.dmg**](https://github.com/kyozxx/PS-Translator/releases/download/mac-1.4.0/ConsoleTranslator-Mac-1.4.dmg).
 2. Mở file, kéo **Console Translator Mac** vào **Applications**.
 3. Mở bot [**t.me/consoletranslatorbot**](https://t.me/consoletranslatorbot), bấm **💻 App Mac** để nhận mã, dán mã vào app.
+
+### Bản PC (Windows)
+
+Cần **Windows 11**, hoặc **Windows 10 bản 2004** trở lên, máy 64-bit. Không cần cài thêm .NET.
+
+1. Tải [**ConsoleTranslator-PC-0.1.0.zip**](https://github.com/kyozxx/PS-Translator/releases/download/pc-0.1.0/ConsoleTranslator-PC-0.1.0.zip), giải nén vào một thư mục (ví dụ `C:\ConsoleTranslator`).
+2. Mở `PSTranslate.exe`. Nếu Windows hiện SmartScreen, bấm **Thông tin thêm** rồi **Vẫn chạy**.
+3. Mở bot [**t.me/consoletranslatorbot**](https://t.me/consoletranslatorbot), bấm **🖥️ App PC (Windows)** để nhận mã, dán mã vào app. Mã App Mac không dùng được trên PC.
 
 ## Bắt đầu nhanh
 
