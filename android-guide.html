@@ -74,7 +74,23 @@ body{background:var(--bg)}.top{border-color:var(--border)}
 <li>Thu hồi mã chỉ chặn cài tiếp, app đã cài vẫn mở được. Hiện trên HDMI được hay không tùy mẫu TV.</li>
 </ul></div></details>
 <p><a href="lg.html">Hướng dẫn đầy đủ và xử lý lỗi</a> · <a href="https://webostv.developer.lge.com/develop/getting-started/developer-mode-app">Developer Mode của LG</a></p>
-</div></details><details id="samsung-tv"><summary>Samsung</summary><p>TV Samsung từ 2017 trở lên. Cần máy tính Windows hoặc Mac để cài một lần.</p><p><a class="download-tv" href="https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.17/ConsoleTranslator-Samsung-PC-1.0.17.zip">Tải cho Windows</a> · <a class="download-tv" href="https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.14/ConsoleTranslator-Samsung-Mac-1.0.14.zip">Tải cho Mac</a> · <a href="https://t.me/consoletranslatorbot">Lấy mã cài</a></p><p>Giải nén và mở bộ cài, làm theo 3 bước trong app. <a href="samsung.html">Xem cách cài hoặc xử lý lỗi</a>.</p></details></div></section>
+</div></details><details id="samsung-tv"><summary>Samsung</summary><p>TV Samsung từ 2017 trở lên. Máy tính và TV cùng Wi-Fi.</p>
+<div><a class="download-button" href="https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.17/ConsoleTranslator-Samsung-PC-1.0.17.zip">Tải cho Windows</a><a class="download-button" href="https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.14/ConsoleTranslator-Samsung-Mac-1.0.14.zip">Tải cho Mac</a></div>
+<p>Windows 10/11 · Mac Intel hoặc M1 trở lên, macOS 12+.</p>
+<ol>
+<li><strong>Mở bộ cài.</strong> Giải nén ZIP. Windows mở Chay-Console-Translator.bat. Mac kéo Console Translator Samsung vào Applications rồi mở.</li>
+<li><strong>Chuẩn bị TV.</strong> Vào Home → Apps (Ứng dụng) → App Settings (Cài đặt ứng dụng). Bấm nút <strong>123</strong> (hoặc <strong>…</strong>) trên remote để hiện bàn phím số, chọn lần lượt <strong>1 2 3 4 5</strong>. Bật Developer Mode → On. Điền IP máy tính hiện trong bộ cài vào Host PC IP, rồi rút điện TV 30 giây và cắm lại. <a href="https://www.youtube.com/watch?v=F8kkdIh1TGY" target="_blank" rel="noopener noreferrer">Xem video bật Developer Mode</a>.</li>
+<li><strong>Cài lên TV.</strong> Nhập IP của TV vào bộ cài, bấm Kiểm tra kết nối TV. <a href="https://t.me/consoletranslatorbot">Lấy mã SSTV qua bot</a> bằng lệnh /samsung, nhập mã rồi bấm Cài đặt lên TV. Đăng nhập Samsung khi trình duyệt mở.</li>
+</ol>
+<p>Cài xong, mở Console Translator TV trên TV, chọn HDMI và ghép điện thoại bằng mã 8 số. Từ lần sau không cần máy tính.</p>
+<details><summary>Cập nhật hoặc gặp lỗi?</summary><ul>
+<li>Cập nhật: tải bộ cài mới phía trên, bấm Cài đặt lên TV. Công cụ tự gỡ bản cũ; có thể cần ghép lại điện thoại.</li>
+<li>Không thấy Developer Mode: vào App Settings rồi dùng nút 123 hoặc … trên remote. Xem video ở bước 2.</li>
+<li>Không kết nối: Host PC IP trên TV là IP máy tính; IP nhập trong bộ cài là IP TV. Rút điện TV 30 giây sau khi bật Developer Mode.</li>
+<li>Mac: giải nén và mở app từ Applications, không cần Terminal. Thiếu Node.js hoặc Rosetta thì cài bằng nút trong app.</li>
+<li>Vẫn lỗi: gửi ảnh thông báo vào <a href="https://t.me/pstranslator">nhóm hỗ trợ</a>, che mã SSTV trước khi gửi.</li>
+</ul></details>
+</details></div></section>
 </div>
 <div class="panel" id="panel-fix" role="tabpanel" aria-labelledby="tab-fix"><section class="area">
 <details id="connection-failed"><summary>Không kết nối được máy chơi game</summary><div class="body"><ol><li>Bật máy chơi game. Khi ghép lần đầu, để điện thoại và máy chơi game cùng mạng Wi-Fi hoặc cùng bộ phát mạng.</li><li>Kiểm tra đã bật <a href="#enable-remote">Chơi từ xa trên máy chơi game</a>.</li><li>Mở Chiaki-Up hoặc PXPlay, ghép máy và chờ hiện hình game trên điện thoại. Sau đó mới mở Console Translator và bấm <strong>Bắt đầu dịch</strong>.</li><li>Nếu app không tìm được máy, kiểm tra IP của máy chơi game và thử nhập IP thủ công trong app Remote Play.</li></ol><p class="caption">Console Translator trên Android dịch hình từ app Remote Play, không tự ghép nối với máy chơi game.</p></div></details>
