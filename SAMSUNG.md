@@ -2,9 +2,9 @@
 
 Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề lên TV Samsung Smart TV (Tizen, 2017 trở lên). Khi chơi, điện thoại vẫn chạy dịch và gửi phụ đề sang TV; PC chỉ cần lúc cài.
 
-[Tải bộ cài PC 1.0.15](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.15/ConsoleTranslator-Samsung-PC-1.0.15.zip) · [Tải bộ cài Mac 1.0.9](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.9/ConsoleTranslator-Samsung-Mac-1.0.9.zip) · [Nhận mã cài và hỗ trợ](https://t.me/pstranslator)
+[Tải bộ cài PC 1.0.17](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.17/ConsoleTranslator-Samsung-PC-1.0.17.zip) · [Tải bộ cài Mac 1.0.14](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.14/ConsoleTranslator-Samsung-Mac-1.0.14.zip) · [Nhận mã cài qua bot](https://t.me/consoletranslatorbot)
 
-Tải file `ConsoleTranslator-Samsung-PC-1.0.15.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
+Tải file `ConsoleTranslator-Samsung-PC-1.0.17.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
 
 ## TV nào dùng được
 
@@ -47,8 +47,8 @@ PC, điện thoại và TV cần cùng mạng Wi-Fi/LAN.
 
 ## Cài từ Mac, không cần Terminal
 
-1. [Tải bộ cài Mac 1.0.9](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.9/ConsoleTranslator-Samsung-Mac-1.0.9.zip), giải nén rồi kéo **Console Translator Samsung** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
-2. Mở app. Nếu macOS chặn vì app chưa notarize: bấm **Xong**, vào **Cài đặt hệ thống → Quyền riêng tư & Bảo mật → Vẫn mở**, rồi bấm **Mở**. Chỉ làm với ZIP từ GitHub chính thức.
+1. [Tải bộ cài Mac 1.0.14](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.14/ConsoleTranslator-Samsung-Mac-1.0.14.zip), giải nén rồi kéo **Console Translator Samsung** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
+2. Mở app từ Applications. Bản 1.0.14 đã ký Developer ID và được Apple công chứng (notarize), hỗ trợ cả Mac Intel và Apple Silicon. Không cần dùng Terminal.
 3. Nếu thiếu Node.js, bấm **Cài Node.js** trong app. Mac Apple Silicon cần thêm **Rosetta** của Apple; app sẽ hỏi và cài giúp.
 4. Làm theo ba bước đánh số trong app, giống bản Windows ở trên: **Bước 1** nhập **IP máy Mac** (số lớn trong app) vào ô **Host PC IP** trên TV rồi rút điện TV; **Bước 2** nhập IP của TV, bấm **Kiểm tra kết nối TV**; **Bước 3** nhập mã **SSTV** cấp riêng cho Mac, bấm **Cài đặt lên TV**, đăng nhập tài khoản Samsung khi trình duyệt mở.
 
@@ -69,9 +69,11 @@ Phím remote trong app: **Lên** đổi cổng HDMI, **Đỏ** xóa điện tho�
 
 ## Cập nhật app trên TV
 
-Không cần tải lại bộ cài (từ bản 1.0.2). Mở công cụ trên máy tính, bấm **Kiểm tra kết nối TV**: nếu có bản mới, nhật ký hiện dòng **CÓ BẢN MỚI**. Bấm **Cài đặt lên TV** để cập nhật. Máy tính đã kích hoạt có thể để trống ô mã cài; vẫn đăng nhập tài khoản Samsung như lần đầu. TV không tự cập nhật được app cài qua Developer Mode.
+Tải bộ cài Windows 1.0.17 hoặc Mac 1.0.14 ở đầu trang để nhận bản sửa cập nhật: công cụ gửi gói mới lên TV thành công rồi tự gỡ bản cũ và cài bản mới. Không cần gỡ thủ công. Cài lại có thể xóa thiết lập và ghép nối trên TV, hãy ghép lại điện thoại sau khi cài.
 
-Lưu ý: app trên TV và bộ cài trên máy tính có số phiên bản riêng (ví dụ app TV 1.1.2, bộ cài 1.0.15), đừng so hai số này với nhau. App TV bản cũ vẫn chơi được, chỉ chưa dùng được tính năng mới; khi có bản mới, chính TV cũng hiện thông báo.
+Không cần tải lại bộ cài (từ bản 1.0.2). Mở công cụ trên máy tính, bấm **Kiểm tra kết nối TV**: nếu có bản mới, nhật ký hiện dòng **CÓ BẢN MỚI**. Bấm **Cài đặt lên TV** để cập nhật. Nhập mã SSTV và đăng nhập tài khoản Samsung như lần đầu. Nếu chưa nhập mã, bộ cài hiện popup với nút **Lấy mã qua bot**; mở bot và gửi `/samsung`. TV không tự cập nhật được app cài qua Developer Mode.
+
+Lưu ý: app trên TV và bộ cài trên máy tính có số phiên bản riêng (ví dụ app TV 1.1.2, bộ cài 1.0.17), đừng so hai số này với nhau. App TV bản cũ vẫn chơi được, chỉ chưa dùng được tính năng mới; khi có bản mới, chính TV cũng hiện thông báo.
 
 Đang dùng bộ cài 1.0.0 hoặc 1.0.1: tải bản 1.0.2 một lần, giải nén vào thư mục mới.
 
