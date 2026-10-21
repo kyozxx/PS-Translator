@@ -72,8 +72,8 @@ Cần Mac chip Apple (**M1 trở lên**) chạy **macOS 15 trở lên**.
 
 Cần **Windows 11**, hoặc **Windows 10 bản 2004** trở lên, máy 64-bit. Không cần cài thêm .NET.
 
-1. Tải [**ConsoleTranslator-PC-0.1.0.zip**](https://github.com/kyozxx/PS-Translator/releases/download/pc-0.1.0/ConsoleTranslator-PC-0.1.0.zip), giải nén vào một thư mục (ví dụ `C:\ConsoleTranslator`).
-2. Mở `PSTranslate.exe`. Nếu Windows hiện SmartScreen, bấm **Thông tin thêm** rồi **Vẫn chạy**.
+1. Tải [**ConsoleTranslator-PC-1.0.2-Setup.exe**](https://github.com/kyozxx/PS-Translator/releases/download/pc-1.0.2/ConsoleTranslator-PC-1.0.2-Setup.exe).
+2. Mở file vừa tải và bấm **Cài đặt**. Cài xong, mở app từ biểu tượng **Console Translator** trên màn hình chính hoặc Start Menu. Nếu Windows hiện SmartScreen, bấm **Thông tin thêm** rồi **Vẫn chạy**.
 3. Mở bot [**t.me/consoletranslatorbot**](https://t.me/consoletranslatorbot), bấm **🖥️ App PC (Windows)** để nhận mã, dán mã vào app. Mã App Mac không dùng được trên PC.
 
 ## Bắt đầu nhanh
