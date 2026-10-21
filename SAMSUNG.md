@@ -9,7 +9,7 @@ Windows 10/11. Mac Intel hoặc M1 trở lên, macOS 12+. Bản Mac đã đượ
 ## Cài trong 3 bước
 
 1. **Mở bộ cài:** giải nén ZIP. Windows mở Chay-Console-Translator.bat. Mac kéo Console Translator Samsung vào Applications rồi mở.
-2. **Chuẩn bị TV:** mở Ứng dụng, bấm 1 2 3 4 5, bật Developer Mode. Điền IP máy tính hiện trong bộ cài vào Host PC IP, rồi rút điện TV 30 giây và cắm lại.
+2. **Chuẩn bị TV:** mở Home → Apps (Ứng dụng) → App Settings (Cài đặt ứng dụng). Bấm nút 123 (hoặc …) trên remote để hiện bàn phím số, chọn lần lượt 1 2 3 4 5. Khi bảng Developer Mode hiện ra, bật On. Điền IP máy tính hiện trong bộ cài vào Host PC IP, rồi rút điện TV 30 giây và cắm lại.
 3. **Cài lên TV:** nhập IP của TV vào bộ cài, bấm Kiểm tra kết nối TV. Gửi /samsung cho bot để lấy mã SSTV, nhập mã và bấm Cài đặt lên TV. Đăng nhập Samsung khi trình duyệt mở.
 
 Cài xong, mở Console Translator TV trên TV, chọn HDMI rồi ghép điện thoại bằng mã 8 số. Từ lần sau không cần máy tính.
@@ -35,5 +35,11 @@ Giải nén ZIP bằng Finder, kéo app vào Applications rồi mở. Không c�
 <details><summary>Cài đặt báo lỗi</summary>
 
 SS-REMOVE: gỡ app bằng remote rồi cài lại. Lỗi chứng chỉ: kiểm tra ngày giờ TV ở chế độ Tự động. Nếu vẫn lỗi, gửi ảnh thông báo và phiên bản bộ cài vào [nhóm hỗ trợ](https://t.me/pstranslator). Che mã SSTV trước khi gửi.
+
+</details>
+
+<details><summary>Không thấy bảng Developer Mode</summary>
+
+Vào App Settings bên trong Apps rồi mới mở bàn phím số bằng nút 123 hoặc … trên remote. TV giao diện cũ thì thử ngay tại màn hình Apps. Không cần tải app Developer Mode. [Hướng dẫn Samsung](https://developer.samsung.com/smarttv/develop/getting-started/using-sdk/tv-device.html).
 
 </details>
