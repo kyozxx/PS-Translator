@@ -64,7 +64,7 @@ Apple ID miễn phí: app hết hạn sau 7 ngày và phải cài lại.
 
 Cần Mac chip Apple (**M1 trở lên**) chạy **macOS 15 trở lên**.
 
-1. Tải [**ConsoleTranslator-Mac-1.4.dmg**](https://github.com/kyozxx/PS-Translator/releases/download/mac-1.4.0/ConsoleTranslator-Mac-1.4.dmg).
+1. Tải [**ConsoleTranslator-Mac-1.5.dmg**](https://github.com/kyozxx/PS-Translator/releases/download/mac-1.5.0/ConsoleTranslator-Mac-1.5.dmg).
 2. Mở file, kéo **Console Translator Mac** vào **Applications**.
 3. Mở bot [**t.me/consoletranslatorbot**](https://t.me/consoletranslatorbot), bấm **💻 App Mac** để nhận mã, dán mã vào app.
 
