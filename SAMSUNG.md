@@ -1,123 +1,39 @@
-# Cài phụ đề cho TV Samsung bằng Windows hoặc Mac
+# Cài phụ đề cho TV Samsung
 
-Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề lên TV Samsung Smart TV (Tizen, 2017 trở lên). Khi chơi, điện thoại vẫn chạy dịch và gửi phụ đề sang TV; PC chỉ cần lúc cài.
+TV Samsung từ 2017 trở lên. Máy tính và TV cùng Wi-Fi.
 
-[Tải bộ cài PC 1.0.17](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.17/ConsoleTranslator-Samsung-PC-1.0.17.zip) · [Tải bộ cài Mac 1.0.14](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.14/ConsoleTranslator-Samsung-Mac-1.0.14.zip) · [Nhận mã cài qua bot](https://t.me/consoletranslatorbot)
+[Tải Windows](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.17/ConsoleTranslator-Samsung-PC-1.0.17.zip) · [Tải Mac](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.14/ConsoleTranslator-Samsung-Mac-1.0.14.zip) · [Lấy mã cài](https://t.me/consoletranslatorbot)
 
-Tải file `ConsoleTranslator-Samsung-PC-1.0.17.zip`, không tải **Source code**. Bộ cài đang thử nghiệm; khả năng hiện hình HDMI tùy mẫu TV/firmware.
+Windows 10/11. Mac Intel hoặc M1 trở lên, macOS 12+. Bản Mac đã được Apple công chứng.
 
-## TV nào dùng được
+## Cài trong 3 bước
 
-- **Được (thử nghiệm):** TV Samsung từ năm 2017 trở lên, tức Tizen 3.0 trở lên. Một số TV đời 2018 đang gặp lỗi khi cài, chưa xử lý xong.
-- **Không dùng được:** TV Samsung 2016 trở về trước (Tizen 2.x). Bộ cài sẽ báo `SS-OLD_TV` và dừng.
+1. **Mở bộ cài:** giải nén ZIP. Windows mở Chay-Console-Translator.bat. Mac kéo Console Translator Samsung vào Applications rồi mở.
+2. **Chuẩn bị TV:** mở Ứng dụng, bấm 1 2 3 4 5, bật Developer Mode. Điền IP máy tính hiện trong bộ cài vào Host PC IP, rồi rút điện TV 30 giây và cắm lại.
+3. **Cài lên TV:** nhập IP của TV vào bộ cài, bấm Kiểm tra kết nối TV. Gửi /samsung cho bot để lấy mã SSTV, nhập mã và bấm Cài đặt lên TV. Đăng nhập Samsung khi trình duyệt mở.
 
-Xem đời TV Samsung: trên TV vào **Cài đặt → Hỗ trợ → Giới thiệu về TV**, xem mã model. Chữ cái sau số inch thường cho biết năm: K = 2016, M = 2017, N = 2018, R = 2019, T = 2020, A = 2021, B = 2022, C = 2023, D = 2024. Chắc chắn hơn: bấm **Kiểm tra kết nối TV** trong bộ cài, nhật ký hiện dòng "TV: Tizen ..."; Tizen 2.x là TV 2016 trở về trước.
+Cài xong, mở Console Translator TV trên TV, chọn HDMI rồi ghép điện thoại bằng mã 8 số. Từ lần sau không cần máy tính.
 
-Nếu bạn định mua gói PRO hoặc donate chỉ để dùng phụ đề trên TV Samsung, hãy cài app lên TV trước. Cài app TV không mất tiền; khi TV hiện được hình cổng HDMI và mã ghép nối 8 số thì hãy mua.
+<details><summary>Cập nhật bản cũ</summary>
 
-## Khác TV LG và Android TV ở đâu
+Tải bộ cài mới ở trên rồi bấm Cài đặt lên TV. Công cụ tự gỡ bản cũ trước khi cài lại. Có thể cần chọn lại HDMI và ghép lại điện thoại.
 
-TV Samsung không cho app nằm đè lên cổng HDMI. App **Console Translator TV** tự hiện hình cổng HDMI bên trong nó rồi vẽ phụ đề lên trên. Vì vậy bạn mở app trên TV để chơi, và bấm **Home** hoặc đổi nguồn sẽ thoát cả hình lẫn phụ đề; mở lại app để chơi tiếp.
+</details>
 
-## Ba bước cài từ Windows, không cần dòng lệnh
+<details><summary>Không kết nối được TV</summary>
 
-Giải nén ZIP, nhấp đúp **Chay-Console-Translator.bat**. Nếu công cụ báo thiếu Node.js, bấm **Cài Node.js**, cài bản LTS rồi quay lại. Công cụ hiện đúng ba bước dưới đây, đánh số 1, 2, 3.
+Host PC IP trên TV là IP máy tính. Ô IP trong bộ cài là IP của TV, xem tại Cài đặt → Mạng → Trạng thái mạng. Sau khi bật Developer Mode phải rút điện TV 30 giây.
 
-### Bước 1. Bật Developer Mode trên TV (làm trên TV, chỉ lần đầu)
+</details>
 
-1. Trên TV mở **Ứng dụng (Apps)**, bấm lần lượt **1 2 3 4 5** trên remote. Remote không có phím số: bấm nút **123** để hiện bàn phím số trên màn hình.
-2. Gạt **Developer mode** sang **On**.
-3. Ở ô **Host PC IP** trên TV, nhập **dãy số lớn màu vàng trong ô Bước 1 của công cụ**. Đó là IP của máy tính, không phải của TV.
-4. Bấm **OK**, rồi **rút dây nguồn TV 30 giây** và cắm lại. Tắt bằng remote không đủ.
+<details><summary>Mac báo lỗi Terminal hoặc không mở được app</summary>
 
-Đây là bước hay bị bỏ sót nhất: chưa nhập IP máy tính vào TV thì bước 2 luôn báo không kết nối được.
+Giải nén ZIP bằng Finder, kéo app vào Applications rồi mở. Không cần lệnh file hay bash. Tải lại bản mới ở đầu trang nếu đang dùng bản cũ. Thiếu Node.js hoặc Rosetta thì làm theo nút cài trong app.
 
-### Bước 2. Kết nối TV
+</details>
 
-1. Xem IP của TV ngay trên TV: **Cài đặt → Chung → Mạng → Trạng thái mạng → Cài đặt IP**.
-2. Nhập số đó vào ô **Địa chỉ IP của TV** trong công cụ, bấm **Kiểm tra kết nối TV**. Đây là IP của TV, khác với số ở bước 1; nhập nhầm IP máy tính thì công cụ báo ngay.
+<details><summary>Cài đặt báo lỗi</summary>
 
-PC, điện thoại và TV cần cùng mạng Wi-Fi/LAN.
+SS-REMOVE: gỡ app bằng remote rồi cài lại. Lỗi chứng chỉ: kiểm tra ngày giờ TV ở chế độ Tự động. Nếu vẫn lỗi, gửi ảnh thông báo và phiên bản bộ cài vào [nhóm hỗ trợ](https://t.me/pstranslator). Che mã SSTV trước khi gửi.
 
-### Bước 3. Cài Console Translator
-
-1. Dán đầy đủ **mã cài bắt đầu bằng `SSTV-`** được cấp riêng qua Telegram, bấm **Cài đặt lên TV**.
-2. Trình duyệt mở trang Samsung: **đăng nhập tài khoản Samsung của bạn** (miễn phí, email đã xác minh). Samsung chỉ cho cài app ngoài cửa hàng khi gói cài được cấp chứng chỉ cho đúng TV của bạn; công cụ dùng lần đăng nhập này để xin chứng chỉ đó và không thấy mật khẩu.
-3. Chờ thông báo đã cài xong. Cần Internet để kiểm tra mã và tải gói.
-
-## Cài từ Mac, không cần Terminal
-
-1. [Tải bộ cài Mac 1.0.14](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.14/ConsoleTranslator-Samsung-Mac-1.0.14.zip), giải nén rồi kéo **Console Translator Samsung** vào **Applications**. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.
-2. Mở app từ Applications. Bản 1.0.14 đã ký Developer ID và được Apple công chứng (notarize), hỗ trợ cả Mac Intel và Apple Silicon. Không cần dùng Terminal.
-3. Nếu thiếu Node.js, bấm **Cài Node.js** trong app. Mac Apple Silicon cần thêm **Rosetta** của Apple; app sẽ hỏi và cài giúp.
-4. Làm theo ba bước đánh số trong app, giống bản Windows ở trên: **Bước 1** nhập **IP máy Mac** (số lớn trong app) vào ô **Host PC IP** trên TV rồi rút điện TV; **Bước 2** nhập IP của TV, bấm **Kiểm tra kết nối TV**; **Bước 3** nhập mã **SSTV** cấp riêng cho Mac, bấm **Cài đặt lên TV**, đăng nhập tài khoản Samsung khi trình duyệt mở.
-
-Mã đã kích hoạt trên Windows không chuyển sang Mac, hãy nhận mã riêng.
-
-## Mỗi lần chơi
-
-1. Bật PX5/máy chơi game.
-2. Trên TV mở **Ứng dụng → Console Translator TV**. Lần đầu chọn cổng HDMI của máy chơi game.
-3. Chạy dịch trên điện thoại như bình thường. Không cần máy tính.
-
-Phím remote trong app: **Lên** đổi cổng HDMI, **Đỏ** xóa điện thoại đã ghép, **Back** thoát.
-
-## Ghép phụ đề từ điện thoại
-
-1. Mở **Phụ đề trên TV** trong app trên iPhone hoặc Android, chọn TV hoặc nhập địa chỉ hiện trên TV.
-2. Nhập mã phụ đề **8 số** đang hiện trên TV, bấm **Kết nối**. Chỉ cần làm lần đầu. Đây không phải mã cài PC.
-
-## Cập nhật app trên TV
-
-Tải bộ cài Windows 1.0.17 hoặc Mac 1.0.14 ở đầu trang để nhận bản sửa cập nhật: công cụ gửi gói mới lên TV thành công rồi tự gỡ bản cũ và cài bản mới. Không cần gỡ thủ công. Cài lại có thể xóa thiết lập và ghép nối trên TV, hãy ghép lại điện thoại sau khi cài.
-
-Sau khi đã tải bộ cài Windows 1.0.17 hoặc Mac 1.0.14, các lần cập nhật app TV tiếp theo không cần tải lại bộ cài. Mở công cụ trên máy tính, bấm **Kiểm tra kết nối TV**: nếu có bản mới, nhật ký hiện dòng **CÓ BẢN MỚI**. Bấm **Cài đặt lên TV** để cập nhật. Nhập mã SSTV và đăng nhập tài khoản Samsung như lần đầu. Nếu chưa nhập mã, bộ cài hiện popup với nút **Lấy mã qua bot**; mở bot và gửi `/samsung`. TV không tự cập nhật được app cài qua Developer Mode.
-
-Lưu ý: app trên TV và bộ cài trên máy tính có số phiên bản riêng (ví dụ app TV 1.1.2, bộ cài 1.0.17), đừng so hai số này với nhau. App TV bản cũ vẫn chơi được, chỉ chưa dùng được tính năng mới; khi có bản mới, chính TV cũng hiện thông báo.
-
-Nếu đang dùng bản cũ hơn Windows 1.0.17 hoặc Mac 1.0.14, tải bản mới ở đầu trang để có sửa lỗi cập nhật.
-
-Bộ cài cũng tự báo khi chính nó có bản mới: mỗi lần bấm một nút, nhật ký hiện dòng **BỘ CÀI CÓ BẢN MỚI** kèm link tải nếu bạn đang dùng bản cũ.
-
-## Phân biệt các mã
-
-| Mã | Dùng ở đâu? |
-| --- | --- |
-| `SSTV-YYYYMMDD-HHMMSS-…` | Nhập trong bộ cài Windows hoặc Mac cho TV Samsung. |
-| `LGTV-YYYYMMDD-HHMMSS-…` | Chỉ dùng cho bộ cài TV LG, không dùng cho Samsung. |
-| `ANDROID-YYYYMMDD-HHMMSS-…` | Kích hoạt app beta trên điện thoại Android. |
-| Mã phụ đề 8 số trên Console Translator TV | Nhập trên điện thoại để ghép phụ đề; mã đổi mỗi phút. |
-
-Mã cài gắn với tài khoản Windows đã kích hoạt; đổi máy cần mã mới. Mã hết hạn hoặc bị thu hồi chỉ chặn cài tiếp, app đã cài trên TV vẫn mở được.
-
-## Dữ liệu
-
-- ZIP không chứa app TV. Công cụ tải app sau khi kiểm tra mã, ký riêng cho TV của bạn rồi cài.
-- PC chỉ lưu IP của TV và khóa máy. Mã cài, đăng nhập Samsung và chứng chỉ không được lưu.
-
-## Các lỗi vừa gặp và cách xử lý
-
-- **Mac báo No such file or directory khi dùng file/bash:** Terminal không tìm thấy đường dẫn đã nhập. Đóng Terminal, giải nén ZIP bằng Finder, kéo Console Translator Samsung.app vào Applications rồi mở app. Không cần lệnh file hay bash.
-- **Mac vẫn cảnh báo nhà phát triển:** tải lại Mac 1.0.14 từ link đầu trang và mở đúng app mới trong Applications. Bản này đã được Apple công chứng. Nếu vẫn lỗi, gửi ảnh đầy đủ cảnh báo và phiên bản macOS cho hỗ trợ.
-- **Cập nhật chỉ thành công sau khi gỡ bản cũ:** dùng Windows 1.0.17 hoặc Mac 1.0.14. Bộ cài tự gỡ rồi cài lại sau khi gửi gói thành công. Nếu báo SS-REMOVE, gỡ Console Translator TV trong Ứng dụng trên TV bằng remote rồi chạy lại bộ cài.
-- **Chưa nhập key:** chọn Lấy mã qua bot trong popup, gửi `/samsung` cho [bot](https://t.me/consoletranslatorbot), rồi nhập đầy đủ mã SSTV còn hạn. Mã này khác mã ghép điện thoại 8 số.
-- **Sau khi cài lại không kết nối điện thoại:** mở app trên TV, chọn lại HDMI nếu được hỏi rồi ghép điện thoại bằng mã 8 số mới trên TV.
-
-Khi cần hỗ trợ, gửi ảnh toàn bộ thông báo, số phiên bản bộ cài và dòng TV: Tizen … trong nhật ký. Che mã SSTV và thông tin đăng nhập trước khi gửi.
-
-## Nếu chưa được
-
-- **Bấm 1 2 3 4 5 không hiện gì:** phải đang ở đúng màn hình Ứng dụng; bấm nhanh liền mạch hoặc dùng bàn phím số trên màn hình.
-- **Không kết nối TV:** từ bản Windows 1.0.6 / Mac 1.0.5 công cụ nói rõ nguyên nhân:
-  - `SS-NO_DEVICE`: không có thiết bị nào ở IP đã nhập. Sai IP của TV, TV đang tắt, hoặc TV và máy tính khác mạng.
-  - `SS-PORT_CLOSED`: đúng TV nhưng Developer Mode chưa có hiệu lực. Rút dây nguồn TV 30 giây rồi cắm lại, mở Ứng dụng phải thấy chữ Developer Mode.
-  - `SS-REFUSED`: TV từ chối máy tính này. Ô Host PC IP trên TV chưa đúng số ở Bước 1 (IP máy tính có thể đổi sau khi khởi động lại modem), hoặc máy tính đang bật VPN.
-  - `SS-SDB_RUN`: máy tính không chạy được công cụ kết nối của Samsung, thường do phần mềm diệt virus chặn.
-- **Cài báo `SS-TV_CERTIFICATE` hoặc `install failed[118012]`:** TV không nhận chứng chỉ vừa cấp, thường do đồng hồ TV chạy chậm hoặc sai ngày. Từ bản Windows 1.0.8 / Mac 1.0.7 bộ cài gửi kèm giấy phép cài đặt của Samsung lên TV (TV đời 2018 trở về trước cần file này), và tự chờ rồi thử lại vài lần. Nếu vẫn lỗi: trên TV vào **Cài đặt → Chung → Quản lý hệ thống → Thời gian → Đồng hồ**, chọn **Tự động**, rồi cài lại.
-- **Cài báo `SS-CERT_REJECTED`:** TV từ chối chứng chỉ vì lý do khác đồng hồ (thường gặp trên TV đời mới Tizen 8/9, ví dụ "Invalid certificate chain"). Chỉnh giờ không giúp được; chụp dòng lỗi có câu gốc của TV gửi hỗ trợ.
-- **`SS-OLD_TV`:** TV sản xuất trước năm 2017 (Tizen 2.x). App cần Tizen 3.0 trở lên nên TV này chưa cài được. Xem đời TV: bấm **Kiểm tra kết nối TV**, dòng "TV: Tizen ..." trong nhật ký.
-- **Không cài được:** kiểm tra mã SSTV còn hạn và kết nối Internet. Nếu vẫn lỗi, sao chép toàn bộ log (có mã lỗi `SS-…`) gửi hỗ trợ.
-- **Không thấy cổng HDMI trong app:** cắm và bật máy chơi game trước khi mở app.
-- **App biến mất sau một thời gian:** TV có thể tự tắt Developer Mode và gỡ app cài ngoài. Bật lại Developer Mode rồi cài lại.
-
-[Telegram hỗ trợ](https://t.me/pstranslator)
+</details>
