@@ -162,7 +162,7 @@ Cài bằng [bộ cài Windows 1.2.17](https://github.com/kyozxx/PS-Translator/r
 
 ## TV Samsung (Tizen)
 
-Cài bằng [bộ cài Windows 1.0.15](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.15/ConsoleTranslator-Samsung-PC-1.0.15.zip) hoặc [bộ cài Mac 1.0.9](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.9/ConsoleTranslator-Samsung-Mac-1.0.9.zip), nhập đầy đủ mã `SSTV-…` được cấp riêng và đăng nhập tài khoản Samsung của bạn khi được hỏi. Xem [hướng dẫn cài TV Samsung từng bước](SAMSUNG.md).
+Cài bằng [bộ cài Windows 1.0.17](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.17/ConsoleTranslator-Samsung-PC-1.0.17.zip) hoặc [bộ cài Mac 1.0.14](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.14/ConsoleTranslator-Samsung-Mac-1.0.14.zip), nhập đầy đủ mã `SSTV-…` được cấp riêng và đăng nhập tài khoản Samsung của bạn khi được hỏi. Xem [hướng dẫn cài TV Samsung từng bước](SAMSUNG.md).
 
 Trên Samsung, app tự hiện hình cổng HDMI bên trong nó: mở **Console Translator TV** trên TV để chơi, bấm Home sẽ thoát cả hình lẫn phụ đề.
 

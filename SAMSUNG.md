@@ -71,11 +71,11 @@ Phím remote trong app: **Lên** đổi cổng HDMI, **Đỏ** xóa điện tho�
 
 Tải bộ cài Windows 1.0.17 hoặc Mac 1.0.14 ở đầu trang để nhận bản sửa cập nhật: công cụ gửi gói mới lên TV thành công rồi tự gỡ bản cũ và cài bản mới. Không cần gỡ thủ công. Cài lại có thể xóa thiết lập và ghép nối trên TV, hãy ghép lại điện thoại sau khi cài.
 
-Không cần tải lại bộ cài (từ bản 1.0.2). Mở công cụ trên máy tính, bấm **Kiểm tra kết nối TV**: nếu có bản mới, nhật ký hiện dòng **CÓ BẢN MỚI**. Bấm **Cài đặt lên TV** để cập nhật. Nhập mã SSTV và đăng nhập tài khoản Samsung như lần đầu. Nếu chưa nhập mã, bộ cài hiện popup với nút **Lấy mã qua bot**; mở bot và gửi `/samsung`. TV không tự cập nhật được app cài qua Developer Mode.
+Sau khi đã tải bộ cài Windows 1.0.17 hoặc Mac 1.0.14, các lần cập nhật app TV tiếp theo không cần tải lại bộ cài. Mở công cụ trên máy tính, bấm **Kiểm tra kết nối TV**: nếu có bản mới, nhật ký hiện dòng **CÓ BẢN MỚI**. Bấm **Cài đặt lên TV** để cập nhật. Nhập mã SSTV và đăng nhập tài khoản Samsung như lần đầu. Nếu chưa nhập mã, bộ cài hiện popup với nút **Lấy mã qua bot**; mở bot và gửi `/samsung`. TV không tự cập nhật được app cài qua Developer Mode.
 
 Lưu ý: app trên TV và bộ cài trên máy tính có số phiên bản riêng (ví dụ app TV 1.1.2, bộ cài 1.0.17), đừng so hai số này với nhau. App TV bản cũ vẫn chơi được, chỉ chưa dùng được tính năng mới; khi có bản mới, chính TV cũng hiện thông báo.
 
-Đang dùng bộ cài 1.0.0 hoặc 1.0.1: tải bản 1.0.2 một lần, giải nén vào thư mục mới.
+Nếu đang dùng bản cũ hơn Windows 1.0.17 hoặc Mac 1.0.14, tải bản mới ở đầu trang để có sửa lỗi cập nhật.
 
 Bộ cài cũng tự báo khi chính nó có bản mới: mỗi lần bấm một nút, nhật ký hiện dòng **BỘ CÀI CÓ BẢN MỚI** kèm link tải nếu bạn đang dùng bản cũ.
 
@@ -94,6 +94,16 @@ Mã cài gắn với tài khoản Windows đã kích hoạt; đổi máy cần m
 
 - ZIP không chứa app TV. Công cụ tải app sau khi kiểm tra mã, ký riêng cho TV của bạn rồi cài.
 - PC chỉ lưu IP của TV và khóa máy. Mã cài, đăng nhập Samsung và chứng chỉ không được lưu.
+
+## Các lỗi vừa gặp và cách xử lý
+
+- **Mac báo No such file or directory khi dùng file/bash:** Terminal không tìm thấy đường dẫn đã nhập. Đóng Terminal, giải nén ZIP bằng Finder, kéo Console Translator Samsung.app vào Applications rồi mở app. Không cần lệnh file hay bash.
+- **Mac vẫn cảnh báo nhà phát triển:** tải lại Mac 1.0.14 từ link đầu trang và mở đúng app mới trong Applications. Bản này đã được Apple công chứng. Nếu vẫn lỗi, gửi ảnh đầy đủ cảnh báo và phiên bản macOS cho hỗ trợ.
+- **Cập nhật chỉ thành công sau khi gỡ bản cũ:** dùng Windows 1.0.17 hoặc Mac 1.0.14. Bộ cài tự gỡ rồi cài lại sau khi gửi gói thành công. Nếu báo SS-REMOVE, gỡ Console Translator TV trong Ứng dụng trên TV bằng remote rồi chạy lại bộ cài.
+- **Chưa nhập key:** chọn Lấy mã qua bot trong popup, gửi `/samsung` cho [bot](https://t.me/consoletranslatorbot), rồi nhập đầy đủ mã SSTV còn hạn. Mã này khác mã ghép điện thoại 8 số.
+- **Sau khi cài lại không kết nối điện thoại:** mở app trên TV, chọn lại HDMI nếu được hỏi rồi ghép điện thoại bằng mã 8 số mới trên TV.
+
+Khi cần hỗ trợ, gửi ảnh toàn bộ thông báo, số phiên bản bộ cài và dòng TV: Tizen … trong nhật ký. Che mã SSTV và thông tin đăng nhập trước khi gửi.
 
 ## Nếu chưa được
 
