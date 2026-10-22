@@ -2,7 +2,7 @@
 
 TV Samsung từ 2017 trở lên. Máy tính và TV cùng Wi-Fi.
 
-[Tải Windows](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.17/ConsoleTranslator-Samsung-PC-1.0.17.zip) · [Tải Mac](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.14/ConsoleTranslator-Samsung-Mac-1.0.14.zip) · [Lấy mã cài](https://t.me/consoletranslatorbot)
+[Tải Windows](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.18/ConsoleTranslator-Samsung-PC-1.0.18.zip) · [Tải Mac](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.15/ConsoleTranslator-Samsung-Mac-1.0.15.zip) · [Lấy mã cài](https://t.me/consoletranslatorbot)
 
 Windows 10/11. Mac Intel hoặc M1 trở lên, macOS 12+. Bản Mac đã được Apple công chứng.
 
