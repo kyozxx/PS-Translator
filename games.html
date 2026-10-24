@@ -34,14 +34,14 @@ li p { color: var(--muted); font-size: 14px; }
 .request-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
 .request-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; }
 </style>
-<link rel="stylesheet" href="guide-theme.css"></head>
-<body><nav class="site-guide-nav"><a href="index.html">‹ Trang chủ</a><a href="guide.html">Hướng dẫn iOS</a><a href="android-guide.html">Android</a><a href="games.html">Danh sách game</a></nav>
+</head>
+<body>
 <div class="wrap">
 <p><a href="guide.html">‹ Hướng dẫn</a></p>
 <h1>Danh sách game</h1>
 <p class="lead">Danh sách 73 game đã có hướng dẫn dịch riêng, giúp Dịch AI chọn văn phong với từng game. Bấm "Sao chép tên", dán vào ô "Đang chơi game" trong Hồ sơ game của app, rồi bấm "Kiểm tra game". Cần gói Premium (Dịch AI): bản dịch thường không dịch theo game.</p>
 <input id="q" type="search" placeholder="Tìm tên game…" aria-label="Tìm tên game" autocomplete="off">
-<label class="filter"><input id="vh" type="checkbox"> Chỉ game có bản Việt hóa (4)</label>
+<label class="filter"><input id="vh" type="checkbox"> Chỉ game có bản Việt hóa (5)</label>
 <p class="note">★ Việt hóa: app Mac và iPhone dùng thẳng bản Việt hóa của game cho câu có sẵn, hiện ngay và không tốn lượt Dịch AI. Câu không có trong bản Việt hóa vẫn được dịch như thường.</p>
 <p class="note">Lưu ý: Các bản Việt hóa có thể còn thiếu một số đoạn. Những đoạn chưa có bản Việt hóa, app vẫn dùng AI để dịch.</p>
 <p class="note">Các bản Việt hóa được tổng hợp từ nhiều nguồn. Xin cảm ơn các nhóm dịch và cộng đồng đã thực hiện, đóng góp và chia sẻ các bản Việt hóa.</p>
@@ -56,6 +56,7 @@ li p { color: var(--muted); font-size: 14px; }
 <p class="note" id="copy-status" role="status" aria-live="polite"></p>
 <ul id="list">
 <li data-s="black myth: wukong wukong than thoai / co phong viet hoa" data-vh="1"><div class="game-heading"><b>Black Myth: Wukong <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Black Myth: Wukong" aria-label="Sao chép tên Black Myth: Wukong">Sao chép tên</button></div><span>Thần thoại / Cổ phong</span><p>Hán-Việt cổ phong, thuật ngữ Tây Du nhất quán.</p><p>Nguồn Việt hóa: TheRedTeam.</p></li>
+<li data-s="call of duty: modern warfare 4 cod-mw4 ban sung / quan su viet hoa" data-vh="1"><div class="game-heading"><b>Call of Duty: Modern Warfare 4 <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Call of Duty: Modern Warfare 4" aria-label="Sao chép tên Call of Duty: Modern Warfare 4">Sao chép tên</button></div><span>Bắn súng / Quân sự</span><p>Giọng quân đội gọn, dứt khoát; xưng hô theo cấp bậc và đồng đội.</p><p>Nguồn Việt hóa: durmuskaracacc.</p></li>
 <li data-s="god of war / ragnarok gow than thoai viet hoa" data-vh="1"><div class="game-heading"><b>God of War / Ragnarök <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="God of War / Ragnarök" aria-label="Sao chép tên God of War / Ragnarök">Sao chép tên</button></div><span>Thần thoại</span><p>Thần thoại Bắc Âu, lời thoại gọn và có sức nặng.</p></li>
 <li data-s="red dead redemption 2 rdr2 cao boi viet hoa" data-vh="1"><div class="game-heading"><b>Red Dead Redemption 2 <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Red Dead Redemption 2" aria-label="Sao chép tên Red Dead Redemption 2">Sao chép tên</button></div><span>Cao bồi</span><p>Bụi bặm, miền Tây; xưng hô theo vai vế.</p><p>Nguồn Việt hóa: TheRedTeam.</p></li>
 <li data-s="the witcher 3 witcher3 nhap vai viet hoa" data-vh="1"><div class="game-heading"><b>The Witcher 3 <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="The Witcher 3" aria-label="Sao chép tên The Witcher 3">Sao chép tên</button></div><span>Nhập vai</span><p>Kỳ ảo trưởng thành, lời thoại tự nhiên, tiết chế.</p></li>
@@ -66,7 +67,6 @@ li p { color: var(--muted); font-size: 14px; }
 <li data-s="assassin's creed shadows ac-shadows hanh đong / lich su nhat " data-vh="0"><div class="game-heading"><b>Assassin's Creed Shadows</b><button type="button" class="copy-name" data-name="Assassin's Creed Shadows" aria-label="Sao chép tên Assassin's Creed Shadows">Sao chép tên</button></div><span>Hành động / Lịch sử Nhật</span><p>Nhật thời Chiến Quốc, trang nghiêm.</p></li>
 <li data-s="baldur’s gate 3 baldursgate nhap vai " data-vh="0"><div class="game-heading"><b>Baldur’s Gate 3</b><button type="button" class="copy-name" data-name="Baldur’s Gate 3" aria-label="Sao chép tên Baldur’s Gate 3">Sao chép tên</button></div><span>Nhập vai</span><p>Đối thoại nhiều lựa chọn, thuật ngữ D&amp;D.</p></li>
 <li data-s="bloodborne bloodborne nhap vai hanh đong / kinh di gothic " data-vh="0"><div class="game-heading"><b>Bloodborne</b><button type="button" class="copy-name" data-name="Bloodborne" aria-label="Sao chép tên Bloodborne">Sao chép tên</button></div><span>Nhập vai hành động / Kinh dị Gothic</span><p>Yharnam, cuộc săn và giấc mơ, giọng u ám tiết chế, thuật ngữ máu nhất quán.</p></li>
-<li data-s="call of duty: modern warfare 4 cod-mw4 ban sung / quan su " data-vh="0"><div class="game-heading"><b>Call of Duty: Modern Warfare 4</b><button type="button" class="copy-name" data-name="Call of Duty: Modern Warfare 4" aria-label="Sao chép tên Call of Duty: Modern Warfare 4">Sao chép tên</button></div><span>Bắn súng / Quân sự</span><p>Giọng quân đội gọn, dứt khoát; xưng hô theo cấp bậc và đồng đội.</p></li>
 <li data-s="control control hanh đong / sieu nhien / bi an " data-vh="0"><div class="game-heading"><b>Control</b><button type="button" class="copy-name" data-name="Control" aria-label="Sao chép tên Control">Sao chép tên</button></div><span>Hành động / Siêu nhiên / Bí ẩn</span><p>Ngôn ngữ cơ quan lạnh, hiện tượng siêu nhiên và lời thoại đời thường.</p></li>
 <li data-s="cyberpunk 2077 cyberpunk khoa hoc vien tuong " data-vh="0"><div class="game-heading"><b>Cyberpunk 2077</b><button type="button" class="copy-name" data-name="Cyberpunk 2077" aria-label="Sao chép tên Cyberpunk 2077">Sao chép tên</button></div><span>Khoa học viễn tưởng</span><p>Đường phố tương lai, phân biệt công nghệ và tiếng lóng.</p></li>
 <li data-s="days gone days-gone hau tan the / biker " data-vh="0"><div class="game-heading"><b>Days Gone</b><button type="button" class="copy-name" data-name="Days Gone" aria-label="Sao chép tên Days Gone">Sao chép tên</button></div><span>Hậu tận thế / Biker</span><p>Biker, bụi bặm, thân tình.</p></li>
