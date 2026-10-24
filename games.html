@@ -34,8 +34,8 @@ li p { color: var(--muted); font-size: 14px; }
 .request-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
 .request-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; }
 </style>
-</head>
-<body>
+<link rel="stylesheet" href="guide-theme.css"></head>
+<body><nav class="site-guide-nav"><a href="index.html">‹ Trang chủ</a><a href="guide.html">Hướng dẫn iOS</a><a href="android-guide.html">Android</a><a href="games.html">Danh sách game</a></nav>
 <div class="wrap">
 <p><a href="guide.html">‹ Hướng dẫn</a></p>
 <h1>Danh sách game</h1>
@@ -43,6 +43,8 @@ li p { color: var(--muted); font-size: 14px; }
 <input id="q" type="search" placeholder="Tìm tên game…" aria-label="Tìm tên game" autocomplete="off">
 <label class="filter"><input id="vh" type="checkbox"> Chỉ game có bản Việt hóa (4)</label>
 <p class="note">★ Việt hóa: app Mac và iPhone dùng thẳng bản Việt hóa của game cho câu có sẵn, hiện ngay và không tốn lượt Dịch AI. Câu không có trong bản Việt hóa vẫn được dịch như thường.</p>
+<p class="note">Lưu ý: Các bản Việt hóa có thể còn thiếu một số đoạn. Những đoạn chưa có bản Việt hóa, app vẫn dùng AI để dịch.</p>
+<p class="note">Các bản Việt hóa được tổng hợp từ nhiều nguồn. Xin cảm ơn các nhóm dịch và cộng đồng đã thực hiện, đóng góp và chia sẻ các bản Việt hóa.</p>
 <details class="request-game" id="request-game">
 <summary>Yêu cầu game</summary>
 <p class="note">Chưa có game bạn đang chơi? Gửi tên game qua bot hoặc nhắn vào nhóm Telegram. Với bot, bấm Start rồi gửi <code>/yeucau Tên game</code>.</p>
@@ -53,9 +55,9 @@ li p { color: var(--muted); font-size: 14px; }
 </details>
 <p class="note" id="copy-status" role="status" aria-live="polite"></p>
 <ul id="list">
-<li data-s="black myth: wukong wukong than thoai / co phong viet hoa" data-vh="1"><div class="game-heading"><b>Black Myth: Wukong <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Black Myth: Wukong" aria-label="Sao chép tên Black Myth: Wukong">Sao chép tên</button></div><span>Thần thoại / Cổ phong</span><p>Hán-Việt cổ phong, thuật ngữ Tây Du nhất quán.</p></li>
+<li data-s="black myth: wukong wukong than thoai / co phong viet hoa" data-vh="1"><div class="game-heading"><b>Black Myth: Wukong <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Black Myth: Wukong" aria-label="Sao chép tên Black Myth: Wukong">Sao chép tên</button></div><span>Thần thoại / Cổ phong</span><p>Hán-Việt cổ phong, thuật ngữ Tây Du nhất quán.</p><p>Nguồn Việt hóa: TheRedTeam.</p></li>
 <li data-s="god of war / ragnarok gow than thoai viet hoa" data-vh="1"><div class="game-heading"><b>God of War / Ragnarök <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="God of War / Ragnarök" aria-label="Sao chép tên God of War / Ragnarök">Sao chép tên</button></div><span>Thần thoại</span><p>Thần thoại Bắc Âu, lời thoại gọn và có sức nặng.</p></li>
-<li data-s="red dead redemption 2 rdr2 cao boi viet hoa" data-vh="1"><div class="game-heading"><b>Red Dead Redemption 2 <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Red Dead Redemption 2" aria-label="Sao chép tên Red Dead Redemption 2">Sao chép tên</button></div><span>Cao bồi</span><p>Bụi bặm, miền Tây; xưng hô theo vai vế.</p></li>
+<li data-s="red dead redemption 2 rdr2 cao boi viet hoa" data-vh="1"><div class="game-heading"><b>Red Dead Redemption 2 <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Red Dead Redemption 2" aria-label="Sao chép tên Red Dead Redemption 2">Sao chép tên</button></div><span>Cao bồi</span><p>Bụi bặm, miền Tây; xưng hô theo vai vế.</p><p>Nguồn Việt hóa: TheRedTeam.</p></li>
 <li data-s="the witcher 3 witcher3 nhap vai viet hoa" data-vh="1"><div class="game-heading"><b>The Witcher 3 <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="The Witcher 3" aria-label="Sao chép tên The Witcher 3">Sao chép tên</button></div><span>Nhập vai</span><p>Kỳ ảo trưởng thành, lời thoại tự nhiên, tiết chế.</p></li>
 <li data-s="a plague tale: innocence plague-tale-innocence phieu luu / len lut / sinh ton " data-vh="0"><div class="game-heading"><b>A Plague Tale: Innocence</b><button type="button" class="copy-name" data-name="A Plague Tale: Innocence" aria-label="Sao chép tên A Plague Tale: Innocence">Sao chép tên</button></div><span>Phiêu lưu / Lén lút / Sinh tồn</span><p>Lời thoại thời dịch bệnh, tình chị em và nỗi sợ được giữ mộc mạc.</p></li>
 <li data-s="a plague tale: requiem plague-tale-requiem phieu luu / len lut / chinh kich " data-vh="0"><div class="game-heading"><b>A Plague Tale: Requiem</b><button type="button" class="copy-name" data-name="A Plague Tale: Requiem" aria-label="Sao chép tên A Plague Tale: Requiem">Sao chép tên</button></div><span>Phiêu lưu / Lén lút / Chính kịch</span><p>Sinh tồn u tối, hy vọng cứu Hugo và tình chị em không tô bi kịch.</p></li>
