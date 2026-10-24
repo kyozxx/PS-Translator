@@ -2,159 +2,505 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Danh sách game</title>
-<meta name="description" content="Danh sách game đã có hướng dẫn dịch riêng cho Dịch AI của Console Translator.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Thư viện game · Console Translator</title>
+<meta name="description" content="Tìm game Console Translator hỗ trợ, xem phạm vi Việt hóa và nguồn bản dịch, sao chép tên game để sử dụng trong app.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <style>
-:root { --bg: #f7f3ea; --card: #fffdf8; --border: #e7dfcd; --text: #1b1a17; --muted: #5f5a50; --accent: #9a5b00; }
-@media (prefers-color-scheme: dark) { :root { --bg: #17150f; --card: #211e17; --border: #3a3427; --text: #f3ede0; --muted: #b3aa98; --accent: #f2a516; } }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 28px 16px 40px; }
-.wrap { max-width: 660px; margin: 0 auto; }
-a { color: var(--accent); }
-h1 { font-size: 24px; letter-spacing: -0.3px; }
-.lead { color: var(--muted); margin: 6px 0 16px; }
-input { width: 100%; font: inherit; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--border); background: var(--card); color: var(--text); }
-ul { list-style: none; margin-top: 14px; display: grid; gap: 10px; }
-li { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 12px 14px; }
-li span { display: block; color: var(--accent); font-size: 13px; }
-li p { color: var(--muted); font-size: 14px; }
-.game-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.game-heading b { min-width: 0; overflow-wrap: anywhere; }
-.copy-name { flex-shrink: 0; min-height: 44px; padding: 8px 12px; font: inherit; font-size: 14px; border: 1px solid var(--border); border-radius: 10px; color: var(--text); background: var(--bg); cursor: pointer; }
-[hidden] { display: none !important; }
-.copy-name:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.vh { font-style: normal; font-size: 12px; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 1px 8px; margin-left: 6px; white-space: nowrap; }
-.filter { display: flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 10px; font-size: 15px; }
-.filter input { width: 20px; height: 20px; }
-.none, .note { color: var(--muted); font-size: 14px; margin-top: 14px; }
-.request-game { margin: 14px 0; padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); }
-.request-game summary { cursor: pointer; font-weight: 600; min-height: 44px; padding: 8px 0; }
-.request-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
-.request-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; }
+:root{--bg:#f8f7f3;--surface:#fff;--ink:#202923;--muted:#616961;--line:#e3e6dc;--green:#244d3c;--green-soft:#eaf1e9;--gold:#9b6424;--gold-soft:#f9edda;--hero:#182e25;--hero-muted:#c3d3c7;--focus:#936023;--radius:20px;--shadow:0 8px 32px #1e342209}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}button,input{font:inherit}button,a,input,summary{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:4px}[hidden]{display:none!important}.wrap{max-width:1120px;margin:0 auto;padding:0 32px}.skip{position:fixed;top:-80px;left:20px;z-index:10;background:var(--surface);padding:12px}.skip:focus{top:12px}.nav{height:88px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-size:15px;font-weight:700;letter-spacing:-.2px}.brand-mark{width:32px;height:32px;display:grid;place-items:center;border-radius:9px;background:var(--green);color:#fff;font-size:12px;letter-spacing:-1px}.back{display:flex;align-items:center;gap:8px;font-size:14px;text-decoration:none;min-height:44px;color:var(--muted)}.back svg{width:16px;height:16px}.hero{position:relative;overflow:hidden;background:var(--hero);color:#fff;border-radius:28px;padding:42px 44px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;color:#d4bd8a;text-transform:uppercase;margin:0 0 13px}h1{font-size:clamp(34px,4.7vw,52px);font-weight:650;line-height:1.1;letter-spacing:-2px;margin:0 0 17px}.hero-copy{max-width:495px;color:var(--hero-muted);margin:0;font-size:16px;line-height:1.65}.hero-stats{display:flex;gap:32px;align-items:center}.stat{min-width:90px}.stat+.stat{border-left:1px solid #ffffff25;padding-left:32px}.stat strong{display:block;font-size:42px;line-height:1.15;font-weight:550;letter-spacing:-1px}.stat span{display:block;font-size:12px;color:var(--hero-muted);margin-top:6px}.stat:last-child strong{color:#ecd09a}.how{display:flex;align-items:center;gap:13px;flex-wrap:wrap;padding:21px 4px;color:var(--muted);font-size:13px}.how strong{color:var(--ink);font-weight:600}.step{display:flex;align-items:center;gap:8px}.step i{font-style:normal;font-size:10px;border:1px solid var(--line);width:21px;height:21px;border-radius:50%;display:grid;place-items:center;color:var(--green)}.step-arrow{color:#a4aaa1}.help{margin-left:auto;min-height:36px;display:flex;align-items:center;text-underline-offset:4px;color:var(--green)}.tools{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);margin:13px 0 25px}.search-label{display:block;font-size:12px;font-weight:650;margin-bottom:8px;color:var(--muted)}.searchbox{display:flex;align-items:center;gap:12px;border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:0 14px}.searchbox:focus-within{border-color:var(--green);box-shadow:0 0 0 2px var(--green-soft)}.searchbox svg{width:20px;height:20px;color:var(--muted);flex-shrink:0}#q{width:100%;min-width:0;border:0;background:transparent;min-height:49px;color:var(--ink);outline:none;font-size:15px}#q::placeholder{color:var(--muted)}.filters-row{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:17px}.filters{display:flex;gap:6px;flex-wrap:wrap}.filter-button{border:1px solid transparent;background:transparent;color:var(--muted);border-radius:8px;min-height:42px;padding:8px 13px;font-size:13px;display:flex;gap:8px;align-items:center;font-weight:550;transition:background .18s,color .18s}.filter-button span{font-size:11px;opacity:.85}.filter-button[aria-pressed="true"]{background:var(--green);color:#fff}.filter-button:hover:not([aria-pressed="true"]){background:var(--green-soft);color:var(--green)}.result-count{margin:0;color:var(--muted);font-size:12px;white-space:nowrap}.legend{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin:0 2px 20px;font-size:12px;color:var(--muted)}.legend-item{display:flex;align-items:center;gap:7px}.dot{display:inline-block;width:6px;height:6px;flex-shrink:0;border-radius:50%;background:var(--gold)}.dot.ai{background:var(--green)}#list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0;padding:0;list-style:none}.game-card{display:flex;flex-direction:column;border:1px solid var(--line);background:var(--surface);border-radius:18px;padding:24px;min-width:0;transition:border-color .18s,box-shadow .18s}.game-card:hover{border-color:#b9c6b7;box-shadow:var(--shadow)}.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:13px}.game-kind{font-size:11px;font-weight:550;color:var(--muted);line-height:1.5;padding-top:3px}.badge{flex-shrink:0;display:inline-flex;align-items:center;gap:5px;border-radius:6px;padding:4px 8px;font-size:10px;font-style:normal;font-weight:650;white-space:nowrap;letter-spacing:.1px}.badge.vh{background:var(--gold-soft);color:var(--gold)}.badge.vh:before{content:"";width:4px;height:4px;background:currentColor;border-radius:50%}.badge.ai{color:var(--green);background:var(--green-soft)}.game-heading{font-size:20px;letter-spacing:-.5px;line-height:1.35}.game-heading b{font-weight:650;overflow-wrap:anywhere}.scope{color:var(--muted);font-size:13px;line-height:1.65;margin:10px 0 0;max-width:450px}.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:auto;padding-top:22px}.source{font-size:12px;line-height:1.55;color:var(--muted);margin:0;max-width:65%}.source span{color:var(--ink);font-weight:550}.ai-caption{font-size:11px;color:var(--muted)}.copy-name{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 11px;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);font-size:12px;font-weight:550;white-space:nowrap;flex-shrink:0;transition:background .18s,border-color .18s}.copy-name svg{width:14px;height:14px}.copy-name:hover{background:var(--green-soft);border-color:#a8bdac}.copy-name.copied{color:var(--green);background:var(--green-soft)}.empty{text-align:center;padding:52px 20px;border:1px dashed var(--line);border-radius:18px;background:var(--surface)}.empty h2{font-size:22px;margin:0 0 8px;letter-spacing:-.5px}.empty p{font-size:14px;color:var(--muted);margin:0 0 18px}.empty button,.request-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 15px;border-radius:9px;border:1px solid var(--line);font-size:13px;text-decoration:none;background:var(--surface);color:var(--ink)}.request-button.primary{background:var(--green);color:#fff;border-color:var(--green)}.info{display:grid;grid-template-columns:1.15fr 1fr;gap:32px;padding:30px;margin:34px 0 0;border:1px solid var(--line);border-radius:var(--radius);background:var(--green-soft);scroll-margin-top:20px}.info h2{font-size:18px;letter-spacing:-.4px;line-height:1.3;margin:0 0 13px}.info p{font-size:13px;color:var(--muted);margin:8px 0;line-height:1.7}.info strong{font-weight:600;color:var(--ink)}.request{border-left:1px solid #cbd6c8;padding-left:32px}.request-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.footer{display:flex;justify-content:space-between;gap:20px;padding:28px 0 32px;font-size:11px;color:var(--muted);line-height:1.7}.footer p{margin:0}.footer .revision{white-space:nowrap}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,14px);background:var(--hero);color:#fff;padding:13px 21px;border-radius:12px;font-size:13px;box-shadow:0 6px 30px #0002;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:9;width:max-content;max-width:calc(100vw - 32px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(prefers-color-scheme:dark){:root{--bg:#121b17;--surface:#1b2620;--ink:#eef1e9;--muted:#b1bbae;--line:#344138;--green:#c4d9b9;--green-soft:#26392d;--gold:#edd0a2;--gold-soft:#3c3323;--hero:#21382c;--hero-muted:#c4d1c2;--focus:#e8bd7d;--shadow:none}.brand-mark,.filter-button[aria-pressed="true"],.request-button.primary{background:#c4d9b9;color:#14281b}.request{border-color:var(--line)}}
+@media(max-width:760px){.wrap{padding:0 20px}.nav{height:73px}.hero{padding:25px;gap:20px;grid-template-columns:1fr}.hero-copy{max-width:100%;font-size:14px;line-height:1.6}.hero-stats{gap:28px}.stat strong{font-size:32px}.stat span{font-size:11px}.stat+.stat{padding-left:28px}h1{letter-spacing:-1.3px}.how{display:grid;grid-template-columns:1fr auto;gap:10px;font-size:12px}.how .step:nth-child(3){grid-column:1/-1;grid-row:2}.how .help{grid-column:2;grid-row:1}.help{margin-left:0}.step-arrow{display:none}.tools{padding:17px}.filters-row{align-items:flex-start;flex-direction:column;gap:10px}.filter-button{padding:8px 10px;font-size:12px;gap:6px}.result-count{padding-left:2px}#list{grid-template-columns:1fr}.game-card{padding:21px}.game-heading{font-size:21px}.source{font-size:12px}.copy-name{font-size:12px}.scope{font-size:14px}.game-kind{font-size:12px}.badge{font-size:11px}.info{grid-template-columns:1fr;padding:24px;gap:23px}.request{border-left:0;border-top:1px solid var(--line);padding:23px 0 0}.footer{flex-direction:column;gap:8px}.legend{gap:12px;font-size:11px}}
+@media(max-width:380px){.wrap{padding:0 14px}.hero{padding:26px 22px}.brand{font-size:13px}.filters{gap:2px}.filter-button{padding:8px;font-size:12px}.card-bottom{gap:8px}.copy-name{padding:8px;font-size:11px}.source{font-size:11px}.badge{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
+<a class="skip" href="#library">Đến danh sách game</a>
 <div class="wrap">
-<p><a href="guide.html">‹ Hướng dẫn</a></p>
-<h1>Danh sách game</h1>
-<p class="lead">Danh sách 74 game đã có hướng dẫn dịch riêng, giúp Dịch AI chọn văn phong với từng game. Bấm "Sao chép tên", dán vào ô "Đang chơi game" trong Hồ sơ game của app, rồi bấm "Kiểm tra game". Cần gói Premium (Dịch AI): bản dịch thường không dịch theo game.</p>
-<input id="q" type="search" placeholder="Tìm tên game…" aria-label="Tìm tên game" autocomplete="off">
-<label class="filter"><input id="vh" type="checkbox"> Chỉ game có bản Việt hóa (10)</label>
-<p class="note">★ Việt hóa: app Mac và iPhone dùng thẳng bản Việt hóa của game cho câu có sẵn, hiện ngay và không tốn lượt Dịch AI. Câu không có trong bản Việt hóa vẫn được dịch như thường.</p>
-<p class="note">Lưu ý: Các bản Việt hóa có thể còn thiếu một số đoạn. Những đoạn chưa có bản Việt hóa, app vẫn dùng AI để dịch.</p>
-<p class="note">Các bản Việt hóa được tổng hợp từ nhiều nguồn. Xin cảm ơn các nhóm dịch và cộng đồng đã thực hiện, đóng góp và chia sẻ các bản Việt hóa.</p>
-<details class="request-game" id="request-game">
-<summary>Yêu cầu game</summary>
-<p class="note">Chưa có game bạn đang chơi? Gửi tên game qua bot hoặc nhắn vào nhóm Telegram. Với bot, bấm Start rồi gửi <code>/yeucau Tên game</code>.</p>
-<div class="request-links">
-<a href="https://t.me/consoletranslatorbot?start=yeucau" target="_blank" rel="noopener noreferrer">Qua bot Telegram</a>
-<a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">Nhắn vào nhóm</a>
-</div>
-</details>
-<p class="note" id="copy-status" role="status" aria-live="polite"></p>
-<ul id="list">
-<li data-s="black myth: wukong wukong than thoai / co phong viet hoa" data-vh="1"><div class="game-heading"><b>Black Myth: Wukong <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Black Myth: Wukong" aria-label="Sao chép tên Black Myth: Wukong">Sao chép tên</button></div><span>Thần thoại / Cổ phong</span><p>Hán-Việt cổ phong, thuật ngữ Tây Du nhất quán.</p><p>Nguồn Việt hóa: TheRedTeam.</p></li>
-<li data-s="call of duty: modern warfare 4 cod-mw4 ban sung / quan su viet hoa" data-vh="1"><div class="game-heading"><b>Call of Duty: Modern Warfare 4 <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Call of Duty: Modern Warfare 4" aria-label="Sao chép tên Call of Duty: Modern Warfare 4">Sao chép tên</button></div><span>Bắn súng / Quân sự</span><p>Giọng quân đội gọn, dứt khoát; xưng hô theo cấp bậc và đồng đội.</p><p>Nguồn Việt hóa: durmuskaracacc (Dịch AI).</p></li>
-<li data-s="crimson desert crimson-desert hanh đong / ky ao viet hoa" data-vh="1"><div class="game-heading"><b>Crimson Desert <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Crimson Desert" aria-label="Sao chép tên Crimson Desert">Sao chép tên</button></div><span>Hành động / Kỳ ảo</span><p>Kỳ ảo trung cổ, lính đánh thuê, lời thoại mạnh.</p><p>Nguồn Việt hóa: Doreeamon.</p></li>
-<li data-s="death stranding 2 death-stranding2 hanh đong / khoa hoc vien tuong viet hoa" data-vh="1"><div class="game-heading"><b>Death Stranding 2 <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Death Stranding 2" aria-label="Sao chép tên Death Stranding 2">Sao chép tên</button></div><span>Hành động / Khoa học viễn tưởng</span><p>Kojima, triết lý, trầm.</p><p>Nguồn Việt hóa: TheRedTeam.</p></li>
-<li data-s="ghost of yotei ghost-of-yotei hanh đong samurai, phieu luu va bao thu tai ezo nam 1603 viet hoa" data-vh="1"><div class="game-heading"><b>Ghost of Yōtei <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Ghost of Yōtei" aria-label="Sao chép tên Ghost of Yōtei">Sao chép tên</button></div><span>Hành động samurai, phiêu lưu và báo thù tại Ezo năm 1603</span><p>Kiếm khách Nhật đầu thời Edo; lời ít, sắc lạnh, xưng hô theo quan hệ và bằng chứng trong câu.</p><p>Nguồn Việt hóa: PSViethoa.</p></li>
-<li data-s="god of war / ragnarok gow than thoai viet hoa" data-vh="1"><div class="game-heading"><b>God of War / Ragnarök <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="God of War / Ragnarök" aria-label="Sao chép tên God of War / Ragnarök">Sao chép tên</button></div><span>Thần thoại</span><p>Thần thoại Bắc Âu, lời thoại gọn và có sức nặng.</p><p>Nguồn Việt hóa: PSVIETHOA x THEREDTEAM (Ragnarök).</p></li>
-<li data-s="grand theft auto v gta5 toi pham viet hoa" data-vh="1"><div class="game-heading"><b>Grand Theft Auto V <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Grand Theft Auto V" aria-label="Sao chép tên Grand Theft Auto V">Sao chép tên</button></div><span>Tội phạm</span><p>Đường phố, châm biếm, giữ tiếng lóng và độ gắt.</p><p>Nguồn Việt hóa: GameTiengViet.Com, đóng gói OIV bởi lehungpop.</p><p>Bản Việt hóa có khoảng 70% thoại cốt truyện, câu còn lại được dịch bằng AI.</p></li>
-<li data-s="red dead redemption 2 rdr2 cao boi viet hoa" data-vh="1"><div class="game-heading"><b>Red Dead Redemption 2 <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Red Dead Redemption 2" aria-label="Sao chép tên Red Dead Redemption 2">Sao chép tên</button></div><span>Cao bồi</span><p>Bụi bặm, miền Tây; xưng hô theo vai vế.</p><p>Nguồn Việt hóa: hoangphu445566 (HearTell 2.0).</p></li>
-<li data-s="the last of us part i / ii lastofus sinh ton viet hoa" data-vh="1"><div class="game-heading"><b>The Last of Us Part I / II <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="The Last of Us Part I / II" aria-label="Sao chép tên The Last of Us Part I / II">Sao chép tên</button></div><span>Sinh tồn</span><p>Đời thường, căng thẳng; cảm xúc không cường điệu.</p><p>Nguồn Việt hóa: THE RED TEAM, bản PS5 port bởi PSVIETHOA.COM (Part II Remastered).</p><p>Bản Việt hóa dành cho Part II Remastered và còn một số câu thoại chưa dịch, câu đó được dịch bằng AI.</p></li>
-<li data-s="the witcher 3 witcher3 nhap vai viet hoa" data-vh="1"><div class="game-heading"><b>The Witcher 3 <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="The Witcher 3" aria-label="Sao chép tên The Witcher 3">Sao chép tên</button></div><span>Nhập vai</span><p>Kỳ ảo trưởng thành, lời thoại tự nhiên, tiết chế.</p><p>Nguồn Việt hóa: superpan3000.</p></li>
-<li data-s="a plague tale: innocence plague-tale-innocence phieu luu / len lut / sinh ton " data-vh="0"><div class="game-heading"><b>A Plague Tale: Innocence</b><button type="button" class="copy-name" data-name="A Plague Tale: Innocence" aria-label="Sao chép tên A Plague Tale: Innocence">Sao chép tên</button></div><span>Phiêu lưu / Lén lút / Sinh tồn</span><p>Lời thoại thời dịch bệnh, tình chị em và nỗi sợ được giữ mộc mạc.</p></li>
-<li data-s="a plague tale: requiem plague-tale-requiem phieu luu / len lut / chinh kich " data-vh="0"><div class="game-heading"><b>A Plague Tale: Requiem</b><button type="button" class="copy-name" data-name="A Plague Tale: Requiem" aria-label="Sao chép tên A Plague Tale: Requiem">Sao chép tên</button></div><span>Phiêu lưu / Lén lút / Chính kịch</span><p>Sinh tồn u tối, hy vọng cứu Hugo và tình chị em không tô bi kịch.</p></li>
-<li data-s="alan wake 2 alanwake2 kinh di tam ly " data-vh="0"><div class="game-heading"><b>Alan Wake 2</b><button type="button" class="copy-name" data-name="Alan Wake 2" aria-label="Sao chép tên Alan Wake 2">Sao chép tên</button></div><span>Kinh dị tâm lý</span><p>Kinh dị, u ám, văn chương.</p></li>
-<li data-s="assassin’s creed assassins lich su " data-vh="0"><div class="game-heading"><b>Assassin’s Creed</b><button type="button" class="copy-name" data-name="Assassin’s Creed" aria-label="Sao chép tên Assassin’s Creed">Sao chép tên</button></div><span>Lịch sử</span><p>Lịch sử dễ hiểu, giữ tên phe và công nghệ Animus.</p></li>
-<li data-s="assassin's creed shadows ac-shadows hanh đong / lich su nhat " data-vh="0"><div class="game-heading"><b>Assassin's Creed Shadows</b><button type="button" class="copy-name" data-name="Assassin's Creed Shadows" aria-label="Sao chép tên Assassin's Creed Shadows">Sao chép tên</button></div><span>Hành động / Lịch sử Nhật</span><p>Nhật thời Chiến Quốc, trang nghiêm.</p></li>
-<li data-s="baldur’s gate 3 baldursgate nhap vai " data-vh="0"><div class="game-heading"><b>Baldur’s Gate 3</b><button type="button" class="copy-name" data-name="Baldur’s Gate 3" aria-label="Sao chép tên Baldur’s Gate 3">Sao chép tên</button></div><span>Nhập vai</span><p>Đối thoại nhiều lựa chọn, thuật ngữ D&amp;D.</p></li>
-<li data-s="bloodborne bloodborne nhap vai hanh đong / kinh di gothic " data-vh="0"><div class="game-heading"><b>Bloodborne</b><button type="button" class="copy-name" data-name="Bloodborne" aria-label="Sao chép tên Bloodborne">Sao chép tên</button></div><span>Nhập vai hành động / Kinh dị Gothic</span><p>Yharnam, cuộc săn và giấc mơ, giọng u ám tiết chế, thuật ngữ máu nhất quán.</p></li>
-<li data-s="control control hanh đong / sieu nhien / bi an " data-vh="0"><div class="game-heading"><b>Control</b><button type="button" class="copy-name" data-name="Control" aria-label="Sao chép tên Control">Sao chép tên</button></div><span>Hành động / Siêu nhiên / Bí ẩn</span><p>Ngôn ngữ cơ quan lạnh, hiện tượng siêu nhiên và lời thoại đời thường.</p></li>
-<li data-s="cyberpunk 2077 cyberpunk khoa hoc vien tuong viet hoa" data-vh="1"><div class="game-heading"><b>Cyberpunk 2077 <em class="vh">★ Việt hóa</em></b><button type="button" class="copy-name" data-name="Cyberpunk 2077" aria-label="Sao chép tên Cyberpunk 2077">Sao chép tên</button></div><span>Khoa học viễn tưởng</span><p>Đường phố tương lai, phân biệt công nghệ và tiếng lóng.</p><p>Nguồn Việt hóa: TheRedTeam.</p></li>
-<li data-s="days gone days-gone hau tan the / biker " data-vh="0"><div class="game-heading"><b>Days Gone</b><button type="button" class="copy-name" data-name="Days Gone" aria-label="Sao chép tên Days Gone">Sao chép tên</button></div><span>Hậu tận thế / Biker</span><p>Biker, bụi bặm, thân tình.</p></li>
-<li data-s="dead island 2 dead-island-2 hanh đong nhap vai / zombie / hai đen " data-vh="0"><div class="game-heading"><b>Dead Island 2</b><button type="button" class="copy-name" data-name="Dead Island 2" aria-label="Sao chép tên Dead Island 2">Sao chép tên</button></div><span>Hành động nhập vai / Zombie / Hài đen</span><p>Los Angeles thời zombie, châm biếm và lời thoại đời thường mạnh.</p></li>
-<li data-s="dead space dead-space-2023 kinh di sinh ton / khoa hoc vien tuong " data-vh="0"><div class="game-heading"><b>Dead Space</b><button type="button" class="copy-name" data-name="Dead Space" aria-label="Sao chép tên Dead Space">Sao chép tên</button></div><span>Kinh dị sinh tồn / Khoa học viễn tưởng</span><p>Kỹ thuật tàu vũ trụ, liên lạc khẩn cấp và kinh dị thân xác.</p></li>
-<li data-s="death stranding deathstranding khoa hoc vien tuong " data-vh="0"><div class="game-heading"><b>Death Stranding</b><button type="button" class="copy-name" data-name="Death Stranding" aria-label="Sao chép tên Death Stranding">Sao chép tên</button></div><span>Khoa học viễn tưởng</span><p>Giao hàng và thế giới hậu tận thế, giữ viết tắt.</p></li>
-<li data-s="demon's souls demons-souls-ps5 nhap vai hanh đong / ky ao đen toi " data-vh="0"><div class="game-heading"><b>Demon's Souls</b><button type="button" class="copy-name" data-name="Demon's Souls" aria-label="Sao chép tên Demon's Souls">Sao chép tên</button></div><span>Nhập vai hành động / Kỳ ảo đen tối</span><p>Boletaria chìm trong sương, lời thoại trang trọng và u ám của bản làm lại PS5.</p></li>
-<li data-s="detroit: become human detroit phieu luu / khoa hoc vien tuong " data-vh="0"><div class="game-heading"><b>Detroit: Become Human</b><button type="button" class="copy-name" data-name="Detroit: Become Human" aria-label="Sao chép tên Detroit: Become Human">Sao chép tên</button></div><span>Phiêu lưu / Khoa học viễn tưởng</span><p>Tương lai gần, cảm xúc, nhập vai.</p></li>
-<li data-s="dragon age: inquisition dragon-age-inquisition nhap vai / ky ao " data-vh="0"><div class="game-heading"><b>Dragon Age: Inquisition</b><button type="button" class="copy-name" data-name="Dragon Age: Inquisition" aria-label="Sao chép tên Dragon Age: Inquisition">Sao chép tên</button></div><span>Nhập vai / Kỳ ảo</span><p>Kỳ ảo chính trị tại Thedas, trang trọng vừa phải và giữ rõ phe phái.</p></li>
-<li data-s="dragon age: the veilguard dragon-age-the-veilguard nhap vai hanh đong / ky ao " data-vh="0"><div class="game-heading"><b>Dragon Age: The Veilguard</b><button type="button" class="copy-name" data-name="Dragon Age: The Veilguard" aria-label="Sao chép tên Dragon Age: The Veilguard">Sao chép tên</button></div><span>Nhập vai hành động / Kỳ ảo</span><p>Nhóm đồng hành ở Thedas, pha chuyện cá nhân với xung đột thần linh.</p></li>
-<li data-s="dragon quest xi s: echoes of an elusive age dragon-quest-xi-s nhap vai theo luot / ky ao " data-vh="0"><div class="game-heading"><b>Dragon Quest XI S: Echoes of an Elusive Age</b><button type="button" class="copy-name" data-name="Dragon Quest XI S: Echoes of an Elusive Age" aria-label="Sao chép tên Dragon Quest XI S: Echoes of an Elusive Age">Sao chép tên</button></div><span>Nhập vai theo lượt / Kỳ ảo</span><p>Phiêu lưu anh hùng ở Erdrea, ấm áp và giữ nét hài trong lời gốc.</p></li>
-<li data-s="dragon's dogma 2 dragons-dogma-2 nhap vai hanh đong / ky ao " data-vh="0"><div class="game-heading"><b>Dragon's Dogma 2</b><button type="button" class="copy-name" data-name="Dragon's Dogma 2" aria-label="Sao chép tên Dragon's Dogma 2">Sao chép tên</button></div><span>Nhập vai hành động / Kỳ ảo</span><p>Hành trình Arisen cùng Pawn, giọng kỳ ảo cổ kính nhưng dễ hiểu.</p></li>
-<li data-s="dying light 2 dying-light2 hau tan the / zombie " data-vh="0"><div class="game-heading"><b>Dying Light 2</b><button type="button" class="copy-name" data-name="Dying Light 2" aria-label="Sao chép tên Dying Light 2">Sao chép tên</button></div><span>Hậu tận thế / Zombie</span><p>Hậu tận thế, sống còn, gắt.</p></li>
-<li data-s="elden ring eldenring ky ao " data-vh="0"><div class="game-heading"><b>Elden Ring</b><button type="button" class="copy-name" data-name="Elden Ring" aria-label="Sao chép tên Elden Ring">Sao chép tên</button></div><span>Kỳ ảo</span><p>Trang trọng, bí ẩn; giữ danh hiệu nhất quán.</p></li>
-<li data-s="final fantasy vii remake / rebirth ff7 nhap vai " data-vh="0"><div class="game-heading"><b>Final Fantasy VII Remake / Rebirth</b><button type="button" class="copy-name" data-name="Final Fantasy VII Remake / Rebirth" aria-label="Sao chép tên Final Fantasy VII Remake / Rebirth">Sao chép tên</button></div><span>Nhập vai</span><p>Đối thoại giàu cá tính, giữ tên chiêu và thế giới.</p></li>
-<li data-s="final fantasy x final-fantasy-x nhap vai theo luot / ky ao " data-vh="0"><div class="game-heading"><b>Final Fantasy X</b><button type="button" class="copy-name" data-name="Final Fantasy X" aria-label="Sao chép tên Final Fantasy X">Sao chép tên</button></div><span>Nhập vai theo lượt / Kỳ ảo</span><p>Hành trình của Tidus và Yuna tại Spira, giản dị và giàu cảm xúc.</p></li>
-<li data-s="final fantasy xv final-fantasy-xv nhap vai hanh đong / ky ao hien đai " data-vh="0"><div class="game-heading"><b>Final Fantasy XV</b><button type="button" class="copy-name" data-name="Final Fantasy XV" aria-label="Sao chép tên Final Fantasy XV">Sao chép tên</button></div><span>Nhập vai hành động / Kỳ ảo hiện đại</span><p>Chuyến đi của Noctis và đồng đội, thân tình xen bổn phận hoàng gia.</p></li>
-<li data-s="final fantasy xvi ff16 ky ao / nhap vai " data-vh="0"><div class="game-heading"><b>Final Fantasy XVI</b><button type="button" class="copy-name" data-name="Final Fantasy XVI" aria-label="Sao chép tên Final Fantasy XVI">Sao chép tên</button></div><span>Kỳ ảo / Nhập vai</span><p>Kỳ ảo trung cổ, trang trọng, có chiều sâu.</p></li>
-<li data-s="ghost of tsushima ghost hanh đong phieu luu samurai, khang chien chong quan mong co " data-vh="0"><div class="game-heading"><b>Ghost of Tsushima</b><button type="button" class="copy-name" data-name="Ghost of Tsushima" aria-label="Sao chép tên Ghost of Tsushima">Sao chép tên</button></div><span>Hành động phiêu lưu samurai, kháng chiến chống quân Mông Cổ</span><p>Đảo Tsushima năm 1274; kiếm sĩ Nhật cổ phong tiết chế, danh dự và sinh tồn; xưng hô theo bằng chứng.</p></li>
-<li data-s="hellblade: senua's sacrifice hellblade-senuas-sacrifice phieu luu / kinh di tam ly / than thoai " data-vh="0"><div class="game-heading"><b>Hellblade: Senua's Sacrifice</b><button type="button" class="copy-name" data-name="Hellblade: Senua's Sacrifice" aria-label="Sao chép tên Hellblade: Senua's Sacrifice">Sao chép tên</button></div><span>Phiêu lưu / Kinh dị tâm lý / Thần thoại</span><p>Lời kể ám ảnh, tiếng nói nội tâm và đau buồn được giữ tiết chế.</p></li>
-<li data-s="hogwarts legacy hogwarts phep thuat " data-vh="0"><div class="game-heading"><b>Hogwarts Legacy</b><button type="button" class="copy-name" data-name="Hogwarts Legacy" aria-label="Sao chép tên Hogwarts Legacy">Sao chép tên</button></div><span>Phép thuật</span><p>Học đường phép thuật, giữ tên bùa và các nhà.</p></li>
-<li data-s="horizon zero dawn / forbidden west horizon khoa hoc vien tuong " data-vh="0"><div class="game-heading"><b>Horizon Zero Dawn / Forbidden West</b><button type="button" class="copy-name" data-name="Horizon Zero Dawn / Forbidden West" aria-label="Sao chép tên Horizon Zero Dawn / Forbidden West">Sao chép tên</button></div><span>Khoa học viễn tưởng</span><p>Phân biệt bộ tộc, máy thú và công nghệ cổ.</p></li>
-<li data-s="indiana jones and the great circle indiana-jones phieu luu " data-vh="0"><div class="game-heading"><b>Indiana Jones and the Great Circle</b><button type="button" class="copy-name" data-name="Indiana Jones and the Great Circle" aria-label="Sao chép tên Indiana Jones and the Great Circle">Sao chép tên</button></div><span>Phiêu lưu</span><p>Phiêu lưu kiểu phim cổ điển, dí dỏm.</p></li>
-<li data-s="kingdom come: deliverance ii kcd2 nhap vai / lich su " data-vh="0"><div class="game-heading"><b>Kingdom Come: Deliverance II</b><button type="button" class="copy-name" data-name="Kingdom Come: Deliverance II" aria-label="Sao chép tên Kingdom Come: Deliverance II">Sao chép tên</button></div><span>Nhập vai / Lịch sử</span><p>Trung cổ Bohemia, mộc mạc, chân thực.</p></li>
-<li data-s="lies of p lies-of-p soulslike / gothic " data-vh="0"><div class="game-heading"><b>Lies of P</b><button type="button" class="copy-name" data-name="Lies of P" aria-label="Sao chép tên Lies of P">Sao chép tên</button></div><span>Soulslike / Gothic</span><p>Gothic, trang trọng, u buồn.</p></li>
-<li data-s="like a dragon (yakuza) yakuza hanh đong / bang đang " data-vh="0"><div class="game-heading"><b>Like a Dragon (Yakuza)</b><button type="button" class="copy-name" data-name="Like a Dragon (Yakuza)" aria-label="Sao chép tên Like a Dragon (Yakuza)">Sao chép tên</button></div><span>Hành động / Băng đảng</span><p>Giang hồ Nhật, gắt, có tình nghĩa.</p></li>
-<li data-s="mafia: the old country mafia-oldcountry hanh đong / bang đang " data-vh="0"><div class="game-heading"><b>Mafia: The Old Country</b><button type="button" class="copy-name" data-name="Mafia: The Old Country" aria-label="Sao chép tên Mafia: The Old Country">Sao chép tên</button></div><span>Hành động / Băng đảng</span><p>Mafia Sicily, trọng danh dự.</p></li>
-<li data-s="marvel's spider-man 2 spiderman2 sieu anh hung / hanh đong " data-vh="0"><div class="game-heading"><b>Marvel's Spider-Man 2</b><button type="button" class="copy-name" data-name="Marvel's Spider-Man 2" aria-label="Sao chép tên Marvel's Spider-Man 2">Sao chép tên</button></div><span>Siêu anh hùng / Hành động</span><p>Trẻ trung, hài hước, đậm chất New York.</p></li>
-<li data-s="marvel's spider-man remastered spider-man-remastered hanh đong / sieu anh hung " data-vh="0"><div class="game-heading"><b>Marvel's Spider-Man Remastered</b><button type="button" class="copy-name" data-name="Marvel's Spider-Man Remastered" aria-label="Sao chép tên Marvel's Spider-Man Remastered">Sao chép tên</button></div><span>Hành động / Siêu anh hùng</span><p>Đời sống New York và lời đùa nhanh của Spider-Man, tách khỏi các phần tiếp theo.</p></li>
-<li data-s="marvel's spider-man: miles morales spider-man-miles-morales hanh đong / sieu anh hung " data-vh="0"><div class="game-heading"><b>Marvel's Spider-Man: Miles Morales</b><button type="button" class="copy-name" data-name="Marvel's Spider-Man: Miles Morales" aria-label="Sao chép tên Marvel's Spider-Man: Miles Morales">Sao chép tên</button></div><span>Hành động / Siêu anh hùng</span><p>Miles bảo vệ East Harlem, lời thoại trẻ trung và gần gũi nhưng không suồng sã.</p></li>
-<li data-s="marvel’s wolverine marvels-wolverine hanh đong sieu anh hung, di nhan va cong nghe, truy tim qua khu " data-vh="0"><div class="game-heading"><b>Marvel’s Wolverine</b><button type="button" class="copy-name" data-name="Marvel’s Wolverine" aria-label="Sao chép tên Marvel’s Wolverine">Sao chép tên</button></div><span>Hành động siêu anh hùng, dị nhân và công nghệ, truy tìm quá khứ</span><p>Logan gai góc, ít lời; dị nhân bị săn đuổi, đối thoại căng thẳng và hiện đại, xưng hô theo bằng chứng.</p></li>
-<li data-s="mass effect legendary edition mass-effect-legendary-edition nhap vai / khoa hoc vien tuong " data-vh="0"><div class="game-heading"><b>Mass Effect Legendary Edition</b><button type="button" class="copy-name" data-name="Mass Effect Legendary Edition" aria-label="Sao chép tên Mass Effect Legendary Edition">Sao chép tên</button></div><span>Nhập vai / Khoa học viễn tưởng</span><p>Sử thi không gian ba phần, lời quân sự rõ ràng và đối thoại đồng đội tự nhiên.</p></li>
-<li data-s="metaphor: refantazio metaphor-refantazio nhap vai theo luot / ky ao chinh tri " data-vh="0"><div class="game-heading"><b>Metaphor: ReFantazio</b><button type="button" class="copy-name" data-name="Metaphor: ReFantazio" aria-label="Sao chép tên Metaphor: ReFantazio">Sao chép tên</button></div><span>Nhập vai theo lượt / Kỳ ảo chính trị</span><p>Cuộc tranh ngôi tại Euchronia, lời chính trị rõ ý và đồng hành chân thành.</p></li>
-<li data-s="metro exodus metro-exodus ban sung / sinh ton / hau tan the " data-vh="0"><div class="game-heading"><b>Metro Exodus</b><button type="button" class="copy-name" data-name="Metro Exodus" aria-label="Sao chép tên Metro Exodus">Sao chép tên</button></div><span>Bắn súng / Sinh tồn / Hậu tận thế</span><p>Chất quân sự Nga, đời sống đoàn tàu và hy vọng sau tận thế.</p></li>
-<li data-s="monster hunter wilds monster-hunter-wilds san quai / nhap vai " data-vh="0"><div class="game-heading"><b>Monster Hunter Wilds</b><button type="button" class="copy-name" data-name="Monster Hunter Wilds" aria-label="Sao chép tên Monster Hunter Wilds">Sao chép tên</button></div><span>Săn quái / Nhập vai</span><p>Phiêu lưu, thân thiện, thuật ngữ săn bắn.</p></li>
-<li data-s="nier:automata nier-automata nhap vai hanh đong / khoa hoc vien tuong " data-vh="0"><div class="game-heading"><b>NieR:Automata</b><button type="button" class="copy-name" data-name="NieR:Automata" aria-label="Sao chép tên NieR:Automata">Sao chép tên</button></div><span>Nhập vai hành động / Khoa học viễn tưởng</span><p>Android và sinh vật máy, lời nhiệm vụ lạnh gọn xen suy tư nhân tính.</p></li>
-<li data-s="onimusha: way of the sword onimusha-way-of-the-sword kiem thuat samurai nhat, gia tuong đen toi, san quy " data-vh="0"><div class="game-heading"><b>Onimusha: Way of the Sword</b><button type="button" class="copy-name" data-name="Onimusha: Way of the Sword" aria-label="Sao chép tên Onimusha: Way of the Sword">Sao chép tên</button></div><span>Kiếm thuật samurai Nhật, giả tưởng đen tối, săn quỷ</span><p>Kyoto đầu thời Edo; kiếm sĩ mộc mạc, quỷ dữ, chiến đấu gấp gáp; xưng hô theo bằng chứng.</p></li>
-<li data-s="persona 5 royal persona5 nhap vai / hoc đuong " data-vh="0"><div class="game-heading"><b>Persona 5 Royal</b><button type="button" class="copy-name" data-name="Persona 5 Royal" aria-label="Sao chép tên Persona 5 Royal">Sao chép tên</button></div><span>Nhập vai / Học đường</span><p>Học sinh Nhật, trẻ trung, giữ kính ngữ.</p></li>
-<li data-s="ratchet &amp; clank: rift apart ratchet-clank-rift-apart hanh đong / phieu luu khong gian " data-vh="0"><div class="game-heading"><b>Ratchet &amp; Clank: Rift Apart</b><button type="button" class="copy-name" data-name="Ratchet &amp; Clank: Rift Apart" aria-label="Sao chép tên Ratchet &amp; Clank: Rift Apart">Sao chép tên</button></div><span>Hành động / Phiêu lưu không gian</span><p>Phiêu lưu xuyên chiều không gian, lời thoại hài hước gọn và tên vũ khí nhất quán.</p></li>
-<li data-s="resident evil resident kinh di " data-vh="0"><div class="game-heading"><b>Resident Evil</b><button type="button" class="copy-name" data-name="Resident Evil" aria-label="Sao chép tên Resident Evil">Sao chép tên</button></div><span>Kinh dị</span><p>Ngắn, căng thẳng; chỉ dẫn giải đố rõ ràng.</p></li>
-<li data-s="returnal returnal ban sung / roguelike / kinh di vu tru " data-vh="0"><div class="game-heading"><b>Returnal</b><button type="button" class="copy-name" data-name="Returnal" aria-label="Sao chép tên Returnal">Sao chép tên</button></div><span>Bắn súng / Roguelike / Kinh dị vũ trụ</span><p>Nhật ký thám hiểm và nỗi bất an của Selene trên Atropos, giữ nguyên sự mơ hồ.</p></li>
-<li data-s="sekiro: shadows die twice sekiro hanh đong / samurai " data-vh="0"><div class="game-heading"><b>Sekiro: Shadows Die Twice</b><button type="button" class="copy-name" data-name="Sekiro: Shadows Die Twice" aria-label="Sao chép tên Sekiro: Shadows Die Twice">Sao chép tên</button></div><span>Hành động / Samurai</span><p>Samurai Nhật, cô đọng, nghiêm.</p></li>
-<li data-s="senua's saga: hellblade ii senuas-saga-hellblade-ii phieu luu / kinh di tam ly / than thoai " data-vh="0"><div class="game-heading"><b>Senua's Saga: Hellblade II</b><button type="button" class="copy-name" data-name="Senua's Saga: Hellblade II" aria-label="Sao chép tên Senua's Saga: Hellblade II">Sao chép tên</button></div><span>Phiêu lưu / Kinh dị tâm lý / Thần thoại</span><p>Iceland thời Viking, đối thoại khắc nghiệt và tiếng nói nội tâm.</p></li>
-<li data-s="shadow of the colossus shadow-of-the-colossus phieu luu / ky ao " data-vh="0"><div class="game-heading"><b>Shadow of the Colossus</b><button type="button" class="copy-name" data-name="Shadow of the Colossus" aria-label="Sao chép tên Shadow of the Colossus">Sao chép tên</button></div><span>Phiêu lưu / Kỳ ảo</span><p>Lời thoại ít và hàm súc giữa vùng đất cổ, không tự diễn giải sự im lặng.</p></li>
-<li data-s="silent hill 2 silenthill2 kinh di tam ly " data-vh="0"><div class="game-heading"><b>Silent Hill 2</b><button type="button" class="copy-name" data-name="Silent Hill 2" aria-label="Sao chép tên Silent Hill 2">Sao chép tên</button></div><span>Kinh dị tâm lý</span><p>Kinh dị, chậm rãi, nặng nề.</p></li>
-<li data-s="sniper ghost warrior contracts 2 sniper-ghost-warrior-contracts-2 quan su, ban tia chien thuat " data-vh="0"><div class="game-heading"><b>Sniper Ghost Warrior Contracts 2</b><button type="button" class="copy-name" data-name="Sniper Ghost Warrior Contracts 2" aria-label="Sao chép tên Sniper Ghost Warrior Contracts 2">Sao chép tên</button></div><span>Quân sự, bắn tỉa chiến thuật</span><p>Bắn tỉa chiến thuật tại Kuamar; điện đàm Raven–Control, mệnh lệnh ngắn, giữ chính xác tên mục tiêu và thuật ngữ tác chiến.</p></li>
-<li data-s="star wars jedi: fallen order jedi-fallen-order hanh đong / phieu luu / khoa hoc vien tuong " data-vh="0"><div class="game-heading"><b>Star Wars Jedi: Fallen Order</b><button type="button" class="copy-name" data-name="Star Wars Jedi: Fallen Order" aria-label="Sao chép tên Star Wars Jedi: Fallen Order">Sao chép tên</button></div><span>Hành động / Phiêu lưu / Khoa học viễn tưởng</span><p>Hành trình Jedi, sức ép Đế chế và thoại phiêu lưu tiết chế.</p></li>
-<li data-s="star wars jedi: survivor jedi-survivor khoa hoc vien tuong / hanh đong " data-vh="0"><div class="game-heading"><b>Star Wars Jedi: Survivor</b><button type="button" class="copy-name" data-name="Star Wars Jedi: Survivor" aria-label="Sao chép tên Star Wars Jedi: Survivor">Sao chép tên</button></div><span>Khoa học viễn tưởng / Hành động</span><p>Star Wars, phiêu lưu, giữ thuật ngữ.</p></li>
-<li data-s="stellar blade stellarblade hanh đong / khoa hoc vien tuong " data-vh="0"><div class="game-heading"><b>Stellar Blade</b><button type="button" class="copy-name" data-name="Stellar Blade" aria-label="Sao chép tên Stellar Blade">Sao chép tên</button></div><span>Hành động / Khoa học viễn tưởng</span><p>Viễn tưởng hậu tận thế, gọn và lạnh.</p></li>
-<li data-s="tales of arise tales-of-arise nhap vai hanh đong / ky ao " data-vh="0"><div class="game-heading"><b>Tales of Arise</b><button type="button" class="copy-name" data-name="Tales of Arise" aria-label="Sao chép tên Tales of Arise">Sao chép tên</button></div><span>Nhập vai hành động / Kỳ ảo</span><p>Xung đột Dahna và Rena, lời phản kháng rõ mạnh xen đối thoại đồng hành.</p></li>
-<li data-s="the blood of dawnwalker the-blood-of-dawnwalker nhap vai hanh đong gia tuong đen toi, ma ca rong thoi trung co " data-vh="0"><div class="game-heading"><b>The Blood of Dawnwalker</b><button type="button" class="copy-name" data-name="The Blood of Dawnwalker" aria-label="Sao chép tên The Blood of Dawnwalker">Sao chép tên</button></div><span>Nhập vai hành động giả tưởng đen tối, ma cà rồng thời trung cổ</span><p>Châu Âu thế kỷ XIV; dân làng mộc mạc, lãnh chúa áp chế, kinh dị u tối; không tự đoán người nói.</p><p>Nguồn Việt hóa: TheRedTeam.</p></li>
-<li data-s="the last guardian the-last-guardian phieu luu / giai đo " data-vh="0"><div class="game-heading"><b>The Last Guardian</b><button type="button" class="copy-name" data-name="The Last Guardian" aria-label="Sao chép tên The Last Guardian">Sao chép tên</button></div><span>Phiêu lưu / Giải đố</span><p>Lời kể tiết chế về niềm tin giữa cậu bé và Trico, không nhân hóa tiếng kêu thành lời.</p></li>
-<li data-s="tomb raider tomb-raider-2013 hanh đong / phieu luu / sinh ton " data-vh="0"><div class="game-heading"><b>Tomb Raider</b><button type="button" class="copy-name" data-name="Tomb Raider" aria-label="Sao chép tên Tomb Raider">Sao chép tên</button></div><span>Hành động / Phiêu lưu / Sinh tồn</span><p>Lara trẻ tuổi trên Yamatai, lời sinh tồn trực tiếp và bí ẩn cổ đại.</p></li>
-<li data-s="uncharted 4: a thief's end uncharted4 phieu luu / hanh đong " data-vh="0"><div class="game-heading"><b>Uncharted 4: A Thief's End</b><button type="button" class="copy-name" data-name="Uncharted 4: A Thief's End" aria-label="Sao chép tên Uncharted 4: A Thief's End">Sao chép tên</button></div><span>Phiêu lưu / Hành động</span><p>Phiêu lưu, dí dỏm, nhiều câu đùa.</p></li>
-<li data-s="uncharted: the lost legacy uncharted-the-lost-legacy phieu luu / truy tim co vat " data-vh="0"><div class="game-heading"><b>Uncharted: The Lost Legacy</b><button type="button" class="copy-name" data-name="Uncharted: The Lost Legacy" aria-label="Sao chép tên Uncharted: The Lost Legacy">Sao chép tên</button></div><span>Phiêu lưu / Truy tìm cổ vật</span><p>Chloe và Nadine tìm cổ vật tại Ấn Độ, giọng phiêu lưu sắc sảo và thực tế.</p></li>
-<li data-s="until dawn until-dawn kinh di / phieu luu lua chon " data-vh="0"><div class="game-heading"><b>Until Dawn</b><button type="button" class="copy-name" data-name="Until Dawn" aria-label="Sao chép tên Until Dawn">Sao chép tên</button></div><span>Kinh dị / Phiêu lưu lựa chọn</span><p>Nhóm người trẻ tại Blackwood Mountain, hội thoại tự nhiên và căng thẳng đúng mức.</p></li>
-<li data-s="watch dogs watchdogs hacker " data-vh="0"><div class="game-heading"><b>Watch Dogs</b><button type="button" class="copy-name" data-name="Watch Dogs" aria-label="Sao chép tên Watch Dogs">Sao chép tên</button></div><span>Hacker</span><p>Công nghệ, trinh thám và đường phố hiện đại.</p></li>
-</ul>
-<p class="none" id="none" hidden>Chưa tìm thấy game này trong danh sách. Bấm “Yêu cầu game” phía trên để gửi tên game bạn muốn thêm.</p>
-<p class="note">Tên game và nhân vật thuộc về chủ sở hữu tương ứng. Danh sách cập nhật lần 22.</p>
-</div>
+<header class="nav"><div class="brand"><span class="brand-mark" aria-hidden="true">CT</span>Console Translator</div><a class="back" href="guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>Hướng dẫn</a></header>
+<main>
+<section class="hero" aria-labelledby="title"><div><p class="eyebrow">Game &amp; bản Việt hóa</p><h1 id="title">Thư viện game</h1><p class="hero-copy">Tìm game, xem phạm vi Việt hóa và sao chép tên để dùng trong app.</p></div><div class="hero-stats" aria-label="Thông tin thư viện"><div class="stat"><strong>76</strong><span>game hỗ trợ</span></div><div class="stat"><strong>11</strong><span>có bộ Việt hóa</span></div></div></section>
+<div class="how" aria-label="Cách sử dụng"><span class="step"><i>1</i><strong>Sao chép tên game</strong></span><span class="step-arrow" aria-hidden="true">→</span><span class="step"><i>2</i>Dán vào ô “Đang chơi game” trong app</span><a class="help" href="#about">Cách hoạt động</a></div>
+<section id="library" aria-label="Tìm và chọn game">
+<div class="tools"><label class="search-label" for="q">Tìm game của bạn</label><div class="searchbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4 4"/></svg><input id="q" type="search" placeholder="Tên game, tên viết tắt hoặc nhóm dịch…" autocomplete="off" aria-controls="list"></div><div class="filters-row"><div class="filters" role="group" aria-label="Loại hỗ trợ"><button type="button" class="filter-button" data-filter="all" aria-pressed="true">Tất cả <span>76</span></button><button type="button" class="filter-button" data-filter="vh" aria-pressed="false">Việt hóa <span>11</span></button><button type="button" class="filter-button" data-filter="ai" aria-pressed="false">Dịch AI <span>65</span></button></div><p class="result-count" id="result-count" role="status" aria-live="polite">76 game trong thư viện</p></div></div>
+<div class="legend"><span class="legend-item"><i class="dot" aria-hidden="true"></i>Việt hóa: có bộ câu dịch sẵn</span><span class="legend-item"><i class="dot ai" aria-hidden="true"></i>Dịch AI: có hướng dẫn riêng theo game</span></div>
+<ul id="list"><li class="game-card localized" data-s="black myth: wukong wukong than thoai / co phong theredteam black myth: wukong wukong black myth wukong" data-vh="1">
+<div class="card-top"><span class="game-kind">Hành động · Thần thoại</span><span class="badge vh">Có Việt hóa</span></div>
+<div class="game-heading"><b>Black Myth: Wukong</b></div>
+<p class="scope">Có dữ liệu thoại và văn bản trong game.</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>TheRedTeam</span>.</p><button type="button" class="copy-name" data-name="Black Myth: Wukong" aria-label="Sao chép tên Black Myth: Wukong"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card localized" data-s="call of duty: modern warfare 4 cod mw4 ban sung / quan su durmuskaracacc (dich ai) call of duty: modern warfare 4 call of duty modern warfare cod modern warfare cod mw modern warfare call of duty" data-vh="1">
+<div class="card-top"><span class="game-kind">Bắn súng · Quân sự</span><span class="badge vh">Có Việt hóa</span></div>
+<div class="game-heading"><b>Call of Duty: Modern Warfare 4</b></div>
+<p class="scope">Có dữ liệu thoại, nhiệm vụ và giao diện.</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>durmuskaracacc (Dịch AI)</span>.</p><button type="button" class="copy-name" data-name="Call of Duty: Modern Warfare 4" aria-label="Sao chép tên Call of Duty: Modern Warfare 4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card localized" data-s="crimson desert crimson desert hanh dong / ky ao doreeamon crimson desert" data-vh="1">
+<div class="card-top"><span class="game-kind">Hành động · Kỳ ảo</span><span class="badge vh">Có Việt hóa</span></div>
+<div class="game-heading"><b>Crimson Desert</b></div>
+<p class="scope">Có dữ liệu thoại và văn bản trong game.</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>Doreeamon</span>.</p><button type="button" class="copy-name" data-name="Crimson Desert" aria-label="Sao chép tên Crimson Desert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card localized" data-s="cyberpunk 2077 cyberpunk khoa hoc vien tuong theredteam cyberpunk 2077 cyberpunk cyberpunk 2077 phantom liberty cyberpunk 2077: phantom liberty phantom liberty" data-vh="1">
+<div class="card-top"><span class="game-kind">Nhập vai · Khoa học viễn tưởng</span><span class="badge vh">Có Việt hóa</span></div>
+<div class="game-heading"><b>Cyberpunk 2077</b></div>
+<p class="scope">Phụ đề game gốc và Phantom Liberty. Chưa bao gồm toàn bộ menu và văn bản khác.</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>TheRedTeam</span>.</p><button type="button" class="copy-name" data-name="Cyberpunk 2077" aria-label="Sao chép tên Cyberpunk 2077"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card localized" data-s="death stranding 2 death stranding2 hanh dong / khoa hoc vien tuong theredteam death stranding 2 death stranding 2 on the beach ds2 death stranding ii" data-vh="1">
+<div class="card-top"><span class="game-kind">Phiêu lưu · Khoa học viễn tưởng</span><span class="badge vh">Có Việt hóa</span></div>
+<div class="game-heading"><b>Death Stranding 2</b></div>
+<p class="scope">Có dữ liệu thoại và văn bản trong game.</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>TheRedTeam</span>.</p><button type="button" class="copy-name" data-name="Death Stranding 2" aria-label="Sao chép tên Death Stranding 2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card localized" data-s="ghost of yotei ghost of yotei hanh dong samurai, phieu luu va bao thu tai ezo nam 1603 psviethoa ghost of yotei ghost of yotei ghost of yotei yotei yotei" data-vh="1">
+<div class="card-top"><span class="game-kind">Hành động · Phiêu lưu</span><span class="badge vh">Có Việt hóa</span></div>
+<div class="game-heading"><b>Ghost of Yōtei</b></div>
+<p class="scope">Có dữ liệu thoại và văn bản trong game.</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>PSViethoa</span>.</p><button type="button" class="copy-name" data-name="Ghost of Yōtei" aria-label="Sao chép tên Ghost of Yōtei"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card localized" data-s="god of war / ragnarok gow than thoai psviethoa x theredteam god of war / ragnarok god of war ragnarok god of war ragnarok ragnarok ragnarok gow ragnarok god of war" data-vh="1">
+<div class="card-top"><span class="game-kind">Hành động · Thần thoại</span><span class="badge vh">Có Việt hóa</span></div>
+<div class="game-heading"><b>God of War / Ragnarök</b></div>
+<p class="scope">Bản Việt hóa dành cho Ragnarök. Chưa có bộ câu sẵn cho God of War (2018).</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>PSVIETHOA x THEREDTEAM</span>.</p><button type="button" class="copy-name" data-name="God of War / Ragnarök" aria-label="Sao chép tên God of War / Ragnarök"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card localized" data-s="grand theft auto v gta5 toi pham gametiengviet.com grand theft auto v gta v gta 5 gtav gta5 grand theft auto 5 gta v enhanced" data-vh="1">
+<div class="card-top"><span class="game-kind">Hành động · Thế giới mở</span><span class="badge vh">Có Việt hóa</span></div>
+<div class="game-heading"><b>Grand Theft Auto V</b></div>
+<p class="scope">Có một phần thoại và văn bản. Những câu chưa có dùng cách dịch bạn đã chọn.</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>GameTiengViet.Com</span>.</p><button type="button" class="copy-name" data-name="Grand Theft Auto V" aria-label="Sao chép tên Grand Theft Auto V"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card localized" data-s="red dead redemption 2 rdr2 cao boi hoangphu445566 (heartell 2.0) red dead redemption 2 rdr2 rdr 2 red dead 2" data-vh="1">
+<div class="card-top"><span class="game-kind">Phiêu lưu · Viễn Tây</span><span class="badge vh">Có Việt hóa</span></div>
+<div class="game-heading"><b>Red Dead Redemption 2</b></div>
+<p class="scope">Thoại NPC và hội thoại môi trường từ HearTell. Chưa bao gồm toàn bộ cốt truyện, thư và menu.</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>hoangphu445566 (HearTell 2.0)</span>.</p><button type="button" class="copy-name" data-name="Red Dead Redemption 2" aria-label="Sao chép tên Red Dead Redemption 2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card localized" data-s="the last of us part i / ii lastofus sinh ton the red team · port psviethoa.com the last of us part i / ii the last of us part ii remastered tlou2 remastered the last of us part ii the last of us 2 the last of us part 2 tlou2 tlou 2 last of us 2 the last of us" data-vh="1">
+<div class="card-top"><span class="game-kind">Hành động · Sinh tồn</span><span class="badge vh">Có Việt hóa</span></div>
+<div class="game-heading"><b>The Last of Us Part I / II</b></div>
+<p class="scope">Bản Việt hóa dành cho Part II Remastered, còn một số câu chưa dịch. Chưa có bộ câu sẵn cho Part I.</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>THE RED TEAM · port PSVIETHOA.COM</span>.</p><button type="button" class="copy-name" data-name="The Last of Us Part I / II" aria-label="Sao chép tên The Last of Us Part I / II"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card localized" data-s="the witcher 3 witcher3 nhap vai superpan3000 the witcher 3 witcher 3 the witcher 3 wild hunt witcher 3 wild hunt" data-vh="1">
+<div class="card-top"><span class="game-kind">Nhập vai · Kỳ ảo</span><span class="badge vh">Có Việt hóa</span></div>
+<div class="game-heading"><b>The Witcher 3</b></div>
+<p class="scope">Có dữ liệu thoại, lựa chọn hội thoại, sách, nhật ký và giao diện.</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>superpan3000</span>.</p><button type="button" class="copy-name" data-name="The Witcher 3" aria-label="Sao chép tên The Witcher 3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="a plague tale: innocence plague tale innocence phieu luu / len lut / sinh ton " data-vh="0">
+<div class="card-top"><span class="game-kind">Phiêu lưu · Lén lút · Sinh tồn</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>A Plague Tale: Innocence</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="A Plague Tale: Innocence" aria-label="Sao chép tên A Plague Tale: Innocence"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="a plague tale: requiem plague tale requiem phieu luu / len lut / chinh kich " data-vh="0">
+<div class="card-top"><span class="game-kind">Phiêu lưu · Lén lút · Chính kịch</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>A Plague Tale: Requiem</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="A Plague Tale: Requiem" aria-label="Sao chép tên A Plague Tale: Requiem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="alan wake 2 alanwake2 kinh di tam ly " data-vh="0">
+<div class="card-top"><span class="game-kind">Kinh dị tâm lý</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Alan Wake 2</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Alan Wake 2" aria-label="Sao chép tên Alan Wake 2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="assassin’s creed assassins lich su " data-vh="0">
+<div class="card-top"><span class="game-kind">Lịch sử</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Assassin’s Creed</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Assassin’s Creed" aria-label="Sao chép tên Assassin’s Creed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="assassin's creed shadows ac shadows hanh dong / lich su nhat " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động · Lịch sử Nhật</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Assassin's Creed Shadows</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Assassin's Creed Shadows" aria-label="Sao chép tên Assassin's Creed Shadows"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="baldur’s gate 3 baldursgate nhap vai " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Baldur’s Gate 3</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Baldur’s Gate 3" aria-label="Sao chép tên Baldur’s Gate 3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="bloodborne bloodborne nhap vai hanh dong / kinh di gothic " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai hành động · Kinh dị Gothic</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Bloodborne</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Bloodborne" aria-label="Sao chép tên Bloodborne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="control control hanh dong / sieu nhien / bi an " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động · Siêu nhiên · Bí ẩn</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Control</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Control" aria-label="Sao chép tên Control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="days gone days gone hau tan the / biker " data-vh="0">
+<div class="card-top"><span class="game-kind">Hậu tận thế · Biker</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Days Gone</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Days Gone" aria-label="Sao chép tên Days Gone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="dead island 2 dead island 2 hanh dong nhap vai / zombie / hai den " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động nhập vai · Zombie · Hài đen</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Dead Island 2</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Dead Island 2" aria-label="Sao chép tên Dead Island 2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="dead space dead space 2023 kinh di sinh ton / khoa hoc vien tuong " data-vh="0">
+<div class="card-top"><span class="game-kind">Kinh dị sinh tồn · Khoa học viễn tưởng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Dead Space</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Dead Space" aria-label="Sao chép tên Dead Space"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="death stranding deathstranding khoa hoc vien tuong " data-vh="0">
+<div class="card-top"><span class="game-kind">Khoa học viễn tưởng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Death Stranding</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Death Stranding" aria-label="Sao chép tên Death Stranding"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="demon's souls demons souls ps5 nhap vai hanh dong / ky ao den toi " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai hành động · Kỳ ảo đen tối</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Demon's Souls</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Demon's Souls" aria-label="Sao chép tên Demon's Souls"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="detroit: become human detroit phieu luu / khoa hoc vien tuong " data-vh="0">
+<div class="card-top"><span class="game-kind">Phiêu lưu · Khoa học viễn tưởng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Detroit: Become Human</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Detroit: Become Human" aria-label="Sao chép tên Detroit: Become Human"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="dragon age: inquisition dragon age inquisition nhap vai / ky ao " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai · Kỳ ảo</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Dragon Age: Inquisition</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Dragon Age: Inquisition" aria-label="Sao chép tên Dragon Age: Inquisition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="dragon age: the veilguard dragon age the veilguard nhap vai hanh dong / ky ao " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai hành động · Kỳ ảo</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Dragon Age: The Veilguard</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Dragon Age: The Veilguard" aria-label="Sao chép tên Dragon Age: The Veilguard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="dragon quest xi s: echoes of an elusive age dragon quest xi s nhap vai theo luot / ky ao " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai theo lượt · Kỳ ảo</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Dragon Quest XI S: Echoes of an Elusive Age</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Dragon Quest XI S: Echoes of an Elusive Age" aria-label="Sao chép tên Dragon Quest XI S: Echoes of an Elusive Age"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="dragon's dogma 2 dragons dogma 2 nhap vai hanh dong / ky ao " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai hành động · Kỳ ảo</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Dragon's Dogma 2</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Dragon's Dogma 2" aria-label="Sao chép tên Dragon's Dogma 2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="dying light 2 dying light2 hau tan the / zombie " data-vh="0">
+<div class="card-top"><span class="game-kind">Hậu tận thế · Zombie</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Dying Light 2</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Dying Light 2" aria-label="Sao chép tên Dying Light 2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="elden ring eldenring ky ao " data-vh="0">
+<div class="card-top"><span class="game-kind">Kỳ ảo</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Elden Ring</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Elden Ring" aria-label="Sao chép tên Elden Ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="final fantasy vii remake / rebirth ff7 nhap vai " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Final Fantasy VII Remake / Rebirth</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Final Fantasy VII Remake / Rebirth" aria-label="Sao chép tên Final Fantasy VII Remake / Rebirth"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="final fantasy x final fantasy x nhap vai theo luot / ky ao " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai theo lượt · Kỳ ảo</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Final Fantasy X</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Final Fantasy X" aria-label="Sao chép tên Final Fantasy X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="final fantasy xv final fantasy xv nhap vai hanh dong / ky ao hien dai " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai hành động · Kỳ ảo hiện đại</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Final Fantasy XV</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Final Fantasy XV" aria-label="Sao chép tên Final Fantasy XV"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="final fantasy xvi ff16 ky ao / nhap vai " data-vh="0">
+<div class="card-top"><span class="game-kind">Kỳ ảo · Nhập vai</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Final Fantasy XVI</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Final Fantasy XVI" aria-label="Sao chép tên Final Fantasy XVI"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="ghost of tsushima ghost hanh dong phieu luu samurai, khang chien chong quan mong co " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động phiêu lưu samurai, kháng chiến chống quân Mông Cổ</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Ghost of Tsushima</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Ghost of Tsushima" aria-label="Sao chép tên Ghost of Tsushima"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="hellblade: senua's sacrifice hellblade senuas sacrifice phieu luu / kinh di tam ly / than thoai " data-vh="0">
+<div class="card-top"><span class="game-kind">Phiêu lưu · Kinh dị tâm lý · Thần thoại</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Hellblade: Senua's Sacrifice</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Hellblade: Senua's Sacrifice" aria-label="Sao chép tên Hellblade: Senua's Sacrifice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="hogwarts legacy hogwarts phep thuat " data-vh="0">
+<div class="card-top"><span class="game-kind">Phép thuật</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Hogwarts Legacy</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Hogwarts Legacy" aria-label="Sao chép tên Hogwarts Legacy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="horizon zero dawn / forbidden west horizon khoa hoc vien tuong " data-vh="0">
+<div class="card-top"><span class="game-kind">Khoa học viễn tưởng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Horizon Zero Dawn / Forbidden West</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Horizon Zero Dawn / Forbidden West" aria-label="Sao chép tên Horizon Zero Dawn / Forbidden West"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="indiana jones and the great circle indiana jones phieu luu " data-vh="0">
+<div class="card-top"><span class="game-kind">Phiêu lưu</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Indiana Jones and the Great Circle</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Indiana Jones and the Great Circle" aria-label="Sao chép tên Indiana Jones and the Great Circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="kingdom come: deliverance ii kcd2 nhap vai / lich su " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai · Lịch sử</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Kingdom Come: Deliverance II</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Kingdom Come: Deliverance II" aria-label="Sao chép tên Kingdom Come: Deliverance II"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="lies of p lies of p soulslike / gothic " data-vh="0">
+<div class="card-top"><span class="game-kind">Soulslike · Gothic</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Lies of P</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Lies of P" aria-label="Sao chép tên Lies of P"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="like a dragon (yakuza) yakuza hanh dong / bang dang " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động · Băng đảng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Like a Dragon (Yakuza)</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Like a Dragon (Yakuza)" aria-label="Sao chép tên Like a Dragon (Yakuza)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="mafia: the old country mafia oldcountry hanh dong / bang dang " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động · Băng đảng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Mafia: The Old Country</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Mafia: The Old Country" aria-label="Sao chép tên Mafia: The Old Country"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="marvel's spider-man 2 spiderman2 sieu anh hung / hanh dong " data-vh="0">
+<div class="card-top"><span class="game-kind">Siêu anh hùng · Hành động</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Marvel's Spider-Man 2</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Marvel's Spider-Man 2" aria-label="Sao chép tên Marvel's Spider-Man 2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="marvel's spider-man remastered spider man remastered hanh dong / sieu anh hung " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động · Siêu anh hùng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Marvel's Spider-Man Remastered</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Marvel's Spider-Man Remastered" aria-label="Sao chép tên Marvel's Spider-Man Remastered"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="marvel's spider-man: miles morales spider man miles morales hanh dong / sieu anh hung " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động · Siêu anh hùng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Marvel's Spider-Man: Miles Morales</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Marvel's Spider-Man: Miles Morales" aria-label="Sao chép tên Marvel's Spider-Man: Miles Morales"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="marvel’s wolverine marvels wolverine hanh dong sieu anh hung, di nhan va cong nghe, truy tim qua khu " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động siêu anh hùng, dị nhân và công nghệ, truy tìm quá khứ</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Marvel’s Wolverine</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Marvel’s Wolverine" aria-label="Sao chép tên Marvel’s Wolverine"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="mass effect legendary edition mass effect legendary edition nhap vai / khoa hoc vien tuong " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai · Khoa học viễn tưởng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Mass Effect Legendary Edition</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Mass Effect Legendary Edition" aria-label="Sao chép tên Mass Effect Legendary Edition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="metaphor: refantazio metaphor refantazio nhap vai theo luot / ky ao chinh tri " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai theo lượt · Kỳ ảo chính trị</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Metaphor: ReFantazio</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Metaphor: ReFantazio" aria-label="Sao chép tên Metaphor: ReFantazio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="metro exodus metro exodus ban sung / sinh ton / hau tan the " data-vh="0">
+<div class="card-top"><span class="game-kind">Bắn súng · Sinh tồn · Hậu tận thế</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Metro Exodus</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Metro Exodus" aria-label="Sao chép tên Metro Exodus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="monster hunter wilds monster hunter wilds san quai / nhap vai " data-vh="0">
+<div class="card-top"><span class="game-kind">Săn quái · Nhập vai</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Monster Hunter Wilds</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Monster Hunter Wilds" aria-label="Sao chép tên Monster Hunter Wilds"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="need for speed heat need for speed heat dua xe duong pho, hanh dong, truy duoi canh sat " data-vh="0">
+<div class="card-top"><span class="game-kind">Đua xe đường phố, hành động, truy đuổi cảnh sát</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Need for Speed Heat</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Need for Speed Heat" aria-label="Sao chép tên Need for Speed Heat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="nier:automata nier automata nhap vai hanh dong / khoa hoc vien tuong " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai hành động · Khoa học viễn tưởng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>NieR:Automata</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="NieR:Automata" aria-label="Sao chép tên NieR:Automata"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="onimusha: way of the sword onimusha way of the sword kiem thuat samurai nhat, gia tuong den toi, san quy " data-vh="0">
+<div class="card-top"><span class="game-kind">Kiếm thuật samurai Nhật, giả tưởng đen tối, săn quỷ</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Onimusha: Way of the Sword</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Onimusha: Way of the Sword" aria-label="Sao chép tên Onimusha: Way of the Sword"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="persona 5 royal persona5 nhap vai / hoc duong " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai · Học đường</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Persona 5 Royal</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Persona 5 Royal" aria-label="Sao chép tên Persona 5 Royal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="ratchet &amp; clank: rift apart ratchet clank rift apart hanh dong / phieu luu khong gian " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động · Phiêu lưu không gian</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Ratchet &amp; Clank: Rift Apart</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Ratchet &amp; Clank: Rift Apart" aria-label="Sao chép tên Ratchet &amp; Clank: Rift Apart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="resident evil resident kinh di " data-vh="0">
+<div class="card-top"><span class="game-kind">Kinh dị</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Resident Evil</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Resident Evil" aria-label="Sao chép tên Resident Evil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="returnal returnal ban sung / roguelike / kinh di vu tru " data-vh="0">
+<div class="card-top"><span class="game-kind">Bắn súng · Roguelike · Kinh dị vũ trụ</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Returnal</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Returnal" aria-label="Sao chép tên Returnal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="sekiro: shadows die twice sekiro hanh dong / samurai " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động · Samurai</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Sekiro: Shadows Die Twice</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Sekiro: Shadows Die Twice" aria-label="Sao chép tên Sekiro: Shadows Die Twice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="senua's saga: hellblade ii senuas saga hellblade ii phieu luu / kinh di tam ly / than thoai " data-vh="0">
+<div class="card-top"><span class="game-kind">Phiêu lưu · Kinh dị tâm lý · Thần thoại</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Senua's Saga: Hellblade II</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Senua's Saga: Hellblade II" aria-label="Sao chép tên Senua's Saga: Hellblade II"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="shadow of the colossus shadow of the colossus phieu luu / ky ao " data-vh="0">
+<div class="card-top"><span class="game-kind">Phiêu lưu · Kỳ ảo</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Shadow of the Colossus</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Shadow of the Colossus" aria-label="Sao chép tên Shadow of the Colossus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="silent hill 2 silenthill2 kinh di tam ly " data-vh="0">
+<div class="card-top"><span class="game-kind">Kinh dị tâm lý</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Silent Hill 2</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Silent Hill 2" aria-label="Sao chép tên Silent Hill 2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="sniper ghost warrior contracts 2 sniper ghost warrior contracts 2 quan su, ban tia chien thuat " data-vh="0">
+<div class="card-top"><span class="game-kind">Quân sự, bắn tỉa chiến thuật</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Sniper Ghost Warrior Contracts 2</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Sniper Ghost Warrior Contracts 2" aria-label="Sao chép tên Sniper Ghost Warrior Contracts 2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="star wars jedi: fallen order jedi fallen order hanh dong / phieu luu / khoa hoc vien tuong " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động · Phiêu lưu · Khoa học viễn tưởng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Star Wars Jedi: Fallen Order</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Star Wars Jedi: Fallen Order" aria-label="Sao chép tên Star Wars Jedi: Fallen Order"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="star wars jedi: survivor jedi survivor khoa hoc vien tuong / hanh dong " data-vh="0">
+<div class="card-top"><span class="game-kind">Khoa học viễn tưởng · Hành động</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Star Wars Jedi: Survivor</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Star Wars Jedi: Survivor" aria-label="Sao chép tên Star Wars Jedi: Survivor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="stellar blade stellarblade hanh dong / khoa hoc vien tuong " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động · Khoa học viễn tưởng</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Stellar Blade</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Stellar Blade" aria-label="Sao chép tên Stellar Blade"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="tales of arise tales of arise nhap vai hanh dong / ky ao " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai hành động · Kỳ ảo</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Tales of Arise</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Tales of Arise" aria-label="Sao chép tên Tales of Arise"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="the blood of dawnwalker the blood of dawnwalker nhap vai hanh dong gia tuong den toi, ma ca rong thoi trung co theredteam" data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai hành động giả tưởng đen tối, ma cà rồng thời trung cổ</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>The Blood of Dawnwalker</b></div>
+<p class="scope">Đã có hướng dẫn Dịch AI. Bộ câu Việt hóa chưa được tích hợp.</p>
+<div class="card-bottom"><p class="source">Nguồn Việt hóa: <span>TheRedTeam</span>.</p><button type="button" class="copy-name" data-name="The Blood of Dawnwalker" aria-label="Sao chép tên The Blood of Dawnwalker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="the first berserker: khazan the first berserker khazan nhap vai hanh dong, dark fantasy, bao thu " data-vh="0">
+<div class="card-top"><span class="game-kind">Nhập vai hành động, dark fantasy, báo thù</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>The First Berserker: Khazan</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="The First Berserker: Khazan" aria-label="Sao chép tên The First Berserker: Khazan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="the last guardian the last guardian phieu luu / giai do " data-vh="0">
+<div class="card-top"><span class="game-kind">Phiêu lưu · Giải đố</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>The Last Guardian</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="The Last Guardian" aria-label="Sao chép tên The Last Guardian"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="tomb raider tomb raider 2013 hanh dong / phieu luu / sinh ton " data-vh="0">
+<div class="card-top"><span class="game-kind">Hành động · Phiêu lưu · Sinh tồn</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Tomb Raider</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Tomb Raider" aria-label="Sao chép tên Tomb Raider"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="uncharted 4: a thief's end uncharted4 phieu luu / hanh dong " data-vh="0">
+<div class="card-top"><span class="game-kind">Phiêu lưu · Hành động</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Uncharted 4: A Thief's End</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Uncharted 4: A Thief's End" aria-label="Sao chép tên Uncharted 4: A Thief's End"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="uncharted: the lost legacy uncharted the lost legacy phieu luu / truy tim co vat " data-vh="0">
+<div class="card-top"><span class="game-kind">Phiêu lưu · Truy tìm cổ vật</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Uncharted: The Lost Legacy</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Uncharted: The Lost Legacy" aria-label="Sao chép tên Uncharted: The Lost Legacy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="until dawn until dawn kinh di / phieu luu lua chon " data-vh="0">
+<div class="card-top"><span class="game-kind">Kinh dị · Phiêu lưu lựa chọn</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Until Dawn</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Until Dawn" aria-label="Sao chép tên Until Dawn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li>
+<li class="game-card" data-s="watch dogs watchdogs hacker " data-vh="0">
+<div class="card-top"><span class="game-kind">Hacker</span><span class="badge ai">Dịch AI</span></div>
+<div class="game-heading"><b>Watch Dogs</b></div>
+
+<div class="card-bottom"><span class="ai-caption">Hướng dẫn dịch theo game</span><button type="button" class="copy-name" data-name="Watch Dogs" aria-label="Sao chép tên Watch Dogs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"/></svg><span>Sao chép tên</span></button></div>
+</li></ul>
+<div class="empty" id="none" hidden><h2>Chưa tìm thấy game này</h2><p>Thử tên ngắn hơn, hoặc gửi yêu cầu để bổ sung game.</p><button type="button" id="clear-search">Xóa tìm kiếm và bộ lọc</button> <a class="request-button" href="#request-game">Yêu cầu game</a></div>
+</section>
+<section class="info" id="about" aria-label="Thông tin hỗ trợ"><div><h2>Đúng game, đúng cách dịch</h2><p>Việt hóa và Dịch AI theo game cần gói <strong>Premium (Dịch AI)</strong>.</p><p><strong>Có Việt hóa:</strong> app đối chiếu chữ nhận được với bộ câu dịch sẵn. Câu khớp không tốn lượt Dịch AI. Câu chưa có hoặc không khớp sẽ dùng cách dịch bạn đã chọn.</p><p><strong>Dịch AI theo game:</strong> dùng hướng dẫn về bối cảnh, tên nhân vật và thuật ngữ.</p><p>Nhãn “Có Việt hóa” không có nghĩa toàn bộ game đã được dịch. Phạm vi cụ thể được ghi ngay trên thẻ game.</p></div><div class="request" id="request-game"><h2>Chưa có game bạn cần?</h2><p>Gửi tên game qua bot hoặc nhóm Telegram. Với bot, bấm Start rồi gửi <code>/yeucau Tên game</code>.</p><div class="request-links"><a class="request-button primary" href="https://t.me/consoletranslatorbot?start=yeucau" target="_blank" rel="noopener noreferrer">Gửi yêu cầu qua bot <span aria-hidden="true">↗</span></a><a class="request-button" href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">Nhóm Telegram <span aria-hidden="true">↗</span></a></div></div></section>
+</main>
+<footer class="footer"><p>Cảm ơn các nhóm Việt hóa và cộng đồng đã đóng góp bản dịch.<br>Tên game và nhân vật thuộc về chủ sở hữu tương ứng.</p><p class="revision">Thư viện · bản cập nhật 24</p></footer>
+</div><div class="toast" id="copy-status" role="status" aria-live="polite" aria-atomic="true"></div>
 <script>
-const items = [...document.querySelectorAll("#list li")];
-document.getElementById("list").addEventListener("click", async (event) => {
-  const button = event.target.closest("button.copy-name");
-  if (!button) return;
-  const status = document.getElementById("copy-status");
-  try {
-    await navigator.clipboard.writeText(button.dataset.name);
-    status.textContent = "Đã sao chép: " + button.dataset.name;
-  } catch {
-    status.textContent = "Chưa sao chép được. Nhấn giữ tên game để sao chép.";
-  }
-});
-function filter() {
-  const q = document.getElementById("q").value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().trim();
-  const onlyVH = document.getElementById("vh")?.checked;
-  let shown = 0;
-  for (const li of items) { const hit = li.dataset.s.includes(q) && (!onlyVH || li.dataset.vh === "1"); li.hidden = !hit; shown += hit; }
-  document.getElementById("none").hidden = shown > 0;
-}
-document.getElementById("q").addEventListener("input", filter);
-document.getElementById("vh")?.addEventListener("change", filter);
+const items=[...document.querySelectorAll('#list li')];
+const query=document.getElementById('q');
+let mode='all',toastTimer;
+function normalize(text){return text.normalize('NFD').replace(/\p{M}/gu,'').replace(/[đĐ]/g,'d').toLowerCase().trim()}
+function filter(){const words=normalize(query.value).split(/\s+/).filter(Boolean);let shown=0;for(const li of items){const hit=words.every(w=>li.dataset.s.includes(w))&&(mode==='all'||li.dataset.vh===(mode==='vh'?'1':'0'));li.hidden=!hit;shown+=Number(hit)}document.getElementById('none').hidden=shown>0;document.getElementById('result-count').textContent=(query.value.trim()||mode!=='all')?shown+' game phù hợp':shown+' game trong thư viện'}
+for(const button of document.querySelectorAll('[data-filter]'))button.addEventListener('click',()=>{mode=button.dataset.filter;for(const b of document.querySelectorAll('[data-filter]'))b.setAttribute('aria-pressed',String(b===button));filter()});
+query.addEventListener('input',filter);
+document.getElementById('clear-search').addEventListener('click',()=>{query.value='';mode='all';for(const b of document.querySelectorAll('[data-filter]'))b.setAttribute('aria-pressed',String(b.dataset.filter==='all'));filter();query.focus()});
+function notify(message){const el=document.getElementById('copy-status');clearTimeout(toastTimer);el.textContent=message;el.classList.add('show');toastTimer=setTimeout(()=>el.classList.remove('show'),3200)}
+document.getElementById('list').addEventListener('click',async event=>{const button=event.target.closest('button.copy-name');if(!button)return;try{await navigator.clipboard.writeText(button.dataset.name);button.classList.add('copied');button.querySelector('span').textContent='Đã sao chép';notify('Đã sao chép: '+button.dataset.name);setTimeout(()=>{button.classList.remove('copied');button.querySelector('span').textContent='Sao chép tên'},2400)}catch{notify('Chưa sao chép được. Nhấn giữ hoặc chọn tên game để sao chép.')}});
+// Restore browser-filled search text (including Back navigation) before reporting the count.
+window.addEventListener('pageshow',filter);filter();
 </script>
 </body>
 </html>
