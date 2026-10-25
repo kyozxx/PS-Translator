@@ -1,9 +1,4 @@
 (() => {
-  const field = document.getElementById('game-search');
-  const results = document.getElementById('game-results');
-  const state = document.getElementById('game-state');
-  const fold = text => text.normalize('NFD').replace(/\p{M}/gu, '').replace(/đ/gi, 'd').toLowerCase();
-  let games = [], toastTimer;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const motionNodes = new Set();
   function reveal(element, delay = 0) {
@@ -35,45 +30,6 @@
   document.querySelectorAll('.faq details').forEach(detail => {
     detail.addEventListener('toggle', () => { if (detail.open) reveal(detail.querySelector('p')); });
   });
-  function notify(message) {
-    const toast = document.getElementById('toast');
-    toast.textContent = message; toast.classList.add('show');
-    clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
-  }
-  async function copy(name, button) {
-    try { await navigator.clipboard.writeText(name); }
-    catch {
-      // Older browsers can still copy from a temporary selected field.
-      const input = document.createElement('textarea'); input.value = name;
-      input.setAttribute('readonly', ''); input.style.position = 'fixed'; input.style.left = '-9999px';
-      document.body.append(input); input.select();
-      const ok = document.execCommand('copy'); input.remove(); button.focus();
-      if (!ok) { notify('Chưa sao chép được. Bạn có thể chọn và sao chép tên game trong danh sách.'); return; }
-    }
-    button.textContent = 'Đã sao chép';
-    setTimeout(() => { button.textContent = 'Sao chép tên'; }, 1800);
-    notify('Đã sao chép: ' + name);
-  }
-  function render() {
-    const q = fold(field.value.trim());
-    const found = games.filter(g => fold(g.name + ' ' + g.genre).includes(q));
-    const shown = found.slice(0, q ? 40 : 4);
-    state.textContent = !found.length ? 'Chưa có game này? Bấm Yêu cầu game để gửi tên cho quản trị viên.'
-      : q ? `Tìm thấy ${found.length} game${found.length > shown.length ? '. Xem đầy đủ tại Danh sách game.' : ''}`
-      : `${games.length} game có hướng dẫn dịch riêng · Đang hiển thị ${shown.length} game`;
-    results.replaceChildren();
-    for (const game of shown) {
-      const row = document.createElement('article'); row.className = 'game-row';
-      const detail = document.createElement('div');
-      const name = document.createElement('strong'); name.textContent = game.name;
-      const genre = document.createElement('small'); genre.textContent = game.genre;
-      detail.append(name, genre);
-      const button = document.createElement('button'); button.className = 'copy-button'; button.type = 'button';
-      button.textContent = 'Sao chép tên'; button.setAttribute('aria-label', 'Sao chép tên ' + game.name);
-      button.addEventListener('click', () => copy(game.name, button));
-      row.append(detail, button); results.append(row);
-    }
-  }
   document.querySelectorAll('[data-demo-lang]').forEach(button => {
     button.addEventListener('click', () => {
       document.querySelector('.product-visual').dataset.language = button.dataset.demoLang;
@@ -127,8 +83,4 @@
     rotatePhone();
   });
   rotatePhone();
-  field.addEventListener('input', render);
-  fetch('games.json').then(r => { if (!r.ok) throw new Error('catalog'); return r.json(); })
-    .then(data => { games = data; render(); })
-    .catch(() => { state.textContent = 'Chưa tải được danh sách. Bấm “Xem toàn bộ danh sách” để mở trang game.'; });
 })();
