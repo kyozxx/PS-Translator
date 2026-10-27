@@ -46,7 +46,7 @@ Xem đời TV Samsung: trên TV vào **Cài đặt → Hỗ trợ → Giới thi
 
 > **TV Xiaomi / Redmi mua từ Trung Quốc (hàng nội địa, giao diện tiếng Trung PatchWall)?** Dùng bản riêng ở mục [TV Xiaomi nội địa](#tv-xiaomi-nội-địa-trung). Bản thường bị TV này tự tắt.
 
-Tải file **Console-Translator-TV.apk** (phiên bản 2.0.0):
+Tải file **Console-Translator-TV.apk** (phiên bản 2.0.1):
 
 ```
 https://api.kyozx.cloud/tv/latest
@@ -107,7 +107,7 @@ Muốn tắt app: bấm **Tắt app** trong app TV.
 
 TV Xiaomi và Redmi bán ở Trung Quốc tự tắt app phụ đề bản thường: mở app lên là app bị đóng, hoặc phụ đề không bao giờ hiện. Dùng bản riêng dưới đây. TV Xiaomi bản quốc tế (Google TV, giao diện tiếng Anh/tiếng Việt) dùng bản thường ở trên.
 
-Tải file **Console-Translator-TV-Mi.apk** (phiên bản 2.0.0-mi):
+Tải file **Console-Translator-TV-Mi.apk** (phiên bản 2.0.1-mi):
 
 ```
 https://api.kyozx.cloud/tv/latest-mi
