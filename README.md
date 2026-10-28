@@ -72,14 +72,14 @@ Cần Mac chip Apple (**M1 trở lên**) chạy **macOS 15 trở lên**.
 
 Cần **Windows 11**, hoặc **Windows 10 bản 2004** trở lên, máy 64-bit. Không cần cài thêm .NET.
 
-1. Tải [**ConsoleTranslator-PC-1.0.7-Setup.exe**](https://github.com/kyozxx/PS-Translator/releases/download/pc-1.0.7/ConsoleTranslator-PC-1.0.7-Setup.exe).
+1. Tải [**ConsoleTranslator-PC-1.0.8-Setup.exe**](https://github.com/kyozxx/PS-Translator/releases/download/pc-1.0.8/ConsoleTranslator-PC-1.0.8-Setup.exe).
 2. Mở file vừa tải và bấm **Cài đặt**. Cài xong, mở app từ biểu tượng **Console Translator** trên màn hình chính hoặc Start Menu. Nếu Windows hiện SmartScreen, bấm **Thông tin thêm** rồi **Vẫn chạy**.
 3. Mở bot [**t.me/consoletranslatorbot**](https://t.me/consoletranslatorbot), bấm **🖥️ App PC (Windows)** để nhận mã, dán mã vào app. Mã App Mac không dùng được trên PC.
 
 ## Bắt đầu nhanh
 
 1. **Trên máy chơi game**: tạo một tài khoản phụ, bật **Chơi từ xa** cho tài khoản đó.
-2. **Trong app**: tìm máy, dán mã người chơi tra từ [psntools.com/psn/checker](https://www.psntools.com/psn/checker), nhập mã 8 số hiện trên TV.
+2. **Trong app**: tìm máy, dán mã người chơi tra từ [id.kyozx.cloud](https://id.kyozx.cloud), nhập mã 8 số hiện trên TV.
 3. **Chơi**: bấm **Bắt đầu dịch game → Dịch khi chơi TV**, kéo khung Thoại tới dòng phụ đề.
 
 Từng bước có ảnh: [**Hướng dẫn cài và ghép nối**](https://kyozxx.github.io/PS-Translator/guide.html) · [**Cách dùng từng chức năng**](https://kyozxx.github.io/PS-Translator/guide.html#dung-man-chinh) · [**Gặp lỗi**](https://kyozxx.github.io/PS-Translator/guide.html#panel-fix)
@@ -100,7 +100,7 @@ Cài app nhận phụ đề lên TV **trước khi mua**: TV hiện được mã
 |---|---|---|
 | Android TV / Google TV (Android 9+) | [Google Play](https://play.google.com/apps/testing/com.kyozx.consoletranslator.tv.play) hoặc [APK 2.0.1](https://github.com/kyozxx/PS-Translator/releases/download/tv-android-2.0.1/Console-Translator-TV.apk) | [TV.md](TV.md) |
 | TV LG webOS | **Ngay trên iPhone** (cần PRO) hoặc [Windows 1.2.17](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.17/ConsoleTranslator-LG-PC-1.2.17.zip) · [Mac 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip), máy tính cần mã `LGTV-…` | [LG.md](LG.md) |
-| TV Samsung từ 2017 (Tizen 3.0+) | [Windows 1.0.15](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.15/ConsoleTranslator-Samsung-PC-1.0.15.zip) · [Mac 1.0.9](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.9/ConsoleTranslator-Samsung-Mac-1.0.9.zip), cần mã `SSTV-…` | [SAMSUNG.md](SAMSUNG.md) |
+| TV Samsung từ 2017 (Tizen 3.0+) | [Windows 1.0.18](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.18/ConsoleTranslator-Samsung-PC-1.0.18.zip) · [Mac 1.0.15](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.15/ConsoleTranslator-Samsung-Mac-1.0.15.zip), cần mã `SSTV-…` | [SAMSUNG.md](SAMSUNG.md) |
 
 Mã `LGTV-…` và `SSTV-…` nhận qua bot [t.me/consoletranslatorbot](https://t.me/consoletranslatorbot). TV LG cài được ngay trên iPhone (PRO) hoặc bằng máy tính lần đầu, sau đó iPhone tự mở app trên TV. Samsung 2016 trở về trước, TV hệ điều hành khác và Android Box không dùng được.
 

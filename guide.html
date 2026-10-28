@@ -469,20 +469,16 @@
         <details class="step" id="ma-nguoi-choi"><summary><span class="num">6</span>Lấy mã người chơi của tài khoản phụ</summary><div class="step-body">
         <ol>
             <li>Trên PS5 (đang ở tài khoản phụ): bấm <strong>ảnh đại diện</strong> → <strong>Hồ sơ</strong> <em>(Profile)</em>. Ghi lại <strong>Online ID</strong> nằm dưới tên hiển thị, đúng từng chữ.</li>
-            <li>Trong app bấm <span class="btn-app">Mở trang tra mã</span>, hoặc mở <a href="https://www.psntools.com/psn/checker" target="_blank" rel="noopener noreferrer">psntools.com/psn/checker</a>.</li>
-            <li>Gõ Online ID, bấm <strong>Search</strong>.</li>
-            <li>Ở dòng <strong>BASE64 (FOR REMOTE PLAY)</strong>, chạm giữ dãy ký tự kết thúc bằng <code>=</code> → <strong>Sao chép</strong>.</li>
+            <li>Mở trang <a href="https://id.kyozx.cloud" target="_blank" rel="noopener noreferrer">id.kyozx.cloud</a> (trang tra mã của Console Translator, không cần đăng nhập).</li>
+            <li>Gõ Online ID, bấm <strong>Tra</strong>.</li>
+            <li>Ở ô <strong>Mã dán vào app</strong>, bấm <strong>Sao chép</strong>.</li>
             <li>Quay lại app, bấm <span class="btn-app">Dán mã</span>. Thấy <strong>Đã nhận mã</strong> thì bấm <span class="btn-app">Tiếp tục</span>.</li>
         </ol>
         <figure>
             <img src="screenshots/app/07-find-online-id.jpg" alt="Trên PS5: ảnh đại diện, Hồ sơ, Online ID dưới tên" loading="lazy">
             <figcaption>Online ID nằm ngay dưới tên hiển thị trong Hồ sơ</figcaption>
         </figure>
-        <figure>
-            <img src="screenshots/app/07-pair-2-lookup-howto.jpg" alt="Trang tra mã: nhập Online ID, bấm Search, copy dòng BASE64" loading="lazy">
-            <figcaption>Nhập Online ID, bấm Search, copy đoạn ở dòng BASE64 (FOR REMOTE PLAY)</figcaption>
-        </figure>
-        <div class="box warn"><strong>Copy đúng dòng</strong>Chỉ lấy dòng BASE64 (FOR REMOTE PLAY), không lấy HEX hay NPID. App báo "Chưa đúng mã" là đã copy nhầm dòng hoặc thiếu dấu =. Trang tra mã là trang bên ngoài, không cần đăng nhập.</div>
+        <div class="box warn"><strong>Copy đủ mã</strong>Bấm nút Sao chép trên trang để lấy đủ cả mã, kể cả dấu = ở cuối. App báo "Chưa đúng mã" là mã bị thiếu hoặc thừa ký tự.</div>
         <details>
             <summary>Không tìm thấy Online ID trên PS5?</summary>
             <ul>
@@ -814,7 +810,7 @@
         <details>
             <summary>App báo "Chưa đúng mã" ở bước lấy mã người chơi</summary>
             <ul>
-                <li>Chỉ copy dòng <strong>BASE64 (FOR REMOTE PLAY)</strong>, dãy kết thúc bằng dấu <code>=</code>. Không lấy dòng HEX hay NPID.</li>
+                <li>Lấy mã ở <a href="https://id.kyozx.cloud" target="_blank" rel="noopener noreferrer">id.kyozx.cloud</a> bằng nút <strong>Sao chép</strong>, mã kết thúc bằng dấu <code>=</code>.</li>
                 <li>Copy đủ cả dãy, không thừa khoảng trắng. Xem lại bước 6 tab iPhone.</li>
             </ul><div class="iphones"><figure class="iphone"><div class="iphone-screen"><img src="screenshots/app/08-pair-2-wrong-code.jpg" alt="App báo Chưa đúng mã" loading="lazy"></div><figcaption>App báo Chưa đúng mã</figcaption></figure></div>
         </details>
