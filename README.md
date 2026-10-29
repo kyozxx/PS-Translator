@@ -79,7 +79,7 @@ Cần **Windows 11**, hoặc **Windows 10 bản 2004** trở lên, máy 64-bit. 
 ## Bắt đầu nhanh
 
 1. **Trên máy chơi game**: tạo một tài khoản phụ, bật **Chơi từ xa** cho tài khoản đó.
-2. **Trong app**: tìm máy, dán mã người chơi tra từ [id.kyozx.cloud](https://id.kyozx.cloud), nhập mã 8 số hiện trên TV.
+2. **Trong app**: tìm máy, dán mã người chơi tra từ [id.kyozx.cloud](https://id.kyozx.cloud) (dự phòng: [psntools.com/psn/checker](https://www.psntools.com/psn/checker), dòng BASE64), nhập mã 8 số hiện trên TV.
 3. **Chơi**: bấm **Bắt đầu dịch game → Dịch khi chơi TV**, kéo khung Thoại tới dòng phụ đề.
 
 Từng bước có ảnh: [**Hướng dẫn cài và ghép nối**](https://kyozxx.github.io/PS-Translator/guide.html) · [**Cách dùng từng chức năng**](https://kyozxx.github.io/PS-Translator/guide.html#dung-man-chinh) · [**Gặp lỗi**](https://kyozxx.github.io/PS-Translator/guide.html#panel-fix)
