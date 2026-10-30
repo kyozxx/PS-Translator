@@ -10,6 +10,7 @@
   index.html?post=ID  : one post full size, for export
   New post: add one entry to POSTS. phone = file in ../appstore/raw; hl = the new control on the
   screenshot as [left, top, width, height] in % of the screenshot; tag = the label beside it.
+  theme: 'gold' (owner's choice 2026-10-30 for every new post) = black-gold background plus logo, name and slogan.
 -->
 <style>
   :root { --amber: #f2a516; --gold: #ffd27a; --cream: #fff8e6; }
@@ -54,8 +55,6 @@
   .card.gold .hl { box-shadow: 0 0 0 5px var(--gold), 0 0 40px 10px #ffd27acc, 0 0 0 2000px #0007; }
   .card.gold .tag { background: var(--gold); color: #2a1606; }
   .card.gold .tag::after { border-top-color: var(--gold); }
-  .card.vivid { background: radial-gradient(80% 60% at 85% 10%, #ff9a3c 0%, transparent 60%), radial-gradient(70% 60% at 10% 90%, #ff2e88 0%, transparent 60%), linear-gradient(160deg, #3a0ca3 0%, #7209b7 45%, #b5179e 100%); }
-  .card.vivid::before { background: radial-gradient(50% 40% at 50% 80%, #ffffff30 0%, transparent 70%); }
   .grid { display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; }
   .grid .wrap { width: 378px; height: 378px; overflow: hidden; border-radius: 18px; }
   .grid .card { transform: scale(.35); transform-origin: top left; }
@@ -77,7 +76,6 @@ const POSTS = [
     phone: 'menu.png', hl: [7.5, 24.8, 87, 13.8], tag: 'MỚI',
     back: 'home.png', backHl: [7, 30, 86, 5.6], backTag: 'Bắt đầu dịch', theme: 'gold' },
 ];
-POSTS.push({ ...POSTS.at(-1), id: 'viet-hoa-26b', theme: 'vivid' });
 const card = p => {
   const [x, y, w, h] = p.hl || [];
   const back = p.back ? (() => { const [a, b, c, d] = p.backHl;
