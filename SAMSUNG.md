@@ -14,6 +14,17 @@ Windows 10/11. Mac Intel hoặc M1 trở lên, macOS 12+. Bản Mac đã đượ
 
 Cài xong, mở Console Translator TV trên TV, chọn HDMI rồi ghép điện thoại bằng mã 8 số. Từ lần sau không cần máy tính.
 
+> **Lưu ý quan trọng khi mở máy chơi game:**
+> - **Bật máy chơi game trước:** Bật máy PS5/Xbox/Switch trước để có sẵn tín hiệu hình ảnh, sau đó mới mở app Console Translator TV trên TV.
+> - **Tắt tự chuyển cổng HDMI (HDMI-CEC):** Trên PS5 vào *Cài đặt → Hệ thống → HDMI* và tắt **Bật liên kết thiết bị HDMI** (hoặc tắt **Anynet+** trên TV Samsung). Nếu không tắt, khi bật máy chơi game TV sẽ tự động nhảy sang cổng HDMI ngoài làm TV thoát khỏi app, khiến điện thoại báo đã kết nối nhưng màn hình không thể hiện phụ đề.
+> - **Kiểm tra app đang chạy:** Bấm nút **Lên** trên remote Samsung. Nếu hiện bảng chọn cổng HDMI ở góc trên trái nghĩa là app vẫn đang hoạt động tốt đè lên hình game.
+
+<details><summary>Mở máy chơi game bị mất phụ đề hoặc app nháy rồi vào thẳng game</summary>
+
+Do tính năng HDMI-CEC (Anynet+ trên TV hoặc Liên kết thiết bị HDMI trên PS5) tự động chuyển cổng sang HDMI ngoài khiến TV thoát app. Khắc phục: 1. Tắt Bật liên kết thiết bị HDMI trên PS5 (Cài đặt → Hệ thống → HDMI) hoặc tắt Anynet+ trên TV. 2. Bật máy chơi game trước, sau đó mới mở app Console Translator TV trên TV. Bấm nút Lên trên remote Samsung để kiểm tra: nếu hiện bảng chọn cổng HDMI nghĩa là app đang chạy đè lên game bình thường.
+
+</details>
+
 <details><summary>Cập nhật bản cũ</summary>
 
 Tải bộ cài mới ở trên rồi bấm Cài đặt lên TV. Công cụ tự gỡ bản cũ trước khi cài lại. Có thể cần chọn lại HDMI và ghép lại điện thoại.
