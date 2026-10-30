@@ -38,6 +38,24 @@
   .card.duo .stage:not(.back) { left: 62%; width: 330px; }
   .stage.back { left: 31%; width: 280px; top: 410px; transform: translateX(-50%) perspective(2200px) rotateY(12deg) rotateX(3deg) rotateZ(-4deg); z-index: 0; opacity: .95; }
   .tag.small { font-size: 24px; padding: 8px 16px; white-space: nowrap; }
+  .brand { display: flex; align-items: center; justify-content: center; gap: 18px; margin-bottom: 26px; text-align: left; }
+  .brand img { width: 84px; height: 84px; border-radius: 20px; box-shadow: 0 8px 26px -6px #0008, 0 0 0 2px #ffffff30; }
+  .brand b { display: block; font-size: 38px; font-weight: 800; letter-spacing: -.02em; }
+  .brand span { display: block; font-size: 26px; font-weight: 600; opacity: .9; }
+  .card.branded .cap { top: 40px; }
+  .card.branded .stage { top: 450px; }
+  .card.branded .stage.back { top: 500px; }
+  .card.branded h1 { font-size: 92px; }
+  .card.gold { background: radial-gradient(70% 55% at 50% 72%, #6b3d0a 0%, #2a1606 45%, #0c0805 100%); }
+  .card.gold::before { background: radial-gradient(40% 30% at 50% 0%, #ffcf6b55 0%, transparent 70%), conic-gradient(from 200deg at 50% -10%, transparent 0deg, #ffd27a14 10deg, transparent 20deg, #ffd27a10 32deg, transparent 44deg, #ffd27a14 56deg, transparent 70deg); }
+  .card.gold::after { border-color: #ffd27a14; }
+  .card.gold h1 em, .card.gold .brand span { color: var(--gold); }
+  .card.gold .eyebrow { color: #2a1606; background: linear-gradient(90deg, #ffd27a, #f2a516); }
+  .card.gold .hl { box-shadow: 0 0 0 5px var(--gold), 0 0 40px 10px #ffd27acc, 0 0 0 2000px #0007; }
+  .card.gold .tag { background: var(--gold); color: #2a1606; }
+  .card.gold .tag::after { border-top-color: var(--gold); }
+  .card.vivid { background: radial-gradient(80% 60% at 85% 10%, #ff9a3c 0%, transparent 60%), radial-gradient(70% 60% at 10% 90%, #ff2e88 0%, transparent 60%), linear-gradient(160deg, #3a0ca3 0%, #7209b7 45%, #b5179e 100%); }
+  .card.vivid::before { background: radial-gradient(50% 40% at 50% 80%, #ffffff30 0%, transparent 70%); }
   .grid { display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; }
   .grid .wrap { width: 378px; height: 378px; overflow: hidden; border-radius: 18px; }
   .grid .card { transform: scale(.35); transform-origin: top left; }
@@ -57,15 +75,16 @@ const POSTS = [
   { id: 'viet-hoa-26', eyebrow: 'TỔNG HỢP CẬP NHẬT', title: 'Việt hóa<br><em>26 game</em>',
     text: 'Wolverine, Spider-Man, The Last of Us, Stellar Blade... dịch chuẩn như bản cộng đồng.',
     phone: 'menu.png', hl: [7.5, 24.8, 87, 13.8], tag: 'MỚI',
-    back: 'home.png', backHl: [7, 30, 86, 5.6], backTag: 'Bắt đầu dịch' },
+    back: 'home.png', backHl: [7, 30, 86, 5.6], backTag: 'Bắt đầu dịch', theme: 'gold' },
 ];
+POSTS.push({ ...POSTS.at(-1), id: 'viet-hoa-26b', theme: 'vivid' });
 const card = p => {
   const [x, y, w, h] = p.hl || [];
   const back = p.back ? (() => { const [a, b, c, d] = p.backHl;
     return `<div class="stage back"><div class="phone"><img src="../appstore/raw/${p.back}" alt="">
     <div style="position:absolute;inset:12px;border-radius:57px;overflow:hidden"><div class="hl" style="left:${a}%;top:${b}%;width:${c}%;height:${d}%"></div></div>
     <div class="tag small" style="left:calc(12px + ${a + c / 2}% - 90px);top:calc(12px + ${b}% - 62px)">${p.backTag}</div></div></div>`; })() : '';
-  return `<section class="card${p.back ? ' duo' : ''}">${back}<div class="cap"><span class="eyebrow">${p.eyebrow}</span><h1>${p.title}</h1><p>${p.text}</p></div>
+  return `<section class="card${p.back ? ' duo' : ''}${p.theme ? ' branded ' + p.theme : ''}">${back}<div class="cap">${p.theme ? '<div class="brand"><img src="app-icon.png" alt=""><div><b>Console Translator</b><span>Chơi game nào cũng hiểu</span></div></div>' : ''}<span class="eyebrow">${p.eyebrow}</span><h1>${p.title}</h1><p>${p.text}</p></div>
   <div class="stage"><div class="phone"><img src="../appstore/raw/${p.phone}" alt="">
   ${p.hl ? `<div style="position:absolute;inset:12px;border-radius:57px;overflow:hidden"><div class="hl" style="left:${x}%;top:${y}%;width:${w}%;height:${h}%"></div></div>
   <div class="tag" style="left:calc(12px + ${x + w / 2}% - 52px);top:calc(12px + ${y}% - 76px)">${p.tag}</div>` : ''}
