@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hướng dẫn Console Translator PC</title>
+<meta name="description" content="Hướng dẫn cài và dùng Console Translator trên Windows: dịch game PlayStation khi chơi trên TV hoặc PC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141210;--panel:#1f1c19;--line:#34302b;--text:#f2ece4;--muted:#b3aa9e;--gold:#f0b46a;--gold2:#ffd9a3}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 "Be Vietnam Pro",system-ui,sans-serif}
+a{color:var(--gold2)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header{padding:56px 0 28px;border-bottom:1px solid var(--line)}
+.kicker{color:var(--gold);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.15;margin:10px 0 12px;font-weight:800}
+.lead{color:var(--muted);max-width:640px;margin:0}
+.dl{display:inline-block;margin-top:22px;padding:12px 22px;border-radius:999px;background:linear-gradient(90deg,var(--gold2),var(--gold));color:#2a1a08;font-weight:800;text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:8px;padding:20px 0}
+nav a{padding:6px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--text);font-size:14px}
+nav a:hover{border-color:var(--gold)}
+section{padding:36px 0;border-bottom:1px solid var(--line)}
+h2{font-size:26px;margin:0 0 6px}
+h2 small{display:block;color:var(--muted);font-size:15px;font-weight:400;margin-top:4px}
+h3{font-size:18px;margin:28px 0 6px;color:var(--gold2)}
+ol,ul{padding-left:22px}
+li{margin:4px 0}
+figure{margin:18px 0 8px}
+figure img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+figcaption{color:var(--muted);font-size:14px;margin-top:8px}
+.note{background:var(--panel);border-left:3px solid var(--gold);padding:12px 16px;border-radius:8px;margin:16px 0;color:var(--muted)}
+.keys{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;padding:0;list-style:none}
+.keys li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+kbd{background:#2c2824;border:1px solid var(--line);border-radius:6px;padding:1px 7px;font:600 13px ui-monospace,monospace;color:var(--gold2)}
+footer{padding:28px 0 48px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">Console Translator · Windows 1.1.0</div>
+  <h1>Hướng dẫn bản PC</h1>
+  <p class="lead">Dịch thoại game PlayStation sang tiếng Việt ngay khi chơi. Hiện phụ đề trên PC hoặc trên TV, đọc to bằng giọng Việt.</p>
+  <a class="dl" href="https://github.com/kyozxx/PS-Translator/releases/download/pc-1.1.0/ConsoleTranslator-PC-1.1.0-Setup.exe">Tải bản cài Windows 1.1.0</a>
+</header>
+
+<nav>
+  <a href="#cai-dat">1. Cài đặt</a><a href="#ai">2. Khóa AI</a><a href="#noi-choi">3. Chọn nơi chơi</a>
+  <a href="#tv">4. Chơi trên TV</a><a href="#capture">5. Capture card</a><a href="#pc">6. Chơi trên PC</a>
+  <a href="#vung">7. Vùng đọc chữ</a><a href="#phu-de-tv">8. Phụ đề trên TV</a><a href="#giong">9. Giọng đọc</a>
+  <a href="#game">10. Chọn game</a><a href="#phim">11. Xem phim</a><a href="#phim-tat">Phím tắt</a>
+</nav>
+
+<section id="cai-dat">
+  <h2>1. Cài đặt<small>Windows 10 (bản 2004) trở lên, 64-bit.</small></h2>
+  <ol>
+    <li>Tải <b>ConsoleTranslator-PC-1.1.0-Setup.exe</b> ở nút phía trên.</li>
+    <li>Mở file và bấm qua các bước cài. Nếu Windows hiện “Windows đã bảo vệ PC của bạn”, bấm <b>Thông tin thêm → Vẫn chạy</b>.</li>
+    <li>Mở app <b>Console Translator</b> từ menu Start và nhập mã dùng thử hoặc mã bản quyền.</li>
+  </ol>
+  <figure><img src="images/01-home.jpg" alt="Màn hình chính" loading="lazy"><figcaption>Màn hình chính. Bên trái để vào game, bên phải để chỉnh nhanh cách dịch, giọng đọc, game và vùng đọc chữ.</figcaption></figure>
+  <div class="note">Đã có bản cũ thì cài đè lên, không cần gỡ. Từ 1.0.8 trở đi app tự báo khi có bản mới.</div>
+</section>
+
+<section id="ai">
+  <h2>2. Thêm khóa AI<small>Không bắt buộc, nhưng dịch hay hơn rất nhiều.</small></h2>
+  <p>Không có khóa thì app dịch bằng Bing, câu hay cứng và sai tên. Khóa Google Gemini miễn phí, lấy trong khoảng 2 phút.</p>
+  <ol>
+    <li>Vào <b>Cài đặt → Cách dịch</b>, chọn <b>Google Gemini</b>.</li>
+    <li>Bấm <b>Lấy khóa miễn phí</b>, đăng nhập Google, tạo khóa rồi dán vào ô <b>Khóa Google Gemini</b>.</li>
+    <li>Có nhiều khóa (Gemini, Groq) thì chọn <b>AI thông minh</b>: hết lượt khóa này app tự chuyển sang khóa khác.</li>
+  </ol>
+  <figure><img src="images/10-settings.jpg" alt="Cài đặt cách dịch" loading="lazy"><figcaption>Cài đặt → Cách dịch.</figcaption></figure>
+  <figure><img src="images/11-aikey.jpg" alt="Nhắc thêm khóa AI" loading="lazy"><figcaption>Chưa có khóa thì app nhắc khi bắt đầu dịch. Có thể bấm “Dùng Bing lần này”.</figcaption></figure>
+</section>
+
+<section id="noi-choi">
+  <h2>3. Chọn nơi chơi<small>Bấm “Bắt đầu dịch game” ở màn hình chính.</small></h2>
+  <ul>
+    <li><b>Chơi trên TV</b>: PC kết nối máy PS qua Remote Play để đọc hình. Bạn vẫn chơi trên TV như bình thường.</li>
+    <li><b>Chơi trên TV, dùng capture card</b>: máy PS cắm HDMI qua capture card vào PC. Mới có từ 1.1.0.</li>
+    <li><b>Chơi trên PC</b>: chơi bằng chiaki-ng hoặc PXPlay trên PC, app đọc cửa sổ đó.</li>
+  </ul>
+  <figure><img src="images/02-play-location.jpg" alt="Bạn chơi ở đâu" loading="lazy"><figcaption>Chọn nơi chơi. Sau đó app hỏi game bạn chơi để dịch đúng tên nhân vật.</figcaption></figure>
+</section>
+
+<section id="tv">
+  <h2>4. Chơi trên TV (Remote Play)<small>Hỗ trợ PX5 và PX4. PC và máy chơi game phải cùng mạng.</small></h2>
+  <h3>Ghép nối lần đầu</h3>
+  <ol>
+    <li>Bật máy chơi game. Trong app bấm <b>Tìm máy</b> và chọn loại máy <b>PX5</b> hoặc <b>PX4</b>.</li>
+    <li>Không thấy máy thì bấm <b>Nhập địa chỉ bằng tay</b> và gõ IP của máy (xem trong Cài đặt mạng của máy).</li>
+    <li><b>Mã người chơi</b>: bấm nút tra mã, đăng nhập tài khoản PlayStation, chép mã vào app.</li>
+    <li><b>Mã trên máy</b>: trên máy chơi game vào Cài đặt → Hệ thống → Chơi từ xa → Liên kết thiết bị, nhập 8 số đang hiện vào app.</li>
+  </ol>
+  <figure><img src="images/05-console.jpg" alt="Thêm người chơi" loading="lazy"><figcaption>Ba bước ghép nối. Mỗi người chơi chỉ cần làm một lần.</figcaption></figure>
+  <div class="note">Máy đổi địa chỉ mạng (do router cấp lại IP) thì từ 1.1.0 app tự tìm lại, không cần ghép nối lại.</div>
+  <h3>Khi chơi</h3>
+  <p>App tự đánh thức máy đang ngủ, kết nối rồi mở màn hình dịch. Thanh dưới cùng có: <b>Chỉnh vùng dịch</b>, đổi <b>AI</b>, <b>Dịch menu</b>, <b>Kết nối TV</b>, <b>Đọc to</b> và <b>Nhân vật</b>.</p>
+  <figure><img src="images/06-tvplay.jpg" alt="Màn hình dịch khi chơi trên TV" loading="lazy"><figcaption>Màn hình dịch. Câu dịch hiện ở dưới, giống trên TV.</figcaption></figure>
+  <ul>
+    <li><b>Dịch menu</b>: dịch chữ trong menu, nhiệm vụ, hướng dẫn. Bật <b>Tự ẩn khi gặp nút</b> để bản dịch tự tắt khi menu có gợi ý nút bấm.</li>
+    <li><b>Dừng dịch</b> ở góc trên. Khi thoát, app hỏi có cho máy ngủ không.</li>
+  </ul>
+</section>
+
+<section id="capture">
+  <h2>5. Chơi trên TV bằng capture card<small>Mới trong 1.1.0. Không cần Remote Play, hình nét và không trễ.</small></h2>
+  <ol>
+    <li>Cắm: máy PS → HDMI vào capture card → HDMI ra TV. Cắm USB của capture card vào PC.</li>
+    <li>Đóng các app khác đang dùng capture card (OBS, Camera).</li>
+    <li>Bấm <b>Bắt đầu dịch game → Chơi trên TV, dùng capture card</b>. PC có nhiều thiết bị hình (webcam…) thì app hỏi chọn cái nào.</li>
+  </ol>
+  <div class="note">Nếu app báo chưa có quyền, mở Cài đặt Windows → Quyền riêng tư → Camera và bật “Cho phép ứng dụng máy tính truy cập camera”.</div>
+</section>
+
+<section id="pc">
+  <h2>6. Chơi trên PC<small>Dùng chiaki-ng (miễn phí) hoặc PXPlay.</small></h2>
+  <ol>
+    <li>Mở chiaki-ng hoặc PXPlay và vào game.</li>
+    <li>Trong app bấm <b>Chọn cửa sổ game</b> và chọn cửa sổ đó.</li>
+    <li>Bấm <b>Bắt đầu dịch game</b>. Phụ đề hiện đè lên cửa sổ game.</li>
+  </ol>
+  <figure><img src="images/03-pc-help.jpg" alt="Chơi trên PC" loading="lazy"><figcaption>Có nút tải chiaki-ng và PXPlay. App PS Remote Play của Sony cho hình đen nên không dùng được.</figcaption></figure>
+  <figure><img src="images/04-windows.jpg" alt="Chọn cửa sổ game" loading="lazy"><figcaption>Chọn cửa sổ game. Bấm nút làm mới nếu chưa thấy cửa sổ.</figcaption></figure>
+</section>
+
+<section id="vung">
+  <h2>7. Vùng đọc chữ<small>Chỉ cho app chỗ phụ đề nằm.</small></h2>
+  <ol>
+    <li>Ở màn hình chính bấm <b>Vùng đọc chữ</b>, hoặc nhấn <kbd>Ctrl+Alt+1</kbd>.</li>
+    <li>Kéo khung xanh <b>Phụ đề chính</b> ôm vừa chỗ phụ đề game. Khung càng sát thì đọc càng nhanh và đúng.</li>
+    <li>Cần đọc thêm chỗ khác (bảng tin, thư…) thì bấm <b>Thêm vùng dịch</b>.</li>
+  </ol>
+  <figure><img src="images/08-regions.jpg" alt="Vùng đọc chữ" loading="lazy"><figcaption>Mỗi vùng chỉnh được khung, kiểu chữ và giọng riêng. Tốc độ đọc 10 lần/giây là vừa.</figcaption></figure>
+</section>
+
+<section id="phu-de-tv">
+  <h2>8. Phụ đề trên TV<small>Câu dịch hiện thẳng trên TV đang chơi.</small></h2>
+  <ol>
+    <li>Vào <b>Cài đặt → Phụ đề trên TV</b>, chọn loại TV: Android TV, LG (webOS) hoặc Samsung (Tizen).</li>
+    <li>Làm theo các bước để cài app Console Translator lên TV.</li>
+    <li>Mở app trên TV, rồi bấm <b>Kết nối TV</b> trong màn hình dịch. Từ 1.1.0 không cần nhập mã: chỉ bấm <b>Đồng ý</b> trên TV.</li>
+  </ol>
+  <figure><img src="images/14-tv.jpg" alt="Cài đặt phụ đề trên TV" loading="lazy"><figcaption>Cài đặt → Phụ đề trên TV.</figcaption></figure>
+  <ul>
+    <li><b>Đè lên câu gốc trên TV</b>: câu dịch che đúng chỗ phụ đề tiếng Anh của game.</li>
+    <li>Tên nhân vật có màu riêng cho từng người.</li>
+    <li>TV LG: bật <b>Giữ app trên TV không tự tắt</b> để app không bị webOS đóng giữa chừng.</li>
+    <li><b>Chế độ stream (OBS)</b>: thêm phụ đề vào OBS khi phát trực tiếp.</li>
+  </ul>
+</section>
+
+<section id="giong">
+  <h2>9. Giọng đọc<small>Đọc to câu dịch bằng giọng Việt.</small></h2>
+  <ol>
+    <li>Vào <b>Cài đặt → Giọng đọc</b>, chọn bộ đọc. <b>VieNeu Turbo</b> hay nhất. Máy yếu thì chọn <b>VieNeu Nano</b> hoặc <b>Giọng Windows</b>.</li>
+    <li>Bấm tải bộ giọng lần đầu (chỉ tải một lần).</li>
+    <li>Chọn tốc độ đọc. Thoại game nhanh thì để 175% trở lên.</li>
+  </ol>
+  <figure><img src="images/15-speech.jpg" alt="Cài đặt giọng đọc" loading="lazy"><figcaption>Có 20 giọng AI, lọc theo nam, nữ. Nút “Nhân vật” trong màn hình dịch gán giọng riêng cho từng nhân vật.</figcaption></figure>
+</section>
+
+<section id="game">
+  <h2>10. Chọn game<small>App dịch đúng tên, cách xưng hô theo từng game.</small></h2>
+  <ul>
+    <li>Vào <b>Cài đặt → Game &amp; máy chơi game</b> và bấm game bạn chơi. Không có thì bấm <b>Thêm game</b>.</li>
+    <li><b>Tự nhận ra game đang chơi</b>: đăng nhập PlayStation để app biết bạn đang chơi gì và gợi ý đổi game. Không đăng nhập thì app đoán theo tên nhân vật trong phụ đề.</li>
+  </ul>
+  <figure><img src="images/16-general.jpg" alt="Game và máy chơi game" loading="lazy"><figcaption>Game &amp; máy chơi game.</figcaption></figure>
+</section>
+
+<section id="phim">
+  <h2>11. Xem phim / YouTube<small>Dịch phụ đề video trên PC.</small></h2>
+  <ol>
+    <li>Mở video trong trình duyệt hoặc app xem phim và bật phụ đề.</li>
+    <li>Ở màn hình chính bấm <b>Xem phim / YouTube</b>, chọn kiểu nội dung và ngôn ngữ phụ đề.</li>
+    <li>Bấm <b>Chọn cửa sổ và bắt đầu</b>.</li>
+  </ol>
+  <figure><img src="images/12-media.jpg" alt="Xem phim" loading="lazy"><figcaption>Phụ đề Việt thì đọc nguyên văn, phụ đề Anh thì dịch rồi đọc.</figcaption></figure>
+</section>
+
+<section id="phim-tat">
+  <h2>Phím tắt</h2>
+  <ul class="keys">
+    <li><kbd>F6</kbd> Hiện logo công cụ</li>
+    <li><kbd>F7</kbd> Chỉnh khung trên game</li>
+    <li><kbd>Ctrl+Alt+1</kbd> Chỉnh vùng đọc</li>
+    <li><kbd>F8</kbd> Hiện khung vùng</li>
+    <li><kbd>F9</kbd> Chạy / Dừng</li>
+    <li><kbd>F10</kbd> Quét lại</li>
+  </ul>
+  <h3>Cập nhật</h3>
+  <p>App tự kiểm tra bản mới và báo khi có. Bấm cài là xong, không cần tải lại từ web.</p>
+  <figure><img src="images/13-update.jpg" alt="Cập nhật ứng dụng" loading="lazy"></figure>
+</section>
+
+<footer>Cần giúp? Nhắn qua Telegram trong app (nút Telegram ở màn hình chính).</footer>
+</div>
+</body>
+</html>
