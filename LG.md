@@ -68,7 +68,9 @@ Không mở Console Translator TV từ danh sách app của TV: luôn mở bằn
 
 ## Cập nhật app trên TV
 
-Không cần tải lại bộ cài (từ Windows 1.2.8 và Mac 1.0.3). Mở công cụ, bấm **Kết nối TV**: nếu có bản mới, nhật ký hiện dòng **CÓ BẢN MỚI**. Bấm **Cài đặt lên TV** để cập nhật. Máy tính đã kích hoạt có thể để trống ô mã cài. TV không tự cập nhật được app cài qua Developer Mode.
+**Từ iPhone (cần gói PRO):** mở app Console Translator, vào **Phụ đề trên TV**, kết nối với TV. Trong thẻ **Mở app trên TV LG**, bấm **Chưa cài app trên TV? Cài từ iPhone** (bản app mới hơn ghi **Cài hoặc cập nhật app trên TV**, và có nút **Cập nhật app trên TV** ngay dưới dòng báo bản mới). Làm như lần cài đầu: bật Developer Mode, nhập Passphrase. App mới cài đè lên app cũ.
+
+**Từ máy tính:** không cần tải lại bộ cài (từ Windows 1.2.8 và Mac 1.0.3). Mở công cụ, bấm **Kết nối TV**: nếu có bản mới, nhật ký hiện dòng **CÓ BẢN MỚI**. Bấm **Cài đặt lên TV** để cập nhật. Máy tính đã kích hoạt có thể để trống ô mã cài. TV không tự cập nhật được app cài qua Developer Mode.
 
 Lưu ý: app trên TV và bộ cài trên máy tính có số phiên bản riêng (ví dụ app TV 1.2.3, bộ cài 1.2.17), đừng so hai số này với nhau. App TV bản cũ vẫn chơi được, chỉ chưa dùng được tính năng mới; khi có bản mới, chính TV cũng hiện thông báo.
 

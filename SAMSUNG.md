@@ -26,8 +26,9 @@ Do tính năng HDMI-CEC (Anynet+ trên TV hoặc Liên kết thiết bị HDMI t
 </details>
 
 <details><summary>Cập nhật bản cũ</summary>
+Từ iPhone (cần gói PRO): vào **Phụ đề trên TV**, bấm **Cài từ iPhone** trong thẻ Cài app lên TV Samsung (bản app mới hơn có nút **Cập nhật app trên TV** ngay dưới dòng báo bản mới), làm như lần cài đầu. 
 
-Tải bộ cài mới ở trên rồi bấm Cài đặt lên TV. Công cụ tự gỡ bản cũ trước khi cài lại. Có thể cần chọn lại HDMI và ghép lại điện thoại.
+Từ máy tính: tải bộ cài mới ở trên rồi bấm Cài đặt lên TV. Công cụ tự gỡ bản cũ trước khi cài lại. Có thể cần chọn lại HDMI và ghép lại điện thoại.
 
 </details>
 
