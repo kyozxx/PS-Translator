@@ -1,203 +1,841 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hướng dẫn Console Translator PC</title>
-<meta name="description" content="Hướng dẫn cài và dùng Console Translator trên Windows: dịch game PlayStation khi chơi trên TV hoặc PC.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#141210;--panel:#1f1c19;--line:#34302b;--text:#f2ece4;--muted:#b3aa9e;--gold:#f0b46a;--gold2:#ffd9a3}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 "Be Vietnam Pro",system-ui,sans-serif}
-a{color:var(--gold2)}
-.wrap{max-width:980px;margin:0 auto;padding:0 16px}
-header{padding:56px 0 28px;border-bottom:1px solid var(--line)}
-.kicker{color:var(--gold);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
-h1{font-size:clamp(30px,5vw,46px);line-height:1.15;margin:10px 0 12px;font-weight:800}
-.lead{color:var(--muted);max-width:640px;margin:0}
-.dl{display:inline-block;margin-top:22px;padding:12px 22px;border-radius:999px;background:linear-gradient(90deg,var(--gold2),var(--gold));color:#2a1a08;font-weight:800;text-decoration:none}
-nav{display:flex;flex-wrap:wrap;gap:8px;padding:20px 0}
-nav a{padding:6px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--text);font-size:14px}
-nav a:hover{border-color:var(--gold)}
-section{padding:36px 0;border-bottom:1px solid var(--line)}
-h2{font-size:26px;margin:0 0 6px}
-h2 small{display:block;color:var(--muted);font-size:15px;font-weight:400;margin-top:4px}
-h3{font-size:18px;margin:28px 0 6px;color:var(--gold2)}
-ol,ul{padding-left:22px}
-li{margin:4px 0}
-figure{margin:18px 0 8px}
-figure img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
-figcaption{color:var(--muted);font-size:14px;margin-top:8px}
-.note{background:var(--panel);border-left:3px solid var(--gold);padding:12px 16px;border-radius:8px;margin:16px 0;color:var(--muted)}
-.keys{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;padding:0;list-style:none}
-.keys li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
-kbd{background:#2c2824;border:1px solid var(--line);border-radius:6px;padding:1px 7px;font:600 13px ui-monospace,monospace;color:var(--gold2)}
-footer{padding:28px 0 48px;color:var(--muted);font-size:14px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn bản PC · Console Translator: Dịch game</title>
+    <meta name="description" content="Hướng dẫn từng bước dùng Console Translator trên Windows: ghép nối PS5, lấy mã người chơi, cài app phụ đề lên TV LG, Samsung, Android TV, chơi trên PC và capture card.">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="../assets/icon-180.png">
+    <style>
+        :root {
+            --bg: #f7f3ea;
+            --card: #fffdf8;
+            --border: #e7dfcd;
+            --text: #1b1a17;
+            --muted: #5f5a50;
+            --blue: #9a5b00;
+            --purple: #9a5b00;
+            --green: #9a5b00;
+            --orange: #9a5b00;
+            --amber: #f2a516;
+            --pink: #9a5b00;
+            --soft: #fcecc4;
+            --sub: #f3ecdc;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            padding: 28px 16px 40px;
+        }
+        .wrap { max-width: 660px; margin: 0 auto; }
+        a { color: var(--blue); }
+
+        header { text-align: center; margin-bottom: 22px; }
+        .app-icon {
+            display: block; width: 88px; height: 88px; margin: 0 auto 12px;
+            border-radius: 20px; box-shadow: 0 10px 30px -6px rgba(168, 85, 247, 0.5);
+        }
+        h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.4px; }
+        .tagline { color: var(--muted); font-size: 15px; margin-top: 4px; }
+
+        /* Telegram */
+        .tg {
+            display: block; text-decoration: none; text-align: center;
+            background: linear-gradient(135deg, #229ed9, #1b7fc4);
+            border-radius: 20px; padding: 22px 18px; margin-bottom: 18px;
+            box-shadow: 0 12px 30px -8px rgba(34, 158, 217, 0.55);
+        }
+        .tg h2 { color: #fff; font-size: 21px; font-weight: 800; }
+        .tg p { color: #e0f2fe; font-size: 15px; margin: 6px 0 14px; }
+        .tg p strong { color: #fff; }
+        .tg .btn {
+            display: inline-block; background: #fff; color: #1b7fc4;
+            font-size: 17px; font-weight: 800; padding: 12px 26px; border-radius: 9999px;
+        }
+        .tg small { display: block; color: #e0f2fe; font-size: 13px; margin-top: 10px; }
+
+        /* Overview */
+        .overview {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 18px;
+        }
+        .overview a {
+            text-decoration: none; text-align: center; border-radius: 12px; padding: 10px 4px;
+            background: var(--card); border: 1px solid var(--border); font-size: 13px; color: var(--muted);
+        }
+        .overview b { display: block; font-size: 18px; }
+
+        /* Step cards: each step has its own soft colour */
+        .card {
+            background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent, var(--blue));
+            border-radius: 16px; padding: 18px; margin-bottom: 16px;
+        }
+        .card h2 { display: flex; align-items: center; gap: 10px; font-size: 19px; margin-bottom: 4px; }
+        .card .why { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+        .num {
+            display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+            width: 30px; height: 30px; border-radius: 50%;
+            background: var(--accent, var(--blue)); color: var(--bg); font-size: 15px; font-weight: 800;
+        }
+        .s1 { --accent: var(--blue); }
+        .s2 { --accent: var(--purple); }
+        .s3 { --accent: var(--green); }
+        .s4 { --accent: var(--orange); }
+        .s5 { --accent: var(--pink); }
+        .s6 { --accent: var(--amber); }
+
+        /* Donation: warm, visible, but below the download call-to-action */
+        .donate {
+            background: linear-gradient(135deg, rgba(244, 114, 182, 0.16), rgba(251, 146, 60, 0.14));
+            border: 1px solid rgba(244, 114, 182, 0.45); border-radius: 20px;
+            padding: 18px; margin-bottom: 18px; text-align: center;
+        }
+        .donate h2 { font-size: 20px; font-weight: 800; color: #fff; }
+        .donate .lead { color: var(--muted); font-size: 15px; margin: 4px 0 12px; }
+        .donate .qr {
+            display: block; width: 190px; height: 190px; margin: 0 auto 12px;
+            background: #fff; border-radius: 16px; padding: 10px;
+        }
+        .donate .bank {
+            display: inline-flex; flex-direction: column; gap: 2px; text-align: left;
+            background: rgba(11, 15, 25, 0.55); border-radius: 12px; padding: 10px 14px;
+            font-size: 14px; color: var(--muted);
+        }
+        .donate .bank b { color: var(--text); font-size: 15px; }
+        .donate .copy {
+            margin-top: 10px; border: 0; cursor: pointer; min-height: 44px;
+            background: var(--pink); color: #fff; font-weight: 800; font-size: 15px;
+            padding: 10px 22px; border-radius: 9999px;
+        }
+        .donate small { display: block; color: var(--muted); font-size: 12px; margin-top: 8px; }
+        .styles { display: grid; gap: 8px; margin-top: 10px; }
+        .style {
+            background: #1a2438; border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px;
+        }
+        .style b { color: var(--text); font-size: 15px; }
+        .style .for { float: right; font-size: 12px; color: var(--amber); font-weight: 600; }
+        .style p { margin: 2px 0 0; font-size: 14px; }
+        .style q { display: block; margin-top: 4px; color: var(--text); font-size: 14px; font-style: italic; quotes: "\201C" "\201D"; }
+        .group-label { font-size: 13px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 14px 0 0; }
+
+        h3 { font-size: 16px; margin: 14px 0 6px; color: var(--text); }
+        ol, ul { padding-left: 22px; color: var(--muted); font-size: 15px; }
+        li { margin-bottom: 8px; }
+        li strong, p strong { color: var(--text); }
+        p { color: var(--muted); font-size: 15px; margin-bottom: 8px; }
+        code { color: var(--text); background: #1e293b; padding: 1px 6px; border-radius: 4px; }
+
+        /* A button in the app */
+        .btn-app {
+            display: inline-block; background: rgba(56, 189, 248, 0.15); color: var(--blue);
+            border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 9999px;
+            padding: 0 9px; font-weight: 600; font-size: 14px; white-space: nowrap;
+        }
+        /* A menu path on the PS5 */
+        .ps-path { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 6px 0 10px; }
+        .ps-path span {
+            background: #1e293b; border: 1px solid var(--border); border-radius: 8px;
+            padding: 3px 9px; font-size: 13px; color: var(--text);
+        }
+        .ps-path span:last-child { border-color: var(--accent, var(--blue)); color: var(--accent, var(--blue)); font-weight: 700; }
+        .ps-path i { color: var(--muted); font-style: normal; font-size: 13px; }
+
+        .box { border-radius: 10px; padding: 11px 13px; margin-top: 12px; font-size: 14px; color: var(--muted); }
+        .box > strong:first-child { display: block; margin-bottom: 2px; }
+        .box.tip { background: rgba(52, 211, 153, 0.08); border: 1px solid rgba(52, 211, 153, 0.3); }
+        .box.tip > strong:first-child { color: var(--green); }
+        .box.warn { background: rgba(251, 191, 36, 0.08); border: 1px solid rgba(251, 191, 36, 0.3); }
+        .box.warn > strong:first-child { color: var(--amber); }
+        .box strong { color: var(--text); }
+
+        .toggle-list { list-style: none; padding-left: 0; }
+        .toggle-list li {
+            display: flex; gap: 10px; align-items: flex-start; background: #1a2438;
+            border: 1px solid var(--border); border-radius: 10px; padding: 9px 12px; margin-bottom: 6px;
+        }
+        .toggle-list .on {
+            flex-shrink: 0; margin-top: 3px; width: 34px; height: 20px; border-radius: 9999px;
+            background: var(--green); position: relative;
+        }
+        .toggle-list .on::after {
+            content: ""; position: absolute; right: 2px; top: 2px; width: 16px; height: 16px;
+            border-radius: 50%; background: #fff;
+        }
+        .toggle-list small { display: block; color: var(--muted); font-size: 13px; }
+        .toggle-list b { color: var(--text); font-size: 14px; }
+
+        figure { margin: 10px 0 4px; }
+        figure.phone { text-align: center; }
+        figure.phone img {
+            width: 100%; max-width: 260px; margin: 0 auto; border-radius: 26px;
+            border: 3px solid #2b3a57; box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.6);
+        }
+        .phones { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0 4px; }
+        .phones figure { margin: 0; }
+        figure img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
+        figcaption { color: var(--muted); font-size: 13px; text-align: center; margin-top: 6px; }
+
+        details {
+            background: #1a2438; border: 1px solid var(--border); border-radius: 12px;
+            padding: 0 14px; margin-bottom: 8px;
+        }
+        details.method { border-color: rgba(52, 211, 153, 0.35); }
+        summary {
+            cursor: pointer; font-weight: 600; font-size: 15px; padding: 12px 0; min-height: 44px;
+            list-style: none; display: flex; justify-content: space-between; gap: 10px; color: var(--text);
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: "+"; color: var(--accent, var(--blue)); font-weight: 800; font-size: 18px; line-height: 1; }
+        details[open] summary::after { content: "−"; }
+        details > :not(summary) { margin-bottom: 12px; }
+        .tag {
+            font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 9999px; margin-left: 6px;
+            background: rgba(52, 211, 153, 0.15); color: var(--green); vertical-align: middle;
+        }
+
+        /* TV guide */
+        .tv-jump {
+            display: flex; align-items: center; justify-content: space-between; gap: 14px;
+            text-decoration: none; color: var(--text); margin-bottom: 18px; padding: 14px 16px;
+            border: 1px solid rgba(52, 211, 153, 0.38); border-radius: 14px;
+            background: linear-gradient(135deg, rgba(52, 211, 153, 0.14), rgba(56, 189, 248, 0.09));
+        }
+        .tv-jump strong { display: block; font-size: 16px; }
+        .tv-jump small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+        .tv-jump .arrow { color: var(--green); font-size: 22px; font-weight: 800; }
+        .tv-card {
+            --accent: var(--green); position: relative; overflow: hidden;
+            background: linear-gradient(160deg, rgba(52, 211, 153, 0.08), var(--card) 32%);
+        }
+        .tv-card h2 { margin-bottom: 6px; }
+        .tv-card > .why { margin-bottom: 14px; }
+        .tv-requirements {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: 10px 0 14px;
+        }
+        .tv-requirements span {
+            text-align: center; padding: 9px 6px; border-radius: 10px; color: var(--muted);
+            background: #111d2e; border: 1px solid var(--border); font-size: 12px;
+        }
+        .tv-requirements b { display: block; color: var(--text); font-size: 13px; }
+        details.platform { border-color: rgba(56, 189, 248, 0.28); }
+        details.platform.lg { border-color: rgba(167, 139, 250, 0.34); }
+        details.platform > summary { align-items: center; font-size: 16px; }
+        .platform-name { display: flex; align-items: center; gap: 9px; }
+        .platform-icon {
+            display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 9px;
+            background: rgba(56, 189, 248, 0.15); color: var(--blue); font-size: 12px; font-weight: 900;
+        }
+        .platform.lg .platform-icon { background: rgba(167, 139, 250, 0.15); color: var(--purple); }
+        .download-tv {
+            display: block; text-align: center; text-decoration: none; margin: 10px 0 12px;
+            border-radius: 10px; padding: 11px 14px; background: var(--blue); color: #06131d; font-weight: 800;
+        }
+        .lg .download-tv { background: var(--purple); color: #110b20; }
+        .download-row { display: flex; gap: 8px; margin: 10px 0 12px; }
+        .download-row .download-tv { flex: 1; margin: 0; }
+        .download-tv.alt { background: transparent; color: var(--blue); border: 1px solid var(--blue); }
+        .tv-downloads { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+        .tv-version { background: #1a2438; border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+        .tv-version h3 { font-size: 16px; margin: 0; }
+        .tv-version p { font-size: 13px; margin: 8px 0 0; }
+        .download-code { display: block; font-size: 29px; letter-spacing: 2px; font-variant-numeric: tabular-nums; color: var(--green); margin: 2px 0 12px; }
+        .download-button { display: flex; align-items: center; justify-content: center; text-decoration: none; min-height: 44px; padding: 10px 8px; border-radius: 10px; border: 1px solid #38bdf855; background: #38bdf818; color: var(--blue); font-size: 14px; font-weight: 600; }
+        @media (max-width: 480px) { .tv-downloads { grid-template-columns: 1fr; } }
+        .other-guide { display: block; text-align: center; padding: 12px; margin-bottom: 18px; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; background: var(--card); }
+        .home-guide { display: block; text-align: center; padding: 14px 18px; margin-bottom: 20px; border-radius: 12px; text-decoration: none; background: var(--text); color: var(--bg) !important; font-weight: 800; font-size: 16px; box-shadow: 0 8px 22px #0002; }
+        .home-guide:hover { filter: brightness(1.08); transform: translateY(-1px); }
+        .mini-title { color: var(--text); font-size: 14px; font-weight: 800; margin: 14px 0 6px; }
+        .play-every-time {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: 8px 0 12px;
+            counter-reset: playstep;
+        }
+        .play-every-time div {
+            counter-increment: playstep; padding: 10px; border-radius: 10px; color: var(--muted);
+            background: rgba(11, 15, 25, 0.55); border: 1px solid var(--border); font-size: 13px;
+        }
+        .play-every-time div::before {
+            content: counter(playstep); display: grid; place-items: center; width: 22px; height: 22px;
+            margin-bottom: 6px; border-radius: 50%; background: var(--green); color: #07101d; font-weight: 900;
+        }
+        .tv-troubleshooting { margin-top: 12px; }
+        .tv-troubleshooting summary { font-size: 14px; }
+
+        @media (max-width: 520px) {
+            .tv-requirements, .play-every-time { grid-template-columns: 1fr; }
+            .tv-requirements span { text-align: left; }
+        }
+
+        footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 22px; }
+        /* brand overrides: replace the old dark-theme literals */
+        .app-icon { box-shadow: none; filter: drop-shadow(0 6px 18px #f2a51655); }
+        h1::after { content: ""; display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--amber); margin: 12px auto 0; }
+        .slogan { color: var(--blue); font-size: 18px; font-weight: 700; margin-top: 4px; }
+        .tg { background: var(--text); box-shadow: none; }
+        .tg h2 { color: #fff8e6; } .tg p, .tg small { color: #e9dfc8; } .tg p strong { color: #fff; }
+        .tg .btn { background: var(--amber); color: var(--text); }
+        .card { border-left-color: var(--amber); }
+        .num, .play-every-time div::before { background: var(--amber); color: var(--text); }
+        .donate { background: var(--card); border-color: var(--border); }
+        .donate h2 { color: var(--text); }
+        .donate .bank, .play-every-time div { background: var(--sub); }
+        .donate .copy { background: var(--text); color: #fff8e6; }
+        .style, .toggle-list li, details, .tv-version, .tv-requirements span { background: var(--sub); }
+        code, .ps-path span { background: var(--sub); }
+        .ps-path span:last-child { border-color: var(--amber); color: var(--text); }
+        .btn-app { background: var(--soft); color: var(--text); border-color: #ecd59a; }
+        .box.tip, .box.warn { background: var(--soft); border: 0; border-left: 3px solid var(--amber); }
+        .box.tip > strong:first-child, .box.warn > strong:first-child { color: var(--text); }
+        .toggle-list .on { background: var(--amber); }
+        figure.phone img { border-color: var(--border); box-shadow: 0 10px 24px -12px #0003; }
+        details.method, details.platform, details.platform.lg { border-color: var(--border); }
+        .tag { background: var(--soft); color: var(--text); }
+        .tv-jump { background: var(--soft); border-color: #ecd59a; }
+        .tv-card { background: var(--card); }
+        .platform-icon, .platform.lg .platform-icon { background: var(--text); color: var(--amber); }
+        .download-tv, .lg .download-tv, .download-button { background: var(--text); color: #fff8e6; border: 0; }
+        .download-tv.alt { background: transparent; color: var(--text); border: 1px solid var(--text); }
+        .download-code { color: var(--text); }
+        .play-store { display: block; margin: 4px 0 12px; }
+        .ps-path em, .toggle-list em, li em, .box em { font-style: normal; font-size: 12px; color: var(--muted); }
+        .ps-path em { display: block; font-weight: 400; }
+        details.tv-fold { background: none; border: 0; padding: 0; margin: 0; }
+        details.tv-fold > summary { padding: 0; min-height: 0; align-items: center; }
+        details.tv-fold > summary h2 { margin: 0; }
+        details.tv-fold[open] > summary { margin-bottom: 6px; }
+        .tabs { display: flex; align-items: center; gap: 4px; padding: 4px; background: #ece4d2; border-radius: 12px; margin: 0 0 16px; }
+        .tabs button { flex: 1; min-height: 44px; border: 0; border-radius: 9px; background: transparent; color: var(--muted); font: inherit; font-size: 14px; padding: 0 4px; cursor: pointer; white-space: nowrap; }
+        .tabs button[aria-selected=true] { background: var(--text); color: #fff8e6; font-weight: 700; }
+        .tab-arrow { color: var(--muted); opacity: 0.55; font-size: 13px; font-weight: 700; flex-shrink: 0; user-select: none; }
+        .panel[hidden] { display: none; }
+        .panel-intro { margin: 0 0 12px; }
+        .card details.tv-fold > summary::after { content: "+"; }
+        .card details.tv-fold[open] > summary::after { content: "−"; }
+        .tg { padding: 16px 18px; }
+        .tg p { margin: 4px 0 10px; }
+        details.step { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 0; margin: 0 0 10px; }
+        details.step > summary { display: flex; align-items: center; gap: 12px; padding: 14px 16px; min-height: 58px; font-size: 16px; font-weight: 650; }
+        details.step > summary .num { width: 28px; height: 28px; font-size: 14px; }
+        details.step > summary::after { margin-left: auto; }
+        details.step[open] > summary { border-bottom: 1px solid var(--border); background: var(--soft); border-radius: 14px 14px 0 0; }
+        .step-body { padding: 4px 16px 14px; }
+        header { padding-top: 12px; }
+        .app-icon { width: 120px; height: 120px; border-radius: 26px; box-shadow: 0 10px 28px -10px #0007; filter: none; margin-bottom: 18px; }
+        h1 { font-size: 34px; letter-spacing: -0.035em; line-height: 1.2; }
+        h1::after { width: 64px; height: 5px; margin: 18px auto 16px; }
+        .slogan { font-size: 22px; margin-top: 0; }
+        .tagline { font-size: 17px; margin-top: 6px; }
+        .badge { display: inline-block; font-size: 12px; letter-spacing: .06em; font-weight: 700; background: var(--text); color: var(--soft); border-radius: 6px; padding: 4px 9px; margin-left: 6px; vertical-align: middle; }
+        @media (max-width: 540px) { h1 { font-size: 27px; } .slogan { font-size: 18px; } .app-icon { width: 88px; height: 88px; border-radius: 20px; } }
+        @media (max-width: 420px) { .tabs { gap: 2px; } .tabs button { font-size: 12px; padding: 0 2px; } .tab-arrow { font-size: 11px; } }
+        .iphones { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 12px; margin: 14px 0 6px; }
+        figure.iphone { margin: 0; width: 220px; text-align: center; }
+        .iphone-screen { position: relative; border-radius: 38px; padding: 9px; background: #121212;
+            box-shadow: 0 0 0 2px #3a3a3c, 0 0 0 4px #1c1c1e, 0 18px 36px -14px #0008; }
+        .iphone-screen img { display: block; width: 100%; border-radius: 30px; border: 0; }
+        figure.iphone figcaption { margin-top: 10px; }
+        @media (max-width: 520px) { figure.iphone { width: calc(50% - 6px); } .iphone-screen { border-radius: 28px; padding: 6px; } .iphone-screen img { border-radius: 23px; } }
+        .gifs { display: flex; justify-content: center; }
+        figure.gif { margin: 14px auto 8px; max-width: 420px; text-align: center; }
+        figure.gif img { width: 100%; border-radius: 14px; border: 1px solid var(--border); box-shadow: 0 10px 24px -14px #0007; }
+        .when { display: grid; gap: 8px; margin: 10px 0; }
+        .when > div { background: var(--sub); border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; }
+        .when b { color: var(--text); font-size: 15px; } .when span { float: right; font-size: 12px; font-weight: 700; color: var(--blue); }
+        .when p { margin: 4px 0 0; font-size: 14px; }
+        .tvmocks { display: grid; gap: 22px; margin: 14px 0; }
+        figure.tvmock { margin: 0; text-align: center; }
+        .tv-bezel { background: #0c0c0d; border-radius: 10px; padding: 1.6%; box-shadow: 0 0 0 1px #2c2c2e, 0 16px 30px -16px #0009; }
+        .tv-screen { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 3px; container-type: inline-size; }
+        .tv-screen img { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; }
+        .tv-stand { width: 22%; height: 10px; margin: 0 auto; background: linear-gradient(#2a2a2c, #0c0c0d); border-radius: 0 0 8px 8px; }
+        .tv-sub { position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%); max-width: 80%; background: rgba(0,0,0,.62);
+            color: #fff; font-weight: 700; font-size: 3.4cqw; line-height: 1.3; padding: .5em .9em; border-radius: .4em; }
+        .tv-box { position: absolute; background: rgba(0,0,0,.85); color: #fff; font-weight: 600; font-size: 2.2cqw; line-height: 1.3;
+            padding: .45em .7em; border-radius: .35em; text-align: left; }
+        figure.tvmock figcaption { margin-top: 8px; }
+    </style>
+    <style>.step-body figure img, .platform figure img { box-shadow: 0 10px 24px -14px #0005; } .other-guide strong { color: var(--text); }</style>
 </head>
 <body>
 <div class="wrap">
-<header>
-  <div class="kicker">Console Translator · Windows 1.1.0</div>
-  <h1>Hướng dẫn bản PC</h1>
-  <p class="lead">Dịch thoại game PlayStation sang tiếng Việt ngay khi chơi. Hiện phụ đề trên PC hoặc trên TV, đọc to bằng giọng Việt.</p>
-  <a class="dl" href="https://github.com/kyozxx/PS-Translator/releases/download/pc-1.1.0/ConsoleTranslator-PC-1.1.0-Setup.exe">Tải bản cài Windows 1.1.0</a>
-</header>
 
-<nav>
-  <a href="#cai-dat">1. Cài đặt</a><a href="#ai">2. Khóa AI</a><a href="#noi-choi">3. Chọn nơi chơi</a>
-  <a href="#tv">4. Chơi trên TV</a><a href="#capture">5. Capture card</a><a href="#pc">6. Chơi trên PC</a>
-  <a href="#vung">7. Vùng đọc chữ</a><a href="#phu-de-tv">8. Phụ đề trên TV</a><a href="#giong">9. Giọng đọc</a>
-  <a href="#game">10. Chọn game</a><a href="#phim">11. Xem phim</a><a href="#phim-tat">Phím tắt</a>
-</nav>
+    <header>
+        <img class="app-icon" src="../assets/icon-180.png?v=2" alt="Biểu tượng Console Translator" width="88" height="88">
+        <h1>Console Translator: Dịch game</h1>
+        <p class="slogan">Chơi game nào cũng hiểu</p>
+        <p class="tagline">Dịch phụ đề game sang tiếng Việt trên máy tính. <span class="badge">PC WINDOWS</span></p>
+    </header>
 
-<section id="cai-dat">
-  <h2>1. Cài đặt<small>Windows 10 (bản 2004) trở lên, 64-bit.</small></h2>
-  <ol>
-    <li>Tải <b>ConsoleTranslator-PC-1.1.0-Setup.exe</b> ở nút phía trên.</li>
-    <li>Mở file và bấm qua các bước cài. Nếu Windows hiện “Windows đã bảo vệ PC của bạn”, bấm <b>Thông tin thêm → Vẫn chạy</b>.</li>
-    <li>Mở app <b>Console Translator</b> từ menu Start và nhập mã dùng thử hoặc mã bản quyền.</li>
-  </ol>
-  <figure><img src="images/01-home.jpg" alt="Màn hình chính" loading="lazy"><figcaption>Màn hình chính. Bên trái để vào game, bên phải để chỉnh nhanh cách dịch, giọng đọc, game và vùng đọc chữ.</figcaption></figure>
-  <div class="note">Đã có bản cũ thì cài đè lên, không cần gỡ. Từ 1.0.8 trở đi app tự báo khi có bản mới.</div>
-</section>
+    <a class="home-guide" href="https://ps5tiengviet.com">← Về trang chủ Console Translator: Dịch game</a>
 
-<section id="ai">
-  <h2>2. Thêm khóa AI<small>Không bắt buộc, nhưng dịch hay hơn rất nhiều.</small></h2>
-  <p>Không có khóa thì app dịch bằng Bing, câu hay cứng và sai tên. Khóa Google Gemini miễn phí, lấy trong khoảng 2 phút.</p>
-  <ol>
-    <li>Vào <b>Cài đặt → Cách dịch</b>, chọn <b>Google Gemini</b>.</li>
-    <li>Bấm <b>Lấy khóa miễn phí</b>, đăng nhập Google, tạo khóa rồi dán vào ô <b>Khóa Google Gemini</b>.</li>
-    <li>Có nhiều khóa (Gemini, Groq) thì chọn <b>AI thông minh</b>: hết lượt khóa này app tự chuyển sang khóa khác.</li>
-  </ol>
-  <figure><img src="images/10-settings.jpg" alt="Cài đặt cách dịch" loading="lazy"><figcaption>Cài đặt → Cách dịch.</figcaption></figure>
-  <figure><img src="images/11-aikey.jpg" alt="Nhắc thêm khóa AI" loading="lazy"><figcaption>Chưa có khóa thì app nhắc khi bắt đầu dịch. Có thể bấm “Dùng Bing lần này”.</figcaption></figure>
-</section>
+    <a class="tg" href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">
+        <h2>Tham gia kênh Telegram</h2>
+        <p>Thông báo bản mới, nơi hỏi đáp và báo lỗi. Mã dùng app PC lấy ở <strong>bot Telegram</strong>.</p>
+        <span class="btn">Vào kênh Telegram</span>
+        <small>t.me/pstranslator</small>
+    </a>
 
-<section id="noi-choi">
-  <h2>3. Chọn nơi chơi<small>Bấm “Bắt đầu dịch game” ở màn hình chính.</small></h2>
-  <ul>
-    <li><b>Chơi trên TV</b>: PC kết nối máy PS qua Remote Play để đọc hình. Bạn vẫn chơi trên TV như bình thường.</li>
-    <li><b>Chơi trên TV, dùng capture card</b>: máy PS cắm HDMI qua capture card vào PC. Mới có từ 1.1.0.</li>
-    <li><b>Chơi trên PC</b>: chơi bằng chiaki-ng hoặc PXPlay trên PC, app đọc cửa sổ đó.</li>
-  </ul>
-  <figure><img src="images/02-play-location.jpg" alt="Bạn chơi ở đâu" loading="lazy"><figcaption>Chọn nơi chơi. Sau đó app hỏi game bạn chơi để dịch đúng tên nhân vật.</figcaption></figure>
-</section>
+    <a class="other-guide" href="https://github.com/kyozxx/PS-Translator/releases/latest"><strong>Tải bộ cài PC (Windows 10/11, 64-bit) →</strong></a>
+    <a class="other-guide" href="../guide.html">Dùng iPhone hoặc máy Mac? Xem hướng dẫn iPhone →</a>
+    <a class="other-guide" href="../games.html">Xem danh sách game Dịch AI · Sao chép tên game →</a>
 
-<section id="tv">
-  <h2>4. Chơi trên TV (Remote Play)<small>Hỗ trợ PX5 và PX4. PC và máy chơi game phải cùng mạng.</small></h2>
-  <h3>Ghép nối lần đầu</h3>
-  <ol>
-    <li>Bật máy chơi game. Trong app bấm <b>Tìm máy</b> và chọn loại máy <b>PX5</b> hoặc <b>PX4</b>.</li>
-    <li>Không thấy máy thì bấm <b>Nhập địa chỉ bằng tay</b> và gõ IP của máy (xem trong Cài đặt mạng của máy).</li>
-    <li><b>Mã người chơi</b>: bấm nút tra mã, đăng nhập tài khoản PlayStation, chép mã vào app.</li>
-    <li><b>Mã trên máy</b>: trên máy chơi game vào Cài đặt → Hệ thống → Chơi từ xa → Liên kết thiết bị, nhập 8 số đang hiện vào app.</li>
-  </ol>
-  <figure><img src="images/05-console.jpg" alt="Thêm người chơi" loading="lazy"><figcaption>Ba bước ghép nối. Mỗi người chơi chỉ cần làm một lần.</figcaption></figure>
-  <div class="note">Máy đổi địa chỉ mạng (do router cấp lại IP) thì từ 1.1.0 app tự tìm lại, không cần ghép nối lại.</div>
-  <h3>Khi chơi</h3>
-  <p>App tự đánh thức máy đang ngủ, kết nối rồi mở màn hình dịch. Thanh dưới cùng có: <b>Chỉnh vùng dịch</b>, đổi <b>AI</b>, <b>Dịch menu</b>, <b>Kết nối TV</b>, <b>Đọc to</b> và <b>Nhân vật</b>.</p>
-  <figure><img src="images/06-tvplay.jpg" alt="Màn hình dịch khi chơi trên TV" loading="lazy"><figcaption>Màn hình dịch. Câu dịch hiện ở dưới, giống trên TV.</figcaption></figure>
-  <ul>
-    <li><b>Dịch menu</b>: dịch chữ trong menu, nhiệm vụ, hướng dẫn. Bật <b>Tự ẩn khi gặp nút</b> để bản dịch tự tắt khi menu có gợi ý nút bấm.</li>
-    <li><b>Dừng dịch</b> ở góc trên. Khi thoát, app hỏi có cho máy ngủ không.</li>
-  </ul>
-</section>
+    <div class="tabs" role="tablist">
+        <button role="tab" data-panel="pc" aria-selected="true">Bắt đầu</button>
+        <span class="tab-arrow" aria-hidden="true">›</span>
+        <button role="tab" data-panel="tv" aria-selected="false">Phụ đề TV</button>
+        <span class="tab-arrow" aria-hidden="true">›</span>
+        <button role="tab" data-panel="use" aria-selected="false">Cách dùng</button>
+        <span class="tab-arrow" aria-hidden="true">›</span>
+        <button role="tab" data-panel="fix" aria-selected="false">Báo lỗi</button>
+    </div>
 
-<section id="capture">
-  <h2>5. Chơi trên TV bằng capture card<small>Mới trong 1.1.0. Không cần Remote Play, hình nét và không trễ.</small></h2>
-  <ol>
-    <li>Cắm: máy PS → HDMI vào capture card → HDMI ra TV. Cắm USB của capture card vào PC.</li>
-    <li>Đóng các app khác đang dùng capture card (OBS, Camera).</li>
-    <li>Bấm <b>Bắt đầu dịch game → Chơi trên TV, dùng capture card</b>. PC có nhiều thiết bị hình (webcam…) thì app hỏi chọn cái nào.</li>
-  </ol>
-  <div class="note">Nếu app báo chưa có quyền, mở Cài đặt Windows → Quyền riêng tư → Camera và bật “Cho phép ứng dụng máy tính truy cập camera”.</div>
-</section>
+    <!-- ===================== BẮT ĐẦU ===================== -->
+    <div class="panel" id="panel-pc" role="tabpanel">
+        <p class="panel-intro">Làm lần lượt từng bước, bấm vào bước để mở. Bước 1 đến 8 chỉ làm một lần.</p>
 
-<section id="pc">
-  <h2>6. Chơi trên PC<small>Dùng chiaki-ng (miễn phí) hoặc PXPlay.</small></h2>
-  <ol>
-    <li>Mở chiaki-ng hoặc PXPlay và vào game.</li>
-    <li>Trong app bấm <b>Chọn cửa sổ game</b> và chọn cửa sổ đó.</li>
-    <li>Bấm <b>Bắt đầu dịch game</b>. Phụ đề hiện đè lên cửa sổ game.</li>
-  </ol>
-  <figure><img src="images/03-pc-help.jpg" alt="Chơi trên PC" loading="lazy"><figcaption>Có nút tải chiaki-ng và PXPlay. App PS Remote Play của Sony cho hình đen nên không dùng được.</figcaption></figure>
-  <figure><img src="images/04-windows.jpg" alt="Chọn cửa sổ game" loading="lazy"><figcaption>Chọn cửa sổ game. Bấm nút làm mới nếu chưa thấy cửa sổ.</figcaption></figure>
-</section>
+        <details class="step" id="cai-app"><summary><span class="num">1</span>Cài app trên PC</summary><div class="step-body">
+        <ol>
+            <li>Tải bộ cài ở nút <strong>Tải bộ cài PC</strong> phía trên (file <code>ConsoleTranslator-PC-…-Setup.exe</code>).</li>
+            <li>Mở file. Windows hiện màn hình xanh <strong>“Windows đã bảo vệ PC của bạn”</strong> thì bấm <strong>Thông tin thêm</strong> <em>(More info)</em> → <strong>Vẫn chạy</strong> <em>(Run anyway)</em>.</li>
+            <li>Bấm Tiếp đến hết. Bộ cài tự cài thêm WebView2 nếu máy còn thiếu.</li>
+            <li>Mở <strong>Console Translator</strong> từ menu Start.</li>
+            <li>App hỏi mã: mở <a href="https://t.me/consoletranslatorbot" target="_blank" rel="noopener noreferrer">bot Telegram</a>, bấm <strong>App PC (Windows)</strong> để nhận mã, dán vào app.</li>
+        </ol>
+        <figure><img src="images/01-home.jpg" alt="Màn hình chính app PC" loading="lazy"><figcaption>Màn hình chính. Bên trái để vào game, bên phải chỉnh nhanh cách dịch, giọng đọc, game, vùng đọc chữ.</figcaption></figure>
+        <div class="box tip"><strong>Cập nhật</strong>Có bản mới thì app tự báo, bấm cài là xong. Tải bộ cài mới thì cứ cài đè, không cần gỡ.</div>
+        </div></details>
 
-<section id="vung">
-  <h2>7. Vùng đọc chữ<small>Chỉ cho app chỗ phụ đề nằm.</small></h2>
-  <ol>
-    <li>Ở màn hình chính bấm <b>Vùng đọc chữ</b>, hoặc nhấn <kbd>Ctrl+Alt+1</kbd>.</li>
-    <li>Kéo khung xanh <b>Phụ đề chính</b> ôm vừa chỗ phụ đề game. Khung càng sát thì đọc càng nhanh và đúng.</li>
-    <li>Cần đọc thêm chỗ khác (bảng tin, thư…) thì bấm <b>Thêm vùng dịch</b>.</li>
-  </ol>
-  <figure><img src="images/08-regions.jpg" alt="Vùng đọc chữ" loading="lazy"><figcaption>Mỗi vùng chỉnh được khung, kiểu chữ và giọng riêng. Tốc độ đọc 10 lần/giây là vừa.</figcaption></figure>
-</section>
+        <details class="step" id="khoa-ai"><summary><span class="num">2</span>Thêm khóa AI (dịch hay hơn, miễn phí)</summary><div class="step-body">
+        <p>Không có khóa thì app dịch bằng Bing: câu cứng, hay sai tên. Khóa <strong>Google Gemini</strong> miễn phí, làm khoảng 2 phút.</p>
+        <ol>
+            <li>Trong app vào <span class="btn-app">Cài đặt</span> → <strong>Cách dịch</strong>, chọn <strong>Google Gemini</strong>.</li>
+            <li>Kéo xuống ô <strong>Khóa Google Gemini</strong>, bấm <span class="btn-app">Lấy khóa miễn phí</span>. Trình duyệt mở trang Google AI Studio.</li>
+            <li>Đăng nhập Google, bấm <strong>Create API key</strong> rồi sao chép khóa.</li>
+            <li>Quay lại app, dán khóa vào ô <strong>Khóa Google Gemini</strong>.</li>
+            <li>Có thêm khóa Groq thì dán vào ô Groq và chọn <strong>AI thông minh</strong>: hết lượt khóa này app tự chuyển sang khóa khác.</li>
+        </ol>
+        <figure><img src="images/10-settings.jpg" alt="Cài đặt cách dịch" loading="lazy"><figcaption>Cài đặt → Cách dịch. Dấu tích là cách dịch đang dùng.</figcaption></figure>
+        <div class="box warn"><strong>Không chia sẻ khóa AI</strong>Khóa gắn với tài khoản Google của bạn. Đừng gửi cho người khác hay đăng lên mạng, kể cả trong ảnh báo lỗi.</div>
+        </div></details>
 
-<section id="phu-de-tv">
-  <h2>8. Phụ đề trên TV<small>Câu dịch hiện thẳng trên TV đang chơi.</small></h2>
-  <ol>
-    <li>Vào <b>Cài đặt → Phụ đề trên TV</b>, chọn loại TV: Android TV, LG (webOS) hoặc Samsung (Tizen).</li>
-    <li>Làm theo các bước để cài app Console Translator lên TV.</li>
-    <li>Mở app trên TV, rồi bấm <b>Kết nối TV</b> trong màn hình dịch. Từ 1.1.0 không cần nhập mã: chỉ bấm <b>Đồng ý</b> trên TV.</li>
-  </ol>
-  <figure><img src="images/14-tv.jpg" alt="Cài đặt phụ đề trên TV" loading="lazy"><figcaption>Cài đặt → Phụ đề trên TV.</figcaption></figure>
-  <ul>
-    <li><b>Đè lên câu gốc trên TV</b>: câu dịch che đúng chỗ phụ đề tiếng Anh của game.</li>
-    <li>Tên nhân vật có màu riêng cho từng người.</li>
-    <li>TV LG: bật <b>Giữ app trên TV không tự tắt</b> để app không bị webOS đóng giữa chừng.</li>
-    <li><b>Chế độ stream (OBS)</b>: thêm phụ đề vào OBS khi phát trực tiếp.</li>
-  </ul>
-</section>
+        <details class="step" id="ps5"><summary><span class="num">3</span>Tạo tài khoản phụ trên PS5</summary><div class="step-body">
+        <p>PC kết nối vào PS5 bằng một tài khoản PlayStation. Dùng chung tài khoản bạn đang cầm tay cầm chơi thì tay cầm bị ngắt, nên dùng một <strong>tài khoản phụ</strong> cho app. Tài khoản chính vẫn để chơi như bình thường.</p>
+        <ol>
+            <li>Ở màn hình chính PS5, bấm <strong>ảnh đại diện</strong> góc phải trên cùng → <strong>Chuyển người dùng</strong> <em>(Switch User)</em> → <strong>Thêm người dùng</strong> <em>(Add User)</em>.</li>
+            <li>Đăng nhập bằng một tài khoản PlayStation khác (tạo mới miễn phí nếu chưa có).</li>
+            <li>Chuyển sang tài khoản phụ này để làm các bước dưới.</li>
+        </ol>
+        <div class="box warn"><strong>Vì sao không dùng tài khoản chính?</strong>Mỗi tài khoản chỉ dùng được ở một nơi cùng lúc: khi PC kết nối bằng tài khoản nào, PS5 chuyển tài khoản đó sang Chơi từ xa, nên tay cầm đang chơi bằng tài khoản đó bị ngắt. Tài khoản phụ chỉ để kết nối, không cần mua game hay PS Plus.</div>
+        </div></details>
 
-<section id="giong">
-  <h2>9. Giọng đọc<small>Đọc to câu dịch bằng giọng Việt.</small></h2>
-  <ol>
-    <li>Vào <b>Cài đặt → Giọng đọc</b>, chọn bộ đọc. <b>VieNeu Turbo</b> hay nhất. Máy yếu thì chọn <b>VieNeu Nano</b> hoặc <b>Giọng Windows</b>.</li>
-    <li>Bấm tải bộ giọng lần đầu (chỉ tải một lần).</li>
-    <li>Chọn tốc độ đọc. Thoại game nhanh thì để 175% trở lên.</li>
-  </ol>
-  <figure><img src="images/15-speech.jpg" alt="Cài đặt giọng đọc" loading="lazy"><figcaption>Có 20 giọng AI, lọc theo nam, nữ. Nút “Nhân vật” trong màn hình dịch gán giọng riêng cho từng nhân vật.</figcaption></figure>
-</section>
+        <details class="step" id="remote-play"><summary><span class="num">4</span>Bật Chơi từ xa cho tài khoản phụ</summary><div class="step-body">
+        <div class="ps-path"><span>Cài đặt <em>Settings</em></span><i>→</i><span>Hệ thống <em>System</em></span><i>→</i><span>Chơi từ xa <em>Remote Play</em></span></div>
+        <ol>
+            <li>Bấm <strong>Bật Chơi từ xa</strong> <em>(Enable Remote Play)</em>, bật công tắc cạnh <strong>tài khoản phụ</strong>. Bật sai người thì PC không kết nối được.</li>
+            <li>Quay lại, bật <strong>Ẩn trạng thái kết nối Chơi từ xa</strong> <em>(Hide Remote Play Connection Status)</em> để TV không hiện dòng "đã kết nối Chơi từ xa" khi chơi.</li>
+        </ol>
+        <figure>
+            <img src="../screenshots/app/ps5-remote-play-steps.jpg" alt="Trên PS5: bấm Bật Chơi từ xa, bật cho tài khoản phụ, rồi bật Ẩn trạng thái kết nối Chơi từ xa" loading="lazy">
+            <figcaption>Bấm Bật Chơi từ xa, bật đúng tài khoản phụ, rồi bật Ẩn trạng thái kết nối</figcaption>
+        </figure>
+        <p>PX4: <strong>Settings → Remote Play Connection Settings</strong>, bật <strong>Enable Remote Play</strong>.</p>
+        </div></details>
 
-<section id="game">
-  <h2>10. Chọn game<small>App dịch đúng tên, cách xưng hô theo từng game.</small></h2>
-  <ul>
-    <li>Vào <b>Cài đặt → Game &amp; máy chơi game</b> và bấm game bạn chơi. Không có thì bấm <b>Thêm game</b>.</li>
-    <li><b>Tự nhận ra game đang chơi</b>: đăng nhập PlayStation để app biết bạn đang chơi gì và gợi ý đổi game. Không đăng nhập thì app đoán theo tên nhân vật trong phụ đề.</li>
-  </ul>
-  <figure><img src="images/16-general.jpg" alt="Game và máy chơi game" loading="lazy"><figcaption>Game &amp; máy chơi game.</figcaption></figure>
-</section>
+        <details class="step" id="rest-mode"><summary><span class="num">5</span>Cho app tự bật PS5 khi máy đang nghỉ (nên làm)</summary><div class="step-body">
+        <div class="ps-path"><span>Cài đặt <em>Settings</em></span><i>→</i><span>Hệ thống <em>System</em></span><i>→</i><span>Tiết kiệm điện <em>Power Saving</em></span><i>→</i><span>Tính năng khi nghỉ <em>Features Available in Rest Mode</em></span></div>
+        <ul class="toggle-list">
+            <li><span class="on" aria-hidden="true"></span><div><b>Giữ kết nối Internet</b> <em>Stay Connected to the Internet</em></div></li>
+            <li><span class="on" aria-hidden="true"></span><div><b>Cho phép bật PS5 qua mạng</b> <em>Enable Turning On PS5 from Network</em></div></li>
+        </ul>
+        <p>Để PS5 ở chế độ nghỉ (đèn cam), trên PC bấm Bắt đầu dịch game là máy tự bật. Máy tắt hẳn thì phải bật bằng tay. PX4: <strong>Settings → Power Save Settings → Set Features Available in Rest Mode</strong>.</p>
+        </div></details>
 
-<section id="phim">
-  <h2>11. Xem phim / YouTube<small>Dịch phụ đề video trên PC.</small></h2>
-  <ol>
-    <li>Mở video trong trình duyệt hoặc app xem phim và bật phụ đề.</li>
-    <li>Ở màn hình chính bấm <b>Xem phim / YouTube</b>, chọn kiểu nội dung và ngôn ngữ phụ đề.</li>
-    <li>Bấm <b>Chọn cửa sổ và bắt đầu</b>.</li>
-  </ol>
-  <figure><img src="images/12-media.jpg" alt="Xem phim" loading="lazy"><figcaption>Phụ đề Việt thì đọc nguyên văn, phụ đề Anh thì dịch rồi đọc.</figcaption></figure>
-</section>
+        <details class="step" id="tim-may"><summary><span class="num">6</span>Trên PC: tìm máy</summary><div class="step-body">
+        <div class="box warn"><strong>Chuẩn bị</strong>
+            <ul style="margin:6px 0 0 18px;padding:0">
+                <li>PC và PS5 cắm chung một mạng ở nhà (cùng router, không dùng Wi-Fi khách, tắt VPN).</li>
+                <li>Bật PS5 (hoặc để ở chế độ nghỉ nếu đã làm bước 5).</li>
+            </ul>
+        </div>
+        <ol>
+            <li>Trên app PC bấm <span class="btn-app">Bắt đầu dịch game</span> → <span class="btn-app">Chơi trên TV</span>, chọn game, rồi bấm <span class="btn-app">Thêm người chơi</span>.</li>
+            <li>Chọn đúng <strong>Loại máy</strong>: <strong>PX5</strong> hoặc <strong>PX4</strong>, bấm <span class="btn-app">Tìm máy</span>.</li>
+            <li>Thấy <strong>Đã tìm thấy</strong> tên máy thì bấm <span class="btn-app">Tiếp tục</span>.</li>
+        </ol>
+        <figure><img src="images/05-console.jpg" alt="Bước 1 Tìm máy trên app PC" loading="lazy"><figcaption>Bước 1: Tìm máy. Chọn đúng loại máy PX5 / PX4.</figcaption></figure>
+        <details>
+            <summary>App không tìm thấy máy? Nhập địa chỉ bằng tay</summary>
+            <ol>
+                <li>Trên PS5 vào <strong>Cài đặt</strong> <em>(Settings)</em> → <strong>Mạng</strong> <em>(Network)</em> → <strong>Trạng thái kết nối</strong> <em>(Connection Status)</em> → <strong>Xem trạng thái kết nối</strong> <em>(View Connection Status)</em>.</li>
+                <li>Tìm dòng <strong>IPv4 Address</strong>, dạng <code>192.168.x.x</code>.</li>
+                <li>Trong app bấm <span class="btn-app">Không tìm thấy? Nhập địa chỉ bằng tay</span>, gõ đúng dãy số đó.</li>
+            </ol>
+        </details>
+        </div></details>
 
-<section id="phim-tat">
-  <h2>Phím tắt</h2>
-  <ul class="keys">
-    <li><kbd>F6</kbd> Hiện logo công cụ</li>
-    <li><kbd>F7</kbd> Chỉnh khung trên game</li>
-    <li><kbd>Ctrl+Alt+1</kbd> Chỉnh vùng đọc</li>
-    <li><kbd>F8</kbd> Hiện khung vùng</li>
-    <li><kbd>F9</kbd> Chạy / Dừng</li>
-    <li><kbd>F10</kbd> Quét lại</li>
-  </ul>
-  <h3>Cập nhật</h3>
-  <p>App tự kiểm tra bản mới và báo khi có. Bấm cài là xong, không cần tải lại từ web.</p>
-  <figure><img src="images/13-update.jpg" alt="Cập nhật ứng dụng" loading="lazy"></figure>
-</section>
+        <details class="step" id="ma-nguoi-choi"><summary><span class="num">7</span>Lấy mã người chơi của tài khoản phụ</summary><div class="step-body">
+        <ol>
+            <li>Trên PS5 (đang ở tài khoản phụ): bấm <strong>ảnh đại diện</strong> → <strong>Hồ sơ</strong> <em>(Profile)</em>. Ghi lại <strong>Online ID</strong> nằm dưới tên hiển thị, đúng từng chữ.</li>
+            <li>Trên app PC chọn <span class="btn-app">Tra mã như iOS</span> → bấm <span class="btn-app">Mở trang tra mã</span>. Trình duyệt mở <a href="https://id.kyozx.cloud" target="_blank" rel="noopener noreferrer">id.kyozx.cloud</a> (không cần đăng nhập).</li>
+            <li>Gõ Online ID, bấm <strong>Tra</strong>.</li>
+            <li>Ở ô <strong>Mã dán vào app</strong>, bấm <strong>Sao chép</strong>.</li>
+            <li>Quay lại app, bấm <span class="btn-app">Dán mã</span>. Thấy <strong>Đã nhận mã người chơi</strong> thì bấm <span class="btn-app">Tiếp tục</span>.</li>
+        </ol>
+        <figure>
+            <img src="../screenshots/app/07-find-online-id.jpg" alt="Trên PS5: ảnh đại diện, Hồ sơ, Online ID dưới tên" loading="lazy">
+            <figcaption>Online ID nằm ngay dưới tên hiển thị trong Hồ sơ</figcaption>
+        </figure>
+        <figure><img src="images/30-console-lookup.jpg" alt="Bước 2 Lấy mã người chơi trên app PC" loading="lazy"><figcaption>Trên app PC: Mở trang tra mã, sao chép mã, bấm Dán mã</figcaption></figure>
+        <div class="box warn"><strong>Copy đủ mã</strong>Bấm nút Sao chép trên trang để lấy đủ cả mã, kể cả dấu = ở cuối. App báo "Mã chưa đúng" là mã bị thiếu hoặc thừa ký tự.</div>
+        <details>
+            <summary>id.kyozx.cloud không vào được? Dùng trang dự phòng psntools</summary>
+            <ol>
+                <li>Trong app bấm <span class="btn-app">Trang tra mã dự phòng (psntools)</span>, hoặc mở <a href="https://www.psntools.com/psn/checker" target="_blank" rel="noopener noreferrer">psntools.com/psn/checker</a>.</li>
+                <li>Gõ Online ID, bấm <strong>Search</strong>.</li>
+                <li>Ở dòng <strong>BASE64 (FOR REMOTE PLAY)</strong>, bôi đen dãy ký tự kết thúc bằng <code>=</code> → chuột phải → <strong>Sao chép</strong>.</li>
+            </ol>
+            <figure>
+                <img src="../screenshots/app/07-pair-2-lookup-howto.jpg" alt="Trang tra mã: nhập Online ID, bấm Search, copy dòng BASE64" loading="lazy">
+                <figcaption>Nhập Online ID, bấm Search, copy đoạn ở dòng BASE64 (FOR REMOTE PLAY)</figcaption>
+            </figure>
+            <div class="box warn"><strong>Copy đúng dòng</strong>Chỉ lấy dòng BASE64 (FOR REMOTE PLAY), không lấy HEX hay NPID.</div>
+        </details>
+        <details>
+            <summary>Cách khác: đăng nhập tài khoản phụ để lấy mã</summary>
+            <ol>
+                <li>Trong app chọn <span class="btn-app">Đăng nhập</span> → <span class="btn-app">Đăng nhập bằng trình duyệt</span>, đăng nhập <strong>tài khoản phụ</strong>.</li>
+                <li>Trình duyệt chuyển sang một trang trắng hoặc báo lỗi: bình thường. Sao chép <strong>cả liên kết trên thanh địa chỉ</strong>.</li>
+                <li>Quay lại app, bấm <span class="btn-app">Dán liên kết và lấy mã</span>.</li>
+            </ol>
+            <figure><img src="images/31-console-login.jpg" alt="Cách Đăng nhập trên app PC" loading="lazy"><figcaption>Cách Đăng nhập: dán liên kết của trang sau khi đăng nhập</figcaption></figure>
+        </details>
+        <details>
+            <summary>Không tìm thấy Online ID trên PS5?</summary>
+            <ul>
+                <li><strong>Trên PS5, cách khác:</strong> <strong>Cài đặt</strong> → <strong>Người dùng và tài khoản</strong> <em>(Users and Accounts)</em> → <strong>Tài khoản</strong> → <strong>Hồ sơ</strong> → <strong>Online ID</strong>.</li>
+                <li><strong>Trên điện thoại:</strong> mở <strong>PlayStation App</strong>, đăng nhập tài khoản phụ, bấm ảnh đại diện. Online ID nằm dưới ảnh.</li>
+            </ul>
+            <p>Online ID là tên hiện khi chơi online, không phải email.</p>
+        </details>
+        </div></details>
 
-<footer>Cần giúp? Nhắn qua Telegram trong app (nút Telegram ở màn hình chính).</footer>
+        <details class="step" id="ghep-noi"><summary><span class="num">8</span>Lấy mã 8 số trên PS5 và ghép nối</summary><div class="step-body">
+        <ol>
+            <li>Trên PS5 (vẫn ở tài khoản phụ): <strong>Cài đặt</strong> → <strong>Hệ thống</strong> → <strong>Chơi từ xa</strong> → <strong>Ghép nối thiết bị</strong> <em>(Link Device)</em>.</li>
+            <li>TV hiện <strong>8 chữ số</strong> kèm thời gian còn lại.</li>
+            <li>Trên app PC (bước <strong>3 Mã trên máy</strong>), nhập ngay 8 số, bấm <span class="btn-app">Ghép nối người chơi</span>, chờ vài giây đến khi app báo thành công.</li>
+        </ol>
+        <figure>
+            <img src="../screenshots/app/ps5-link-device-code.jpg" alt="Trên PS5: Chơi từ xa, Ghép nối thiết bị, TV hiện mã 8 số kèm thời gian còn lại" loading="lazy">
+            <figcaption>Cài đặt → Hệ thống → Chơi từ xa → Ghép nối thiết bị</figcaption>
+        </figure>
+        <div class="box warn"><strong>Máy từ chối mã?</strong>Thường do mã người chơi ở bước 7 là của tài khoản khác với tài khoản đang chọn trên PS5. Chuyển đúng tài khoản phụ, lấy mã 8 số mới rồi nhập lại. Không dùng tài khoản Khách (Guest). Hết giờ thì bấm Ghép nối thiết bị lần nữa.</div>
+        <div class="box tip"><strong>Xong rồi, lần sau thế nào?</strong>Không cần ghép lại. Mở app, bấm <strong>Bắt đầu dịch game → Chơi trên TV</strong>: app tự đánh thức máy và kết nối. Chuyển PS5 về tài khoản chính để chơi. Bị đá tay cầm thì bấm nút PS, chọn lại tài khoản chính. Máy đổi địa chỉ mạng thì app tự tìm lại.</div>
+        </div></details>
+
+        <details class="step" id="choi"><summary><span class="num">9</span>Chơi và dịch</summary><div class="step-body">
+        <ol>
+            <li>Bấm <span class="btn-app">Bắt đầu dịch game</span>, chọn cách chơi:
+                <ul>
+                    <li><strong>Chơi trên TV</strong>: máy cắm TV như bình thường, PC nhận hình qua Chơi từ xa để đọc chữ.</li>
+                    <li><strong>Chơi trên PC</strong>: không cần TV, chơi ngay trong app với hình, tiếng game và tay cầm cắm vào PC. Xem <a href="#choi-pc">Cách dùng → Chơi trên PC</a>.</li>
+                    <li><strong>Cách khác</strong> (dòng chữ nhỏ dưới mỗi lựa chọn): <a href="#capture">capture card</a>, hoặc <a href="#app-khac">chiaki-ng / PXPlay</a>.</li>
+                </ul>
+            </li>
+            <li>Chọn game bạn chơi để app dịch đúng tên nhân vật.</li>
+            <li>Lần đầu, bấm <span class="btn-app">Chỉnh vùng dịch</span> và kéo khung ôm vừa dòng phụ đề (xem <a href="#vung">Cách dùng → Vùng đọc chữ</a>).</li>
+            <li>Bấm <span class="btn-app">Bắt đầu dịch</span>. Câu dịch hiện trên PC, và trên TV nếu đã ghép TV (tab <a href="#phu-de-tv">Phụ đề TV</a>).</li>
+        </ol>
+        <figure><img src="images/02-play-location.jpg" alt="Bạn chơi ở đâu" loading="lazy"><figcaption>Hai lựa chọn chính, cách khác nằm ở dòng chữ nhỏ bên dưới</figcaption></figure>
+        <figure><img src="images/06-tvplay.jpg" alt="Màn hình dịch khi chơi trên TV" loading="lazy"><figcaption>Màn hình dịch. Thanh dưới: Bắt đầu dịch, Chỉnh vùng dịch, AI, Dịch menu, Kết nối TV, Đọc to, Nhân vật.</figcaption></figure>
+        </div></details>
+    </div>
+
+    <!-- ===================== PHỤ ĐỀ TV ===================== -->
+    <div class="panel" id="panel-tv" role="tabpanel" hidden>
+    <section class="card tv-card" id="phu-de-tv">
+        <details class="tv-fold" open><summary><h2><span class="num">TV</span>Phụ đề ngay trên màn hình TV</h2></summary>
+        <p class="why">Máy chơi game vẫn cắm HDMI thẳng vào TV. Chỉ phụ đề và giọng đọc đi từ PC sang TV qua mạng nhà nên hình ảnh không giảm chất lượng hay thêm độ trễ. Không cần thì bỏ qua tab này, phụ đề vẫn hiện trên PC.</p>
+
+        <div class="tv-requirements" aria-label="Điều kiện sử dụng">
+            <span><b>TV tương thích</b>Android TV, LG webOS, Samsung từ 2017</span>
+            <span><b>Cùng mạng</b>TV và PC chung mạng nhà</span>
+            <span><b>Cài app lên TV</b>Android TV cài bằng remote, LG / Samsung cài từ app PC</span>
+        </div>
+
+        <div class="box warn"><strong>Kiểm tra TV trước</strong>Tính năng này không chạy trên mọi TV.<ul style="margin:8px 0 8px 18px;padding:0"><li><strong>Android TV / Google TV:</strong> được, cần <strong>Android 9 trở lên</strong>. TV nào khóa quyền Hiển thị trên ứng dụng khác thì không hiện được phụ đề.</li><li><strong>TV LG webOS:</strong> thử nghiệm, cần Developer Mode và mã LGTV.</li><li><strong>TV Samsung từ 2017 (Tizen 3.0 trở lên):</strong> thử nghiệm, cần Developer Mode, mã SSTV và tài khoản Samsung.</li><li><strong>TV Samsung 2016 trở về trước, Android Box, TV hệ điều hành khác:</strong> không dùng được.</li></ul>Cài app lên TV trước. Khi TV hiện được màn hình ghép nối thì TV đó dùng được.</div>
+
+        <p>Trong app PC vào <span class="btn-app">Cài đặt</span> → <strong>Phụ đề trên TV</strong>, ở mục <strong>Bạn đang dùng TV gì?</strong> chọn đúng loại TV, rồi làm theo phần của TV mình bên dưới.</p>
+
+        <details class="platform" id="android-tv">
+            <summary><span class="platform-name"><span class="platform-icon">A</span>Android TV</span><span class="tag">Cài bằng remote</span></summary>
+            <div class="box tip"><strong>Dễ nhất: cài từ Google Play (thử nghiệm)</strong>Trên TV, mở link bằng Gmail của bạn, bấm “Trở thành người thử nghiệm” rồi cài <strong>Console Translator TV</strong>.<a class="download-tv play-store" href="https://play.google.com/apps/testing/com.kyozx.consoletranslator.tv.play">Tải Console Translator TV trên Google Play</a>Không mở được Google Play trên TV thì cài bằng mã Downloader bên dưới.</div>
+            <div class="tv-downloads">
+                <div class="tv-version">
+                    <h3>Android TV thông thường</h3>
+                    <p>Mã Downloader</p>
+                    <strong class="download-code">8179089</strong>
+                    <a class="download-button" href="https://api.kyozx.cloud/tv/latest">Tải APK cho TV</a>
+                </div>
+                <div class="tv-version">
+                    <h3>TV Xiaomi nội địa</h3>
+                    <p>Mã Downloader</p>
+                    <strong class="download-code">2484675</strong>
+                    <a class="download-button" href="https://api.kyozx.cloud/tv/latest-mi">Tải APK Xiaomi</a>
+                </div>
+            </div>
+            <p class="why">Mã Downloader dùng để tải app trên TV, khác với mã ghép phụ đề. App TV tự hiện nút <strong>Cập nhật</strong> khi có bản mới.</p>
+            <figure><img src="images/20-tv-android.jpg" alt="Chọn Android TV trong app PC" loading="lazy"><figcaption>Trên app PC chọn Android TV để xem các bước</figcaption></figure>
+            <p class="mini-title">Cài app</p>
+            <ol>
+                <li>Trên TV, cài <strong>Downloader by AFTVnews</strong> từ Google Play.</li>
+                <li>Vào <strong>Cài đặt → Ứng dụng → Quyền truy cập đặc biệt → Cài đặt ứng dụng không rõ nguồn</strong>, cho phép Downloader.</li>
+                <li>Mở Downloader, nhập mã đúng loại TV ở trên, tải rồi cài file APK. Đã có bản cũ thì cài đè.</li>
+            </ol>
+            <p class="mini-title">Cấp quyền và mở app</p>
+            <ol>
+                <li>Mở <strong>Console Translator TV</strong>, bấm <strong>Cấp quyền hiển thị trên ứng dụng khác</strong>.</li>
+                <li>Bật quyền cho app rồi bấm Back. Nếu được hỏi, cho phép app bỏ qua tối ưu hóa pin.</li>
+                <li>App hiện màn hình ghép nối và địa chỉ TV. Làm tiếp phần <a href="#ghep-tv">Ghép nối TV với PC</a>.</li>
+            </ol>
+            <div class="box warn"><strong>Không thấy quyền hiển thị?</strong>Tìm thủ công trong Cài đặt TV với các tên: Quyền truy cập đặc biệt, Hiển thị trên ứng dụng khác hoặc Xuất hiện trên cùng. Một số firmware khóa hoàn toàn quyền này.</div>
+            <div class="box warn"><strong>TV Xiaomi nội địa không bật được quyền?</strong>1. TV: <strong>Settings → Accounts and Security → ADB</strong>, bật và chọn <strong>ALLOW</strong>. 2. Mở app <strong>Permissions Manager</strong> (khiên xanh). 3. Chọn <strong>Console Translator TV (Mi)</strong> → <code>android.permission.SYSTEM_ALERT_WINDOW</code> → <strong>Allow</strong>. Bản Mi chỉ hiện phụ đề sau khi chuyển sang cổng HDMI.</div>
+        </details>
+
+        <details class="platform" id="samsung-tv">
+            <summary><span class="platform-name"><span class="platform-icon">S</span>TV Samsung</span><span class="tag">Cài từ app PC</span></summary>
+            <p class="mini-title">1. Bật Developer Mode trên TV</p>
+            <ol>
+                <li>Trên TV vào <strong>Home → Apps (Ứng dụng) → App Settings (Cài đặt ứng dụng)</strong>.</li>
+                <li>Bấm nút <strong>123</strong> (hoặc <strong>…</strong>) trên remote để hiện bàn phím số, bấm lần lượt <strong>1 2 3 4 5</strong>.</li>
+                <li>Bật <strong>Developer Mode → On</strong>. Ở ô <strong>Host PC IP</strong> nhập IP máy tính đang hiện trong app PC (dòng màu vàng), bấm OK.</li>
+                <li><strong>Rút điện TV 30 giây rồi cắm lại.</strong> Tắt bằng remote là chưa đủ.</li>
+            </ol>
+            <p class="mini-title">2. Cài app từ PC</p>
+            <ol>
+                <li>Trên app PC chọn <strong>TV Samsung</strong>. Lần đầu bấm <span class="btn-app">Tải công cụ cho TV Samsung</span>, chờ “Công cụ đã sẵn sàng trên máy tính”.</li>
+                <li>Nhập <strong>IP của TV</strong> (trên TV: Cài đặt → Mạng → Trạng thái mạng). Đây là IP TV, khác IP máy tính ở trên.</li>
+                <li>Nhập <strong>mã SSTV</strong>: lấy ở <a href="https://t.me/consoletranslatorbot" target="_blank" rel="noopener noreferrer">bot Telegram</a> bằng lệnh <code>/samsung</code>. Máy đã kích hoạt thì để trống.</li>
+                <li>Bấm <span class="btn-app">Kiểm tra TV</span>, rồi <span class="btn-app">Cài / cập nhật app TV</span>. Trình duyệt mở trang đăng nhập Samsung: đăng nhập để cấp chứng chỉ cho đúng TV.</li>
+            </ol>
+            <figure><img src="images/23-tv-samsung.jpg" alt="Cài app lên TV Samsung từ app PC" loading="lazy"><figcaption>Dòng vàng là IP máy tính để nhập vào Host PC IP trên TV</figcaption></figure>
+            <p class="mini-title">Mỗi lần chơi</p>
+            <div class="play-every-time"><div>Bật máy chơi game trước</div><div>Trên TV mở Apps → Console Translator TV</div><div>Lần đầu chọn cổng HDMI của máy chơi game</div></div>
+            <div class="box warn"><strong>Tắt tự chuyển cổng HDMI</strong>Trên PS5 vào <strong>Cài đặt → Hệ thống → HDMI</strong>, tắt <strong>Bật liên kết thiết bị HDMI</strong> (hoặc tắt Anynet+ trên TV). Nếu không, bật máy chơi game làm TV nhảy sang HDMI và thoát app phụ đề. Bấm nút Lên trên remote: hiện bảng chọn HDMI nghĩa là app vẫn đang chạy.</div>
+        </details>
+
+        <details class="platform lg" id="lg-tv">
+            <summary><span class="platform-name"><span class="platform-icon">LG</span>TV LG</span><span class="tag">Cài từ app PC</span></summary>
+            <p class="mini-title">1. Chuẩn bị TV (làm lần đầu)</p>
+            <ol>
+                <li>Tạo tài khoản tại <a href="https://webostv.developer.lge.com/" target="_blank" rel="noopener noreferrer">LG Developer</a>.</li>
+                <li>Trên TV mở <strong>LG Content Store</strong>, cài app <strong>Developer Mode</strong>, mở và đăng nhập.</li>
+                <li>Bật <strong>Dev Mode Status</strong>, chờ TV khởi động lại. Mở lại Developer Mode, bật <strong>Key Server</strong>.</li>
+                <li>Để nguyên màn hình này: nó hiện <strong>IP</strong> và <strong>Passphrase</strong> (6 ký tự) của TV.</li>
+            </ol>
+            <p class="mini-title">2. Cài app từ PC</p>
+            <ol>
+                <li>Trên app PC chọn <strong>TV LG</strong>. Lần đầu bấm <span class="btn-app">Tải công cụ cho TV LG</span>.</li>
+                <li>Nhập <strong>IP</strong> và <strong>Passphrase</strong> đang hiện trên TV (phân biệt chữ hoa, chữ thường).</li>
+                <li>Nhập <strong>mã LGTV</strong> lấy ở <a href="https://t.me/consoletranslatorbot" target="_blank" rel="noopener noreferrer">bot Telegram</a>. Máy đã kích hoạt thì để trống.</li>
+                <li>Bấm <span class="btn-app">Kiểm tra TV</span>, xác nhận đúng TV của bạn, rồi bấm <span class="btn-app">Cài / cập nhật app TV</span>. Chờ báo “Đã cài xong app lên TV”.</li>
+            </ol>
+            <figure><img src="images/22-tv-lg.jpg" alt="Cài app lên TV LG từ app PC" loading="lazy"><figcaption>Phần cài cho TV LG trong app PC</figcaption></figure>
+            <p class="mini-title">Mỗi lần chơi</p>
+            <div class="play-every-time"><div>Bật máy chơi game, chuyển TV sang cổng HDMI của máy</div><div>Key Server trong Developer Mode đang bật</div><div>Trên app PC bấm Mở app trên TV</div></div>
+            <p>Bật <strong>Tự mở app TV khi bấm Bắt đầu</strong> trong Phụ đề trên TV để app PC tự làm bước 3.</p>
+            <div class="box warn"><strong>Đừng mở app bằng remote TV LG</strong>Luôn mở bằng nút Mở app trên TV trên PC. Đang chơi đừng bấm Home hay đổi nguồn, app trên TV sẽ bị đóng. Chỉ dùng tăng giảm âm lượng.</div>
+            <div class="box tip"><strong>Developer Mode có hạn</strong>Mở Developer Mode và bấm EXTEND trước khi hết hạn. TV LG đời cũ tự tắt app sau khoảng một phút: bật <strong>Giữ app trên TV không tự tắt</strong>.</div>
+        </details>
+
+        <details class="platform" id="ghep-tv" open>
+            <summary><span class="platform-name"><span class="platform-icon">PC</span>Ghép nối TV với PC</span><span class="tag">Dùng cho mọi loại TV</span></summary>
+            <div style="padding: 10px 0;">
+                <p class="mini-title">Bước 1: Mở máy PS5 và mở app trên TV</p>
+                <ul style="margin: 8px 0 12px 20px;">
+                    <li><strong>TV Samsung, Android TV:</strong> mở app <strong>Console Translator TV</strong> trên TV.</li>
+                    <li><strong>TV LG:</strong> trên app PC bấm <span class="btn-app">Mở app trên TV</span>.</li>
+                </ul>
+                <p>TV hiện <strong>Địa chỉ TV</strong> và màn hình ghép nối:</p>
+                <div style="display: flex; gap: 12px; margin: 12px 0; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 260px; text-align: center;">
+                        <img src="../assets/tv-lg-code.jpg" alt="Màn hình trên TV LG" style="width: 100%; max-width: 300px; border-radius: 12px; border: 1px solid var(--border);" />
+                        <div style="font-size: 13px; color: var(--muted); margin-top: 4px;">Màn hình trên TV LG</div>
+                    </div>
+                    <div style="flex: 1; min-width: 260px; text-align: center;">
+                        <img src="../assets/tv-android-code.png" alt="Màn hình trên Android TV" style="width: 100%; max-width: 300px; border-radius: 12px; border: 1px solid var(--border);" />
+                        <div style="font-size: 13px; color: var(--muted); margin-top: 4px;">Màn hình trên Android TV</div>
+                    </div>
+                </div>
+                <p class="mini-title" style="margin-top: 16px;">Bước 2: Trên PC, mở Kết nối TV</p>
+                <p>Vào <span class="btn-app">Cài đặt</span> → <strong>Phụ đề trên TV</strong> → mục <strong>Kết nối TV</strong>, hoặc bấm <span class="btn-app">Kết nối TV</span> trên thanh dưới màn hình dịch.</p>
+                <figure><img src="images/21-tv-connect.jpg" alt="Mục Kết nối TV trên app PC" loading="lazy"><figcaption>Mục Kết nối TV</figcaption></figure>
+                <p class="mini-title" style="margin-top: 16px;">Bước 3: Chọn TV, bấm Kết nối, Đồng ý trên TV</p>
+                <ol>
+                    <li>Chọn TV trong danh sách. Không thấy thì gõ <strong>Địa chỉ TV</strong> đang hiện trên TV.</li>
+                    <li>Bấm <span class="btn-app">Kết nối</span>. TV hỏi <strong>Đồng ý?</strong>: bấm <strong>Đồng ý</strong> bằng remote TV.</li>
+                    <li>App TV đời cũ không hỏi mà hiện <strong>mã 8 số</strong>: nhập mã vào ô <strong>Mã 8 số trên TV</strong> rồi bấm Kết nối.</li>
+                    <li>Thấy <strong>Đã kết nối</strong> là xong. Bấm <span class="btn-app">Câu thử</span> để xem phụ đề hiện trên TV.</li>
+                </ol>
+                <p style="margin-top: 10px;">Chuyển TV sang cổng HDMI của máy chơi game và bắt đầu dịch: phụ đề tiếng Việt nổi ngay trên hình game. Lần sau PC tự kết nối lại.</p>
+            </div>
+            <p class="mini-title">Chỉnh chữ trên TV</p>
+            <ul class="toggle-list">
+                <li><span class="on" aria-hidden="true"></span><div><b>Tự đặt thoại theo game</b><small>Dòng dịch nằm đúng độ cao và cỡ chữ của phụ đề gốc. Tắt để tự chỉnh cỡ chữ, vị trí.</small></div></li>
+                <li><span class="on" aria-hidden="true"></span><div><b>Đè lên câu gốc trên TV</b><small>Câu dịch che đúng chỗ phụ đề tiếng Anh của game.</small></div></li>
+                <li><span class="on" aria-hidden="true"></span><div><b>Phát giọng đọc ra loa TV</b><small>Giọng đọc ra loa TV, máy tính im lặng. Không nghe thấy thì đổi Digital Audio Out của TV sang PCM.</small></div></li>
+            </ul>
+            <p class="mini-title">Kết quả trên TV</p>
+            <div class="tvmocks"><figure class="tvmock"><div class="tv-bezel"><div class="tv-screen"><img src="../screenshots/app/tv-scene-road.jpg" alt="" loading="lazy"><div class="tv-sub">Ta phải tới thành phố trước khi trời tối.</div></div></div><div class="tv-stand"></div><figcaption>Phụ đề tiếng Việt hiện ở dưới, đè lên hình game</figcaption></figure></div>
+        </details>
+
+        <details class="tv-troubleshooting">
+            <summary>Lỗi thường gặp trên TV</summary>
+            <ul>
+                <li><strong>LG không kết nối khi cài:</strong> kiểm tra Developer Mode còn hạn, Key Server đang bật, IP và Passphrase mới nhất, PC cùng mạng với TV.</li>
+                <li><strong>Samsung không kết nối khi cài:</strong> Host PC IP trên TV là IP máy tính, ô IP trong app là IP TV; sau khi bật Developer Mode phải rút điện TV 30 giây.</li>
+                <li><strong>PC không thấy TV:</strong> mở app trên TV trước, TV và PC cùng mạng, rồi gõ đúng địa chỉ đang hiện trên TV.</li>
+                <li><strong>Phụ đề biến mất:</strong> Android TV cần bỏ tối ưu hóa pin; LG bấm lại Mở app trên TV nếu đã bấm Home; Samsung tắt liên kết thiết bị HDMI.</li>
+                <li><strong>Không nghe giọng đọc trên TV:</strong> đổi Digital Audio Out của TV sang PCM.</li>
+            </ul>
+            <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">Telegram hỗ trợ</a> kèm hãng/model TV và ảnh lỗi.</div>
+        </details>
+        </details>
+    </section>
+    </div>
+
+    <!-- ===================== CÁCH DÙNG ===================== -->
+    <div class="panel" id="panel-use" role="tabpanel" hidden>
+        <p class="panel-intro">Mỗi chức năng một mục, bấm để xem.</p>
+
+        <details class="step" id="vung"><summary><span class="num">1</span>Kéo vùng đọc chữ đúng cách</summary><div class="step-body">
+        <p>Bước quan trọng nhất. Khung sai thì dịch sai hoặc không dịch.</p>
+        <ol>
+            <li>Ở màn hình chính bấm <span class="btn-app">Vùng đọc chữ</span> (hoặc phím <code>Ctrl+Alt+1</code>). Chờ có hình game và phụ đề trên hình.</li>
+            <li>Kéo khung xanh <strong>Phụ đề chính</strong> <strong>chỉ vừa dòng phụ đề của nhân vật</strong>, dư một chút cho câu dài hai dòng.</li>
+            <li>Kéo chấm ở góc để đổi cỡ. Khung sát chữ thì đọc nhanh và đúng hơn.</li>
+        </ol>
+        <figure><img src="images/08-regions.jpg" alt="Vùng đọc chữ" loading="lazy"><figcaption>Khung xanh ôm vừa chỗ phụ đề. Tốc độ đọc 10 lần/giây là vừa.</figcaption></figure>
+        <div class="box warn"><strong>Không kéo khung to cả màn hình</strong>Khung quá to đọc nhầm menu, nhiệm vụ, chữ trên màn hình thành thoại. Menu đã có <strong>Dịch menu</strong>. App hiện băng đỏ khi khung quá to hoặc quá nhỏ.</div>
+        </div></details>
+
+        <details class="step" id="man-dich"><summary><span class="num">2</span>Màn dịch và Dịch menu</summary><div class="step-body">
+        <p>Thanh dưới cùng màn dịch, từ trái sang:</p>
+        <ul>
+            <li><strong>Bắt đầu dịch / Dừng</strong>.</li>
+            <li><strong>Chỉnh vùng dịch</strong>: kéo lại khung đọc chữ.</li>
+            <li><strong>AI</strong>: đổi cách dịch nhanh.</li>
+            <li><strong>Dịch menu</strong>: bấm khi đang mở menu, kỹ năng, túi đồ, nhiệm vụ. Bản dịch hiện ngay tại chữ gốc. Mũi tên bên cạnh mở tùy chọn: Tự động, Đè lên chữ gốc, Tự ẩn khi gặp nút, màu chữ và nền “Theo game”.</li>
+            <li><strong>Kết nối TV</strong>, <strong>Đọc to</strong>, <strong>Nhân vật</strong> (giọng và màu tên riêng cho từng nhân vật).</li>
+        </ul>
+        <figure><img src="images/06-tvplay.jpg" alt="Màn dịch" loading="lazy"><figcaption>Màn dịch khi chơi trên TV</figcaption></figure>
+        <p>Phím tắt: <code>F6</code> logo công cụ, <code>F7</code> chỉnh khung trên game, <code>F8</code> hiện khung vùng, <code>F9</code> chạy / dừng, <code>F10</code> quét lại.</p>
+        </div></details>
+
+        <details class="step" id="choi-pc"><summary><span class="num">3</span>Chơi trên PC ngay trong app</summary><div class="step-body">
+        <p>Không cần TV, không cần cài app khác. Dùng máy và tài khoản phụ đã ghép nối ở tab Bắt đầu.</p>
+        <ol>
+            <li>Cắm tay cầm vào PC (USB hoặc Bluetooth): tay Xbox, DualSense hoặc DualShock 4.</li>
+            <li>Bấm <span class="btn-app">Bắt đầu dịch game</span> → <strong>Chơi trên PC</strong>, chọn game.</li>
+            <li>App tự bật máy và mở cửa sổ chơi: hình 1080p 60 khung/giây, tiếng game ra loa PC, phụ đề đè lên. <code>F11</code> hoặc nhấp đúp để toàn màn hình.</li>
+        </ol>
+        <div class="box tip"><strong>Tay Xbox</strong>A = ×, B = ○, X = □, Y = △, nút View = touchpad. Nhấn Menu và View cùng lúc thay cho nút PS. Chỉ bấm được khi cửa sổ chơi đang ở trên cùng.</div>
+        </div></details>
+
+        <details class="step" id="app-khac"><summary><span class="num">4</span>Chơi bằng chiaki-ng / PXPlay</summary><div class="step-body">
+        <ol>
+            <li>Cài <strong>chiaki-ng</strong> (miễn phí) hoặc <strong>PXPlay</strong> (trả phí), mở app đó, kết nối máy và vào game.</li>
+            <li>Trên Console Translator bấm <span class="btn-app">Bắt đầu dịch game</span>, dưới <strong>Chơi trên PC</strong> bấm <strong>Cách khác: Dùng chiaki-ng / PXPlay</strong>, rồi <span class="btn-app">Chọn cửa sổ game</span>.</li>
+            <li>Đã cài app rồi thì bật <strong>Tôi đã cài app, lần sau không hiện bảng này</strong> để lần sau vào thẳng bước chọn cửa sổ.</li>
+            <li>Kéo vùng đọc chữ rồi bấm Bắt đầu dịch. Muốn đổi sang cửa sổ khác, bấm <span class="btn-app">Đổi cửa sổ</span> trên thanh màn dịch.</li>
+        </ol>
+        <figure><img src="images/03-pc-help.jpg" alt="Chơi trên PC" loading="lazy"><figcaption>App PS Remote Play của Sony cho hình đen khi app khác đọc màn hình, nên không dùng được.</figcaption></figure>
+        <figure><img src="images/04-windows.jpg" alt="Chọn cửa sổ game" loading="lazy"><figcaption>Chọn cửa sổ game. Bấm nút làm mới nếu chưa thấy.</figcaption></figure>
+        <div class="box warn"><strong>Đừng bấm toàn màn hình trong chiaki-ng / PXPlay</strong>Kiểu toàn màn hình đó có thể làm app chỉ thấy <strong>màn hình đen</strong>, không dịch được. Để chiaki-ng ở dạng cửa sổ, rồi bấm logo công cụ trên game (<code>F6</code>) → <strong>Toàn màn hình</strong>. App phóng cửa sổ ra toàn màn hình không viền, vẫn dịch và hiện phụ đề.</div>
+        <p>App chỉ thấy hình đen hơn 10 giây thì báo <strong>“Không thấy hình game”</strong> kèm cách sửa. Game ở chế độ toàn màn hình độc quyền thì app tự chuyển sang không viền; không được thì chọn <strong>Borderless</strong> trong cài đặt đồ họa của game.</p>
+        </div></details>
+
+        <details class="step" id="capture"><summary><span class="num">5</span>Chơi bằng capture card</summary><div class="step-body">
+        <p>Hình nét, không trễ, không cần Chơi từ xa hay tài khoản phụ.</p>
+        <ol>
+            <li>Cắm: máy chơi game → HDMI vào capture card → HDMI ra TV (nếu chơi trên TV). Cắm USB của card vào PC.</li>
+            <li>Đóng các app khác đang dùng card (OBS, Camera).</li>
+            <li>Bấm <span class="btn-app">Bắt đầu dịch game</span>, bấm <strong>Cách khác: Dùng capture card</strong> dưới <strong>Chơi trên TV</strong> (vẫn chơi trên TV) hoặc dưới <strong>Chơi trên PC</strong> (hình và tiếng hiện trong cửa sổ trên PC; <code>F11</code> hoặc nhấp đúp để toàn màn hình).</li>
+            <li>PC có nhiều thiết bị hình (webcam…) thì app hỏi chọn đúng capture card.</li>
+        </ol>
+        <div class="box tip"><strong>App báo chưa có quyền?</strong>Cài đặt Windows → Quyền riêng tư và bảo mật → Camera, bật “Cho phép ứng dụng máy tính truy cập camera”. Muốn có tiếng: bật cả mục Micro.</div>
+        </div></details>
+
+        <details class="step" id="giong"><summary><span class="num">6</span>Giọng đọc</summary><div class="step-body">
+        <ol>
+            <li>Vào <span class="btn-app">Cài đặt</span> → <strong>Giọng đọc</strong>, chọn bộ đọc. <strong>VieNeu Turbo</strong> hay nhất; máy yếu chọn <strong>VieNeu Nano</strong> hoặc <strong>Giọng Windows</strong>.</li>
+            <li>Lần đầu bấm tải bộ giọng (chỉ tải một lần).</li>
+            <li>Chọn tốc độ đọc. Thoại game nhanh thì để 175% trở lên.</li>
+            <li>Ở màn dịch bấm <span class="btn-app">Đọc to</span> để bật hoặc tắt.</li>
+        </ol>
+        <figure><img src="images/15-speech.jpg" alt="Cài đặt giọng đọc" loading="lazy"><figcaption>20 giọng AI, lọc theo nam, nữ</figcaption></figure>
+        </div></details>
+
+        <details class="step" id="game"><summary><span class="num">7</span>Chọn game, tự nhận game</summary><div class="step-body">
+        <ul>
+            <li><span class="btn-app">Cài đặt</span> → <strong>Game &amp; máy chơi game</strong>, bấm game bạn chơi. Game có bản Việt hóa thì app dùng luôn bản đó. Không có game thì bấm <span class="btn-app">Thêm game</span>.</li>
+            <li><strong>Tự nhận ra game đang chơi</strong>: đăng nhập PlayStation để app biết bạn chơi gì và gợi ý đổi game. Không đăng nhập thì app đoán theo tên nhân vật trong phụ đề.</li>
+        </ul>
+        <figure><img src="images/16-general.jpg" alt="Game và máy chơi game" loading="lazy"><figcaption>Game &amp; máy chơi game</figcaption></figure>
+        </div></details>
+
+        <details class="step" id="phim"><summary><span class="num">8</span>Xem phim / YouTube</summary><div class="step-body">
+        <ol>
+            <li>Mở video trong trình duyệt hoặc app xem phim, bật phụ đề.</li>
+            <li>Ở màn hình chính bấm <span class="btn-app">Xem phim / YouTube</span>, chọn kiểu nội dung và ngôn ngữ phụ đề.</li>
+            <li>Bấm <span class="btn-app">Chọn cửa sổ và bắt đầu</span>.</li>
+        </ol>
+        <figure><img src="images/12-media.jpg" alt="Xem phim" loading="lazy"><figcaption>Phụ đề Việt đọc nguyên văn, phụ đề Anh dịch rồi đọc</figcaption></figure>
+        </div></details>
+
+        <details class="step" id="stream"><summary><span class="num">9</span>Phát trực tiếp (OBS)</summary><div class="step-body">
+        <p>Người xem livestream thấy phụ đề tiếng Việt trên hình game.</p>
+        <ol>
+            <li>Trong OBS bật <strong>Tools → WebSocket Server Settings</strong>, đặt mật khẩu.</li>
+            <li>Trên app PC vào <span class="btn-app">Cài đặt</span> → <strong>Phụ đề trên TV</strong> → <strong>Chế độ stream</strong>, nhập mật khẩu WebSocket, bấm <span class="btn-app">Bật chế độ stream</span>. App tự thêm phụ đề vào cảnh đang chọn.</li>
+        </ol>
+        </div></details>
+    </div>
+
+    <!-- ===================== BÁO LỖI ===================== -->
+    <div class="panel" id="panel-fix" role="tabpanel" hidden>
+        <p class="panel-intro">Bấm vào lỗi bạn gặp để xem cách sửa.</p>
+        <details><summary>Chọn cửa sổ chiaki-ng rồi mà không có hình (màn hình đen)</summary>
+            <p>Thoát toàn màn hình của chiaki-ng (<code>F11</code> hoặc nhấp đúp), rồi dùng <strong>Toàn màn hình</strong> trên logo công cụ của app (<code>F6</code>). Không phải do toàn màn hình thì kiểm tra game có đang hiện hình, hoặc chọn lại cửa sổ.</p></details>
+        <details><summary>App không tìm thấy máy chơi game</summary>
+            <p>PC và PS5 phải cùng mạng (cùng router, không Wi-Fi khách, tắt VPN). Máy phải bật, hoặc ở chế độ nghỉ có bật Giữ kết nối Internet. Vẫn không thấy thì nhập IP bằng tay (Bắt đầu → bước 6).</p></details>
+        <details><summary>PS5 từ chối ghép nối</summary>
+            <p>Mã người chơi (bước 7) và tài khoản đang mở trên PS5 (bước 8) phải là một. Không dùng tài khoản Khách. Mã 8 số hết hạn sau vài phút: lấy mã mới.</p></details>
+        <details><summary>Tay cầm bị ngắt khi PC kết nối</summary>
+            <p>Dùng tài khoản phụ để ghép nối (Bắt đầu → bước 3). Hoặc bấm nút PS, chọn lại tài khoản chính.</p></details>
+        <details><summary>Không dịch hoặc dịch sai, nhảy chữ lung tung</summary>
+            <p>Kéo lại khung vùng đọc chữ chỉ vừa dòng phụ đề. Chọn đúng game. Thêm khóa Gemini nếu đang dùng Bing.</p></details>
+        <details><summary>Phụ đề không hiện trên TV</summary>
+            <p>TV và PC cùng mạng, app trên TV đang mở và đã ghép. TV LG: mở lại bằng nút Mở app trên TV, đừng bấm Home. TV Samsung: tắt liên kết thiết bị HDMI / Anynet+. Bấm Câu thử để kiểm tra.</p></details>
+        <details><summary>Capture card không có hình hoặc không có tiếng</summary>
+            <p>Đóng OBS, Camera. Bật quyền Camera (và Micro cho tiếng) cho ứng dụng máy tính trong Cài đặt Windows. Rút cắm lại USB của card.</p></details>
+        <details><summary>Windows chặn mở bộ cài</summary>
+            <p>Bấm <strong>Thông tin thêm</strong> → <strong>Vẫn chạy</strong>. Chỉ làm với bộ cài tải từ GitHub chính thức.</p></details>
+        <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">Telegram hỗ trợ</a> kèm ảnh màn hình lỗi. Đừng để lộ khóa AI hay mã cài trong ảnh.</div>
+    </div>
+
+    <footer>Console Translator · Bản PC Windows · <a href="https://t.me/pstranslator">t.me/pstranslator</a></footer>
 </div>
+<script>
+// Tabs, plus deep links: a #hash inside a panel shows that panel and opens its folds.
+var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+function show(name){tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.panel===name)});['pc','tv','use','fix'].forEach(function(n){document.getElementById('panel-'+n).hidden=n!==name});}
+tabs.forEach(function(t){t.onclick=function(){show(t.dataset.panel)}});
+function openTarget(){var t=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));if(!t)return;var p=t.closest('.panel');if(p)show(p.id.slice(6));for(var e=t;e;e=e.parentElement)if(e.tagName==='DETAILS')e.open=true;if(t.tagName==='DETAILS')t.open=true;var f=t.querySelector(':scope > details.tv-fold');if(f)f.open=true;t.scrollIntoView();}
+addEventListener('hashchange',openTarget);openTarget();
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(a){setTimeout(openTarget,0)}});
+</script>
 </body>
 </html>
