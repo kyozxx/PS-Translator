@@ -41,7 +41,7 @@
 // Hero screenshots: slide by themselves (unless reduced motion), arrows and dots move them, tap opens the viewer.
 (() => {
   const viewer = document.getElementById('shot-viewer');
-  const links = [...document.querySelectorAll('[data-shot]')];
+  const links = [...new Map([...document.querySelectorAll('[data-shot]')].map(a => [a.dataset.shot, a])).values()];
   if (!viewer || !links.length || !viewer.showModal) return;
   const img = viewer.querySelector('img'), count = viewer.querySelector('.sv-count');
   let at = 0;
@@ -51,7 +51,11 @@
     img.alt = links[at].querySelector('img').alt;
     count.textContent = `${at + 1} / ${links.length}`;
   };
-  links.forEach((a, i) => a.addEventListener('click', e => { e.preventDefault(); show(i); viewer.showModal(); }));
+  document.addEventListener('click', e => {
+    const a = e.target.closest('[data-shot]');
+    if (!a) return;
+    e.preventDefault(); show(+a.dataset.shot); viewer.showModal();
+  });
   viewer.querySelector('.sv-prev').onclick = () => show(at - 1);
   viewer.querySelector('.sv-next').onclick = () => show(at + 1);
   viewer.querySelector('.sv-close').onclick = () => viewer.close();
@@ -69,18 +73,29 @@
 (() => {
   const box = document.querySelector('.hero-shots');
   if (!box) return;
-  const slides = [...box.querySelectorAll('[data-shot]')], dots = [...box.querySelectorAll('.hs-dots button')];
-  let at = 0, timer = null;
-  const go = i => {
-    at = (i + slides.length) % slides.length;
-    slides.forEach((s, k) => { s.classList.toggle('on', k === at); s.tabIndex = k === at ? 0 : -1; });
-    dots.forEach((d, k) => d.setAttribute('aria-current', String(k === at)));
+  const track = box.querySelector('.hs-track'), dots = [...box.querySelectorAll('.hs-dots button')];
+  const n = track.children.length;
+  // Three copies so the strip can keep sliding one way; after a move into a copy it jumps back unseen.
+  track.innerHTML = track.innerHTML.repeat(3);
+  track.querySelectorAll('img').forEach(i => i.removeAttribute('loading'));
+  const slides = [...track.children];
+  let pos = n, timer = null;
+  const place = animate => {
+    const w = slides[0].offsetWidth, gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    track.style.transition = animate ? '' : 'none';
+    track.style.transform = `translateX(${box.querySelector('.hs-frame').offsetWidth / 2 - (pos * (w + gap) + w / 2)}px)`;
+    slides.forEach((s, k) => { s.classList.toggle('on', k === pos); s.tabIndex = k === pos ? 0 : -1; });
+    dots.forEach((d, k) => d.setAttribute('aria-current', String(k === pos % n)));
   };
+  const go = p => { pos = p; place(true); };
+  track.addEventListener('transitionend', () => {
+    if (pos < n || pos >= 2 * n) { pos = pos % n + n; place(false); track.offsetWidth; }
+  });
   const stop = () => { clearInterval(timer); timer = null; };
-  const play = () => { if (!timer && !matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(() => go(at + 1), 4000); };
-  box.querySelector('.hs-prev').onclick = () => { go(at - 1); stop(); };
-  box.querySelector('.hs-next').onclick = () => { go(at + 1); stop(); };
-  dots.forEach((d, k) => d.onclick = () => { go(k); stop(); });
+  const play = () => { if (!timer && !matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(() => go(pos + 1), 3500); };
+  box.querySelector('.hs-prev').onclick = () => { go(pos - 1); stop(); };
+  box.querySelector('.hs-next').onclick = () => { go(pos + 1); stop(); };
+  dots.forEach((d, k) => d.onclick = () => { go(n + k); stop(); });
   box.addEventListener('mouseenter', stop);
   box.addEventListener('mouseleave', play);
   let x0 = null;
@@ -88,7 +103,8 @@
   box.addEventListener('touchend', e => {
     if (x0 === null) return;
     const dx = e.changedTouches[0].clientX - x0; x0 = null;
-    if (Math.abs(dx) > 40) go(at + (dx < 0 ? 1 : -1));
+    if (Math.abs(dx) > 40) go(pos + (dx < 0 ? 1 : -1));
   });
-  go(0); play();
+  addEventListener('resize', () => place(false));
+  place(false); play();
 })();
