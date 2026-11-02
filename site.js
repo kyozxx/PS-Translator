@@ -36,56 +36,9 @@
       document.querySelectorAll('[data-demo-lang]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
     });
   });
-  const phone = document.querySelector('.phone');
-  const floatingPhone = phone.closest('.phone-float');
-  let yaw = -10, pitch = 3, drag = null;
-  const clamp = (value, limit) => Math.max(-limit, Math.min(limit, value));
-  function rotatePhone() {
-    yaw = clamp(yaw, 20); pitch = clamp(pitch, 12);
-    phone.style.transform = `rotateX(${pitch}deg) rotateY(${yaw}deg) rotateZ(-2deg)`;
-  }
-  function resetPhone() { yaw = -10; pitch = 3; rotatePhone(); }
-  phone.addEventListener('dragstart', event => event.preventDefault());
-  phone.addEventListener('pointerdown', event => {
-    if (event.button !== 0) return;
-    phone.setPointerCapture(event.pointerId);
-    drag = { id: event.pointerId, x: event.clientX, y: event.clientY, yaw, pitch };
-    phone.classList.add('rotating');
-    floatingPhone.classList.add('is-held');
-  });
-  phone.addEventListener('pointermove', event => {
-    if (!drag || event.pointerId !== drag.id) return;
-    yaw = drag.yaw + (event.clientX - drag.x) * 0.14;
-    pitch = drag.pitch - (event.clientY - drag.y) * 0.1;
-    rotatePhone();
-  });
-  function endRotation(event) {
-    if (!drag || event.pointerId !== drag.id) return;
-    drag = null; phone.classList.remove('rotating');
-    floatingPhone.classList.remove('is-held');
-    resetPhone();
-    if (phone.hasPointerCapture(event.pointerId)) phone.releasePointerCapture(event.pointerId);
-  }
-  phone.addEventListener('pointerup', endRotation);
-  phone.addEventListener('pointercancel', endRotation);
-  phone.addEventListener('lostpointercapture', () => {
-    drag = null; phone.classList.remove('rotating'); floatingPhone.classList.remove('is-held'); resetPhone();
-  });
-  phone.addEventListener('dblclick', resetPhone);
-  phone.addEventListener('keydown', event => {
-    if (!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','Escape'].includes(event.key)) return;
-    event.preventDefault();
-    if (event.key === 'Home' || event.key === 'Escape') { resetPhone(); return; }
-    if (event.key === 'ArrowLeft') yaw -= 4;
-    if (event.key === 'ArrowRight') yaw += 4;
-    if (event.key === 'ArrowUp') pitch += 3;
-    if (event.key === 'ArrowDown') pitch -= 3;
-    rotatePhone();
-  });
-  rotatePhone();
 })();
 
-// Screenshot strip: tap opens a full-size viewer with previous/next (arrow keys and swipe too).
+// Hero screenshots: slide by themselves (unless reduced motion), arrows and dots move them, tap opens the viewer.
 (() => {
   const viewer = document.getElementById('shot-viewer');
   const links = [...document.querySelectorAll('[data-shot]')];
@@ -111,4 +64,31 @@
     const dx = e.changedTouches[0].clientX - x0; x0 = null;
     if (Math.abs(dx) > 40) show(at + (dx < 0 ? 1 : -1));
   });
+})();
+
+(() => {
+  const box = document.querySelector('.hero-shots');
+  if (!box) return;
+  const slides = [...box.querySelectorAll('[data-shot]')], dots = [...box.querySelectorAll('.hs-dots button')];
+  let at = 0, timer = null;
+  const go = i => {
+    at = (i + slides.length) % slides.length;
+    slides.forEach((s, k) => { s.classList.toggle('on', k === at); s.tabIndex = k === at ? 0 : -1; });
+    dots.forEach((d, k) => d.setAttribute('aria-current', String(k === at)));
+  };
+  const stop = () => { clearInterval(timer); timer = null; };
+  const play = () => { if (!timer && !matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(() => go(at + 1), 4000); };
+  box.querySelector('.hs-prev').onclick = () => { go(at - 1); stop(); };
+  box.querySelector('.hs-next').onclick = () => { go(at + 1); stop(); };
+  dots.forEach((d, k) => d.onclick = () => { go(k); stop(); });
+  box.addEventListener('mouseenter', stop);
+  box.addEventListener('mouseleave', play);
+  let x0 = null;
+  box.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+  box.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) go(at + (dx < 0 ? 1 : -1));
+  });
+  go(0); play();
 })();
