@@ -84,3 +84,31 @@
   });
   rotatePhone();
 })();
+
+// Screenshot strip: tap opens a full-size viewer with previous/next (arrow keys and swipe too).
+(() => {
+  const viewer = document.getElementById('shot-viewer');
+  const links = [...document.querySelectorAll('[data-shot]')];
+  if (!viewer || !links.length || !viewer.showModal) return;
+  const img = viewer.querySelector('img'), count = viewer.querySelector('.sv-count');
+  let at = 0;
+  const show = i => {
+    at = (i + links.length) % links.length;
+    img.src = links[at].href;
+    img.alt = links[at].querySelector('img').alt;
+    count.textContent = `${at + 1} / ${links.length}`;
+  };
+  links.forEach((a, i) => a.addEventListener('click', e => { e.preventDefault(); show(i); viewer.showModal(); }));
+  viewer.querySelector('.sv-prev').onclick = () => show(at - 1);
+  viewer.querySelector('.sv-next').onclick = () => show(at + 1);
+  viewer.querySelector('.sv-close').onclick = () => viewer.close();
+  viewer.addEventListener('click', e => { if (e.target === viewer) viewer.close(); });
+  viewer.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') show(at - 1); if (e.key === 'ArrowRight') show(at + 1); });
+  let x0 = null;
+  viewer.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  viewer.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) show(at + (dx < 0 ? 1 : -1));
+  });
+})();
