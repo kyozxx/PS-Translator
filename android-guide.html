@@ -1,114 +1,811 @@
-<!doctype html>
-<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Console Translator: Dịch game · Chơi game nào cũng hiểu</title><meta name="description" content="Cài Console Translator từ Google Play. Hướng dẫn dịch game từng bước bằng hình và kết nối phụ đề với TV."><meta property="og:title" content="Console Translator · Dịch game sang tiếng Việt"><meta property="og:image" content="https://kyozxx.github.io/Console-Translator/assets/android-icon.png"><style>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Translator: Dịch game · Android</title>
+    <meta name="description" content="Hướng dẫn từng bước cho bản Android: cài app, ghép nối máy chơi game, dịch phụ đề game sang tiếng Việt, phụ đề trên TV.">
+    <link rel="icon" type="image/png" href="assets/android-icon.png">
+<style>
+        :root {
+            --bg: #f7f3ea;
+            --card: #fffdf8;
+            --border: #e7dfcd;
+            --text: #1b1a17;
+            --muted: #5f5a50;
+            --blue: #9a5b00;
+            --purple: #9a5b00;
+            --green: #9a5b00;
+            --orange: #9a5b00;
+            --amber: #f2a516;
+            --pink: #9a5b00;
+            --soft: #fcecc4;
+            --sub: #f3ecdc;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            padding: 28px 16px 40px;
+        }
+        .wrap { max-width: 660px; margin: 0 auto; }
+        a { color: var(--blue); }
 
-:root {color-scheme:light;--bg:#fafafa;--card:#fff;--text:#1d1d1f;--muted:#65656b;--border:#e8e8ed;--blue:#0066cc;--green:#0066cc}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:var(--blue);text-underline-offset:3px}button{font:inherit}a,button,summary{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #0071e3;outline-offset:4px}.shell{max-width:760px;padding:0 24px;margin:auto}.top{height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);font-size:13px}.brand{font-weight:600;color:var(--text);text-decoration:none}.brand img{display:none}.top>a:last-child{text-decoration:none;color:var(--muted)}.hero{text-align:center;padding:38px 0 26px}.hero img{width:64px;height:64px;object-fit:contain;margin-bottom:10px}.hero h1{font-size:30px;letter-spacing:-.035em;line-height:1.2;font-weight:650;margin:0 0 8px}.hero p{font-size:15px;color:var(--muted);margin:0}.badge{display:inline-block;font-size:11px;letter-spacing:.05em;font-weight:650;color:#515158;border:1px solid #dedee4;border-radius:5px;padding:3px 7px;margin-left:5px;vertical-align:middle}
-p{color:var(--muted);margin:8px 0 14px}h2{font-size:23px;letter-spacing:-.025em;margin:0 0 8px;line-height:1.3}h3{font-size:16px;margin:0 0 5px}strong{color:var(--text)}.download{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px 30px}.download-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.download-heading h2{font-size:20px;margin:0}.download-heading span{font-size:12px;color:var(--muted)}.download-intro{font-size:14px;margin:8px 0 16px}.install-row{display:grid;grid-template-columns:28px 1fr auto;gap:14px;align-items:center;padding:19px 0;border-top:1px solid var(--border)}.num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#f2f2f7;color:#73737a;font-size:12px;font-weight:600;flex-shrink:0}.install-row h3{font-weight:600}.install-row p{font-size:13px;margin:3px 0 0;max-width:330px}.button,.download-button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-height:44px;padding:10px 18px;border-radius:9px;background:#0071e3;color:#fff;font-size:14px;font-weight:550;white-space:normal}.install-row .button{min-width:112px}.secondary{background:#f2f2f7;color:#0066cc}.download-note{font-size:12px;line-height:1.6;margin:14px 0 0;color:var(--muted)}.download details{margin:12px -2px 0;border:0;background:transparent;border-radius:0}.download summary{font-size:13px;padding:10px 2px;min-height:44px;color:var(--blue);font-weight:500}.download .body{padding:10px 2px;font-size:13px}.download details[open]>summary{border:0}.test-note{text-align:center;font-size:12px;margin:16px auto 0;max-width:500px}.help{padding-top:38px}.help>h2{font-size:20px;margin-bottom:16px}.tabs{display:flex;padding:4px;background:#ededf0;border-radius:11px;gap:4px;margin-bottom:18px}.tabs button{border:0;flex:1;min-height:44px;background:transparent;border-radius:8px;font-size:14px;color:#68686e;cursor:pointer;white-space:nowrap}.tabs button[aria-selected=true]{background:white;color:var(--text);box-shadow:0 1px 4px #00000012;font-weight:600}.panel{padding-bottom:6px}.panel[hidden]{display:none}.panel-intro{font-size:14px;margin:0 0 16px}.area{border:0;padding:0}.intro{display:none}.steps,.tv-picker{margin:0}.panel details{background:var(--card);border:1px solid var(--border);border-radius:12px;margin:10px 0;overflow:hidden}summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:17px 20px;min-height:58px;font-size:15px;font-weight:550}summary::-webkit-details-marker{display:none}summary:after{content:'›';margin-left:auto;color:#8c8c94;font-size:22px;line-height:1;transition:transform .15s}details[open]>summary:after{transform:rotate(90deg)}details[open]>summary{border-bottom:1px solid var(--border)}.body{padding:20px;font-size:15px}.why{display:none}.body>p{max-width:600px}.body details summary{font-size:14px}.body details .body{font-size:14px}.body h2{font-size:20px}.box{background:#f5f5f7!important;border:0!important;border-radius:8px;padding:14px!important;margin:16px 0;color:var(--muted)!important;font-size:13px}.box strong{color:var(--text)}figure{max-width:340px;margin:22px auto}figure.wide{max-width:100%}figure a{display:block}figure img{display:block;width:100%;height:auto;border-radius:8px}.caption,figcaption{font-size:12px}.features{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:0;counter-reset:tools}.features li{margin:0;counter-increment:tools}.features h3:before{content:counter(tools) '. ';color:var(--muted)}.features p{font-size:13px}.tv-downloads{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}.tv-version{border:1px solid var(--border);border-radius:10px;padding:16px}.tv-version p{font-size:13px}.download-code{display:block;font-size:28px;font-weight:600;letter-spacing:.04em;margin:8px 0 14px}.download-button{display:flex;margin-top:10px;min-height:44px}.support{margin-top:24px;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--border)}.support h3{font-size:14px}.support p{margin:4px 0 0;font-size:12px}.support a{font-size:13px;text-decoration:none;white-space:nowrap}footer{padding:12px 0 28px;font-size:11px;display:flex;justify-content:space-between;color:#7c7c83}footer a{color:inherit}ol,ul{padding-left:20px;color:var(--muted)}li{margin:9px 0}noscript p{font-size:13px}@media(max-width:540px){.shell{padding:0 18px}.hero{padding:26px 0 22px}.hero h1{font-size:27px}.hero img{width:56px;height:56px}.download{padding:20px}.download-heading h2{font-size:19px}.download-heading span{font-size:11px}.install-row{grid-template-columns:24px 1fr;gap:10px;padding:17px 0}.install-row .button{grid-column:2;justify-self:stretch;margin-top:2px}.install-row p{font-size:13px}.install-row .num{align-self:start;margin-top:1px}.test-note{padding:0 12px}.help{padding-top:30px}.tabs button{font-size:13px}.body{padding:16px}summary{padding:15px 16px}.tv-downloads,.features{grid-template-columns:1fr}.support{align-items:flex-start}.support p{max-width:210px}footer{gap:20px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}summary:after{transition:none}}
+        header { text-align: center; margin-bottom: 22px; }
+        .app-icon {
+            display: block; width: 88px; height: 88px; margin: 0 auto 12px;
+            border-radius: 20px; box-shadow: 0 10px 30px -6px rgba(168, 85, 247, 0.5);
+        }
+        h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.4px; }
+        .tagline { color: var(--muted); font-size: 15px; margin-top: 4px; }
 
-.support{display:block;text-align:center;padding:30px 24px;background:#fff;border:1px solid var(--border);border-radius:16px;margin-top:28px}.support h2{font-size:22px}.support p{font-size:14px;max-width:none;margin:8px 0 20px}.support a.button{font-size:16px;min-height:52px;min-width:260px;background:#087bbd;color:#fff;border-radius:10px;white-space:normal}.donation{margin-top:20px;padding:28px;display:grid;grid-template-columns:1fr 200px;align-items:center;gap:26px;border:1px solid var(--border);border-radius:16px;background:#fff}.donation h2{font-size:21px}.donation p{font-size:14px}.donation dl{margin:18px 0 12px;font-size:13px}.donation dl>div{display:flex;justify-content:space-between;gap:15px;margin:8px 0}.donation dt{color:var(--muted)}.donation dd{margin:0;font-weight:550}.account-number{font-size:18px;font-variant-numeric:tabular-nums;letter-spacing:.06em}.donation-qr{margin:0;text-align:center}.donation-qr img{background:white;border-radius:0;aspect-ratio:1;object-fit:contain}.donation-qr figcaption{margin-top:8px}.qr-save{display:inline-flex;align-items:center;min-height:44px;font-size:13px}@media(max-width:540px){.support{padding:24px 18px}.support a.button{display:flex;min-width:0;width:100%}.donation{grid-template-columns:1fr;padding:24px;gap:18px}.donation-qr{width:200px;justify-self:center}.donation dl>div{gap:10px}}
-.top>a.header-support{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border-radius:8px;background:#eaf4fa;color:#07689f;font-size:13px;font-weight:600}@media(max-width:360px){.top>a.header-support{font-size:12px;padding:8px}.brand{font-size:12px}}
-/* brand: cream, ink, amber from the app icon */
-:root{--bg:#f7f3ea;--card:#fffdf8;--text:#1b1a17;--muted:#5f5a50;--border:#e7dfcd;--blue:#9a5b00;--amber:#f2a516;--amber-soft:#fcecc4}
-body{background:var(--bg)}.top{border-color:var(--border)}
-.hero{position:relative}.hero img{width:84px;height:84px;filter:drop-shadow(0 6px 18px #f2a51655)}.hero h1{font-weight:750}
-.hero h1:after{content:'';display:block;width:44px;height:4px;border-radius:2px;background:var(--amber);margin:14px auto 0}
-.badge{background:var(--text);color:var(--amber-soft);border-color:var(--text)}
-.download{border-top:4px solid var(--amber)}
-.num{background:var(--amber);color:var(--text);font-weight:700}
-.button,.download-button,.support a.button{background:var(--text);color:#fff8e6}.button:hover,.download-button:hover{background:#3a362e}
-.secondary{background:var(--amber-soft);color:var(--text)}
-.tabs{background:#ece4d2}.tabs button[aria-selected=true]{background:var(--text);color:#fff8e6}
-.panel details{background:var(--card)}details[open]>summary{background:var(--amber-soft)}summary:after{color:var(--blue)}
-.box{background:var(--amber-soft)!important;border-left:3px solid var(--amber)!important;color:var(--text)!important}
-.features h3:before{color:var(--blue)}.tv-version{background:var(--card)}
-.top>a.header-support{background:var(--amber-soft);color:var(--text)}
-.support,.donation{background:var(--card)}a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:var(--amber)}
-.dns-hint{font-size:12px!important;margin-top:6px!important;padding:6px 10px;border-left:3px solid var(--amber);background:var(--amber-soft);border-radius:4px;color:var(--text)!important}
-.lg>h3{display:flex;align-items:center;gap:10px;margin:22px 0 4px}.lg>h3 small{font-weight:400;color:var(--muted);font-size:13px}.lg .tv-version h3{margin-bottom:6px}.lg .tv-version ol{font-size:13px;padding-left:18px}
-.hero p.slogan{font-size:18px;font-weight:600;color:var(--blue);margin:0 0 6px}
-.install-row h3 small{font-weight:400;color:var(--muted);font-size:12px}
-.hero img{border-radius:18px;filter:none;box-shadow:0 8px 22px -8px #0006}
-.other-guide{display:block;text-align:center;padding:12px;margin:0 0 18px;border:1px solid var(--border);border-radius:12px;text-decoration:none;background:var(--card);color:var(--text);font-weight:600;font-size:14px;transition:background .15s}.other-guide:hover{background:var(--amber-soft)}
-.play-badge{display:inline-block;flex:none}.play-badge img{display:block;width:180px;height:auto}
-</style><link rel="stylesheet" href="guide-theme.css"></head><body><nav class="site-guide-nav"><a href="index.html">‹ Trang chủ</a><a href="guide.html">Hướng dẫn iOS</a><a href="android-guide.html">Android</a><a href="games.html">Danh sách game</a></nav><div class="shell">
-<header class="top"><a class="brand" href="android-guide.html"><img src="https://kyozxx.github.io/Console-Translator/assets/android-icon.png" width="38" height="38" alt="">Console Translator</a><a class="header-support" href="https://t.me/pstranslator">Hỗ trợ Telegram ↗</a></header>
-<main>
-<section class="hero"><img src="https://kyozxx.github.io/Console-Translator/assets/android-icon.png" width="64" height="64" alt=""><h1>Console Translator: Dịch game</h1><p class="slogan">Chơi game nào cũng hiểu</p><p>Dịch phụ đề game sang tiếng Việt. <span class="badge">ANDROID</span></p></section>
-<a class="other-guide" href="guide.html">Dùng iPhone? Xem hướng dẫn bản iOS →</a>
-<section class="download" id="google-play">
-<div class="download-heading"><h2>Tải trên Google Play</h2><span>Android 11 trở lên</span></div>
-<div class="install-row"><span class="num">1</span><div><h3>Cài app</h3><p>Mở trang app trên Google Play rồi bấm Cài đặt.</p></div><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.kyozx.consoletranslator" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Tải trên Google Play" width="200"></a></div>
-</section>
-<section class="help" id="help"><h2>Hướng dẫn sử dụng</h2>
-<div class="tabs" role="tablist" aria-label="Chọn hướng dẫn"><button id="tab-phone" role="tab" aria-controls="panel-phone" aria-selected="true" data-panel="phone">Điện thoại</button><button id="tab-tv" role="tab" aria-controls="panel-tv" aria-selected="false" tabindex="-1" data-panel="tv">TV</button><button id="tab-fix" role="tab" aria-controls="panel-fix" aria-selected="false" tabindex="-1" data-panel="fix">Gặp lỗi</button></div>
-<div class="panel" id="panel-phone" role="tabpanel" aria-labelledby="tab-phone"><p class="panel-intro">Bật phụ đề trong game, rồi mở bước bạn cần.</p>
-<section class="area" id="start"><div class="intro"><h2>Dịch lần đầu</h2><p>Bật phụ đề trong game. Làm theo từng bước dưới đây.</p></div><div class="ps5-video" style="position:relative;aspect-ratio:16/9;margin:14px 0;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/D2_oEmTiqlc" title="Video hướng dẫn kết nối app với PS5" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div><details id="remote"><summary>Chơi PX5 / PX4: chuẩn bị trước</summary><div class="body"><p class="why">Bắt buộc nếu game chạy trên máy chơi game. Chơi game điện thoại hoặc xem YouTube thì bỏ qua phần này.</p><p>Console Translator chỉ đọc và dịch chữ <strong>đang hiện trên màn hình điện thoại</strong>, không tự kết nối được với máy chơi game. Bạn cần một app Remote Play riêng để đưa hình game về điện thoại.</p><div class="box">Đây là app bên ngoài của nhà phát triển khác, <strong>không thuộc Console Translator</strong>. Chúng tôi không làm ra và không hỗ trợ các app này. Bạn chọn app nào cũng được.</div><div class="tv-downloads"><div class="tv-version"><h3>Chiaki-Up</h3><p>Miễn phí · Google Play</p><a class="download-button" href="https://play.google.com/store/apps/details?id=com.gameblabla.chiaki">Tải Chiaki-Up</a></div><div class="tv-version"><h3>PXPlay</h3><p>Trả phí · Google Play</p><a class="download-button" href="https://play.google.com/store/apps/details?id=psplay.grill.com">Tải PXPlay</a></div></div><div class="box"><strong>Chiaki-Up báo không tìm được tài khoản?</strong> Chức năng tìm tài khoản theo tên trong Chiaki-Up hiện đang lỗi. Hãy mở trang <a href="https://id.kyozx.cloud">id.kyozx.cloud</a> (dự phòng: <a href="https://www.psntools.com/psn/checker">psntools.com/psn/checker</a>), nhập tên tài khoản PSN của bạn để lấy <strong>Account ID</strong>, rồi dán Account ID đó vào Chiaki-Up khi ghép máy. Đây là trang bên ngoài, không thuộc Console Translator.</div><ol><li>Mở app Remote Play vừa cài và ghép với máy chơi game.</li><li>Vào được <strong>hình game trên điện thoại</strong>.</li><li>Mở Console Translator, bấm <strong>Bắt đầu dịch</strong>. Khi Android hỏi, chọn chia sẻ <strong>đúng app Remote Play đó</strong>.</li></ol><p class="caption">Trong app, khi bấm Bắt đầu dịch và chọn “Trên máy PX5 / PX4”, màn hình này cũng hiện ra kèm nút tải.</p></div></details><details id="tk-phu"><summary>Máy PX5: tạo tài khoản phụ (làm một lần)</summary><div class="body"><p>App Remote Play kết nối vào máy bằng một tài khoản PlayStation. Nên dùng một <strong>tài khoản phụ</strong> cho việc này, tài khoản chính vẫn để cầm tay cầm chơi.</p><ol><li>Ở màn hình chính, bấm <strong>ảnh đại diện</strong> góc phải trên cùng → <strong>Chuyển người dùng</strong> → <strong>Thêm người dùng</strong>.</li><li>Đăng nhập bằng một tài khoản PlayStation khác (tạo mới miễn phí nếu chưa có).</li><li>Chuyển sang tài khoản phụ này để làm các bước dưới.</li></ol><div class="box"><strong>Vì sao không dùng tài khoản chính?</strong> Đây là cách máy chơi game hoạt động, không phải lỗi và không ảnh hưởng gì tới tài khoản của bạn. Mỗi tài khoản chỉ dùng được ở một nơi cùng lúc: khi app Remote Play kết nối bằng tài khoản nào, máy chuyển tài khoản đó sang Chơi từ xa, nên tay cầm đang chơi bằng tài khoản đó bị ngắt. Dùng tài khoản phụ thì tài khoản chính vẫn chơi bình thường.</div></div></details><details id="bat-choi-tu-xa"><summary>Máy PX5: bật Chơi từ xa cho tài khoản phụ</summary><div class="body"><p><strong>Cài đặt → Hệ thống → Chơi từ xa</strong>:</p><ol><li>Bấm <strong>Bật Chơi từ xa</strong>, bật công tắc cạnh <strong>tài khoản phụ</strong>.</li><li>Bật <strong>Ẩn trạng thái kết nối Chơi từ xa</strong> để TV không hiện dòng thông báo khi chơi.</li></ol><figure class="wide"><a href="https://kyozxx.github.io/Console-Translator/assets/ps5-remote-play-steps.jpg"><img src="https://kyozxx.github.io/Console-Translator/assets/ps5-remote-play-steps.jpg" alt="Bấm Bật Chơi từ xa, bật cho tài khoản phụ, rồi bật Ẩn trạng thái kết nối" loading="lazy"></a><figcaption>Bấm Bật Chơi từ xa, bật đúng tài khoản phụ, rồi bật Ẩn trạng thái kết nối</figcaption></figure></div></details><details id="nghi"><summary>Máy PX5: tự bật khi đang nghỉ (nên làm)</summary><div class="body"><p><strong>Cài đặt → Hệ thống → Tiết kiệm điện → Tính năng khi ở chế độ nghỉ</strong>, bật:</p><ul><li><strong>Giữ kết nối Internet</strong></li><li><strong>Cho phép bật máy qua mạng</strong></li></ul><p>Để máy ở chế độ nghỉ (đèn cam), app Remote Play bấm kết nối là máy tự bật. Máy tắt hẳn thì phải bật bằng tay.</p></div></details><details id="ghep-chiaki"><summary>Ghép Chiaki-Up với máy: Online ID, Account ID, mã 8 số</summary><div class="body"><ol><li><strong>Online ID:</strong> trên máy (đang ở tài khoản phụ) bấm ảnh đại diện → <strong>Hồ sơ</strong>. Online ID nằm dưới tên hiển thị.</li></ol><figure class="wide"><a href="https://kyozxx.github.io/Console-Translator/assets/07-find-online-id.jpg"><img src="https://kyozxx.github.io/Console-Translator/assets/07-find-online-id.jpg" alt="Ảnh đại diện, Hồ sơ, Online ID dưới tên" loading="lazy"></a><figcaption>Online ID nằm ngay dưới tên hiển thị trong Hồ sơ</figcaption></figure><ol start="2"><li><strong>Account ID:</strong> mở <a href="https://id.kyozx.cloud">id.kyozx.cloud</a>, gõ Online ID, bấm Tra, bấm Sao chép ở ô <strong>Mã dán vào app</strong> (kết thúc bằng dấu =). Dán vào Chiaki-Up khi ghép máy.</li></ol><figure class="wide"><a href="https://kyozxx.github.io/Console-Translator/assets/07-pair-2-lookup-howto.jpg"><img src="https://kyozxx.github.io/Console-Translator/assets/07-pair-2-lookup-howto.jpg" alt="Trang tra mã: nhập Online ID, bấm Search, copy dòng BASE64" loading="lazy"></a><figcaption>Nhập Online ID, bấm Search, copy đoạn BASE64</figcaption></figure><ol start="3"><li><strong>Mã 8 số:</strong> trên máy vào <strong>Cài đặt → Hệ thống → Chơi từ xa → Ghép nối thiết bị</strong>. Nhập 8 số hiện trên TV vào Chiaki-Up trước khi hết giờ.</li></ol><figure class="wide"><a href="https://kyozxx.github.io/Console-Translator/assets/ps5-link-device-code.jpg"><img src="https://kyozxx.github.io/Console-Translator/assets/ps5-link-device-code.jpg" alt="Chơi từ xa, Ghép nối thiết bị, mã 8 số" loading="lazy"></a><figcaption>Ghép nối thiết bị: TV hiện mã 8 số kèm thời gian còn lại</figcaption></figure><div class="box">Account ID và mã 8 số phải là của cùng tài khoản phụ đang chọn trên máy, nếu không máy sẽ từ chối.</div></div></details><div class="steps"><details class="step" id="step-1"><summary><span class="num">1</span>Cấp quyền hiện nổi</summary><div class="body"><p class="why">Để phụ đề xuất hiện trên game.</p><p>Mở Console Translator, bấm <strong>Cho phép hiện nổi</strong>.</p><figure class=""><a href="https://kyozxx.github.io/Console-Translator/assets/guide/01-allow-overlay.png" target="_blank" rel="noopener" aria-label="Xem ảnh lớn: Màn hình chính, nút Cho phép hiện nổi"><img src="https://kyozxx.github.io/Console-Translator/assets/guide/01-allow-overlay.png" width="816" height="668" alt="Màn hình chính, nút Cho phép hiện nổi" loading="lazy" decoding="async"></a></figure></div></details><details class="step" id="step-2" ><summary><span class="num">2</span>Bật quyền cho app</summary><div class="body"><p class="why">Chỉ cần làm lần đầu.</p><p>Nếu hiện danh sách ứng dụng, chọn <strong>Console Translator</strong>. Bật <strong>Cho phép hiện trên các ứng dụng khác</strong>, rồi quay lại app.</p><figure class=""><a href="https://kyozxx.github.io/Console-Translator/assets/guide/02-overlay-permission.png" target="_blank" rel="noopener" aria-label="Xem ảnh lớn: Bật công tắc Cho phép hiện trên các ứng dụng khác"><img src="https://kyozxx.github.io/Console-Translator/assets/guide/02-overlay-permission.png" width="818" height="728" alt="Bật công tắc Cho phép hiện trên các ứng dụng khác" loading="lazy" decoding="async"></a></figure></div></details><details class="step" id="step-3" ><summary><span class="num">3</span>Tải ngôn ngữ và giọng đọc</summary><div class="body"><p class="why">Chỉ tải những ngôn ngữ bạn cần.</p><p>Chọn ngôn ngữ trong game và ngôn ngữ dịch sang, rồi bấm <strong>Bắt đầu dịch</strong>. Nếu app mở <strong>Tải ngôn ngữ</strong>, tải các gói còn thiếu.</p><figure class=""><a href="https://kyozxx.github.io/Console-Translator/assets/guide/03-start-translation.png" target="_blank" rel="noopener" aria-label="Xem ảnh lớn: Chọn English sang Tiếng Việt rồi bấm Bắt đầu dịch"><img src="https://kyozxx.github.io/Console-Translator/assets/guide/03-start-translation.png" width="814" height="532" alt="Chọn English sang Tiếng Việt rồi bấm Bắt đầu dịch" loading="lazy" decoding="async"></a></figure><p>Muốn nghe bản dịch, tải thêm giọng của ngôn ngữ dịch sang. Nếu hiện <strong>Đã có</strong> hoặc <strong>Xóa</strong> thì gói đó đã được tải. Xong, đóng màn hình này để quay lại.</p><figure class=""><a href="https://kyozxx.github.io/Console-Translator/assets/guide/04-language-downloads.png" target="_blank" rel="noopener" aria-label="Xem ảnh lớn: Màn hình Tải ngôn ngữ với Gói đọc chữ và Giọng đọc"><img src="https://kyozxx.github.io/Console-Translator/assets/guide/04-language-downloads.png" width="808" height="1312" alt="Màn hình Tải ngôn ngữ với Gói đọc chữ và Giọng đọc" loading="lazy" decoding="async"></a></figure><div class="box">Game tiếng Anh đã có bộ đọc chữ. Tiếng Trung, Nhật, Hàn cần tải thêm gói đọc chữ tương ứng; dịch trên máy cần gói dịch của cặp ngôn ngữ.</div></div></details><details class="step" id="step-4" ><summary><span class="num">4</span>Chọn ứng dụng cần dịch</summary><div class="body"><p class="why">Chia sẻ đúng app đang có hình game.</p><p>Bấm <strong>Bắt đầu dịch</strong> lần nữa. Khi Android hỏi, chọn <strong>Chia sẻ một ứng dụng → Tiếp theo</strong>, rồi chọn game hoặc app Remote Play đang dùng.</p><figure class=""><a href="https://kyozxx.github.io/Console-Translator/assets/guide/05-share-one-app.png" target="_blank" rel="noopener" aria-label="Xem ảnh lớn: Hộp thoại Android, chọn Chia sẻ một ứng dụng rồi Tiếp theo"><img src="https://kyozxx.github.io/Console-Translator/assets/guide/05-share-one-app.png" width="812" height="938" alt="Hộp thoại Android, chọn Chia sẻ một ứng dụng rồi Tiếp theo" loading="lazy" decoding="async"></a></figure><div class="box">Chơi PX5 / PX4: mở hình game bằng app Remote Play trước (xem <a href="#remote">phần cài app Remote Play</a> ở trên), rồi chọn chia sẻ đúng app đó. Nếu Android chỉ có chia sẻ toàn màn hình, bạn có thể dùng lựa chọn đó.</div></div></details><details class="step" id="step-5" ><summary><span class="num">5</span>Chọn vùng chữ, rồi chạy dịch</summary><div class="body"><p class="why">Thanh nổi xuất hiện trên ứng dụng bạn vừa chọn.</p><p>Bật phụ đề trong game. Bấm nút <strong>khung quét</strong>, kéo khung bao quanh chữ gốc và bấm <strong>Xong</strong>. Sau đó bấm <strong>tam giác chạy</strong> để bắt đầu dịch.</p><figure class="wide"><a href="https://kyozxx.github.io/Console-Translator/assets/guide/06-floating-toolbar.png" target="_blank" rel="noopener" aria-label="Xem ảnh lớn: Thanh nổi: logo, chạy, khung quét, aA, TV, loa, cài đặt, đóng"><img src="https://kyozxx.github.io/Console-Translator/assets/guide/06-floating-toolbar.png" width="726" height="172" alt="Thanh nổi: logo, chạy, khung quét, aA, TV, loa, cài đặt, đóng" loading="lazy" decoding="async"></a></figure><p class="caption">Các nút dưới đây được xếp từ trái sang phải như trong ảnh.</p><ol class="features"><li><h3>Logo app</h3><p>Bấm để thu gọn hoặc mở thanh nút. Giữ và kéo logo để di chuyển thanh.</p></li><li><h3>Chạy / Tạm dừng</h3><p>Bấm nút tam giác để dịch; bấm lại để tạm dừng mà vẫn giữ thanh nổi.</p></li><li><h3>Khung quét</h3><p>Bấm để chọn <strong>Vùng quét</strong> (phụ đề, dịch liên tục) hoặc <strong>Chọn vùng dịch</strong>. Vùng quét: kéo khung lên chỗ chữ gốc, kéo góc để đổi kích thước, rồi bấm Xong. <strong>Chọn vùng dịch</strong> dịch một lần chỗ bạn đặt khung: nhiệm vụ, mô tả vật phẩm, bảng lựa chọn. Kéo khung lên chữ rồi bấm Dịch. Bản dịch hiện đúng chỗ chữ gốc khoảng 12 giây, chạm để tắt sớm, và hiện trên TV nếu đang nối.</p></li><li><h3>aA · Kiểu phụ đề</h3><p>Đổi cỡ chữ, màu chữ, nền và bật/tắt hiển thị chữ gốc cùng bản dịch.</p></li><li><h3>Màn hình TV</h3><p>Xem trạng thái và kết nối lại TV đã ghép. Ghép lần đầu trong Cài đặt → Phụ đề trên TV.</p></li><li><h3>Loa · Đọc bản dịch</h3><p>Bật hoặc tắt đọc to. Dùng giọng của ngôn ngữ dịch sang đã tải trên điện thoại.</p></li><li><h3>Bánh răng · Chỉnh nhanh</h3><p>Đổi cách dịch, phong cách, giọng đọc, tốc độ quét hoặc hồ sơ game. Có lối mở cài đặt đầy đủ.</p></li><li><h3>Dấu X · Kết thúc</h3><p>Dừng phiên dịch và đóng thanh nổi. Muốn dịch lại, mở app và bấm Bắt đầu dịch.</p></li></ol><div class="box">Lần sau chỉ cần bấm Bắt đầu dịch, chọn app game, kiểm tra vùng chữ và bấm nút chạy.</div></div></details></div></section>
-</div>
-<div class="panel" id="panel-tv" role="tabpanel" aria-labelledby="tab-tv"><div class="box"><strong>Kiểm tra TV trước khi donate để dùng phụ đề trên TV.</strong> Không phải TV nào cũng chạy được:<ul><li><strong>Android TV / Google TV:</strong> được, cần <strong>Android 9 trở lên</strong> (TV đời 2018 trở về trước thường không cài được). TV nào khóa quyền Hiển thị trên ứng dụng khác thì không hiện được phụ đề.</li><li><strong>TV LG webOS:</strong> thử nghiệm, cần Developer Mode. Đã chạy trên webOS 7 (TV 2022), đời khác chưa kiểm tra hết.</li><li><strong>TV Samsung từ 2017 (Tizen 3.0 trở lên):</strong> thử nghiệm, cần Developer Mode, máy tính và tài khoản Samsung. Một số TV đời 2018 đang gặp lỗi khi cài.</li><li><strong>TV Samsung 2016 trở về trước:</strong> không dùng được.</li><li><strong>TV hệ điều hành khác, Android Box:</strong> không hỗ trợ.</li></ul>Cách chắc nhất, không mất tiền: cài app nhận phụ đề lên TV trước. Khi TV hiện được mã ghép nối 8 số thì hãy mua.</div><p class="panel-intro">Bạn dùng TV hãng nào?</p><section class="area" id="tv"><div class="intro"><h2>Đưa phụ đề lên TV</h2><p>Chọn đúng loại TV để xem cách cài. Điện thoại vẫn cần có hình game để dịch.</p></div><div class="tv-picker"><details id="android-tv"><summary>Android TV / Google TV</summary><div class="body"><div class="tv-video" style="position:relative;aspect-ratio:9/16;width:100%;max-width:320px;margin:14px auto;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/vBn606-ZA80" title="Video hướng dẫn Android TV" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div><p class="why">Cài app nhận phụ đề trên TV, chọn đúng bản bên dưới.</p><div class="tv-downloads"><div class="tv-version"><h3>Android TV thông thường</h3><p>Mã Downloader</p><strong class="download-code">8179089</strong><a class="download-button" href="https://api.kyozx.cloud/tv/latest">Tải APK TV 2.0.1</a></div><div class="tv-version"><h3>TV Xiaomi nội địa</h3><p>Mã Downloader</p><strong class="download-code">2484675</strong><a class="download-button" href="https://api.kyozx.cloud/tv/latest-mi">Tải APK Xiaomi 2.0.1-mi</a></div></div><p class="caption">Mã Downloader dùng để tải app trên TV. Khác với mã mời beta và mã ghép phụ đề 8 số. Từ bản 0.2.3, app TV tự hiện nút Cập nhật khi có bản mới.</p><details><summary>Cách cài trên TV bằng remote</summary><div class="body"><ol><li>Trên TV, cài <strong>Downloader by AFTVnews</strong> từ Google Play nếu có.</li><li>Vào <strong>Cài đặt → Ứng dụng → Quyền truy cập đặc biệt → Cài đặt ứng dụng không rõ nguồn</strong>, cho phép Downloader.</li><li>Mở Downloader, nhập mã đúng loại TV ở trên, tải rồi cài APK. Kiểm tra tên app <strong>Console Translator TV</strong> và phiên bản <strong>2.0.1</strong>; bản Xiaomi có đuôi <strong>-mi</strong>.</li><li>Mở app nhận trên TV, bấm <strong>Cấp quyền hiển thị trên ứng dụng khác</strong>, bật quyền cho app rồi bấm Back. Nếu được hỏi, cho phép bỏ qua tối ưu hóa pin.</li><li>Điện thoại và TV cùng Wi-Fi. Trên điện thoại vào <strong>Cài đặt → Phụ đề trên TV</strong>, chọn TV hoặc nhập địa chỉ hiện trên TV, nhập mã ghép <strong>8 số</strong> rồi bấm <strong>Kết nối</strong>.</li><li>Chuyển TV sang HDMI của máy chơi game. Giữ hình game trên điện thoại và chạy dịch theo 5 bước phía trên.</li></ol><p>Nếu không tìm thấy quyền hiện nổi, tìm các mục <strong>Hiển thị trên ứng dụng khác</strong> hoặc <strong>Xuất hiện trên cùng</strong> trong Cài đặt TV. Một số phần mềm TV khóa quyền này.</p></div></details><details><summary>TV Xiaomi nội địa: cần làm gì khác?</summary><div class="body"><p>TV Xiaomi mua từ Trung Quốc dùng bản <strong>2.0.1-mi</strong>, mã <strong>2484675</strong>. Xiaomi bản quốc tế chạy Android TV / Google TV dùng bản thông thường.</p><p>Bản nội địa chỉ hiện phụ đề khi đã rời màn hình app nhận và chuyển sang <strong>cổng HDMI</strong>. Màn hình app chưa hiện phụ đề là bình thường; đừng bấm <strong>Tắt app</strong> trước khi chơi.</p><p>Nếu TV không có Google Play hoặc Downloader, tải đúng APK bằng nút phía trên, chép vào USB rồi mở bằng trình quản lý tệp của TV để cài. Cho phép cài APK cho trình quản lý tệp khi được hỏi; tên menu tùy TV.</p><p>Nếu bản thường bị đóng hoặc không hiện phụ đề trên Xiaomi nội địa, chuyển sang bản <strong>-mi</strong>, cấp quyền và ghép lại bằng mã 8 số của bản đó.</p><p><strong>Không bật được quyền hiển thị trên ứng dụng khác?</strong></p><ol><li>Trên TV: <strong>Settings → Accounts and Security → ADB</strong>, bật và chọn <strong>ALLOW</strong>.</li><li>Mở app <strong>Permissions Manager</strong> (khiên xanh).</li><li>Chọn <strong>Console Translator TV (Mi)</strong> → <code>android.permission.SYSTEM_ALERT_WINDOW</code> → <strong>Allow</strong>.</li></ol></div></details><div class="box">Điện thoại vẫn cần hiển thị hình game để đọc chữ. Đây là APK cho TV, không phải APK beta cho điện thoại. Samsung Tizen và LG webOS không cài được APK này; TV LG và TV Samsung dùng hướng dẫn riêng bên dưới.</div></div></details><details id="lg-tv"><summary>LG webOS</summary><div class="body lg"><div class="tv-video" style="position:relative;aspect-ratio:9/16;width:100%;max-width:320px;margin:14px auto;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/w3neOWEDM50" title="Video hướng dẫn TV LG" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
-<p>TV LG cần Developer Mode. Điện thoại vẫn chạy dịch và nhận hình game; máy tính chỉ dùng để cài hoặc mở app trên TV.</p>
-<h3><span class="num">1</span> Chuẩn bị TV</h3>
-<ol><li>Cài <strong>Developer Mode</strong> trong LG Apps, đăng nhập LG Developer, bật <strong>Dev Mode Status</strong>.</li><li>Sau khi TV khởi động lại, bật <strong>Key Server</strong>.</li><li>Máy tính, điện thoại và TV dùng chung một mạng Wi-Fi.</li></ol>
-<h3><span class="num">2</span> Cài app lên TV <small>(chọn 1 cách)</small></h3>
-<div class="tv-downloads">
-<div class="tv-version"><h3>Windows 10/11</h3><ol><li>Giải nén ZIP, mở <strong>Chay-Console-Translator.bat</strong>. Thiếu Node.js thì bấm <strong>Cài Node.js</strong>, cài bản LTS rồi mở lại.</li><li>Nhập IP và Passphrase 6 ký tự hiện trên TV, bấm <strong>Kết nối TV</strong>. Kiểm tra đúng IP trước khi xác nhận khóa.</li><li>Nhập <strong>mã LGTV</strong> nhận từ <a href="https://t.me/pstranslator">Telegram</a>, bấm <strong>Cài đặt lên TV</strong>.</li></ol><a class="download-button" href="https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.17/ConsoleTranslator-LG-PC-1.2.17.zip">Tải bộ cài Windows 1.2.17</a></div>
-<div class="tv-version"><h3>Mac (macOS 12+)</h3><ol><li>Giải nén ZIP, kéo <strong>Console Translator LG</strong> vào Applications rồi mở. Thiếu Node.js thì bấm <strong>Cài Node.js</strong> trong app.</li><li>Nhập IP/Passphrase, kết nối TV.</li><li>Nhập mã LGTV rồi cài. Nút <strong>Hỗ trợ Telegram</strong> để nhận mã hoặc gửi log.</li></ol><a class="download-button" href="https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip">Tải bộ cài Mac 1.0.5</a></div>
-</div>
-<details id="lg-mac-warning"><summary>Mac báo “Console Translator LG chưa được mở”</summary><div><figure><a href="https://kyozxx.github.io/Console-Translator/assets/lg-mac-open-warning.png"><img src="https://kyozxx.github.io/Console-Translator/assets/lg-mac-open-warning.png" alt="Cảnh báo macOS khi mở Console Translator LG, với nút Xong và Chuyển vào Thùng rác" width="604" height="700" loading="lazy"></a></figure><ol><li>Bấm <strong>Xong</strong> trong cảnh báo. Không chọn Chuyển vào Thùng rác nếu muốn tiếp tục cài.</li><li>Mở <strong>Cài đặt hệ thống → Quyền riêng tư &amp; Bảo mật</strong>, kéo xuống phần <strong>Bảo mật</strong>.</li><li>Tại thông báo chặn Console Translator LG, bấm <strong>Vẫn mở / Open Anyway</strong>. Nhập mật khẩu Mac hoặc dùng Touch ID nếu được hỏi.<figure><a href="https://kyozxx.github.io/Console-Translator/assets/lg-mac-open-anyway.png"><img src="https://kyozxx.github.io/Console-Translator/assets/lg-mac-open-anyway.png" alt="Trong Quyền riêng tư và Bảo mật, bấm nút Vẫn mở cạnh Console Translator LG" width="1578" height="358" loading="lazy"></a><figcaption>Chạm ảnh để xem lớn. Bấm Vẫn mở ở bên phải.</figcaption></figure></li><li>Khi cảnh báo xuất hiện lại, bấm <strong>Mở / Open</strong>.</li></ol><p>Nếu chưa thấy Vẫn mở, thử mở app lần nữa rồi quay lại mục Bảo mật. Chỉ thực hiện với bản tải từ GitHub chính thức. <a href="https://support.apple.com/102445">Hướng dẫn của Apple</a>.</p></div></details>
-<p class="box"><strong>Không có máy tính?</strong> Trong bản beta Android, vào <strong>Cài đặt → Phụ đề trên TV → Cài cho TV LG webOS</strong>, nhập IP/Passphrase và bấm <strong>Cài lên TV</strong>. Cách này dùng quyền beta Android, không cần mã LGTV.</p>
-<h3><span class="num">3</span> Mỗi lần chơi</h3>
-<ol><li>Bật PX5 trước, chuyển TV sang HDMI. Key Server chưa bật thì bật rồi quay về HDMI.</li><li>Bấm <strong>Mở app trên TV</strong> trong công cụ Windows/Mac (Mac: xác nhận <strong>Đã hiện hình, mở app</strong>), hoặc <strong>Mở app đã cài</strong> trong màn hình LG của Android.</li></ol>
-<h3><span class="num">4</span> Ghép phụ đề</h3>
-<ol><li>Trên Android vào <strong>Cài đặt → Phụ đề trên TV</strong>, chọn TV hoặc nhập địa chỉ hiện trên TV.</li><li>Nhập mã <strong>8 số</strong> hiện trong app TV rồi kết nối.</li><li>Mở hình game bằng Chiaki-Up, chia sẻ ứng dụng đó và chạy dịch như các bước phía trên.</li></ol>
-<details><summary>Lưu ý về mã và khi chơi</summary><div class="body"><ul>
-<li>Mã <strong>LGTV</strong> dùng cho bộ cài Windows/Mac; mã <strong>ANDROID</strong> kích hoạt app điện thoại. Mã đã gắn với Windows cần cấp riêng cho Mac.</li>
-<li><strong>Passphrase</strong> để kết nối TV LG; <strong>mã 8 số</strong> để ghép phụ đề.</li>
-<li>Ngày giờ trong mã là lúc tạo (giờ Việt Nam), không phải hạn dùng. Mã cũ 32 ký tự vẫn dùng được.</li>
-<li>Bộ cài nhớ IP/Passphrase (Mac lưu trong Keychain). TV đổi Passphrase thì nhập lại.</li>
-<li>Bộ cài PC 1.2.5 trở xuống chỉ nhận mã cũ: giải nén bản 1.2.17 vào thư mục mới rồi mở file .bat.</li>
-<li>Khi chơi chỉ nên bấm tăng/giảm âm lượng, tránh Home/Cài đặt trên remote.</li>
-<li>Bấm <strong>EXTEND</strong> trong Developer Mode trước khi hết hạn.</li>
-<li>Thu hồi mã chỉ chặn cài tiếp, app đã cài vẫn mở được. Hiện trên HDMI được hay không tùy mẫu TV.</li>
-</ul></div></details>
-<p><a href="lg.html">Hướng dẫn đầy đủ và xử lý lỗi</a> · <a href="https://webostv.developer.lge.com/develop/getting-started/developer-mode-app">Developer Mode của LG</a></p>
-</div></details><details id="samsung-tv"><summary>Samsung</summary><div class="tv-video" style="position:relative;aspect-ratio:9/16;width:100%;max-width:320px;margin:14px auto;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/LO0mW9ANw3g" title="Video hướng dẫn TV Samsung" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div><p>TV Samsung từ 2017 trở lên. Máy tính và TV cùng Wi-Fi.</p>
-<div><a class="download-button" href="https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.18/ConsoleTranslator-Samsung-PC-1.0.18.zip">Tải cho Windows</a><a class="download-button" href="https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.15/ConsoleTranslator-Samsung-Mac-1.0.15.zip">Tải cho Mac</a></div>
-<p>Windows 10/11 · Mac Intel hoặc M1 trở lên, macOS 12+.</p>
-<ol>
-<li><strong>Mở bộ cài.</strong> Giải nén ZIP. Windows mở Chay-Console-Translator.bat. Mac kéo Console Translator Samsung vào Applications rồi mở.</li>
-<li><strong>Chuẩn bị TV.</strong> Vào Home → Apps (Ứng dụng) → App Settings (Cài đặt ứng dụng). Bấm nút <strong>123</strong> (hoặc <strong>…</strong>) trên remote để hiện bàn phím số, chọn lần lượt <strong>1 2 3 4 5</strong>. Bật Developer Mode → On. Điền IP máy tính hiện trong bộ cài vào Host PC IP, rồi rút điện TV 30 giây và cắm lại. <a href="https://www.youtube.com/watch?v=F8kkdIh1TGY" target="_blank" rel="noopener noreferrer">Xem video bật Developer Mode</a>.</li>
-<li><strong>Cài lên TV.</strong> Nhập IP của TV vào bộ cài, bấm Kiểm tra kết nối TV. <a href="https://t.me/consoletranslatorbot">Lấy mã SSTV qua bot</a> bằng lệnh /samsung, nhập mã rồi bấm Cài đặt lên TV. Đăng nhập Samsung khi trình duyệt mở.</li>
-</ol>
-<p>Cài xong, mở Console Translator TV trên TV, chọn HDMI và ghép điện thoại bằng mã 8 số. Từ lần sau không cần máy tính.</p>
-<details><summary>Cập nhật hoặc gặp lỗi?</summary><ul>
-<li>Mất phụ đề khi mở máy chơi game: tắt tính năng HDMI-CEC / Liên kết thiết bị HDMI trên PS5 (Cài đặt → Hệ thống → HDMI) hoặc tắt Anynet+ trên TV để TV không tự nhảy sang cổng HDMI ngoài. Bật máy PS5 trước rồi mới mở app trên TV.</li>
-<li>Cập nhật: tải bộ cài mới phía trên, bấm Cài đặt lên TV. Công cụ tự gỡ bản cũ; có thể cần ghép lại điện thoại.</li>
-<li>Không thấy Developer Mode: vào App Settings rồi dùng nút 123 hoặc … trên remote. Xem video ở bước 2.</li>
-<li>Không kết nối: Host PC IP trên TV là IP máy tính; IP nhập trong bộ cài là IP TV. Rút điện TV 30 giây sau khi bật Developer Mode.</li>
-<li>Mac: giải nén và mở app từ Applications, không cần Terminal. Thiếu Node.js hoặc Rosetta thì cài bằng nút trong app.</li>
-<li>Vẫn lỗi: gửi ảnh thông báo vào <a href="https://t.me/pstranslator">nhóm hỗ trợ</a>, che mã SSTV trước khi gửi.</li>
-</ul></details>
-</details></div></section>
-</div>
-<div class="panel" id="panel-fix" role="tabpanel" aria-labelledby="tab-fix"><section class="area">
-<details id="connection-failed"><summary>Không kết nối được máy chơi game</summary><div class="body"><ol><li>Bật máy chơi game. Khi ghép lần đầu, để điện thoại và máy chơi game cùng mạng Wi-Fi hoặc cùng bộ phát mạng.</li><li>Kiểm tra đã bật <a href="#enable-remote">Chơi từ xa trên máy chơi game</a>.</li><li>Mở Chiaki-Up hoặc PXPlay, ghép máy và chờ hiện hình game trên điện thoại. Sau đó mới mở Console Translator và bấm <strong>Bắt đầu dịch</strong>.</li><li>Nếu app không tìm được máy, kiểm tra IP của máy chơi game và thử nhập IP thủ công trong app Remote Play.</li></ol><p class="caption">Console Translator trên Android dịch hình từ app Remote Play, không tự ghép nối với máy chơi game.</p></div></details>
-<details id="enable-remote"><summary>Chưa bật Chơi từ xa trên máy</summary><div class="body"><p>Tên tiếng Việt của Remote Play là <strong>Chơi từ xa</strong>.</p><p><strong>PX5:</strong> Cài đặt → Hệ thống → Chơi từ xa → bật <strong>Bật ứng dụng Chơi từ xa</strong>.</p><p><strong>PX4:</strong> Cài đặt → Cài đặt kết nối Chơi từ xa → bật <strong>Bật ứng dụng Chơi từ xa</strong>.</p><p>Ghép lần đầu: trong mục này, chọn <strong>Ghép đôi thiết bị</strong> trên PX5 hoặc <strong>Thêm thiết bị</strong> trên PX4, rồi nhập mã hiện trên TV vào app Remote Play.</p><p class="caption">Tên mục có thể khác nhẹ theo phiên bản phần mềm máy. <a href="https://remoteplay.dl.playstation.net/remoteplay/lang/vn/1100001.html">Hướng dẫn PX5</a> · <a href="https://manuals.playstation.net/document/vn/ps4/settings/remote.html">Hướng dẫn PX4</a></p></div></details>
-<details id="local-network"><summary>Chưa cho phép Mạng cục bộ</summary><div class="body"><p><strong>Trên iPhone:</strong> Cài đặt → Quyền riêng tư &amp; Bảo mật → Mạng cục bộ → bật quyền cho Console Translator hoặc app Remote Play đang dùng. Sau đó mở lại app và kết nối lại.</p><p><strong>Trên Android:</strong> không phải máy nào cũng có mục “Mạng cục bộ”. Vào Cài đặt → Ứng dụng → chọn app đang dùng → Quyền. Nếu có quyền truy cập mạng cục bộ hoặc thiết bị ở gần và app yêu cầu, hãy cho phép.</p><p>Điện thoại và TV/máy chơi game cần ở cùng mạng khi kết nối trong nhà. Tránh Wi-Fi khách vì có thể chặn các thiết bị tìm thấy nhau.</p><p class="caption"><a href="https://support.apple.com/vi-vn/102229">Cách bật quyền Mạng cục bộ trên iPhone</a></p></div></details>
-<details id="controller-disconnected"><summary>Bị đá tay cầm khi kết nối Remote Play</summary><div class="body"><p>App Remote Play và tay cầm có thể đang dùng cùng một người chơi.</p><ol><li>Bấm nút giữa tay cầm để bật lại. Nếu cần, giữ nút giữa để mở menu người dùng.</li><li>Chọn <strong>Chuyển người dùng</strong>, rồi chọn người chơi khác với tài khoản app Remote Play đang dùng.</li></ol><p><strong>Cách dùng lâu dài:</strong> ghép app Remote Play bằng tài khoản phụ, còn tay cầm dùng tài khoản chính để chơi. Hai bên không tranh cùng một người dùng.</p><p class="caption">Cách này dành cho người giữ tay cầm kết nối trực tiếp với máy chơi game để chơi trên TV.</p></div></details>
-<details id="tv-connection-failed"><summary>Không tìm thấy hoặc không kết nối được TV</summary><div class="body"><ol><li>Mở <strong>Console Translator TV</strong> trên TV, kiểm tra có hiện mã ghép 8 số.</li><li>Điện thoại và TV cùng mạng Wi-Fi hoặc cùng bộ phát mạng. Kiểm tra <a href="#local-network">quyền Mạng cục bộ</a> nếu điện thoại có yêu cầu.</li><li>Trên điện thoại mở <strong>Phụ đề trên TV</strong>. Nếu không tìm thấy TV, nhập địa chỉ đang hiện trên màn hình app TV.</li><li>Nhập mã 8 số hiện tại. Nếu mã đã đổi, dùng mã mới.</li></ol><p>Nếu TV chưa cài app nhận phụ đề, mở <a href="#tv">hướng dẫn cài cho TV</a>.</p></div></details>
-<details><summary>Bấm Bắt đầu dịch mà không hiện hộp hỏi quyền</summary><div class="body"><p>Kiểm tra đã cấp quyền hiện nổi cho app, rồi bấm lại Bắt đầu dịch. Nếu đang dùng Beta cũ, kiểm tra thêm mạng và hạn mã Beta.</p></div></details><details><summary>Chọn nhầm app khi chia sẻ</summary><div class="body"><p>Ở bước Chia sẻ một ứng dụng phải chọn đúng game, YouTube hoặc app Remote Play đang có hình. App đứng đầu danh sách thường là app vừa mở gần nhất (ví dụ app nhắn tin), chọn nhầm thì không dịch được gì.</p></div></details><details><summary>Không có chữ</summary><div class="body"><p>Nội dung phải có phụ đề hiện trên màn hình (bật phụ đề trong game, hoặc nút CC trên YouTube). Kiểm tra đã bấm nút chạy và khung quét đúng chỗ phụ đề.</p></div></details><details><summary>Máy lag</summary><div class="body"><p>Trong bánh răng trên thanh nổi, giảm tốc độ quét xuống 3.</p></div></details><details><summary>Hình chia sẻ bị đen</summary><div class="body"><p>App game/Remote Play có thể chặn chụp màn hình. Kiểm tra ảnh chụp/chia sẻ từ Chiaki-Up có hiện chữ game hay không. Nếu vẫn đen, báo người phát hành để kiểm tra.</p></div></details><details><summary>Không nghe giọng</summary><div class="body"><p>Bật nút loa, tăng âm lượng và kiểm tra giọng đã tải.</p></div></details><details><summary>Hình giật hoặc hay rớt mạng</summary><div class="body"><p>Cắm dây mạng (LAN) cho máy chơi game nếu được. Điện thoại dùng Wi-Fi 5 GHz và để gần bộ phát. Tạm dừng các máy đang tải game hay xem phim. Trong bánh răng trên thanh nổi, giảm tốc độ quét nếu máy nóng.</p></div></details><details><summary>Dịch cả menu</summary><div class="body"><p>Thu nhỏ vùng quét; dời phụ đề dịch để không che chữ gốc.</p></div></details></section></div></section>
-<section class="support" id="support"><div><h2>Cần giúp? Nhắn mình nhé.</h2><p>Gửi ảnh chỗ bạn bị kẹt, mình xem giúp.</p></div><a class="button" href="https://t.me/pstranslator">Nhắn hỗ trợ Telegram ↗</a></section>
-<section class="donation" id="donate"><div class="donation-copy"><h2>Ủng hộ app</h2><p>Ae thấy app hữu ích thì mời mình ly cà phê nhé.<br>Cảm ơn ae đã dùng và góp ý.</p><dl><div><dt>Ngân hàng</dt><dd>MBBank</dd></div><div><dt>Số tài khoản</dt><dd class="account-number">008808</dd></div><div><dt>Chủ tài khoản</dt><dd>TRAN VAN NITO</dd></div></dl><a class="qr-save" href="https://kyozxx.github.io/Console-Translator/assets/donate-mb.png" download="Console-Translator-Donate.png">Lưu mã QR</a></div><figure class="donation-qr"><img src="https://kyozxx.github.io/Console-Translator/assets/donate-mb.png" width="240" height="240" loading="lazy" alt="Mã QR ủng hộ Console Translator, MBBank 008808, TRAN VAN NITO"><figcaption>Quét bằng app ngân hàng</figcaption></figure></section></main><footer><span>Console Translator · Hướng dẫn Android</span><span><a href="guide.html">Bản iPhone</a> · <a href="https://kyozxx.github.io/Console-Translator/privacy.html">Quyền riêng tư</a></span></footer></div><script>
+        /* Telegram */
+        .tg {
+            display: block; text-decoration: none; text-align: center;
+            background: linear-gradient(135deg, #229ed9, #1b7fc4);
+            border-radius: 20px; padding: 22px 18px; margin-bottom: 18px;
+            box-shadow: 0 12px 30px -8px rgba(34, 158, 217, 0.55);
+        }
+        .tg h2 { color: #fff; font-size: 21px; font-weight: 800; }
+        .tg p { color: #e0f2fe; font-size: 15px; margin: 6px 0 14px; }
+        .tg p strong { color: #fff; }
+        .tg .btn {
+            display: inline-block; background: #fff; color: #1b7fc4;
+            font-size: 17px; font-weight: 800; padding: 12px 26px; border-radius: 9999px;
+        }
+        .tg small { display: block; color: #e0f2fe; font-size: 13px; margin-top: 10px; }
 
-const tabs=[...document.querySelectorAll('[role="tab"]')];
-const panels=[...document.querySelectorAll('[role="tabpanel"]')];
-function showPanel(name,focus=false){
- tabs.forEach(tab=>{const active=tab.dataset.panel===name;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;if(active&&focus)tab.focus();});
- panels.forEach(panel=>panel.hidden=panel.id!=='panel-'+name);
-}
-tabs.forEach((tab,index)=>{
- tab.addEventListener('click',()=>showPanel(tab.dataset.panel));
- tab.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();showPanel(tabs[next].dataset.panel,true);});
-});
-function revealHash(){const target=document.getElementById(location.hash.slice(1));if(!target)return;const panel=target.closest('[role="tabpanel"]');if(panel)showPanel(panel.id.replace('panel-',''));let parent=target;while(parent){if(parent.tagName==='DETAILS')parent.open=true;parent=parent.parentElement;}requestAnimationFrame(()=>target.scrollIntoView());}
-showPanel('phone');revealHash();window.addEventListener('hashchange',revealHash);
-</script></body></html>
+        /* Overview */
+        .overview {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 18px;
+        }
+        .overview a {
+            text-decoration: none; text-align: center; border-radius: 12px; padding: 10px 4px;
+            background: var(--card); border: 1px solid var(--border); font-size: 13px; color: var(--muted);
+        }
+        .overview b { display: block; font-size: 18px; }
+
+        /* Step cards: each step has its own soft colour */
+        .card {
+            background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent, var(--blue));
+            border-radius: 16px; padding: 18px; margin-bottom: 16px;
+        }
+        .card h2 { display: flex; align-items: center; gap: 10px; font-size: 19px; margin-bottom: 4px; }
+        .card .why { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+        .num {
+            display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+            width: 30px; height: 30px; border-radius: 50%;
+            background: var(--accent, var(--blue)); color: var(--bg); font-size: 15px; font-weight: 800;
+        }
+        .s1 { --accent: var(--blue); }
+        .s2 { --accent: var(--purple); }
+        .s3 { --accent: var(--green); }
+        .s4 { --accent: var(--orange); }
+        .s5 { --accent: var(--pink); }
+        .s6 { --accent: var(--amber); }
+
+        /* Donation: warm, visible, but below the download call-to-action */
+        .donate {
+            background: linear-gradient(135deg, rgba(244, 114, 182, 0.16), rgba(251, 146, 60, 0.14));
+            border: 1px solid rgba(244, 114, 182, 0.45); border-radius: 20px;
+            padding: 18px; margin-bottom: 18px; text-align: center;
+        }
+        .donate h2 { font-size: 20px; font-weight: 800; color: #fff; }
+        .donate .lead { color: var(--muted); font-size: 15px; margin: 4px 0 12px; }
+        .donate .qr {
+            display: block; width: 190px; height: 190px; margin: 0 auto 12px;
+            background: #fff; border-radius: 16px; padding: 10px;
+        }
+        .donate .bank {
+            display: inline-flex; flex-direction: column; gap: 2px; text-align: left;
+            background: rgba(11, 15, 25, 0.55); border-radius: 12px; padding: 10px 14px;
+            font-size: 14px; color: var(--muted);
+        }
+        .donate .bank b { color: var(--text); font-size: 15px; }
+        .donate .copy {
+            margin-top: 10px; border: 0; cursor: pointer; min-height: 44px;
+            background: var(--pink); color: #fff; font-weight: 800; font-size: 15px;
+            padding: 10px 22px; border-radius: 9999px;
+        }
+        .donate small { display: block; color: var(--muted); font-size: 12px; margin-top: 8px; }
+        .styles { display: grid; gap: 8px; margin-top: 10px; }
+        .style {
+            background: #1a2438; border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px;
+        }
+        .style b { color: var(--text); font-size: 15px; }
+        .style .for { float: right; font-size: 12px; color: var(--amber); font-weight: 600; }
+        .style p { margin: 2px 0 0; font-size: 14px; }
+        .style q { display: block; margin-top: 4px; color: var(--text); font-size: 14px; font-style: italic; quotes: "\201C" "\201D"; }
+        .group-label { font-size: 13px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 14px 0 0; }
+
+        h3 { font-size: 16px; margin: 14px 0 6px; color: var(--text); }
+        ol, ul { padding-left: 22px; color: var(--muted); font-size: 15px; }
+        li { margin-bottom: 8px; }
+        li strong, p strong { color: var(--text); }
+        p { color: var(--muted); font-size: 15px; margin-bottom: 8px; }
+        code { color: var(--text); background: #1e293b; padding: 1px 6px; border-radius: 4px; }
+
+        /* A button in the app */
+        .btn-app {
+            display: inline-block; background: rgba(56, 189, 248, 0.15); color: var(--blue);
+            border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 9999px;
+            padding: 0 9px; font-weight: 600; font-size: 14px; white-space: nowrap;
+        }
+        /* A menu path on the PS5 */
+        .ps-path { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 6px 0 10px; }
+        .ps-path span {
+            background: #1e293b; border: 1px solid var(--border); border-radius: 8px;
+            padding: 3px 9px; font-size: 13px; color: var(--text);
+        }
+        .ps-path span:last-child { border-color: var(--accent, var(--blue)); color: var(--accent, var(--blue)); font-weight: 700; }
+        .ps-path i { color: var(--muted); font-style: normal; font-size: 13px; }
+
+        .box { border-radius: 10px; padding: 11px 13px; margin-top: 12px; font-size: 14px; color: var(--muted); }
+        .box > strong:first-child { display: block; margin-bottom: 2px; }
+        .box.tip { background: rgba(52, 211, 153, 0.08); border: 1px solid rgba(52, 211, 153, 0.3); }
+        .box.tip > strong:first-child { color: var(--green); }
+        .box.warn { background: rgba(251, 191, 36, 0.08); border: 1px solid rgba(251, 191, 36, 0.3); }
+        .box.warn > strong:first-child { color: var(--amber); }
+        .box strong { color: var(--text); }
+
+        .toggle-list { list-style: none; padding-left: 0; }
+        .toggle-list li {
+            display: flex; gap: 10px; align-items: flex-start; background: #1a2438;
+            border: 1px solid var(--border); border-radius: 10px; padding: 9px 12px; margin-bottom: 6px;
+        }
+        .toggle-list .on {
+            flex-shrink: 0; margin-top: 3px; width: 34px; height: 20px; border-radius: 9999px;
+            background: var(--green); position: relative;
+        }
+        .toggle-list .on::after {
+            content: ""; position: absolute; right: 2px; top: 2px; width: 16px; height: 16px;
+            border-radius: 50%; background: #fff;
+        }
+        .toggle-list small { display: block; color: var(--muted); font-size: 13px; }
+        .toggle-list b { color: var(--text); font-size: 14px; }
+
+        figure { margin: 10px 0 4px; }
+        figure.phone { text-align: center; }
+        figure.phone img {
+            width: 100%; max-width: 260px; margin: 0 auto; border-radius: 26px;
+            border: 3px solid #2b3a57; box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.6);
+        }
+        .phones { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0 4px; }
+        .phones figure { margin: 0; }
+        figure img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
+        figcaption { color: var(--muted); font-size: 13px; text-align: center; margin-top: 6px; }
+
+        details {
+            background: #1a2438; border: 1px solid var(--border); border-radius: 12px;
+            padding: 0 14px; margin-bottom: 8px;
+        }
+        details.method { border-color: rgba(52, 211, 153, 0.35); }
+        summary {
+            cursor: pointer; font-weight: 600; font-size: 15px; padding: 12px 0; min-height: 44px;
+            list-style: none; display: flex; justify-content: space-between; gap: 10px; color: var(--text);
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: "+"; color: var(--accent, var(--blue)); font-weight: 800; font-size: 18px; line-height: 1; }
+        details[open] summary::after { content: "−"; }
+        details > :not(summary) { margin-bottom: 12px; }
+        .tag {
+            font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 9999px; margin-left: 6px;
+            background: rgba(52, 211, 153, 0.15); color: var(--green); vertical-align: middle;
+        }
+
+        /* TV guide */
+        .tv-jump {
+            display: flex; align-items: center; justify-content: space-between; gap: 14px;
+            text-decoration: none; color: var(--text); margin-bottom: 18px; padding: 14px 16px;
+            border: 1px solid rgba(52, 211, 153, 0.38); border-radius: 14px;
+            background: linear-gradient(135deg, rgba(52, 211, 153, 0.14), rgba(56, 189, 248, 0.09));
+        }
+        .tv-jump strong { display: block; font-size: 16px; }
+        .tv-jump small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+        .tv-jump .arrow { color: var(--green); font-size: 22px; font-weight: 800; }
+        .tv-card {
+            --accent: var(--green); position: relative; overflow: hidden;
+            background: linear-gradient(160deg, rgba(52, 211, 153, 0.08), var(--card) 32%);
+        }
+        .tv-card h2 { margin-bottom: 6px; }
+        .tv-card > .why { margin-bottom: 14px; }
+        .tv-requirements {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: 10px 0 14px;
+        }
+        .tv-requirements span {
+            text-align: center; padding: 9px 6px; border-radius: 10px; color: var(--muted);
+            background: #111d2e; border: 1px solid var(--border); font-size: 12px;
+        }
+        .tv-requirements b { display: block; color: var(--text); font-size: 13px; }
+        details.platform { border-color: rgba(56, 189, 248, 0.28); }
+        details.platform.lg { border-color: rgba(167, 139, 250, 0.34); }
+        details.platform > summary { align-items: center; font-size: 16px; }
+        .platform-name { display: flex; align-items: center; gap: 9px; }
+        .platform-icon {
+            display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 9px;
+            background: rgba(56, 189, 248, 0.15); color: var(--blue); font-size: 12px; font-weight: 900;
+        }
+        .platform.lg .platform-icon { background: rgba(167, 139, 250, 0.15); color: var(--purple); }
+        .download-tv {
+            display: block; text-align: center; text-decoration: none; margin: 10px 0 12px;
+            border-radius: 10px; padding: 11px 14px; background: var(--blue); color: #06131d; font-weight: 800;
+        }
+        .lg .download-tv { background: var(--purple); color: #110b20; }
+        .download-row { display: flex; gap: 8px; margin: 10px 0 12px; }
+        .download-row .download-tv { flex: 1; margin: 0; }
+        .download-tv.alt { background: transparent; color: var(--blue); border: 1px solid var(--blue); }
+        .tv-downloads { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+        .tv-version { background: #1a2438; border: 1px solid var(--border); border-radius: 12px; padding: 14px; }
+        .tv-version h3 { font-size: 16px; margin: 0; }
+        .tv-version p { font-size: 13px; margin: 8px 0 0; }
+        .download-code { display: block; font-size: 29px; letter-spacing: 2px; font-variant-numeric: tabular-nums; color: var(--green); margin: 2px 0 12px; }
+        .download-button { display: flex; align-items: center; justify-content: center; text-decoration: none; min-height: 44px; padding: 10px 8px; border-radius: 10px; border: 1px solid #38bdf855; background: #38bdf818; color: var(--blue); font-size: 14px; font-weight: 600; }
+        @media (max-width: 480px) { .tv-downloads { grid-template-columns: 1fr; } }
+        .tg-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px; }
+        .tg-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px; color: #fff !important; font-weight: 700; text-decoration: none; }
+        .tg-link svg { width: 18px; height: 18px; }
+        .tg-fb { background: #1877f2; }
+        .tg-tele { background: #229ed9; }
+        .guide-more { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-bottom: 18px; font-size: 14px; }
+        .guide-more a { text-decoration: none; }
+        .other-guide { display: block; text-align: center; padding: 12px; margin-bottom: 18px; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; background: var(--card); }
+        .home-guide { display: block; text-align: center; padding: 14px 18px; margin-bottom: 20px; border-radius: 12px; text-decoration: none; background: var(--text); color: var(--bg) !important; font-weight: 800; font-size: 16px; box-shadow: 0 8px 22px #0002; }
+        .home-guide:hover { filter: brightness(1.08); transform: translateY(-1px); }
+        .mini-title { color: var(--text); font-size: 14px; font-weight: 800; margin: 14px 0 6px; }
+        .play-every-time {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: 8px 0 12px;
+            counter-reset: playstep;
+        }
+        .play-every-time div {
+            counter-increment: playstep; padding: 10px; border-radius: 10px; color: var(--muted);
+            background: rgba(11, 15, 25, 0.55); border: 1px solid var(--border); font-size: 13px;
+        }
+        .play-every-time div::before {
+            content: counter(playstep); display: grid; place-items: center; width: 22px; height: 22px;
+            margin-bottom: 6px; border-radius: 50%; background: var(--green); color: #07101d; font-weight: 900;
+        }
+        .tv-troubleshooting { margin-top: 12px; }
+        .tv-troubleshooting summary { font-size: 14px; }
+
+        @media (max-width: 520px) {
+            .tv-requirements, .play-every-time { grid-template-columns: 1fr; }
+            .tv-requirements span { text-align: left; }
+        }
+
+        footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 22px; }
+        /* brand overrides: replace the old dark-theme literals */
+        .app-icon { box-shadow: none; filter: drop-shadow(0 6px 18px #f2a51655); }
+        h1::after { content: ""; display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--amber); margin: 12px auto 0; }
+        .slogan { color: var(--blue); font-size: 18px; font-weight: 700; margin-top: 4px; }
+        .tg { background: var(--text); box-shadow: none; }
+        .tg h2 { color: #fff8e6; } .tg p, .tg small { color: #e9dfc8; } .tg p strong { color: #fff; }
+        .tg .btn { background: var(--amber); color: var(--text); }
+        .card { border-left-color: var(--amber); }
+        .num, .play-every-time div::before { background: var(--amber); color: var(--text); }
+        .donate { background: var(--card); border-color: var(--border); }
+        .donate h2 { color: var(--text); }
+        .donate .bank, .play-every-time div { background: var(--sub); }
+        .donate .copy { background: var(--text); color: #fff8e6; }
+        .style, .toggle-list li, details, .tv-version, .tv-requirements span { background: var(--sub); }
+        code, .ps-path span { background: var(--sub); }
+        .ps-path span:last-child { border-color: var(--amber); color: var(--text); }
+        .btn-app { background: var(--soft); color: var(--text); border-color: #ecd59a; }
+        .box.tip, .box.warn { background: var(--soft); border: 0; border-left: 3px solid var(--amber); }
+        .box.tip > strong:first-child, .box.warn > strong:first-child { color: var(--text); }
+        .toggle-list .on { background: var(--amber); }
+        figure.phone img { border-color: var(--border); box-shadow: 0 10px 24px -12px #0003; }
+        details.method, details.platform, details.platform.lg { border-color: var(--border); }
+        .tag { background: var(--soft); color: var(--text); }
+        .tv-jump { background: var(--soft); border-color: #ecd59a; }
+        .tv-card { background: var(--card); }
+        .platform-icon, .platform.lg .platform-icon { background: var(--text); color: var(--amber); }
+        .download-tv, .lg .download-tv, .download-button { background: var(--text); color: #fff8e6; border: 0; }
+        .download-tv.alt { background: transparent; color: var(--text); border: 1px solid var(--text); }
+        .download-code { color: var(--text); }
+        .play-store { display: block; margin: 4px 0 12px; }
+        .play-badge { display: inline-block; margin: 4px 0 12px; }
+        .play-badge img { display: block; width: 200px; height: auto; }
+        .ps-path em, .toggle-list em, li em, .box em { font-style: normal; font-size: 12px; color: var(--muted); }
+        .ps-path em { display: block; font-weight: 400; }
+        details.tv-fold { background: none; border: 0; padding: 0; margin: 0; }
+        details.tv-fold > summary { padding: 0; min-height: 0; align-items: center; }
+        details.tv-fold > summary h2 { margin: 0; }
+        details.tv-fold[open] > summary { margin-bottom: 6px; }
+        .tabs { display: flex; align-items: center; gap: 4px; padding: 4px; background: #ece4d2; border-radius: 12px; margin: 0 0 16px; }
+        .tabs button { flex: 1; min-height: 44px; border: 0; border-radius: 9px; background: transparent; color: var(--muted); font: inherit; font-size: 14px; padding: 0 4px; cursor: pointer; white-space: nowrap; }
+        .tabs button[aria-selected=true] { background: var(--text); color: #fff8e6; font-weight: 700; }
+        .tab-arrow { color: var(--muted); opacity: 0.55; font-size: 13px; font-weight: 700; flex-shrink: 0; user-select: none; }
+        .panel[hidden] { display: none; }
+        .panel-intro { margin: 0 0 12px; }
+        .card details.tv-fold > summary::after { content: "+"; }
+        .card details.tv-fold[open] > summary::after { content: "−"; }
+        .tg { padding: 16px 18px; }
+        .tg p { margin: 4px 0 10px; }
+        details.step { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 0; margin: 0 0 10px; }
+        details.step > summary { display: flex; align-items: center; gap: 12px; padding: 14px 16px; min-height: 58px; font-size: 16px; font-weight: 650; }
+        details.step > summary .num { width: 28px; height: 28px; font-size: 14px; }
+        details.step > summary::after { margin-left: auto; }
+        details.step[open] > summary { border-bottom: 1px solid var(--border); background: var(--soft); border-radius: 14px 14px 0 0; }
+        .step-body { padding: 4px 16px 14px; }
+        header { padding-top: 12px; }
+        .app-icon { width: 120px; height: 120px; border-radius: 26px; box-shadow: 0 10px 28px -10px #0007; filter: none; margin-bottom: 18px; }
+        h1 { font-size: 34px; letter-spacing: -0.035em; line-height: 1.2; }
+        h1::after { width: 64px; height: 5px; margin: 18px auto 16px; }
+        .slogan { font-size: 22px; margin-top: 0; }
+        .tagline { font-size: 17px; margin-top: 6px; }
+        .badge { display: inline-block; font-size: 12px; letter-spacing: .06em; font-weight: 700; background: var(--text); color: var(--soft); border-radius: 6px; padding: 4px 9px; margin-left: 6px; vertical-align: middle; }
+        @media (max-width: 540px) { h1 { font-size: 27px; } .slogan { font-size: 18px; } .app-icon { width: 88px; height: 88px; border-radius: 20px; } }
+        @media (max-width: 420px) { .tabs { gap: 2px; } .tabs button { font-size: 12px; padding: 0 2px; } .tab-arrow { font-size: 11px; } }
+        .iphones { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 12px; margin: 14px 0 6px; }
+        figure.iphone { margin: 0; width: 220px; text-align: center; }
+        .iphone-screen { position: relative; border-radius: 38px; padding: 9px; background: #121212;
+            box-shadow: 0 0 0 2px #3a3a3c, 0 0 0 4px #1c1c1e, 0 18px 36px -14px #0008; }
+        .iphone-screen img { display: block; width: 100%; border-radius: 30px; border: 0; }
+        figure.iphone figcaption { margin-top: 10px; }
+        @media (max-width: 520px) { figure.iphone { width: calc(50% - 6px); } .iphone-screen { border-radius: 28px; padding: 6px; } .iphone-screen img { border-radius: 23px; } }
+        .gifs { display: flex; justify-content: center; }
+        figure.gif { margin: 14px auto 8px; max-width: 420px; text-align: center; }
+        figure.gif img { width: 100%; border-radius: 14px; border: 1px solid var(--border); box-shadow: 0 10px 24px -14px #0007; }
+        .when { display: grid; gap: 8px; margin: 10px 0; }
+        .when > div { background: var(--sub); border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; }
+        .when b { color: var(--text); font-size: 15px; } .when span { float: right; font-size: 12px; font-weight: 700; color: var(--blue); }
+        .when p { margin: 4px 0 0; font-size: 14px; }
+        .tvmocks { display: grid; gap: 22px; margin: 14px 0; }
+        figure.tvmock { margin: 0; text-align: center; }
+        .tv-bezel { background: #0c0c0d; border-radius: 10px; padding: 1.6%; box-shadow: 0 0 0 1px #2c2c2e, 0 16px 30px -16px #0009; }
+        .tv-screen { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 3px; container-type: inline-size; }
+        .tv-screen img { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 0; }
+        .tv-stand { width: 22%; height: 10px; margin: 0 auto; background: linear-gradient(#2a2a2c, #0c0c0d); border-radius: 0 0 8px 8px; }
+        .tv-sub { position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%); max-width: 80%; background: rgba(0,0,0,.62);
+            color: #fff; font-weight: 700; font-size: 3.4cqw; line-height: 1.3; padding: .5em .9em; border-radius: .4em; }
+        .tv-box { position: absolute; background: rgba(0,0,0,.85); color: #fff; font-weight: 600; font-size: 2.2cqw; line-height: 1.3;
+            padding: .45em .7em; border-radius: .35em; text-align: left; }
+        figure.tvmock figcaption { margin-top: 8px; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <header>
+        <img class="app-icon" src="assets/android-icon.png" alt="Biểu tượng Console Translator" width="88" height="88">
+        <h1>Console Translator: Dịch game</h1>
+        <p class="slogan">Chơi game nào cũng hiểu</p>
+        <p class="tagline">Dịch phụ đề game sang tiếng Việt. <span class="badge">ANDROID</span></p>
+    </header>
+
+    <a class="home-guide" href="index.html">← Về trang chủ Console Translator: Dịch game</a>
+
+    <div class="tg">
+        <h2>Tham gia cộng đồng</h2>
+        <p>Thông báo bản mới và nơi hỏi đáp, báo lỗi.</p>
+        <div class="tg-links"><a class="tg-link tg-fb" href="https://www.facebook.com/groups/4501840066744701" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8V6.2c0-.8.2-1.2 1.4-1.2H17V2h-2.6C11.6 2 10.7 3.4 10.7 5.9V8H8.5v3h2.2v11H14V11h2.6l.4-3z"/></svg>Nhóm Facebook</a><a class="tg-link tg-tele" href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.5 3.6 2.9 10.8c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.5-1.4zM8.6 13.4l9.6-6c.5-.3.9-.1.5.2l-8.2 7.4-.3 3.4z"/></svg>Kênh Telegram</a></div>
+    </div>
+
+    <nav class="guide-more" aria-label="Bản khác"><a href="guide.html">iPhone</a><a href="desktop.html">Mac</a><a href="desktop.html">PC Windows</a><a href="games.html">Danh sách game</a></nav>
+
+    <div class="tabs" role="tablist">
+        <button role="tab" data-panel="phone" aria-selected="true">Điện thoại</button>
+        <span class="tab-arrow" aria-hidden="true">→</span>
+        <button role="tab" data-panel="tv" aria-selected="false">Phụ đề TV</button>
+        <span class="tab-arrow" aria-hidden="true">→</span>
+        <button role="tab" data-panel="use" aria-selected="false">Cách dùng</button>
+        <span class="tab-arrow" aria-hidden="true">→</span>
+        <button role="tab" data-panel="fix" aria-selected="false">Báo lỗi</button>
+    </div>
+
+    <div class="panel" id="panel-phone" role="tabpanel">
+        <p class="panel-intro">Làm lần lượt từng bước, bấm vào bước để mở. Bước 2 đến 8 chỉ làm một lần.</p>
+
+        <div class="ps5-video" style="position:relative;aspect-ratio:16/9;margin:14px 0;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/D2_oEmTiqlc" title="Video hướng dẫn kết nối app với PS5" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
+<details class="step" id="cai-app"><summary><span class="num">1</span>Cài app</summary><div class="step-body">
+        <p class="why">Bấm nút dưới để mở trang app trên Google Play rồi bấm Cài đặt. Cần điện thoại Android 11 trở lên.</p>
+        <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.kyozx.consoletranslator" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Tải trên Google Play" width="200"></a>
+        </div></details>
+
+        <details class="step" id="mo-app"><summary><span class="num">2</span>Mở app lần đầu: chọn ngôn ngữ</summary><div class="step-body">
+        <ol>
+            <li>Chọn <strong>Tiếng Việt</strong> làm ngôn ngữ của app.</li>
+            <li>Chọn <strong>Ngôn ngữ trong game</strong> (thường là English) và <strong>Dịch sang</strong> Tiếng Việt, bấm <span class="btn-app">Tiếp tục</span>. Đổi lại được bất cứ lúc nào trong Cài đặt.</li>
+            <li>Bạn vào màn chính. Thấy <strong>Sẵn sàng</strong> là được.</li>
+        </ol>
+        <div class="phones">
+            <figure class="phone"><img src="screenshots/play/a01-language.jpg" alt="Chọn ngôn ngữ của app" loading="lazy"><figcaption>Chọn ngôn ngữ của app</figcaption></figure>
+            <figure class="phone"><img src="screenshots/play/a02-what-to-translate.jpg" alt="Chọn ngôn ngữ trong game và ngôn ngữ dịch sang" loading="lazy"><figcaption>Ngôn ngữ trong game và dịch sang</figcaption></figure>
+            <figure class="phone"><img src="screenshots/play/a03-home.jpg" alt="Màn chính của app" loading="lazy"><figcaption>Màn chính</figcaption></figure>
+        </div>
+        <div class="box tip"><strong>Lần đầu dịch</strong>Dịch trên máy cần tải một gói ngôn ngữ khoảng 30 MB. App tự hỏi khi cần, nên mở Wi-Fi lần đầu.</div>
+        </div></details>
+
+        <details class="step" id="ps5"><summary><span class="num">3</span>Tạo tài khoản phụ trên PS5</summary><div class="step-body">
+        <p>App kết nối vào PS5 bằng một tài khoản PlayStation. Dùng chung tài khoản bạn đang cầm tay cầm chơi thì tay cầm bị ngắt, nên dùng một <strong>tài khoản phụ</strong> cho app. Tài khoản chính vẫn để chơi như bình thường.</p>
+        <ol>
+            <li>Ở màn hình chính PS5, bấm <strong>ảnh đại diện</strong> góc phải trên cùng → <strong>Chuyển người dùng</strong> <em>(Switch User)</em> → <strong>Thêm người dùng</strong> <em>(Add User)</em>.</li>
+            <li>Đăng nhập bằng một tài khoản PlayStation khác (tạo mới miễn phí nếu chưa có).</li>
+            <li>Chuyển sang tài khoản phụ này để làm các bước dưới.</li>
+        </ol>
+        <div class="box warn"><strong>Vì sao không dùng tài khoản chính?</strong>Mỗi tài khoản chỉ dùng được ở một nơi cùng lúc: khi app kết nối bằng tài khoản nào, PS5 chuyển tài khoản đó sang Chơi từ xa, nên tay cầm đang chơi bằng tài khoản đó bị ngắt. Tài khoản phụ chỉ để kết nối, không cần mua game hay PS Plus.</div>
+        </div></details>
+
+        <details class="step" id="remote-play"><summary><span class="num">4</span>Bật Chơi từ xa cho tài khoản phụ</summary><div class="step-body">
+        <div class="ps-path"><span>Cài đặt <em>Settings</em></span><i>→</i><span>Hệ thống <em>System</em></span><i>→</i><span>Chơi từ xa <em>Remote Play</em></span></div>
+        <ol>
+            <li>Bấm <strong>Bật Chơi từ xa</strong> <em>(Enable Remote Play)</em>, bật công tắc cạnh <strong>tài khoản phụ</strong>. Bật sai người thì app không kết nối được.</li>
+            <li>Quay lại, bật <strong>Ẩn trạng thái kết nối Chơi từ xa</strong> <em>(Hide Remote Play Connection Status)</em> để TV không hiện dòng "đã kết nối Chơi từ xa" khi chơi.</li>
+        </ol>
+        <figure>
+            <img src="screenshots/play/ps5-remote-play-steps.jpg" alt="Trên PS5: bấm Bật Chơi từ xa, bật cho tài khoản phụ, rồi bật Ẩn trạng thái kết nối Chơi từ xa" loading="lazy">
+            <figcaption>Bấm Bật Chơi từ xa, bật đúng tài khoản phụ, rồi bật Ẩn trạng thái kết nối</figcaption>
+        </figure>
+        </div></details>
+
+        <details class="step" id="rest-mode"><summary><span class="num">5</span>Cho app tự bật PS5 khi máy đang nghỉ (nên làm)</summary><div class="step-body">
+        <div class="ps-path"><span>Cài đặt <em>Settings</em></span><i>→</i><span>Hệ thống <em>System</em></span><i>→</i><span>Tiết kiệm điện <em>Power Saving</em></span><i>→</i><span>Tính năng khi nghỉ <em>Features Available in Rest Mode</em></span></div>
+        <ul class="toggle-list">
+            <li><span class="on" aria-hidden="true"></span><div><b>Giữ kết nối Internet</b> <em>Stay Connected to the Internet</em></div></li>
+            <li><span class="on" aria-hidden="true"></span><div><b>Cho phép bật PS5 qua mạng</b> <em>Enable Turning On PS5 from Network</em></div></li>
+        </ul>
+        <p>Để PS5 ở chế độ nghỉ (đèn cam), mở app bấm kết nối là máy tự bật. Máy tắt hẳn thì phải bật bằng tay.</p>
+        </div></details>
+
+        <details class="step" id="tim-may"><summary><span class="num">6</span>Trên điện thoại: tìm máy</summary><div class="step-body">
+        <div class="box warn"><strong>Chuẩn bị</strong>Điện thoại và PS5 dùng chung một mạng Wi-Fi ở nhà (không dùng Wi-Fi khách, tắt VPN).</div>
+        <ol>
+            <li>Ở màn chính bấm <span class="btn-app">Bắt đầu dịch game</span>, chọn <span class="btn-app">Chơi trên TV</span>. Lần đầu app mở <strong>Ghép nối PX5</strong>.</li>
+            <li>Bấm <span class="btn-app">Tìm máy</span>. Thấy dấu tích xanh <strong>Đã có máy ở địa chỉ...</strong> thì bấm <span class="btn-app">Tiếp tục</span>.</li>
+        </ol>
+        <div class="phones">
+            <figure class="phone"><img src="screenshots/play/a05-choice.jpg" alt="Bấm Bắt đầu dịch game, chọn Chơi trên TV" loading="lazy"><figcaption>Bắt đầu dịch game → Chơi trên TV</figcaption></figure>
+            <figure class="phone"><img src="screenshots/play/a07-pair-1-found.jpg" alt="App đã tìm thấy máy chơi game" loading="lazy"><figcaption>Thấy dấu tích xanh là bấm Tiếp tục</figcaption></figure>
+        </div>
+        <details>
+            <summary>App không tìm thấy máy? Nhập địa chỉ bằng tay</summary>
+            <ol>
+                <li>Trên PS5 vào <strong>Cài đặt</strong> <em>(Settings)</em> → <strong>Mạng</strong> <em>(Network)</em> → <strong>Trạng thái kết nối</strong> <em>(Connection Status)</em> → <strong>Xem trạng thái kết nối</strong> <em>(View Connection Status)</em>.</li>
+                <li>Tìm dòng <strong>IPv4 Address</strong>, dạng <code>192.168.x.x</code>.</li>
+                <li>Trong app bấm <span class="btn-app">Không tìm thấy? Nhập địa chỉ bằng tay</span>, chọn PX5 hoặc PX4 rồi gõ đúng dãy số đó.</li>
+            </ol>
+            <div class="phones"><figure class="phone"><img src="screenshots/play/a07b-pair-1-manual.jpg" alt="Nhập địa chỉ máy bằng tay" loading="lazy"><figcaption>Nhập địa chỉ bằng tay</figcaption></figure></div>
+        </details>
+        </div></details>
+
+        <details class="step" id="ma-nguoi-choi"><summary><span class="num">7</span>Lấy mã người chơi của tài khoản phụ</summary><div class="step-body">
+        <ol>
+            <li>Trên PS5 (đang ở tài khoản phụ): bấm <strong>ảnh đại diện</strong> → <strong>Hồ sơ</strong> <em>(Profile)</em>. Ghi lại <strong>Online ID</strong> nằm dưới tên hiển thị, đúng từng chữ.</li>
+            <li>Mở trang <a href="https://id.kyozx.cloud" target="_blank" rel="noopener noreferrer">id.kyozx.cloud</a> (trang tra mã của Console Translator, không cần đăng nhập).</li>
+            <li>Gõ Online ID, bấm <strong>Tra</strong>.</li>
+            <li>Ở ô <strong>Mã dán vào app</strong>, bấm <strong>Sao chép</strong>.</li>
+            <li>Quay lại app, bấm <span class="btn-app">Dán mã</span>. Thấy <strong>Đã nhận mã</strong> thì bấm <span class="btn-app">Tiếp tục</span>.</li>
+        </ol>
+        <figure>
+            <img src="screenshots/play/07-find-online-id.jpg" alt="Trên PS5: ảnh đại diện, Hồ sơ, Online ID dưới tên" loading="lazy">
+            <figcaption>Online ID nằm ngay dưới tên hiển thị trong Hồ sơ</figcaption>
+        </figure>
+        <div class="phones">
+            <figure class="phone"><img src="screenshots/play/a08-pair-2.jpg" alt="Bước 2 trong app: Mở trang tra mã, Dán mã" loading="lazy"><figcaption>Bấm Mở trang tra mã, rồi Dán mã</figcaption></figure>
+            <figure class="phone"><img src="screenshots/play/a09-pair-2-ok.jpg" alt="App báo Đã nhận mã" loading="lazy"><figcaption>Thấy Đã nhận mã là bấm Tiếp tục</figcaption></figure>
+        </div>
+        <div class="box warn"><strong>Copy đủ mã</strong>Bấm nút Sao chép trên trang để lấy đủ cả mã, kể cả dấu = ở cuối. App báo chưa đúng mã là mã bị thiếu hoặc thừa ký tự.</div>
+        <details>
+            <summary>Không tìm thấy Online ID trên PS5?</summary>
+            <ul>
+                <li><strong>Trên PS5, cách khác:</strong> <strong>Cài đặt</strong> → <strong>Người dùng và tài khoản</strong> <em>(Users and Accounts)</em> → <strong>Tài khoản</strong> → <strong>Hồ sơ</strong> → <strong>Online ID</strong>.</li>
+                <li><strong>Trên điện thoại:</strong> mở <strong>PlayStation App</strong>, đăng nhập tài khoản phụ, bấm ảnh đại diện. Online ID nằm dưới ảnh.</li>
+            </ul>
+            <p>Online ID là tên hiện khi chơi online, không phải email.</p>
+        </details>
+        </div></details>
+
+        <details class="step" id="account"><summary><span class="num">8</span>Lấy mã 8 số trên PS5 và ghép nối</summary><div class="step-body">
+        <ol>
+            <li>Trên PS5 (vẫn ở tài khoản phụ): <strong>Cài đặt</strong> → <strong>Hệ thống</strong> → <strong>Chơi từ xa</strong> → <strong>Ghép nối thiết bị</strong> <em>(Link Device)</em>.</li>
+            <li>TV hiện <strong>8 chữ số</strong> kèm thời gian còn lại.</li>
+            <li>Nhập ngay 8 số vào app, bấm <span class="btn-app">Ghép nối</span>, chờ vài giây đến khi app báo thành công.</li>
+        </ol>
+        <figure>
+            <img src="screenshots/play/ps5-link-device-code.jpg" alt="Trên PS5: Chơi từ xa, Ghép nối thiết bị, TV hiện mã 8 số kèm thời gian còn lại" loading="lazy">
+            <figcaption>Cài đặt → Hệ thống → Chơi từ xa → Ghép nối thiết bị</figcaption>
+        </figure>
+        <div class="phones"><figure class="phone"><img src="screenshots/play/a10-pair-3.jpg" alt="Ô nhập mã 8 số và nút Ghép nối trong app" loading="lazy"><figcaption>Nhập mã 8 số rồi bấm Ghép nối</figcaption></figure></div>
+        <div class="box warn"><strong>Máy từ chối mã?</strong>Thường do mã người chơi ở bước 7 là của tài khoản khác với tài khoản đang chọn trên PS5. Chuyển đúng tài khoản phụ, lấy mã 8 số mới rồi nhập lại. Hết giờ thì bấm Ghép nối thiết bị lần nữa.</div>
+        <div class="box tip"><strong>Xong rồi, lần sau thế nào?</strong>Không cần ghép lại. Mở app, bấm <strong>Bắt đầu dịch game</strong>. Chuyển PS5 về tài khoản chính để chơi. Bị đá tay cầm thì bấm nút Home giữa tay cầm, chọn lại tài khoản chính.</div>
+        </div></details>
+
+        <details class="step" id="choi"><summary><span class="num">9</span>Chơi và dịch</summary><div class="step-body">
+        <p class="why">Ghép nối xong, từ lần sau chỉ cần làm bước này.</p>
+        <ol>
+            <li>Ở màn chính bấm <span class="btn-app">Bắt đầu dịch game</span>, chọn <span class="btn-app">Chơi trên TV</span>, rồi bấm <span class="btn-app">Dịch khi chơi TV</span>. Nếu PS5 đang nghỉ, app tự bật máy, đợi khoảng 30 giây.</li>
+            <li>App báo tay cầm sẽ tắt một lát: bấm <span class="btn-app">Đã hiểu, kết nối</span>. Khi tay cầm tắt, bấm nút Home giữa tay cầm rồi chọn lại người chơi của bạn.</li>
+            <li>Vào game, bật <strong>phụ đề tiếng Anh (English)</strong> trong phần cài đặt của game.</li>
+            <li>Trong app, bấm nút <span class="btn-app">khung</span> màu vàng trên thanh công cụ, kéo khung vàng trùm lên chỗ phụ đề trên hình game, kéo chấm tròn ở góc để khung ôm vừa dòng chữ, bấm <span class="btn-app">Lưu khung</span>.</li>
+            <li>Chơi bình thường bằng tay cầm. Nhân vật nói gì, app dịch và đọc to bằng tiếng Việt.</li>
+        </ol>
+        <div class="phones">
+            <figure class="phone"><img src="screenshots/play/a06-connect.jpg" alt="Màn Kết nối, nút Dịch khi chơi TV" loading="lazy"><figcaption>Bấm Dịch khi chơi TV</figcaption></figure>
+            <figure class="phone"><img src="screenshots/play/a11-controller.jpg" alt="Thông báo tay cầm tắt một lát" loading="lazy"><figcaption>Bấm Đã hiểu, kết nối</figcaption></figure>
+        </div>
+        <div class="phones">
+            <figure class="phone"><img src="screenshots/play/a14-scan-box.jpg" alt="Kéo khung vàng lên chỗ phụ đề, bấm Lưu khung" loading="lazy"><figcaption>Kéo khung vàng lên phụ đề, bấm Lưu khung</figcaption></figure>
+            <figure class="phone"><img src="screenshots/play/a13-live.jpg" alt="Màn dịch: bản dịch tiếng Việt hiện ở dưới" loading="lazy"><figcaption>Bản dịch hiện ngay khi nhân vật nói</figcaption></figure>
+        </div>
+        <p><strong>Khi nào dùng cách nào?</strong></p><div class="when">
+<div><b>Thoại</b><span>Tự động, luôn chạy</span><p>Câu nhân vật nói, phụ đề ở cuối màn hình, đổi liên tục. Chỉ cần kéo khung vàng đúng chỗ một lần.</p></div>
+<div><b>Vùng dịch</b><span>Bấm khi cần</span><p>Chữ đứng yên ở một chỗ khi đang chơi: nhiệm vụ ở góc, thư, bảng lựa chọn hội thoại, mô tả vật phẩm vừa nhặt. Kéo khung cam tới đúng chỗ đó.</p></div>
+<div><b>Dịch menu</b><span>Nên bật Tự động</span><p>Khi mở menu: kỹ năng, túi đồ, bản đồ, hướng dẫn. Cả màn hình nhiều chữ, app tự tìm đoạn mô tả dài để dịch, không cần kéo khung.</p></div>
+</div>
+        <div class="box tip"><strong>Nên bật Dịch menu tự động</strong>Bấm <strong>Dịch menu</strong> rồi bật <strong>Dịch tự động</strong>. Từ đó cứ mở menu và đứng yên một chút là app tự dịch, không phải bấm. Đang chơi bình thường thì nó không làm gì.</div>
+        <div class="box tip"><strong>Nên thử</strong>Xem phim Vietsub hay chơi game đã Việt hóa? Chọn <strong>Thuyết minh</strong> ở màn chính (cạnh chữ Sẵn sàng): app đọc to phụ đề tiếng Việt có sẵn, không dịch. Muốn đỡ tốn pin, bấm nút <strong>mặt trăng</strong> để tắt màn hình, app vẫn đọc.</div>
+        </div></details>
+    </div>
+
+    <div class="panel" id="panel-use" role="tabpanel" hidden>
+        <p class="panel-intro">Mỗi chức năng một mục, bấm để xem.</p>
+        <details class="step" id="dung-man-chinh"><summary><span class="num">1</span>Màn chính</summary><div class="step-body"><ul>
+<li><strong>Sẵn sàng</strong>: app đã sẵn sàng. Bấm <strong>Bắt đầu dịch game</strong> để vào dịch.</li>
+<li><strong>Dịch / Thuyết minh</strong>: Dịch là dịch phụ đề tiếng Anh sang tiếng Việt. Thuyết minh là đọc to phụ đề tiếng Việt có sẵn (game đã Việt hóa, phim Vietsub), không dịch.</li>
+<li><strong>English → Tiếng Việt</strong>: bấm để đổi ngôn ngữ trong game và ngôn ngữ dịch sang.</li>
+<li><strong>Vương miện</strong>: gói Premium và PRO. <strong>Bánh răng</strong>: Cài đặt.</li>
+<li>Các ô bên dưới mở nhanh: Phụ đề trên TV, Dịch video trên web, Cách dịch, Giọng đọc, Hồ sơ game, Hướng dẫn.</li></ul>
+<div class="phones"><figure class="phone"><img src="screenshots/play/a03-home.jpg" alt="Màn chính, chế độ Dịch" loading="lazy"><figcaption>Màn chính, chế độ Dịch</figcaption></figure><figure class="phone"><img src="screenshots/play/a04-home-narrate.jpg" alt="Chế độ Thuyết minh" loading="lazy"><figcaption>Chế độ Thuyết minh</figcaption></figure></div></div></details>
+
+        <details class="step" id="dung-ket-noi"><summary><span class="num">2</span>Kết nối máy chơi game</summary><div class="step-body"><ol>
+<li>Bấm <strong>Bắt đầu dịch game</strong>, chọn nơi bạn chơi.</li>
+<li><strong>Chơi trên TV</strong>: chơi trên TV bằng tay cầm, điện thoại chỉ hiện và đọc bản dịch. Màn Kết nối hiện tên máy, địa chỉ và <strong>Máy đang bật</strong>.</li>
+<li><strong>Chơi trên điện thoại</strong>: hình game hiện trên điện thoại (xem mục 7).</li>
+<li><strong>Game đang chơi</strong>: chọn hồ sơ game (mỗi game một khung đọc và phong cách dịch).</li>
+<li><strong>Người chơi đã ghép nối</strong>: chọn người chơi dùng khi dịch và khi chơi trên điện thoại. Bấm <strong>Thêm</strong> để ghép người chơi khác.</li>
+<li>Nút <strong>Kết nối TV</strong> cạnh Dịch khi chơi TV: mở phần Phụ đề trên TV.</li></ol>
+<div class="box tip"><strong>Tay cầm tắt một lát là bình thường</strong>Khi app kết nối, bấm nút Home giữa tay cầm rồi chọn lại người chơi của bạn.</div>
+<div class="phones"><figure class="phone"><img src="screenshots/play/a06-connect.jpg" alt="Màn Kết nối" loading="lazy"><figcaption>Màn Kết nối</figcaption></figure><figure class="phone"><img src="screenshots/play/a11-controller.jpg" alt="Thông báo tay cầm" loading="lazy"><figcaption>Thông báo tay cầm</figcaption></figure></div></div></details>
+
+        <details class="step" id="dung-khung"><summary><span class="num">3</span>Chỉnh khung đọc phụ đề</summary><div class="step-body"><ol>
+<li>Trên màn dịch, bấm nút <strong>khung</strong> màu vàng trên thanh công cụ. Hình game hiện ra kèm khung vàng.</li>
+<li>Kéo khung vàng tới dòng phụ đề tiếng Anh. Kéo chấm tròn ở góc dưới bên phải để khung ôm vừa chữ.</li>
+<li>Bấm <strong>Lưu khung</strong>.</li></ol>
+<div class="phones"><figure class="phone"><img src="screenshots/play/a14-scan-box.jpg" alt="Kéo khung vàng lên phụ đề" loading="lazy"><figcaption>Kéo khung vàng lên phụ đề</figcaption></figure></div></div></details>
+
+        <details class="step" id="dung-man-dich"><summary><span class="num">4</span>Màn dịch và thanh công cụ</summary><div class="step-body"><p>Lần đầu vào, app hiện thẻ <strong>Cách dùng màn hình dịch</strong>. Bản dịch hiện ở hộp dưới cùng: dòng nhỏ phía trên là câu trước, rồi câu gốc tiếng Anh, chữ to là bản dịch. Thanh trên cùng, từ trái sang:</p><ul>
+<li><strong>Mũi tên</strong>: quay lại, dừng dịch.</li>
+<li><strong>Hồ sơ</strong>: đổi game, phong cách dịch, xem lại hướng dẫn.</li>
+<li><strong>Khung</strong>: chỉnh khung đọc phụ đề.</li>
+<li><strong>Aa</strong>: cỡ chữ, màu, nền phụ đề trên TV và trên điện thoại.</li>
+<li><strong>TV</strong>: phụ đề trên TV.</li>
+<li><strong>Mặt trăng</strong>: tắt màn hình cho đỡ tốn pin, vẫn dịch và đọc. Chạm 2 lần để bật lại.</li>
+<li><strong>Loa</strong>: bật, tắt giọng đọc.</li>
+<li><strong>Bánh răng</strong>: Cài đặt.</li></ul>
+<div class="phones"><figure class="phone"><img src="screenshots/play/a12-live-help.jpg" alt="Hướng dẫn ngay trên màn dịch" loading="lazy"><figcaption>Hướng dẫn ngay trên màn dịch</figcaption></figure><figure class="phone"><img src="screenshots/play/a13-live.jpg" alt="Bản dịch hiện khi nhân vật nói" loading="lazy"><figcaption>Bản dịch hiện khi nhân vật nói</figcaption></figure></div></div></details>
+
+        <details class="step" id="dung-vung"><summary><span class="num">5</span>Vùng dịch và Dịch menu</summary><div class="step-body"><p><strong>Vùng dịch</strong>: cho chữ đứng yên như nhiệm vụ, mô tả vật phẩm, thư, các lựa chọn hội thoại.</p><ol>
+<li>Bấm <strong>Vùng dịch</strong>, hình game hiện ra với khung cam <strong>Dịch tạm thời</strong>.</li>
+<li>Kéo khung cam phủ lên chữ rồi thả tay, bản dịch hiện ngay bên dưới.</li>
+<li>Bấm <strong>Ẩn hình game</strong> để đóng.</li></ol>
+<p><strong>Dịch menu</strong>: mở menu trong game (kỹ năng, túi đồ, hướng dẫn) rồi bấm Dịch menu. App đọc cả màn hình và chỉ dịch đoạn chữ dài. Bật <strong>Dịch tự động</strong> để khỏi bấm mỗi lần, bấm <strong>Dịch lại</strong> khi cần.</p>
+<div class="phones"><figure class="phone"><img src="screenshots/play/a15-area.jpg" alt="Vùng dịch: kéo khung cam lên nhiệm vụ" loading="lazy"><figcaption>Vùng dịch: kéo khung cam lên nhiệm vụ</figcaption></figure><figure class="phone"><img src="screenshots/play/a26-menu.jpg" alt="Bảng Dịch menu" loading="lazy"><figcaption>Dịch menu, nút Dịch lại và Dịch tự động</figcaption></figure></div></div></details>
+
+        <details class="step" id="dung-kieu"><summary><span class="num">6</span>Kiểu phụ đề (Aa)</summary><div class="step-body"><ul>
+<li>Tab <strong>Điện thoại</strong>: cỡ chữ, màu, nền phụ đề trên điện thoại.</li>
+<li>Tab <strong>TV</strong>: cỡ chữ, vị trí từ đáy màn hình, chiều rộng, màu chữ, độ đậm và màu nền, hiện câu gốc, âm lượng giọng TV.</li></ul>
+<div class="phones"><figure class="phone"><img src="screenshots/play/a17-style-phone.jpg" alt="Kiểu phụ đề trên điện thoại" loading="lazy"><figcaption>Phụ đề trên điện thoại</figcaption></figure><figure class="phone"><img src="screenshots/play/a16-style-tv.jpg" alt="Kiểu phụ đề trên TV" loading="lazy"><figcaption>Phụ đề trên TV</figcaption></figure></div></div></details>
+
+        <details class="step" id="dung-dien-thoai"><summary><span class="num">7</span>Chơi trên điện thoại</summary><div class="step-body"><p>Hình game hiện ngay trên điện thoại, bản dịch hiện đè lên hình.</p><ol>
+<li>Bấm <strong>Bắt đầu dịch game</strong> → <strong>Chơi trên điện thoại</strong> → <strong>Chơi trực tiếp trong app</strong>.</li>
+<li>Bấm <strong>Chơi trên điện thoại</strong>, chọn chất lượng hình (Tự động là được, Wi-Fi yếu thì chọn tốc độ thấp), bấm <strong>Chơi</strong>.</li>
+<li>Chơi bằng tay cầm nối điện thoại hoặc nút ảo trên màn hình. Thanh trên cùng có khung đọc phụ đề, Dịch menu, loa, TV và Aa. Chơi bằng tay cầm thì thanh tự ẩn sau 4 giây, chạm vào hình để hiện lại.</li></ol>
+<p>Đang dùng app Remote Play khác (PXPlay, Chiaki)? Chọn <strong>Dùng app PXPlay hoặc Chiaki</strong>: bản dịch nổi lên trên app đó.</p>
+<div class="phones"><figure class="phone"><img src="screenshots/play/a27-choice-phone.jpg" alt="Chọn cách chơi trên điện thoại" loading="lazy"><figcaption>Chơi trực tiếp trong app</figcaption></figure><figure class="phone"><img src="screenshots/play/a28-phone-quality.jpg" alt="Chất lượng hình khi chơi" loading="lazy"><figcaption>Chất lượng hình</figcaption></figure><figure class="phone"><img src="screenshots/play/a29-phone-live.jpg" alt="Chơi trên điện thoại, bản dịch đè lên hình" loading="lazy"><figcaption>Bản dịch hiện trên hình game</figcaption></figure></div></div></details>
+
+        <details class="step" id="dung-web"><summary><span class="num">8</span>Dịch video trên web (miễn phí)</summary><div class="step-body"><p>Xem YouTube hay trang video khác ngay trong app, phụ đề tự sang tiếng Việt.</p><ol>
+<li>Ở màn chính bấm <strong>Dịch video trên web</strong>, mở video và bật phụ đề.</li>
+<li>Bấm <strong>Dịch</strong> trên thanh trên cùng để bắt đầu.</li>
+<li><strong>OCR</strong>: đọc chữ trên hình khi video không có phụ đề dạng chữ. <strong>Khung quét</strong> chọn vùng chữ.</li></ol>
+<div class="phones"><figure class="phone"><img src="screenshots/play/a31-web.jpg" alt="Dịch video trên web" loading="lazy"><figcaption>Dịch video trên web</figcaption></figure></div></div></details>
+
+        <details class="step" id="dung-cai-dat"><summary><span class="num">9</span>Cài đặt: cách dịch, giọng đọc, hồ sơ</summary><div class="step-body"><ul>
+<li><strong>Cách dịch</strong>: Dịch trên máy (miễn phí, tải gói khoảng 30 MB rồi dịch không cần mạng), Dịch AI (hay nhất, Premium), CloudAPI, Google Gemini (cần khóa).</li>
+<li><strong>Giọng đọc</strong>: chọn giọng, tốc độ, <strong>Đọc theo cảm xúc</strong>, Nghe thử.</li>
+<li><strong>Phụ đề</strong>: hiện câu gốc, cỡ chữ. <strong>Nâng cao</strong>: khi máy nóng hoặc sót câu thoại.</li>
+<li><strong>Hồ sơ game</strong>: mỗi game một hồ sơ (khung đọc, phong cách dịch riêng). Gõ tên game đang chơi để Dịch AI dịch đúng tên riêng (cần Premium; bản dịch thường không dịch theo game).</li>
+<li><strong>Ngôn ngữ</strong>: ngôn ngữ app, ngôn ngữ trong game, dịch sang, tải gói đọc chữ và dịch ngoại tuyến.</li></ul>
+<div class="phones"><figure class="phone"><img src="screenshots/play/a22-settings-engine.jpg" alt="Cách dịch" loading="lazy"><figcaption>Cách dịch</figcaption></figure><figure class="phone"><img src="screenshots/play/a23-settings-voice.jpg" alt="Giọng đọc, phụ đề, hồ sơ" loading="lazy"><figcaption>Giọng đọc, phụ đề, hồ sơ</figcaption></figure><figure class="phone"><img src="screenshots/play/a24-settings-profile.jpg" alt="Hồ sơ game và ngôn ngữ" loading="lazy"><figcaption>Hồ sơ game, ngôn ngữ</figcaption></figure></div></div></details>
+
+        <details class="step" id="dung-goi"><summary><span class="num">10</span>Gói Premium và PRO</summary><div class="step-body"><ul>
+<li><strong>Premium</strong> (theo tuần, tháng, năm): Dịch AI (1.000 câu mỗi ngày), đọc theo cảm xúc, hồ sơ game không giới hạn.</li>
+<li><strong>PRO mua 1 lần</strong>: Phụ đề trên TV, giọng đọc qua loa TV, Vùng dịch hiện trên TV, giọng AI, hồ sơ game không giới hạn. Không gồm Dịch AI.</li>
+<li>Bấm <strong>vương miện</strong> ở màn chính để xem và mua. Đổi máy hay cài lại thì gói theo tài khoản Google Play của bạn.</li></ul>
+<div class="phones"><figure class="phone"><img src="screenshots/play/a30-premium.jpg" alt="Quyền lợi Premium và PRO" loading="lazy"><figcaption>Quyền lợi Premium và PRO</figcaption></figure></div></div></details>
+    </div>
+
+    <div class="panel" id="panel-tv" role="tabpanel" hidden>
+    <section class="card tv-card" id="phu-de-tv">
+        <details class="tv-fold" open><summary><h2><span class="num">TV</span>Phụ đề ngay trên màn hình TV</h2></summary>
+        <p class="why">Máy chơi game vẫn cắm HDMI thẳng vào TV. Chỉ phụ đề và giọng đọc đi từ điện thoại sang TV qua Wi-Fi nên hình ảnh không bị giảm chất lượng hay thêm độ trễ.</p>
+
+        <div class="tv-requirements" aria-label="Điều kiện sử dụng">
+            <span><b>TV tương thích</b>Android TV, LG webOS, Samsung từ 2017</span>
+            <span><b>Cùng mạng</b>TV và điện thoại chung Wi-Fi</span>
+            <span><b>Trên điện thoại</b>Cần gói Console Translator PRO</span>
+        </div>
+
+        <div class="box warn"><strong>Kiểm tra TV trước khi mua PRO</strong>Tính năng này không chạy trên mọi TV, và gói đã mua không đổi lại được chỉ vì TV không tương thích.<ul style="margin:8px 0 8px 18px;padding:0"><li><strong>Android TV / Google TV:</strong> được, cần <strong>Android 9 trở lên</strong>. TV nào khóa quyền Hiển thị trên ứng dụng khác thì không hiện được phụ đề.</li><li><strong>TV LG webOS:</strong> thử nghiệm, cần Developer Mode. Đã chạy trên webOS 7 (TV 2022), đời khác chưa kiểm tra hết.</li><li><strong>TV Samsung từ 2017 (Tizen 3.0 trở lên):</strong> thử nghiệm, cần Developer Mode, máy tính và tài khoản Samsung.</li><li><strong>TV Samsung 2016 trở về trước, TV hệ điều hành khác, Android Box:</strong> không hỗ trợ.</li></ul>Cách chắc nhất, không mất tiền: cài app nhận phụ đề lên TV trước. Khi TV hiện được mã ghép nối 8 số thì hãy mua.</div>
+
+        <div class="phones">
+            <figure class="phone"><img src="screenshots/play/a19-tv-pick.jpg" alt="Phụ đề trên TV: chọn hãng TV" loading="lazy"><figcaption>Trong app: chọn hãng TV để xem cách cài</figcaption></figure>
+        </div>
+
+        <details class="platform">
+            <summary><span class="platform-name"><span class="platform-icon">A</span>Android TV</span><span class="tag">Cài bằng remote</span></summary><div class="tv-video" style="position:relative;aspect-ratio:9/16;width:100%;max-width:320px;margin:14px auto;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/vBn606-ZA80" title="Video hướng dẫn Android TV" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
+            <div class="tv-downloads">
+                <div class="tv-version"><h3>Android TV thông thường</h3><p>Mã Downloader</p><strong class="download-code">8179089</strong><a class="download-button" href="https://api.kyozx.cloud/tv/latest">Tải APK TV</a></div>
+                <div class="tv-version"><h3>TV Xiaomi nội địa</h3><p>Mã Downloader</p><strong class="download-code">2484675</strong><a class="download-button" href="https://api.kyozx.cloud/tv/latest-mi">Tải APK Xiaomi</a></div>
+            </div>
+            <p class="why">Mã Downloader dùng để tải app trên TV, khác với mã ghép phụ đề 8 số. App TV tự hiện nút <strong>Cập nhật</strong> khi có bản mới.</p>
+            <p class="mini-title">Cài app</p>
+            <ol>
+                <li>Trên TV, cài <strong>Downloader by AFTVnews</strong> từ Google Play.</li>
+                <li>Vào <strong>Cài đặt → Ứng dụng → Quyền truy cập đặc biệt → Cài đặt ứng dụng không rõ nguồn</strong>, cho phép Downloader.</li>
+                <li>Mở Downloader, nhập mã đúng loại TV ở trên, tải rồi cài file APK.</li>
+            </ol>
+            <p class="mini-title">Cấp quyền và mở app</p>
+            <ol>
+                <li>Mở <strong>Console Translator TV</strong>, bấm <strong>Cấp quyền hiển thị trên ứng dụng khác</strong>.</li>
+                <li>Bật quyền cho app rồi bấm Back. Nếu được hỏi, cho phép app bỏ qua tối ưu hóa pin.</li>
+                <li>App hiện mã 8 số và địa chỉ TV. Làm tiếp phần <strong>Ghép nối TV với điện thoại</strong> ở dưới.</li>
+            </ol>
+            <div class="box warn"><strong>TV Xiaomi nội địa không bật được quyền?</strong>1. TV: <strong>Settings → Accounts and Security → ADB</strong>, bật và chọn <strong>ALLOW</strong>. 2. Mở app <strong>Permissions Manager</strong> (khiên xanh). 3. Chọn <strong>Console Translator TV (Mi)</strong> → <code>android.permission.SYSTEM_ALERT_WINDOW</code> → <strong>Allow</strong>.</div>
+        </details>
+
+        <details class="platform lg" id="lg-tv">
+            <summary><span class="platform-name"><span class="platform-icon">LG</span>TV LG (webOS)</span><span class="tag">Cài bằng điện thoại</span></summary><div class="tv-video" style="position:relative;aspect-ratio:9/16;width:100%;max-width:320px;margin:14px auto;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/w3neOWEDM50" title="Video hướng dẫn TV LG" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
+            <p>Cài app lên TV một lần ngay bằng điện thoại (cần PRO). Sau đó mỗi lần chơi, điện thoại tự mở app trên TV.</p>
+            <p class="mini-title">1. Chuẩn bị TV, làm lần đầu</p>
+            <ol>
+                <li>Tạo tài khoản <a href="https://webostv.developer.lge.com">LG Developer</a> (miễn phí). Trên TV, cài <strong>Developer Mode</strong> từ LG Content Store và đăng nhập.</li>
+                <li>Bật <strong>Dev Mode Status</strong>, chờ TV khởi động lại. Mở Developer Mode, bật <strong>Key Server</strong>.</li>
+                <li>Ghi lại <strong>IP</strong> và <strong>Passphrase</strong> 6 ký tự đang hiện trên TV. Điện thoại và TV dùng chung Wi-Fi.</li>
+            </ol>
+            <p class="mini-title">2. Cài bằng điện thoại</p>
+            <ol>
+                <li>Trong app: <strong>Phụ đề trên TV</strong> → <strong>TV LG: cài app lên TV (lần đầu)</strong>.</li>
+                <li>Nhập <strong>IP</strong> và <strong>Passphrase</strong> đang hiện trên TV, bấm <strong>Cài lên TV</strong>.</li>
+                <li>Lần đầu, app hiện <strong>mã nhận dạng TV</strong>: đúng TV nhà bạn thì bấm xác nhận.</li>
+                <li>Thấy báo đã cài xong là app phụ đề đã mở trên TV.</li>
+            </ol>
+            <div class="phones"><figure class="phone"><img src="screenshots/play/a20-lg-install.jpg" alt="Cài cho TV LG: chuẩn bị TV và cài app" loading="lazy"><figcaption>Cài cho TV LG</figcaption></figure></div>
+            <p class="mini-title">3. Mỗi lần chơi</p>
+            <ol>
+                <li>Bật máy chơi game, chuyển TV sang đúng cổng HDMI, chờ TV hiện hình game.</li>
+                <li>Trong app: <strong>Phụ đề trên TV</strong> → <strong>TV của bạn là LG? Mở app phụ đề chỉ bằng IP</strong>, nhập IP của TV. Lần đầu TV hỏi cho phép điện thoại điều khiển: chọn <strong>Đồng ý</strong> bằng remote.</li>
+            </ol>
+            <div class="box warn"><strong>Gia hạn và mở lại</strong>Bấm EXTEND trong Developer Mode trước khi hết hạn. Tránh bấm Home trên remote khi chơi. Nếu phụ đề đóng, mở lại app trên TV từ điện thoại.</div>
+        </details>
+
+        <details class="platform" id="samsung-tv">
+            <summary><span class="platform-name"><span class="platform-icon">SS</span>TV Samsung (Tizen)</span><span class="tag">Windows / Mac</span></summary><div class="tv-video" style="position:relative;aspect-ratio:9/16;width:100%;max-width:320px;margin:14px auto;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/LO0mW9ANw3g" title="Video hướng dẫn TV Samsung" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
+            <p>TV Samsung từ 2017 trở lên. Bản APK beta cài thẳng từ điện thoại: Phụ đề trên TV → <strong>TV Samsung: cài app lên TV</strong>, ô Host PC IP trên TV nhập IP của điện thoại (app hiện sẵn). Bản Google Play cài một lần bằng máy tính Windows hoặc Mac, máy tính và TV cùng Wi-Fi. Làm theo <a href="guide.html#samsung-tv">hướng dẫn cài TV Samsung</a>. Cài xong, mở Console Translator TV trên TV và ghép điện thoại bằng mã 8 số. Từ lần sau không cần máy tính.</p>
+        </details>
+
+        <details class="platform" open>
+            <summary><span class="platform-name"><span class="platform-icon">A</span>Ghép nối TV với điện thoại</span><span class="tag">Dùng cho mọi loại TV</span></summary>
+            <div style="padding: 10px 0;">
+                <p class="mini-title">Bước 1: Mở app trên TV</p>
+                <p>Bật máy chơi game trên TV, rồi mở app <strong>Console Translator TV</strong>. Màn hình TV hiện <strong>Địa chỉ TV</strong> và <strong>Mã ghép nối (8 số)</strong>:</p>
+                <div style="display: flex; gap: 12px; margin: 12px 0; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 260px; text-align: center;"><img src="screenshots/play/tv-lg-code.jpg" alt="Màn hình TV LG" style="width: 100%; max-width: 300px; border-radius: 12px; border: 1px solid var(--border);"><div style="font-size: 13px; color: var(--muted); margin-top: 4px;">Màn hình trên TV LG</div></div>
+                    <div style="flex: 1; min-width: 260px; text-align: center;"><img src="screenshots/play/tv-android-code.png" alt="Màn hình Android TV" style="width: 100%; max-width: 300px; border-radius: 12px; border: 1px solid var(--border);"><div style="font-size: 13px; color: var(--muted); margin-top: 4px;">Màn hình trên Android TV</div></div>
+                </div>
+                <p class="mini-title" style="margin-top: 16px;">Bước 2: Mở Phụ đề trên TV trong app</p>
+                <p>Ở màn chính bấm ô <strong>Phụ đề trên TV</strong>, hoặc trên màn dịch bấm nút <strong>TV</strong> trên thanh công cụ.</p>
+                <p class="mini-title" style="margin-top: 16px;">Bước 3: Nhập địa chỉ TV và mã 8 số, bấm Kết nối</p>
+                <p>Chọn TV trong danh sách (hoặc gõ <strong>Địa chỉ TV</strong> đang hiện trên TV), nhập <strong>mã 8 số</strong>, bấm <strong>Kết nối</strong>. Thấy <strong>Đã kết nối</strong> là xong. Bấm <strong>Gửi lên TV</strong> để thử một câu.</p>
+                <div class="phones"><figure class="phone"><img src="screenshots/play/a19-tv-pick.jpg" alt="Nhập địa chỉ TV và mã 8 số, bấm Kết nối" loading="lazy"><figcaption>Nhập địa chỉ TV, mã 8 số, bấm Kết nối</figcaption></figure><figure class="phone"><img src="screenshots/play/a18-tv-connected.jpg" alt="Đã kết nối TV" loading="lazy"><figcaption>Đã kết nối, gửi thử một câu</figcaption></figure></div>
+                <p style="margin-top: 10px;">Chuyển TV sang cổng HDMI của máy chơi game, phụ đề tiếng Việt sẽ tự nổi trên màn hình TV. Bật <strong>Đọc bằng loa TV</strong> nếu muốn giọng đọc phát ra loa TV.</p>
+            </div>
+            <p class="mini-title">Kết quả trên TV</p><div class="tvmocks"><figure class="tvmock"><div class="tv-bezel"><div class="tv-screen"><img src="screenshots/play/tv-scene-road.jpg" alt="" loading="lazy"><div class="tv-sub">Ta phải tới thành phố trước khi trời tối.</div></div></div><div class="tv-stand"></div><figcaption>Thoại: phụ đề tiếng Việt hiện ở dưới, đè lên hình game</figcaption></figure><figure class="tvmock"><div class="tv-bezel"><div class="tv-screen"><img src="screenshots/play/tv-scene-road.jpg" alt="" loading="lazy"><div class="tv-sub">Ta phải tới thành phố trước khi trời tối.</div><div class="tv-box" style="left:43%;top:6%;width:42%">Tìm người lái buôn ở cây cầu cũ và hỏi về đoàn xe bị mất tích.</div></div></div><div class="tv-stand"></div><figcaption>Vùng dịch: bản dịch nhiệm vụ hiện cạnh chữ gốc</figcaption></figure><figure class="tvmock"><div class="tv-bezel"><div class="tv-screen"><img src="screenshots/play/tv-scene-menu.jpg" alt="" loading="lazy"><div class="tv-box" style="left:43.4%;top:42.5%;width:47.6%">Lướt xuyên qua kẻ địch, làm chúng choáng trong ba giây. Tốn một thanh thể lực.</div><div class="tv-box" style="left:43.4%;top:70.5%;width:47.6%">Mở khóa lần lướt thứ hai và giảm thể lực tốn cho mỗi lần né.</div></div></div><div class="tv-stand"></div><figcaption>Dịch menu: bản dịch hiện ngay dưới từng đoạn mô tả</figcaption></figure></div><p>Mã ghép nối đổi mỗi phút nhưng chỉ cần nhập một lần đầu. Cỡ chữ, màu, nền, vị trí đều chỉnh trên điện thoại (nút Aa).</p>
+        </details>
+
+        <details class="tv-troubleshooting">
+            <summary>Lỗi thường gặp trên TV</summary>
+            <ul>
+                <li><strong>Không kết nối được TV:</strong> mở app trên TV trước, kiểm tra TV và điện thoại cùng Wi-Fi, rồi nhập đúng địa chỉ đang hiện trên TV.</li>
+                <li><strong>Sai mã:</strong> nhập mã 8 số mới nhất đang hiện trên TV.</li>
+                <li><strong>LG không cài được:</strong> kiểm tra Developer Mode còn hạn, Key Server đang bật, IP và Passphrase đúng.</li>
+                <li><strong>Phụ đề biến mất:</strong> Android TV cần bỏ tối ưu hóa pin; LG cần mở lại app trên TV từ điện thoại nếu đã bấm Home.</li>
+            </ul>
+            <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">Telegram hỗ trợ</a> kèm hãng/model TV và ảnh lỗi.</div>
+        </details>
+        </details>
+    </section>
+    </div>
+
+    <div class="panel" id="panel-fix" role="tabpanel" hidden>
+    <section class="card s5">
+        <h2>Gặp lỗi? Bấm vào lỗi giống bạn</h2>
+        <details>
+            <summary>Không tìm thấy máy</summary>
+            <ul>
+                <li>Điện thoại và PS5 cùng một mạng Wi-Fi. Tắt VPN, không dùng Wi-Fi dành cho khách.</li>
+                <li>Vẫn không thấy thì nhập IP bằng tay: trên PS5 vào <strong>Cài đặt</strong> → <strong>Mạng</strong> → <strong>Trạng thái kết nối</strong> → <strong>Xem trạng thái kết nối</strong>, xem dòng <strong>IPv4 Address</strong> (dạng 192.168.x.x), rồi bấm <strong>Không tìm thấy? Nhập địa chỉ bằng tay</strong> trong app.</li>
+            </ul><div class="phones"><figure class="phone"><img src="screenshots/play/a07b-pair-1-manual.jpg" alt="Nhập địa chỉ bằng tay" loading="lazy"><figcaption>Nhập địa chỉ bằng tay</figcaption></figure></div>
+        </details>
+        <details>
+            <summary>App báo chưa đúng mã ở bước lấy mã người chơi</summary>
+            <ul>
+                <li>Lấy mã ở <a href="https://id.kyozx.cloud" target="_blank" rel="noopener noreferrer">id.kyozx.cloud</a> bằng nút <strong>Sao chép</strong>, mã kết thúc bằng dấu <code>=</code>.</li>
+                <li>Copy đủ cả dãy, không thừa khoảng trắng. Xem lại bước 7 tab Điện thoại.</li>
+            </ul>
+        </details>
+        <details>
+            <summary>Ghép nối thất bại (PS5 từ chối mã 8 số)</summary>
+            <ul>
+                <li>Trên PS5 vào <strong>Bật Chơi từ xa</strong>, kiểm tra đã bật đúng tài khoản phụ mà app dùng.</li>
+                <li>Mã người chơi (bước 7) phải là của tài khoản đang chọn trên PS5.</li>
+                <li>Mã 8 số hết hạn rất nhanh: bấm <strong>Ghép nối thiết bị</strong> lấy mã mới rồi nhập ngay.</li>
+            </ul>
+        </details>
+        <details>
+            <summary>Ghép nối xong nhưng không vào được game</summary>
+            <ul>
+                <li>Tắt Chơi từ xa đang mở ở thiết bị khác (PC, điện thoại khác).</li>
+                <li>Đợi khoảng 30 giây rồi thử lại. App tự nối lại tối đa 4 lần khi rớt mạng.</li>
+                <li>Vẫn lỗi thì xóa ghép nối cũ trên PS5 và ghép nối lại từ đầu.</li>
+            </ul>
+        </details>
+        <details>
+            <summary>Tay cầm bị ngắt khi app kết nối</summary>
+            <p>Đây là bình thường, không phải lỗi. Bấm nút Home giữa tay cầm, chọn lại người chơi của bạn. Để không bị nữa, dùng tài khoản phụ như bước 3 tab Điện thoại.</p><div class="phones"><figure class="phone"><img src="screenshots/play/a11-controller.jpg" alt="App báo trước khi kết nối" loading="lazy"><figcaption>App báo trước khi kết nối</figcaption></figure></div>
+        </details>
+        <details>
+            <summary>Có hình nhưng không ra bản dịch</summary>
+            <ul>
+                <li>Game phải bật phụ đề tiếng Anh.</li>
+                <li>Khung vàng phải trùm đúng dòng phụ đề: bấm nút khung trên thanh công cụ, kéo lại cho khớp.</li>
+                <li>Dịch trên máy cần tải gói ngôn ngữ lần đầu: Cài đặt → Ngôn ngữ → <strong>Tải ngôn ngữ</strong>, cần Wi-Fi.</li>
+                <li>Dùng Gemini hoặc CloudAPI: kiểm tra mạng và khóa API.</li>
+            </ul><div class="phones"><figure class="phone"><img src="screenshots/play/a14-scan-box.jpg" alt="Kéo khung vàng lên phụ đề" loading="lazy"><figcaption>Kéo khung vàng lên phụ đề</figcaption></figure><figure class="phone"><img src="screenshots/play/a22-settings-engine.jpg" alt="Chọn cách dịch" loading="lazy"><figcaption>Chọn cách dịch</figcaption></figure></div>
+        </details>
+        <details>
+            <summary>Có bản dịch nhưng không nghe đọc</summary>
+            <p>Bật nút <strong>loa</strong> trên thanh công cụ màn dịch, tăng âm lượng điện thoại, kiểm tra có đang nối tai nghe Bluetooth không. Đổi giọng trong Cài đặt → Giọng đọc, bấm Nghe thử.</p><div class="phones"><figure class="phone"><img src="screenshots/play/a23-settings-voice.jpg" alt="Cài đặt giọng đọc" loading="lazy"><figcaption>Cài đặt giọng đọc</figcaption></figure></div>
+        </details>
+        <details>
+            <summary>Máy nóng, hình giật hoặc hay rớt mạng</summary>
+            <ul>
+                <li>Cắm dây mạng (LAN) cho PS5 nếu được. Điện thoại dùng Wi-Fi 5 GHz, để gần router.</li>
+                <li>Máy nóng: Cài đặt → <strong>Nâng cao: máy nóng hoặc sót câu thoại</strong>. Bật <strong>mặt trăng</strong> trên màn dịch để tắt màn hình.</li>
+                <li>Chơi trên điện thoại: chọn 720p và tốc độ mạng thấp hơn trong Chất lượng hình.</li>
+            </ul>
+        </details>
+        <details>
+            <summary>Không tìm thấy hoặc không kết nối được TV</summary>
+            <ul>
+                <li>Mở app nhận phụ đề trên TV, kiểm tra TV đang hiện mã 8 số.</li>
+                <li>Điện thoại và TV cùng mạng Wi-Fi.</li>
+                <li>Không thấy TV trong danh sách thì gõ địa chỉ đang hiện trên TV. Mã đổi mỗi phút, dùng mã mới nhất.</li>
+                <li>TV chưa có app thì xem tab <a href="#phu-de-tv">Phụ đề TV</a>.</li>
+            </ul>
+        </details>
+        <details>
+            <summary>Dịch cả chữ menu, bảng điểm, HUD</summary>
+            <p>Thu nhỏ khung vàng cho vừa dòng phụ đề. Chữ menu thì dùng <strong>Dịch menu</strong>, chữ nhiệm vụ thì dùng <strong>Vùng dịch</strong> (xem tab Cách dùng).</p>
+        </details>
+        <div class="box tip"><strong>Vẫn chưa được?</strong>Nhắn vào <a href="https://t.me/pstranslator" target="_blank" rel="noopener noreferrer">kênh Telegram</a> kèm ảnh chụp màn hình. Nhớ che mã người chơi, địa chỉ IP, mã 8 số và khóa API trước khi gửi.</div>
+    </section>
+    </div>
+
+    <footer>
+        Console Translator © 2026 · <a href="privacy.html">Chính sách riêng tư</a>
+    </footer>
+
+</div>
+
+<script>
+// Tabs, plus deep links: a #hash inside a panel shows that panel and opens its folds.
+var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+function show(name){tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.panel===name)});['phone','use','tv','fix'].forEach(function(n){document.getElementById('panel-'+n).hidden=n!==name});}
+tabs.forEach(function(t){t.onclick=function(){show(t.dataset.panel)}});
+function openTarget(){var t=location.hash&&document.getElementById(decodeURIComponent(location.hash.slice(1)));if(!t)return;var p=t.closest('.panel');if(p)show(p.id.slice(6));for(var e=t;e;e=e.parentElement)if(e.tagName==='DETAILS')e.open=true;if(t.tagName==='DETAILS')t.open=true;var f=t.querySelector(':scope > details.tv-fold');if(f)f.open=true;t.scrollIntoView();}
+addEventListener('hashchange',openTarget);openTarget();
+</script>
+</body>
+</html>
