@@ -93,3 +93,24 @@ html{scroll-padding-top:20px}.wrap{width:calc(100% - 36px)}
 .hero-guides span{width:100%}.hero-guides a{padding:0 13px}
 @media(max-width:1150px){.hero .store-badges{display:grid;grid-template-columns:repeat(2,max-content)}.hero .store-badges a{width:148px}.hero .store-badges a img{margin-inline:auto}}
 @media(max-width:650px){.hero .store-badges,.hero-guides{justify-content:center}.hero-guides span{text-align:center}}
+/* Home lower sections: readable sizes, one spacing rhythm, room for the fixed dock. */
+.app-highlights article>span,.community-kicker{font-size:11px;color:#5f6368}
+.app-highlights p,.support-section p,footer p,footer small{color:#5f6368}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;padding-block:12px;font-size:16px;line-height:1.4;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:9px;height:9px;margin-right:4px;border-right:2px solid #5f6368;border-bottom:2px solid #5f6368;transform:rotate(45deg)}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+footer{padding-bottom:120px}footer p{font-size:13px;line-height:1.6}footer>a:last-child{display:inline-flex;align-items:center;min-height:44px;font-size:13px}
+@media(min-width:821px){
+.games-section{padding-block:64px}
+.community-ribbon{display:block;padding-block:64px;border-top:1px solid #dce0e7;border-bottom:0}
+.community-ribbon h2{max-width:none;font-size:32px;letter-spacing:-1px}
+.community-links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.community-links a{align-items:flex-start;gap:14px;padding:20px;background:#fff;border:1px solid #dedfe4;border-radius:14px}
+.community-links a:hover{border-color:#202124}
+.community-links strong{font-size:16px}
+.community-links small{display:block;max-width:none;margin-top:4px;font-size:14px;line-height:1.45;color:#5f6368}
+.community-links .social-mark{width:38px;height:38px;font-size:21px}
+.support-section{grid-template-columns:minmax(240px,1fr) 2fr;gap:64px;padding-block:64px;align-items:start}
+.support-section>div:first-child{position:sticky;top:32px}
+}
