@@ -41,8 +41,11 @@
 // Hero screenshots: slide by themselves (unless reduced motion), arrows and dots move them, tap opens the viewer.
 (() => {
   const viewer = document.getElementById('shot-viewer');
-  const links = [...new Map([...document.querySelectorAll('[data-shot]')].map(a => [a.dataset.shot, a])).values()];
-  if (!viewer || !links.length || !viewer.showModal) return;
+  // Each group (app screenshots, member photos) pages through its own pictures.
+  const groups = {};
+  document.querySelectorAll('[data-shot]').forEach(a => (groups[a.dataset.group || 'app'] ||= new Map()).set(a.dataset.shot, a));
+  let links = [];
+  if (!viewer || !Object.keys(groups).length || !viewer.showModal) return;
   const img = viewer.querySelector('img'), count = viewer.querySelector('.sv-count');
   let at = 0;
   const show = i => {
@@ -54,7 +57,7 @@
   document.addEventListener('click', e => {
     const a = e.target.closest('[data-shot]');
     if (!a) return;
-    e.preventDefault(); show(+a.dataset.shot); viewer.showModal();
+    e.preventDefault(); links = [...groups[a.dataset.group || 'app'].values()]; show(+a.dataset.shot); viewer.showModal();
   });
   viewer.querySelector('.sv-prev').onclick = () => show(at - 1);
   viewer.querySelector('.sv-next').onclick = () => show(at + 1);
@@ -73,29 +76,34 @@
 (() => {
   const box = document.querySelector('.hero-shots');
   if (!box) return;
-  const track = box.querySelector('.hs-track'), dots = [...box.querySelectorAll('.hs-dots button')];
-  const n = track.children.length;
-  // Three copies so the strip can keep sliding one way; after a move into a copy it jumps back unseen.
-  track.innerHTML = track.innerHTML.repeat(3);
-  track.querySelectorAll('img').forEach(i => i.removeAttribute('loading'));
-  const slides = [...track.children];
-  let pos = n, timer = null;
-  const place = animate => {
-    const w = slides[0].offsetWidth, gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-    track.style.transition = animate ? '' : 'none';
-    track.style.transform = `translateX(${box.querySelector('.hs-frame').offsetWidth / 2 - (pos * (w + gap) + w / 2)}px)`;
-    slides.forEach((s, k) => { s.classList.toggle('on', k === pos); s.tabIndex = k === pos ? 0 : -1; });
-    dots.forEach((d, k) => d.setAttribute('aria-current', String(k === pos % n)));
+  const slides = [...box.querySelectorAll('.hs-track a')], dots = [...box.querySelectorAll('.hs-dots button')];
+  const n = slides.length;
+  let at = 0, timer = null;
+  // Stacked cards: the current one on top, the previous and next tucked behind it to each side.
+  const go = i => {
+    at = (i + n) % n;
+    slides.forEach((s, k) => {
+      let d = (k - at + n) % n;
+      if (d > n / 2) d -= n;
+      const side = Math.abs(d) === 1;
+      s.classList.toggle('on', d === 0);
+      s.classList.toggle('side', side);
+      s.style.transform = d === 0 ? 'none' : `translateX(${Math.sign(d) * (side ? 42 : 60)}%) scale(${side ? .84 : .7}) rotate(${Math.sign(d) * (side ? 4 : 6)}deg)`;
+      s.style.zIndex = 3 - Math.min(Math.abs(d), 3);
+      s.tabIndex = d === 0 ? 0 : -1;
+    });
+    dots.forEach((d, k) => d.setAttribute('aria-current', String(k === at)));
   };
-  const go = p => { pos = p; place(true); };
-  track.addEventListener('transitionend', () => {
-    if (pos < n || pos >= 2 * n) { pos = pos % n + n; place(false); track.offsetWidth; }
-  });
   const stop = () => { clearInterval(timer); timer = null; };
-  const play = () => { if (!timer && !matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(() => go(pos + 1), 3500); };
-  box.querySelector('.hs-prev').onclick = () => { go(pos - 1); stop(); };
-  box.querySelector('.hs-next').onclick = () => { go(pos + 1); stop(); };
-  dots.forEach((d, k) => d.onclick = () => { go(n + k); stop(); });
+  const play = () => { if (!timer && !matchMedia('(prefers-reduced-motion: reduce)').matches) timer = setInterval(() => go(at + 1), 3500); };
+  box.querySelector('.hs-prev').onclick = () => { go(at - 1); stop(); };
+  box.querySelector('.hs-next').onclick = () => { go(at + 1); stop(); };
+  dots.forEach((d, k) => d.onclick = () => { go(k); stop(); });
+  // A side card is a shortcut to it; only the top card opens the viewer.
+  box.addEventListener('click', e => {
+    const a = e.target.closest('.hs-track a');
+    if (a && a.classList.contains('side')) { e.preventDefault(); e.stopPropagation(); go(slides.indexOf(a)); stop(); }
+  }, true);
   box.addEventListener('mouseenter', stop);
   box.addEventListener('mouseleave', play);
   let x0 = null;
@@ -103,8 +111,24 @@
   box.addEventListener('touchend', e => {
     if (x0 === null) return;
     const dx = e.changedTouches[0].clientX - x0; x0 = null;
-    if (Math.abs(dx) > 40) go(pos + (dx < 0 ? 1 : -1));
+    if (Math.abs(dx) > 40) go(at + (dx < 0 ? 1 : -1));
   });
-  addEventListener('resize', () => place(false));
-  place(false); play();
+  go(0); play();
+})();
+
+// Member feedback: on phones the cards sit in a swipe row; move to the next one every 4 s,
+// back to the first after the last. A touch pauses it for a while.
+(() => {
+  const row = document.querySelector('.review-grid');
+  if (!row || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let pausedUntil = 0;
+  row.addEventListener('touchstart', () => { pausedUntil = Date.now() + 8000; }, { passive: true });
+  setInterval(() => {
+    if (Date.now() < pausedUntil || row.scrollWidth <= row.clientWidth + 4) return;
+    const card = row.firstElementChild, step = card.offsetWidth + (parseFloat(getComputedStyle(row).columnGap) || 0);
+    const atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
+    // scrollBy, not scrollTo: smooth scrollTo to an offset is dropped inside a scroll-snap row.
+    if (atEnd) row.scrollBy({ left: -row.scrollWidth, behavior: 'smooth' });
+    else row.scrollBy({ left: step, behavior: 'smooth' });
+  }, 4000);
 })();
