@@ -3,8 +3,8 @@
 <p><strong>Mới: cài ngay trên iPhone, không cần máy tính.</strong> Bật Developer Mode và Key Server trên TV, rồi trong app iPhone vào <strong>Phụ đề trên TV → TV LG → Cài từ iPhone</strong>, nhập IP và Passphrase, bấm <strong>Cài lên TV</strong> (cần gói PRO). Xem <a href="ios/#lg-tv">hướng dẫn có ảnh</a>. Phần dưới đây là cách cài bằng Windows hoặc Mac.</p>
 </blockquote>
 <p>Dùng Windows 10/11 hoặc macOS 12 trở lên để cài app nhận phụ đề lên TV LG webOS. Khi chơi, điện thoại vẫn phải chạy dịch và gửi phụ đề sang TV; PC chỉ dùng cài hoặc mở app TV.</p>
-<p><a href="https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.17/ConsoleTranslator-LG-PC-1.2.17.zip">Tải bộ cài PC 1.2.17</a> · <a href="https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip">Tải bộ cài Mac 1.0.5</a> · <a href="https://t.me/pstranslator">Nhận mã cài và hỗ trợ</a></p>
-<p>Tải file <code>ConsoleTranslator-LG-PC-1.2.17.zip</code>, không tải <strong>Source code</strong>. Bộ cài đang thử nghiệm; khả năng hiện phụ đề trên HDMI tùy mẫu TV/firmware.</p>
+<p><a href="https://api.kyozx.cloud/lg-pc/latest">Tải bộ cài PC</a> · <a href="https://api.kyozx.cloud/lg-mac/latest">Tải bộ cài Mac</a> · <a href="https://t.me/pstranslator">Nhận mã cài và hỗ trợ</a></p>
+<p>Tải file ZIP bộ cài, không tải <strong>Source code</strong>. Bộ cài đang thử nghiệm; khả năng hiện phụ đề trên HDMI tùy mẫu TV/firmware.</p>
 <blockquote>
 <p><strong>Trước khi mua gói PRO hoặc donate để dùng phụ đề trên TV LG:</strong> bản LG đang thử nghiệm, mới kiểm tra trên webOS 7 (TV 2022). Hãy cài app lên TV trước (không mất tiền); khi TV hiện được mã ghép nối 8 số trên hình game thì hãy mua.</p>
 </blockquote>
@@ -25,7 +25,7 @@
 <p>Công cụ tự chuẩn bị gói cài và cài đặt lên TV. PC nhớ IP/Passphrase sau khi kết nối thành công; nếu thông tin trên TV đổi, nhập lại rồi kết nối.</p>
 <h2 id="cài-từ-mac-không-cần-terminal">Cài từ Mac, không cần Terminal</h2>
 <ol>
-<li><a href="https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip">Tải bộ cài Mac 1.0.5</a>, giải nén rồi kéo <strong>Console Translator LG</strong> vào <strong>Applications</strong>. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.</li>
+<li><a href="https://api.kyozx.cloud/lg-mac/latest">Tải bộ cài Mac</a>, giải nén rồi kéo <strong>Console Translator LG</strong> vào <strong>Applications</strong>. Hỗ trợ macOS 12 trở lên, Intel và Apple Silicon.</li>
 <li>Nếu thiếu Node.js, bấm <strong>Cài Node.js</strong> ngay trong app và chờ hoàn tất. App cũng tự nhắc <strong>Cài và tiếp tục</strong> khi cần, không phải tải riêng trên web. Nút <strong>Hỗ trợ Telegram</strong> dùng để nhận mã hoặc gửi log lỗi.</li>
 <li>Mở app, nhập IP và Passphrase trên TV, bấm <strong>Kết nối TV</strong>, xác nhận đúng TV.</li>
 <li>Nhập mã <strong>LGTV</strong> cấp riêng cho Mac, bấm <strong>Cài đặt lên TV</strong>, chờ hoàn tất.</li>
@@ -76,7 +76,7 @@
 </thead>
 <tbody><tr>
 <td><code>LGTV-YYYYMMDD-HHMMSS-…</code></td>
-<td>Nhập đầy đủ trong bộ cài Windows 1.2.17 hoặc Mac 1.0.5 để cài app TV.</td>
+<td>Nhập đầy đủ trong bộ cài Windows hoặc Mac để cài app TV.</td>
 </tr>
 <tr>
 <td><code>ANDROID-YYYYMMDD-HHMMSS-…</code></td>
@@ -97,10 +97,10 @@
 <li><strong>Không kết nối TV:</strong> kiểm tra cùng mạng, IP/Passphrase mới nhất, Key Server bật và Developer Mode còn hạn.</li>
 <li><strong>Vừa bấm đã báo &quot;Công cụ không hoàn tất&quot; hoặc mã <code>LG-NPX</code>:</strong> máy tính chưa tải được công cụ của LG, chưa liên quan tới TV. Từ bản Windows 1.2.12 bộ cài nói rõ lý do: mất mạng hoặc bị chặn tới máy chủ npm (tắt VPN, thử mạng khác), thiếu lệnh npx (cài lại Node.js LTS từ nodejs.org), hoặc phần mềm diệt virus chặn. Riêng mã <code>LG-NPX, ENOENT</code> là bộ nhớ tạm của công cụ bị hỏng do lần tải trước bị ngắt: bản 1.2.12 tự dọn rồi nhắc bấm lại; bản cũ hơn thì mở <code>%LOCALAPPDATA%\npm-cache\_npx</code>, xóa các thư mục bên trong rồi thử lại.</li>
 <li><strong>Báo &quot;Thông tin chưa đúng&quot; <code>[LG-INPUT]</code> dù IP và passphrase đúng:</strong> dùng bản Windows 1.2.17 trở lên. Số phiên bản hiện trên tiêu đề cửa sổ và dòng cuối bộ cài; khi gửi ảnh hỗ trợ hãy chụp cả phần đó.</li>
-<li><strong>Không cài được:</strong> dùng Windows 1.2.17 hoặc Mac 1.0.5, kiểm tra mã LGTV còn hạn và kết nối Internet. Nếu vẫn lỗi, sao chép toàn bộ log gửi hỗ trợ; chưa cần gỡ app trên TV.</li>
+<li><strong>Không cài được:</strong> dùng bộ cài Windows hoặc Mac mới nhất, kiểm tra mã LGTV còn hạn và kết nối Internet. Nếu vẫn lỗi, sao chép toàn bộ log gửi hỗ trợ; chưa cần gỡ app trên TV.</li>
 <li><strong>Không thấy phụ đề:</strong> kiểm tra điện thoại đang chạy dịch, vùng quét có chữ gốc và đã ghép TV. Nếu vừa bấm Home, mở app TV lại.</li>
 </ul>
 <p><a href="https://webostv.developer.lge.com/develop/getting-started/developer-mode-app">Hướng dẫn Developer Mode chính thức của LG</a> · <a href="https://t.me/pstranslator">Telegram hỗ trợ</a></p>
-<p>Ngày giờ trong mã là lúc tạo theo giờ Việt Nam, không phải hạn sử dụng. Mã cũ 32 ký tự vẫn dùng được. Bản PC 1.2.5 trở xuống chỉ nhận mã cũ; mã LGTV mới cần bản 1.2.17.</p>
-<p>Cập nhật bộ cài: đóng bản cũ, giải nén ZIP 1.2.17 vào thư mục mới rồi mở <code>Chay-Console-Translator.bat</code>. Dùng cùng tài khoản Windows để giữ thông tin TV và máy đã kích hoạt. Nếu quên mã, nhắn người cấp mã qua Telegram.</p>
+<p>Ngày giờ trong mã là lúc tạo theo giờ Việt Nam, không phải hạn sử dụng. Mã cũ 32 ký tự vẫn dùng được. Bản PC 1.2.5 trở xuống chỉ nhận mã cũ; mã LGTV mới cần bộ cài mới nhất.</p>
+<p>Cập nhật bộ cài: đóng bản cũ, giải nén ZIP mới vào thư mục mới rồi mở <code>Chay-Console-Translator.bat</code>. Dùng cùng tài khoản Windows để giữ thông tin TV và máy đã kích hoạt. Nếu quên mã, nhắn người cấp mã qua Telegram.</p>
 </article></main></body></html>
