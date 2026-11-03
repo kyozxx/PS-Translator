@@ -29,3 +29,5 @@
 /* Giveaway art sits on the left, fading into the text. */
 .gta-section .gta-count.gw.has-art{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}.gta-section .gw .gc-art{-webkit-mask-image:linear-gradient(270deg,transparent,#000 14%);mask-image:linear-gradient(270deg,transparent,#000 14%)}
 @media(max-width:650px){.gta-section .gta-count.gw.has-art{grid-template-columns:1fr}.gta-section .gw .gc-art{-webkit-mask-image:linear-gradient(0deg,transparent,#000 12%);mask-image:linear-gradient(0deg,transparent,#000 12%)}}
+/* Phone: keep the giveaway box short enough for one screenshot. */
+@media(max-width:650px){.gta-section .gw .gc-art{max-height:150px;object-position:center 62%}.gta-section .gw .gc-body{gap:10px}.gw .gc-sub{font-size:13px}.gw .gw-prizes{gap:6px}.gw .gw-prizes li{padding:7px 10px;font-size:13px;line-height:1.35}.gw .gw-prizes b{display:inline;margin:0 4px 0 0;font-size:12px}}
