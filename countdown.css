@@ -23,3 +23,9 @@
 @media(max-width:650px){.gta-section .gta-count.has-art{grid-template-columns:1fr}.gta-section .has-art .gc-art{min-height:0;-webkit-mask-image:linear-gradient(0deg,transparent,#000 12%);mask-image:linear-gradient(0deg,transparent,#000 12%)}}
 .gta-section .has-art .gc-art{height:0;min-height:100%}.gta-section .has-art .gc-body{min-height:330px}
 @media(max-width:650px){.gta-section .has-art .gc-art{height:auto;min-height:0}.gta-section .has-art .gc-body{min-height:0}}
+/* Giveaway box: same look as the countdown, prize tiles instead of art. */
+.gw-section{margin-top:18px}.gta-count.gw{max-width:none}.gw .gw-prizes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0;padding:0;list-style:none}.gw .gw-prizes li{padding:12px 14px;border-radius:14px;background:#ffffff1f;border:1px solid #ffffff2e;font-size:14px;line-height:1.45;color:#ffffffd9}.gw .gw-prizes b{display:block;margin-bottom:4px;color:#ffd36b;font-size:13px;letter-spacing:.04em}
+@media(max-width:650px){.gw .gw-prizes{grid-template-columns:1fr}}
+/* Giveaway art sits on the left, fading into the text. */
+.gta-section .gta-count.gw.has-art{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}.gta-section .gw .gc-art{-webkit-mask-image:linear-gradient(270deg,transparent,#000 14%);mask-image:linear-gradient(270deg,transparent,#000 14%)}
+@media(max-width:650px){.gta-section .gta-count.gw.has-art{grid-template-columns:1fr}.gta-section .gw .gc-art{-webkit-mask-image:linear-gradient(0deg,transparent,#000 12%);mask-image:linear-gradient(0deg,transparent,#000 12%)}}
