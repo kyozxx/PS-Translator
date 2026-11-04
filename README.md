@@ -98,7 +98,7 @@ Cài app nhận phụ đề lên TV **trước khi mua**: TV hiện được mã
 
 | TV | Cách cài | Hướng dẫn |
 |---|---|---|
-| Android TV / Google TV (Android 9+) | [APK 2.0.3](https://github.com/kyozxx/PS-Translator/releases/download/tv-android-2.0.3/Console-Translator-TV.apk) | [TV.md](TV.md) |
+| Android TV / Google TV (Android 9+) | [APK 2.0.5](https://github.com/kyozxx/PS-Translator/releases/download/tv-android-2.0.5/Console-Translator-TV.apk) | [TV.md](TV.md) |
 | TV LG webOS | **Ngay trên iPhone** (cần PRO) hoặc [Windows 1.2.17](https://github.com/kyozxx/PS-Translator/releases/download/lg-pc-1.2.17/ConsoleTranslator-LG-PC-1.2.17.zip) · [Mac 1.0.5](https://github.com/kyozxx/PS-Translator/releases/download/lg-mac-1.0.5/ConsoleTranslator-LG-Mac-1.0.5.zip), máy tính cần mã `LGTV-…` | [LG.md](LG.md) |
 | TV Samsung từ 2017 (Tizen 3.0+) | [Windows 1.0.18](https://github.com/kyozxx/PS-Translator/releases/download/samsung-pc-1.0.18/ConsoleTranslator-Samsung-PC-1.0.18.zip) · [Mac 1.0.15](https://github.com/kyozxx/PS-Translator/releases/download/samsung-mac-1.0.15/ConsoleTranslator-Samsung-Mac-1.0.15.zip), cần mã `SSTV-…` | [SAMSUNG.md](SAMSUNG.md) |
 
