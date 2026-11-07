@@ -16,8 +16,8 @@
 
   /* ---------- one screenshot, 1320 x 2868 ---------- */
   .shot { width: 1320px; height: 2868px; position: relative; overflow: hidden; color: var(--cream);
-    background: radial-gradient(120% 70% at 50% 0%, #3a2a10 0%, #14110c 55%, #0b0a08 100%); }
-  .shot::before { content: ""; position: absolute; inset: 0; opacity: .18;
+    background: url(bg.jpg) center top/cover no-repeat; }
+  .shot::before { content: none; position: absolute; inset: 0; opacity: .18;
     background: repeating-radial-gradient(circle at 20% 110%, transparent 0 46px, #c9953a 46px 48px); }
   .cap { position: absolute; top: 150px; left: 0; right: 0; text-align: center; padding: 0 90px; }
   .cap .k { display: inline-block; font-size: 44px; font-weight: 800; letter-spacing: .08em; color: var(--ink);
@@ -90,7 +90,7 @@
  <div class="chips"><b>Thoại</b><b>Nhiệm vụ</b><b>Menu</b><b>Trên TV</b></div>
   </section>
   <section class="shot">
-    <div class="cap"><span class="k">PHỤ ĐỀ TRÊN TV</span><h2>Bản dịch hiện<br><em>ngay trên TV</em></h2><p>Đè lên hình game, không trễ. Android TV, LG, Samsung.</p></div><div class="tv" style="top:640px"><div class="bezel"><div class="screen"><img src="tv-scene-road.jpg" alt=""><div class="sub">Ta phải tới thành phố trước khi trời tối.</div><div class="box" style="left:43%;top:6%;width:42%">Tìm người lái buôn ở cây cầu cũ và hỏi về đoàn xe bị mất tích.</div></div></div><div class="stand"></div></div><div class="phone duo"><img src="raw/tv.png" alt=""></div>
+    <div class="cap"><span class="k">PHỤ ĐỀ TRÊN TV</span><h2>Bản dịch hiện<br><em>ngay trên TV</em></h2><p>Đè lên hình game, không trễ. TV LG, Samsung.</p></div><div class="tv" style="top:640px"><div class="bezel"><div class="screen"><img src="tv-scene-road.jpg" alt=""><div class="sub">Ta phải tới thành phố trước khi trời tối.</div><div class="box" style="left:43%;top:6%;width:42%">Tìm người lái buôn ở cây cầu cũ và hỏi về đoàn xe bị mất tích.</div></div></div><div class="stand"></div></div><div class="phone duo"><img src="raw/tv.png" alt=""></div>
   </section>
   <section class="shot">
     <div class="cap"><span class="k">CÀI MỘT LẦN</span><h2>Kéo khung<br>tới <em>dòng phụ đề</em></h2><p>App tự đọc và dịch từng câu thoại.</p></div><div class="phone big"><img src="raw/scan.png" alt=""></div>
@@ -121,6 +121,7 @@
   <p class="note">Xuất từng ảnh 1320×2868: mở <code>index.html?shot=1</code> … <code>?shot=6</code>.</p>
 </div>
 
+<script>if(new URLSearchParams(location.search).get('bare')){document.documentElement.style.background='transparent';document.write('<style>body,.shot{background:transparent!important}.phone{background:none!important;padding:0!important;box-shadow:0 40px 90px -30px #000!important;border:0!important;border-radius:48px!important}.phone::after,.phone::before{display:none!important}.phone img{border-radius:48px!important;border:3px solid rgba(255,255,255,.18)}</style>')}</script>
 <script>
   const tpl = document.getElementById('shots').content;
   const shots = [...tpl.querySelectorAll('.shot')];
