@@ -39,9 +39,8 @@
 
 Cần iPhone hoặc iPad chạy **iOS 18 trở lên**.
 
-1. Cài [TestFlight](https://apps.apple.com/app/testflight/id899247664) từ App Store.
-2. Mở bot [**t.me/consoletranslatorbot**](https://t.me/consoletranslatorbot), bấm **Start** → **🍎 Bản iOS** để nhận link.
-3. TestFlight mở ra, bấm **Chấp nhận** rồi **Cài đặt**.
+1. Mở [**Console Translator: Dịch game trên App Store**](https://apps.apple.com/vn/app/id6817313561).
+2. Bấm **Nhận** để cài.
 
 | | Bản Free | Bản Premium |
 |---|---|---|
