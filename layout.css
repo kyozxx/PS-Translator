@@ -89,9 +89,9 @@ html{scroll-padding-top:20px}.wrap{width:calc(100% - 36px)}
 .hero-guides span{font-weight:600;margin-right:2px}
 .hero-guides a{display:inline-flex;align-items:center;min-height:44px;padding:0 15px;border:1px solid #c9ccd2;border-radius:999px;color:#202124;font-weight:600;background:#fff;text-decoration:none}
 .hero-guides a:hover{border-color:#202124}
-.hero .store-badges .os-badge{min-width:125px}
+.hero .store-badges .os-badge{width:150px;box-sizing:border-box}
 .hero-guides span{width:100%}.hero-guides a{padding:0 13px}
-@media(max-width:1150px){.hero .store-badges{display:grid;grid-template-columns:repeat(2,max-content)}.hero .store-badges a{width:148px}.hero .store-badges a img{margin-inline:auto}}
+@media(max-width:1150px){.hero .store-badges{display:grid;grid-template-columns:repeat(2,max-content)}.hero .store-badges a{width:150px}.hero .store-badges a img{margin-inline:auto}}
 @media(max-width:650px){.hero .store-badges,.hero-guides{justify-content:center}.hero-guides span{text-align:center}}
 /* Home lower sections: readable sizes, one spacing rhythm, room for the fixed dock. */
 .app-highlights article>span,.community-kicker{font-size:11px;color:#5f6368}
