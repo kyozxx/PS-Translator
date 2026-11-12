@@ -144,3 +144,4 @@ footer{padding-bottom:120px}footer p{font-size:13px;line-height:1.6}footer>a:las
 @media(max-width:650px){.gta-section{padding-top:28px}}
 /* Phone: screenshots right under the headline, the intro and buttons below them. */
 @media(max-width:650px){.hero{text-align:center}.hero .hero-copy{display:contents}.hero .hero-copy>*{order:2}.hero .hero-copy>.eyebrow,.hero .hero-copy>h1{order:0}.hero .product-visual{order:1}.hero{gap:0;padding-top:20px}.hero .hero-copy>.eyebrow{margin-bottom:12px}.hero .hero-copy>h1{margin-bottom:6px}.hero .hero-shots{padding-top:0;margin-bottom:18px}}
+.hero .store-badges{display:grid;grid-template-columns:repeat(2,max-content)}
