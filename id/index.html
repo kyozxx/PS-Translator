@@ -24,11 +24,13 @@ button{padding:12px 16px;border:0;border-radius:10px;background:var(--acc);color
 <figcaption>Nhập Online ID, bấm Search, copy đoạn ở dòng BASE64 (FOR REMOTE PLAY)</figcaption></figure></details>
 </main><script>
 const $=(i)=>document.getElementById(i);
-const say={invalid:'Online ID không hợp lệ.',missing:'Không tìm thấy người chơi này.',busy:'Máy tra đang bận. Thử lại sau ít phút, hoặc dùng trang dự phòng psntools bên dưới.'};
+const say={invalid:'Online ID không hợp lệ.',missing:'Không tìm thấy người chơi này. Kiểm tra lại Online ID, hoặc thử trang dự phòng psntools bên dưới.',busy:'Máy tra đang bận. Thử lại sau ít phút, hoặc dùng trang dự phòng psntools bên dưới.'};
+// A failed lookup shows the psntools backup right away (opened and scrolled to).
+const fail=(code)=>{$('msg').textContent=say[code]||say.busy;if(code==='invalid')return;const b=$('backup');b.open=true;b.scrollIntoView({behavior:'smooth',block:'start'})};
 $('f').onsubmit=async(e)=>{e.preventDefault();$('out').hidden=true;$('msg').textContent='Đang tra...';
  try{const r=await fetch('https://id.kyozx.cloud/lookup?id='+encodeURIComponent($('id').value.trim()));const j=await r.json();
-  if(j.error){$('msg').textContent=say[j.error]||say.busy;return}
+  if(j.error){fail(j.error);return}
   $('msg').textContent='Người chơi: '+j.onlineId;$('b64').textContent=j.base64;$('out').hidden=false}
- catch{$('msg').textContent=say.busy}};
+ catch{fail('busy')}};
 document.querySelectorAll('.copy').forEach(b=>b.onclick=()=>{navigator.clipboard.writeText($(b.dataset.c).textContent);b.textContent='Đã chép';setTimeout(()=>b.textContent='Sao chép',1500)});
 </script></body></html>
