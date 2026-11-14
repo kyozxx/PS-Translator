@@ -85,7 +85,7 @@ Bộ cài cũng tự báo khi chính nó có bản mới: mỗi lần bấm mộ
 | `LGTV-YYYYMMDD-HHMMSS-…` | Nhập đầy đủ trong bộ cài Windows 1.2.17 hoặc Mac 1.0.5 để cài app TV. |
 | `ANDROID-YYYYMMDD-HHMMSS-…` | Kích hoạt app beta trên điện thoại Android; không dùng trong bộ cài PC. |
 | Passphrase 6 ký tự trên Developer Mode | Dùng kết nối TV, phân biệt chữ hoa/chữ thường. Dùng đúng giá trị đang hiện trên TV. |
-| Mã phụ đề 8 số trên Console Translator TV | Nhập trên điện thoại để ghép phụ đề; mã hiện trên TV đổi mỗi phút. |
+| Mã phụ đề 8 số trên Console Translator TV | Nhập trên điện thoại để ghép phụ đề; mã hiện trên TV có thời hạn, dùng mã đang hiện. |
 
 Mã cài PC hết hạn, bị thu hồi hoặc bị xóa sẽ chặn cài tiếp, app đã cài trên TV vẫn mở được. Thời hạn Developer Mode là riêng: TV cần kết nối mạng, mở Developer Mode và bấm **EXTEND** trước khi hết hạn. Nếu Developer Mode bị tắt, app cài ngoài có thể bị gỡ và phải cài lại.
 
