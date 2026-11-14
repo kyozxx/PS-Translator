@@ -19,9 +19,9 @@ Cài xong, mở Console Translator TV trên TV, chọn HDMI rồi ghép điện 
 > - **Tắt tự chuyển cổng HDMI (HDMI-CEC):** Trên PS5 vào *Cài đặt → Hệ thống → HDMI* và tắt **Bật liên kết thiết bị HDMI** (hoặc tắt **Anynet+** trên TV Samsung). Nếu không tắt, khi bật máy chơi game TV sẽ tự động nhảy sang cổng HDMI ngoài làm TV thoát khỏi app, khiến điện thoại báo đã kết nối nhưng màn hình không thể hiện phụ đề.
 > - **Kiểm tra app đang chạy:** Bấm nút **Lên** trên remote Samsung. Nếu hiện bảng chọn cổng HDMI ở góc trên trái nghĩa là app vẫn đang hoạt động tốt đè lên hình game.
 
-<details><summary>Mở máy chơi game bị mất phụ đề hoặc app nháy rồi vào thẳng game</summary>
+<details><summary>App mở được 1 giây rồi tự thoát, mất phụ đề, hoặc nháy rồi vào thẳng game</summary>
 
-Do tính năng HDMI-CEC (Anynet+ trên TV hoặc Liên kết thiết bị HDMI trên PS5) tự động chuyển cổng sang HDMI ngoài khiến TV thoát app. Khắc phục: 1. Tắt Bật liên kết thiết bị HDMI trên PS5 (Cài đặt → Hệ thống → HDMI) hoặc tắt Anynet+ trên TV. 2. Bật máy chơi game trước, sau đó mới mở app Console Translator TV trên TV. Bấm nút Lên trên remote Samsung để kiểm tra: nếu hiện bảng chọn cổng HDMI nghĩa là app đang chạy đè lên game bình thường.
+App không bị lỗi: tính năng HDMI-CEC (Anynet+ trên TV hoặc Liên kết thiết bị HDMI trên PS5) tự chuyển TV sang cổng HDMI của máy chơi game nên đẩy app ra. Khắc phục: 1. Trên TV vào Cài đặt → Kết nối → Trình quản lý thiết bị bên ngoài, tắt Anynet+ (HDMI-CEC). Nếu vẫn bị, tắt thêm Bật liên kết thiết bị HDMI trên PS5 (Cài đặt → Hệ thống → HDMI). 2. Bật máy chơi game trước, sau đó mới mở app Console Translator TV trên TV. Bấm nút Lên trên remote Samsung để kiểm tra: nếu hiện bảng chọn cổng HDMI nghĩa là app đang chạy đè lên game bình thường.
 
 </details>
 
