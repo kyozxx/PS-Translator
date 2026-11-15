@@ -487,9 +487,11 @@ static void session_log(ChiakiLogLevel level, const char *message, void *user)
 /// Opens a local session to the console. resolution: 1=360p 2=540p 3=720p 4=1080p; fps 30 or 60.
 /// is_ps4: the PS4 protocol (it streams H.264 only, which is what is asked for anyway). Returns NULL with *error set.
 /// with_audio: playing on the PC, so the console's sound comes too (pst_session_read_audio).
-PST_API void *pst_session_start_play(const char *host, const uint8_t *regist_key, const uint8_t *morning, const uint8_t *account_id,
-                                     int resolution_preset, int frame_rate, int is_ps4, int with_audio,
-                                     pst_status_cb status_cb, void *user, int *error)
+/// bitrate_kbps: the video data the console sends (5000..30000); 0 keeps the default for the picture asked
+/// (about 10000 at 720p, 15000 at 1080p, 30000 when playing at 60 pictures a second).
+PST_API void *pst_session_start_play_bitrate(const char *host, const uint8_t *regist_key, const uint8_t *morning, const uint8_t *account_id,
+                                             int resolution_preset, int frame_rate, int is_ps4, int with_audio, int bitrate_kbps,
+                                             pst_status_cb status_cb, void *user, int *error)
 {
     *error = ensure_lib();
     if (*error != CHIAKI_ERR_SUCCESS) return NULL;
@@ -523,6 +525,8 @@ PST_API void *pst_session_start_play(const char *host, const uint8_t *regist_key
                                         frame_rate == 60 ? CHIAKI_VIDEO_FPS_PRESET_60 : CHIAKI_VIDEO_FPS_PRESET_30);
     // Playing at 60 pictures a second: twice the data (default 15000) keeps the picture as sharp as at 30.
     if (with_audio && frame_rate == 60) info.video_profile.bitrate = 30000;
+    // The player's own choice ("Tốc độ mạng"), as on iOS.
+    if (bitrate_kbps >= 2000 && bitrate_kbps <= 50000) info.video_profile.bitrate = (unsigned int)bitrate_kbps;
     info.video_profile.codec = CHIAKI_CODEC_H264;
     info.video_profile_auto_downgrade = true;
     info.audio_video_disabled = with_audio ? 0 : CHIAKI_AUDIO_DISABLED;
@@ -550,6 +554,14 @@ PST_API void *pst_session_start_play(const char *host, const uint8_t *regist_key
     }
     context->started = TRUE;
     return context;
+}
+
+PST_API void *pst_session_start_play(const char *host, const uint8_t *regist_key, const uint8_t *morning, const uint8_t *account_id,
+                                     int resolution_preset, int frame_rate, int is_ps4, int with_audio,
+                                     pst_status_cb status_cb, void *user, int *error)
+{
+    return pst_session_start_play_bitrate(host, regist_key, morning, account_id, resolution_preset, frame_rate, is_ps4, with_audio, 0,
+                                          status_cb, user, error);
 }
 
 /// Without sound (reading subtitles only), as before.
