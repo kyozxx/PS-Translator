@@ -1,6 +1,6 @@
 # Chính sách riêng tư — Console Translator (iPhone, iPad)
 
-Cập nhật: 14/11/2026
+Cập nhật: 22/11/2026
 
 Console Translator không có tài khoản người dùng riêng, không có quảng cáo, không dùng công cụ theo dõi hay phân tích hành vi. Nhà phát triển chỉ dùng máy chủ (Cloudflare) cho các tính năng nêu bên dưới và không thu thập dữ liệu cá nhân của bạn.
 
@@ -30,6 +30,8 @@ Console Translator không có tài khoản người dùng riêng, không có qu�
 
 Thanh toán do Apple xử lý hoàn toàn. App chỉ biết bạn đang có gói nào (Premium, PRO, dùng thử), không nhận thông tin thẻ hay thanh toán của bạn. Mã giao dịch chỉ được gửi tới máy chủ của nhà phát triển cho các tính năng nêu ở trên.
 
+**Khi bạn xin hoàn tiền gói Premium** (chỉ khi bạn đồng ý): Apple hỏi nhà phát triển về việc sử dụng gói. Nếu bạn đã bấm Đồng ý (hỏi một lần sau khi mua, đổi được ở Cài đặt > Cách dịch), máy chủ gửi Apple số câu Dịch AI bạn đã dùng kể từ khi mua, việc gói đã hoạt động bình thường, việc app có dùng thử miễn phí, và đề nghị của nhà phát triển (từ chối hoàn khi đã dùng nhiều). Không gửi gì khác về bạn. Apple là bên quyết định hoàn tiền. Tắt công tắc thì máy chủ không gửi nữa. Một gói Premium đã được hoàn tiền sẽ ngừng Dịch AI.
+
 ## Trẻ em
 
 App không dành riêng cho trẻ em và không cố ý thu thập dữ liệu của trẻ em.
@@ -42,7 +44,7 @@ Kênh Telegram: https://t.me/pstranslator — hoặc tạo mục [Issues](https:
 
 # Privacy Policy — Console Translator (iPhone, iPad) (English)
 
-Last updated: November 14, 2026
+Last updated: November 22, 2026
 
 Console Translator has no user accounts of its own, no ads, and no tracking or analytics. The developer uses servers (Cloudflare) only for the features listed below and does not collect your personal data.
 
@@ -71,6 +73,8 @@ Console Translator has no user accounts of its own, no ads, and no tracking or a
 ## In-app purchases
 
 Payments are handled entirely by Apple. The app only learns which plan you have (Premium, PRO, trial); it never receives your card or payment details. Transaction IDs are sent to the developer's server only for the features above.
+
+**When you ask Apple for a Premium refund** (only with your consent): Apple asks the developer about your use of the plan. If you tapped Agree (asked once after purchase, changeable in Settings > Cách dịch), the server sends Apple the number of AI translation lines you used since the purchase, that the plan worked normally, that the app offers a free trial, and the developer's preference (decline when much was used). Nothing else about you is sent. Apple decides the refund. Turning the switch off stops this. A refunded Premium plan stops AI translation.
 
 ## Children
 
