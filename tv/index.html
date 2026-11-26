@@ -1,17 +1,82 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-tv="web">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The subtitle page itself, kept at an address players remember (owner 2026-11-27). A copy of CloudAPI/tvweb/public/index.html
+     with this one <base>: scripts, style and fonts come from the relay at tv.kyozx.cloud, so they are never out of date.
+     When that index.html changes, copy it here again. -->
+<base href="https://tv.kyozx.cloud/">
 <meta name="robots" content="noindex">
-<title>Phụ đề trên TV</title>
-<!-- A short address to type on a TV remote: the subtitle page itself runs at tv.kyozx.cloud. -->
-<meta http-equiv="refresh" content="0;url=https://tv.kyozx.cloud/">
-<script>location.replace("https://tv.kyozx.cloud/" + location.search + location.hash);</script>
-<style>body{background:#111;color:#fff;font:28px sans-serif;text-align:center;padding-top:20vh}a{color:#f5c26b}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Console Translator TV</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Web edition: the console picture plays in the page itself, under the subtitles. */
+  html { background: #000 !important; }
+  #hdmi { position: fixed; left: 0; top: 0; width: 100%; height: 100%; object-fit: fill; }
+  /* Left of the pairing card (right 4%, 26% wide): centred across the screen, the bar's long Samsung
+     note ran over the card's title and code (owner's photo, 2026-11-14). */
+  #hdmi-bar { position: fixed; top: 24px; left: 3%; z-index: 20; text-align: center; width: -webkit-max-content; width: max-content; max-width: 62%; box-sizing: border-box;
+    background: rgba(0,0,0,.8); color: #fff; padding: 14px 22px; border-radius: 16px; font-size: 26px; }
+  #hdmi-bar button { font-size: 28px; padding: 10px 24px; margin: 6px; border-radius: 10px; border: 3px solid #555; background: #222; color: #fff; }
+  #hdmi-bar button:focus { border-color: #f6d58e; outline: none; }
+  #tv-platform { font: inherit; color: #fff; background: #222; margin: 0 0 8px 8px; }
+  #hdmi-note { font-size: 22px; color: #f6d58e; white-space: pre-line; }
+  body.playing:not(.bar) #hdmi-bar { display: none; }
+  #address, .addr-label, #update, #newer { display: none !important; }
+  .dgt:not(.tvbrowser) #hdmi-bar { display: none !important; }
+  /* Samsung: the TV draws HDMI behind the page, so the page itself must be see-through. */
+  html.tizen.playing-tv, html.tizen body.playing { background: transparent !important; }
+  html.tizen body.playing #hdmi { display: none; }
+  html.vestel-overlay body.playing { background: transparent !important; }
+  html.vestel-overlay { background: transparent !important; }
+  html.vestel-overlay #hdmi { display: none; }
+</style>
+<script src="web.js"></script>
 </head>
 <body>
-<p>Đang mở trang phụ đề trên TV…</p>
-<p><a href="https://tv.kyozx.cloud/">Bấm vào đây nếu trang không tự mở</a></p>
+  <video id="hdmi" playsinline></video>
+  <div id="hdmi-bar">
+    <label for="tv-platform">Bạn đang dùng TV gì?</label>
+    <select id="tv-platform">
+      <option value="auto">Tự nhận diện</option>
+      <option value="lg">LG webOS</option>
+      <option value="samsung">Samsung Tizen</option>
+      <option value="other">TV khác</option>
+    </select>
+    <div id="hdmi-label">Chọn cổng HDMI đang cắm máy chơi game</div>
+    <div id="hdmi-ports"></div>
+    <div id="hdmi-note"></div>
+  </div>
+  <div id="pairing">
+    <div class="title">Console Translator TV</div>
+    <div class="label">MÃ GHÉP NỐI</div>
+    <div id="pair-qr"></div>
+    <div id="code">-</div>
+    <div id="countdown"></div>
+    <div class="label addr-label">Địa chỉ TV</div>
+    <div id="address">-</div>
+    <div id="status">Đang kết nối…</div>
+    <div id="newer"></div>
+    <ol class="steps">
+      <li>Mở app Console Translator trên điện thoại.</li>
+      <li>Vào <b>Phụ đề trên TV</b>, bấm <b>Quét mã QR</b> rồi quét mã ở trên. Hoặc chọn <b>TV qua trình duyệt</b>.</li>
+      <li>Nhập <b>mã ghép nối</b> đang hiện ở đây.</li>
+    </ol>
+    <div class="warn">Giữ trang này mở khi chơi. Không đổi nguồn bằng remote: chọn cổng HDMI ở thanh phía trên (bấm OK để hiện lại).</div>
+    <div id="help"><div id="help-qr"></div><div id="help-text"></div></div>
+  </div>
+  <div id="news" class="hidden"><div id="news-qr"></div><div id="news-text"></div></div>
+  <div id="update" class="hidden"></div>
+  <div id="area" class="hidden"></div>
+  <div id="subtitle" class="hidden">
+    <div id="previous"></div>
+    <div id="original"></div>
+    <div id="text"></div>
+  </div>
+  <script src="boxes.js"></script>
+  <script src="app.js"></script>
+  <script src="qrcode.js"></script>
+  <script src="notice.js"></script>
 </body>
 </html>
