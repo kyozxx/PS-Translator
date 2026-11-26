@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <!-- The subtitle page itself, kept at an address players remember (owner 2026-11-27). A copy of CloudAPI/tvweb/public/index.html
-     with this one <base>: scripts, style and fonts come from the relay at tv.kyozx.cloud, so they are never out of date.
-     When that index.html changes, copy it here again. -->
-<base href="https://tv.kyozx.cloud/">
+     whose scripts and style are loaded from the relay at tv.kyozx.cloud, so they are never out of date (no <base>: the page
+     reloads itself by its own path when the TV type is picked). When that index.html changes, copy it here again. -->
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Console Translator TV</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://tv.kyozx.cloud/style.css">
 <style>
   /* Web edition: the console picture plays in the page itself, under the subtitles. */
   html { background: #000 !important; }
@@ -32,7 +31,7 @@
   html.vestel-overlay { background: transparent !important; }
   html.vestel-overlay #hdmi { display: none; }
 </style>
-<script src="web.js"></script>
+<script src="https://tv.kyozx.cloud/web.js"></script>
 </head>
 <body>
   <video id="hdmi" playsinline></video>
@@ -74,9 +73,9 @@
     <div id="original"></div>
     <div id="text"></div>
   </div>
-  <script src="boxes.js"></script>
-  <script src="app.js"></script>
-  <script src="qrcode.js"></script>
-  <script src="notice.js"></script>
+  <script src="https://tv.kyozx.cloud/boxes.js"></script>
+  <script src="https://tv.kyozx.cloud/app.js"></script>
+  <script src="https://tv.kyozx.cloud/qrcode.js"></script>
+  <script src="https://tv.kyozx.cloud/notice.js"></script>
 </body>
 </html>
