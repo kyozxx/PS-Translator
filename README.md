@@ -69,7 +69,7 @@ Cần Mac chip Apple (**M1 trở lên**) chạy **macOS 15 trở lên**.
 
 ### Bản PC (Windows)
 
-Cần **Windows 11**, hoặc **Windows 10 bản 2004** trở lên, máy 64-bit. Không cần cài thêm .NET.
+Cần **Windows 11**, máy 64-bit (Windows 10 tạm thời chưa hỗ trợ). Không cần cài thêm .NET.
 
 1. Tải [**ConsoleTranslator-PC-1.2.3-Setup.exe**](https://api.kyozx.cloud/pc/latest).
 2. Mở file vừa tải và bấm **Cài đặt**. Cài xong, mở app từ biểu tượng **Console Translator** trên màn hình chính hoặc Start Menu. Nếu Windows hiện SmartScreen, bấm **Thông tin thêm** rồi **Vẫn chạy**.
